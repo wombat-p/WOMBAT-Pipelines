@@ -1,0 +1,707 @@
+"Unimod ID"	"Unimod title"	"Unimod full name"	"unimod entry"	"searchgui name"	"residue"
+"1"	"Acetyl"	"Acetylation"	"UNIMOD:1"	"Acetylation of K"	"K"
+"1"	"Acetyl"	"Acetylation"	"UNIMOD:1"	"Acetylation of protein N-term"	"protein N-term"
+"1"	"Acetyl"	"Acetylation"	"UNIMOD:1"	"Acetylation of peptide N-term"	"peptide N-term"
+"10"	"Met->Hse"	"Homoserine"	"UNIMOD:10"	"Homoserine of peptide C-term M"	"peptide C-term M"
+"105"	"ICAT-C"	"Applied Biosystems cleavable ICAT(TM) light"	"UNIMOD:105"	"ICAT-O"	NA
+"106"	"ICAT-C:13C(9)"	"Applied Biosystems cleavable ICAT(TM) heavy"	"UNIMOD:106"	"ICAT-9"	NA
+"107"	"FormylMet"	"Addition of N-formyl met"	"UNIMOD:107"	"FormylMet of protein N-term"	"protein N-term"
+"108"	"Nethylmaleimide"	"N-ethylmaleimide on cysteines"	"UNIMOD:108"	"Nethylmaleimide of C"	"C"
+"11"	"Met->Hsl"	"Homoserine lactone"	"UNIMOD:11"	"Homoserine lactone of peptide C-term M"	"peptide C-term M"
+"112"	"OxLysBiotinRed"	"Oxidized lysine biotinylated with biotin-LC-hydrazide, reduced"	NA	NA	NA
+"113"	"OxLysBiotin"	"Oxidized lysine biotinylated with biotin-LC-hydrazide"	NA	NA	NA
+"114"	"OxProBiotinRed"	"Oxidized proline biotinylated with biotin-LC-hydrazide, reduced"	NA	NA	NA
+"115"	"OxProBiotin"	"Oxidized Proline biotinylated with biotin-LC-hydrazide"	NA	NA	NA
+"116"	"OxArgBiotin"	"Oxidized arginine biotinylated with biotin-LC-hydrazide"	NA	NA	NA
+"117"	"OxArgBiotinRed"	"Oxidized arginine biotinylated with biotin-LC-hydrazide, reduced"	NA	NA	NA
+"118"	"EDT-iodoacetyl-PEO-biotin"	"EDT-iodo-PEO-biotin"	NA	NA	NA
+"119"	"IBTP"	"Thio Ether Formation - BTP Adduct"	NA	NA	NA
+"12"	"ICAT-D:2H(8)"	"Applied Biosystems original ICAT(TM) d8"	NA	NA	NA
+"121"	"GlyGly"	"ubiquitinylation residue"	"UNIMOD:121"	"Ubiquitination of K"	"K"
+"122"	"Formyl"	"Formylation"	"UNIMOD:122"	"Formylation of peptide N-term"	"peptide N-term"
+"122"	"Formyl"	"Formylation"	"UNIMOD:122"	"Formylation of T"	"T"
+"122"	"Formyl"	"Formylation"	"UNIMOD:122"	"Formylation of S"	"S"
+"122"	"Formyl"	"Formylation"	"UNIMOD:122"	"Formylation of K"	"K"
+"122"	"Formyl"	"Formylation"	"UNIMOD:122"	"Formylation of protein N-term"	"protein N-term"
+"123"	"ICAT-H"	"N-iodoacetyl, p-chlorobenzyl-12C6-glucamine"	NA	NA	NA
+"124"	"ICAT-H:13C(6)"	"N-iodoacetyl, p-chlorobenzyl-13C6-glucamine"	NA	NA	NA
+"126"	"Thioacyl"	"thioacylation of primary amines (N-term and Lys)"	"UNIMOD:126"	"Thioacyl of peptide N-term"	"peptide N-term"
+"127"	"Fluoro"	"fluorophenylalanine replacement of phenylalanine"	NA	NA	NA
+"128"	"Fluorescein"	"5-Iodoacetamidofluorescein (Molecular Probe, Eugene, OR)"	NA	NA	NA
+"129"	"Iodo"	"Iodination"	NA	NA	NA
+"1291"	NA	NA	"UNIMOD:1291"	"Dimethylation of K 2H(6)"	"K 2H(6)"
+"1291"	NA	NA	"UNIMOD:1291"	"Dimethylation of peptide N-term 2H(6)"	"peptide N-term 2H(6)"
+"13"	"ICAT-D"	"Applied Biosystems original ICAT(TM) d0"	NA	NA	NA
+"130"	"Diiodo"	"di-Iodination"	"UNIMOD:130"	"Diiodination of Y"	"Y"
+"1302"	NA	NA	"UNIMOD:1302"	"mTRAQ of 13C(6) 15N(2)"	"13C(6) 15N(2)"
+"1302"	NA	NA	"UNIMOD:1302"	"mTRAQ of peptide N-term 13C(6) 15N(2)"	"peptide N-term 13C(6) 15N(2)"
+"131"	"Triiodo"	"tri-Iodination"	NA	NA	NA
+"134"	"Myristoleyl"	"(cis-delta 5)-tetradecaenoyl"	NA	NA	NA
+"135"	"Myristoyl+Delta:H(-4)"	"(cis,cis-delta 5, delta 8)-tetradecadienoyl"	NA	NA	NA
+"136"	"Benzoyl"	"labeling reagent light form (N-term & K)"	NA	NA	NA
+"137"	"Hex(5)HexNAc(2)"	"N-linked glycan core"	NA	NA	NA
+"139"	"Dansyl"	"5-dimethylaminonaphthalene-1-sulfonyl"	NA	NA	NA
+"140"	"a-type-ion"	"ISD a-series (C-Term)"	NA	NA	NA
+"1408"	NA	NA	"UNIMOD:1408"	"Hex(5) HexNAc(4) NeuAc(2) Na of N"	"N"
+"141"	"Amidine"	"amidination of lysines or N-terminal amines with methyl acetimidate"	NA	NA	NA
+"142"	"HexNAc(1)dHex(1)"	"HexNAc1dHex1"	NA	NA	NA
+"143"	"HexNAc(2)"	"HexNAc2"	NA	NA	NA
+"144"	"Hex(3)"	"Hex3"	NA	NA	NA
+"145"	"HexNAc(1)dHex(2)"	"HexNAc1dHex2"	NA	NA	NA
+"146"	"Hex(1)HexNAc(1)dHex(1)"	"Hex1HexNAc1dHex1"	NA	NA	NA
+"147"	"HexNAc(2)dHex(1)"	"HexNAc2dHex1"	NA	NA	NA
+"148"	"Hex(1)HexNAc(2)"	"Hex1HexNAc2"	NA	NA	NA
+"149"	"Hex(1)HexNAc(1)NeuAc(1)"	"Hex1HexNAc1NeuAc1"	NA	NA	NA
+"150"	"HexNAc(2)dHex(2)"	"HexNAc2dHex2"	NA	NA	NA
+"151"	"Hex(1)HexNAc(2)Pent(1)"	"Hex1HexNAc2Pent1"	NA	NA	NA
+"152"	"Hex(1)HexNAc(2)dHex(1)"	"Hex1HexNAc2dHex1"	NA	NA	NA
+"153"	"Hex(2)HexNAc(2)"	"Hex2HexNAc2"	NA	NA	NA
+"154"	"Hex(3)HexNAc(1)Pent(1)"	"Hex3HexNAc1Pent1"	NA	NA	NA
+"155"	"Hex(1)HexNAc(2)dHex(1)Pent(1)"	"Hex1HexNAc2dHex1Pent1"	NA	NA	NA
+"156"	"Hex(1)HexNAc(2)dHex(2)"	"Hex1HexNAc2dHex2"	NA	NA	NA
+"157"	"Hex(2)HexNAc(2)Pent(1)"	"Hex2HexNAc2Pent1"	NA	NA	NA
+"158"	"Hex(2)HexNAc(2)dHex(1)"	"Hex2HexNAc2dHex1"	NA	NA	NA
+"159"	"Hex(3)HexNAc(2)"	"Hex3HexNAc2"	NA	NA	NA
+"160"	"Hex(1)HexNAc(1)NeuAc(2)"	"Hex1HexNAc1NeuAc2"	NA	NA	NA
+"161"	"Hex(3)HexNAc(2)P(1)"	"Hex3HexNAc2P1"	NA	NA	NA
+"162"	"Delta:S(-1)Se(1)"	"Selenium replaces sulphur"	NA	NA	NA
+"17"	"NIPCAM"	"N-isopropylcarboxamidomethyl"	"UNIMOD:17"	"NIPCAM of C"	"C"
+"170"	"Delta:H(1)O(-1)18O(1)"	"glycosylated asparagine 18O labeling"	NA	NA	NA
+"171"	"NBS:13C(6)"	"Shimadzu NBS-13C"	NA	NA	NA
+"172"	"NBS"	"Shimadzu NBS-12C"	NA	NA	NA
+"176"	"BHT"	"Michael addition of BHT quinone methide to Cysteine and Lysine"	NA	NA	NA
+"178"	"DAET"	"phosphorylation to amine thiol"	NA	NA	NA
+"184"	"Label:13C(9)"	"13C(9) Silac label"	NA	NA	NA
+"185"	"Label:13C(9)+Phospho"	"C13 label (Phosphotyrosine)"	NA	NA	NA
+"186"	"HPG"	"Hydroxyphenylglyoxal arginine"	NA	NA	NA
+"187"	"2HPG"	"bis(hydroxphenylglyoxal) arginine"	NA	NA	NA
+"188"	"Label:13C(6)"	"13C(6) Silac label"	"UNIMOD:188"	"Lysine 13C(6)"	NA
+"188"	"Label:13C(6)"	"13C(6) Silac label"	"UNIMOD:188"	"Arginine 13C(6)"	NA
+"193"	"Label:18O(2)"	"O18 label at both C-terminal oxygens"	"UNIMOD:193"	"18O(2) of peptide C-term"	"peptide C-term"
+"194"	"AccQTag"	"6-aminoquinolyl-N-hydroxysuccinimidyl carbamate"	NA	NA	NA
+"195"	"QAT"	"APTA-d0"	NA	NA	NA
+"196"	"QAT:2H(3)"	"APTA d3"	NA	NA	NA
+"197"	"EQAT"	"EAPTA d0"	NA	NA	NA
+"198"	"EQAT:2H(5)"	"EAPTA d5"	NA	NA	NA
+"199"	"Dimethyl:2H(4)"	"DiMethyl-CHD2"	"UNIMOD:199"	"Dimethylation of peptide N-term 2H(4)"	"peptide N-term 2H(4)"
+"2"	"Amidated"	"Amidation"	"UNIMOD:2"	"Amidation of the peptide C-term"	"the peptide C-term"
+"2"	"Amidated"	"Amidation"	"UNIMOD:2"	"Amidation of the protein C-term"	"the protein C-term"
+"20"	"PEO-Iodoacetyl-LC-Biotin"	"Biotinyl-iodoacetamidyl-3,6-dioxaoctanediamine"	NA	NA	NA
+"200"	"Ethanedithiol"	"EDT"	NA	NA	NA
+"205"	"Delta:H(6)C(6)O(1)"	"Acrolein addition +94"	NA	NA	NA
+"206"	"Delta:H(4)C(3)O(1)"	"Acrolein addition +56"	NA	NA	NA
+"207"	"Delta:H(2)C(3)"	"Acrolein addition +38"	NA	NA	NA
+"208"	"Delta:H(4)C(6)"	"Acrolein addition +76"	NA	NA	NA
+"209"	"Delta:H(8)C(6)O(2)"	"Acrolein addition +112"	NA	NA	NA
+"21"	"Phospho"	"Phosphorylation"	"UNIMOD:21"	"Phosphorylation of Y"	"Y"
+"21"	"Phospho"	"Phosphorylation"	"UNIMOD:21"	"Phosphorylation of S"	"S"
+"21"	"Phospho"	"Phosphorylation"	"UNIMOD:21"	"Phosphorylation of T"	"T"
+"211"	"NEIAA"	"N-ethyl iodoacetamide-d0"	NA	NA	NA
+"212"	"NEIAA:2H(5)"	"N-ethyl iodoacetamide-d5"	NA	NA	NA
+"213"	"ADP-Ribosyl"	"ADP  Ribose addition"	NA	NA	NA
+"214"	"iTRAQ4plex"	"Representative mass and accurate mass for 116 & 117"	"UNIMOD:214"	"iTRAQ 4-plex of peptide N-term"	"peptide N-term"
+"214"	"iTRAQ4plex"	"Representative mass and accurate mass for 116 & 117"	"UNIMOD:214"	"iTRAQ 4-plex of Y"	"Y"
+"214"	"iTRAQ4plex"	"Representative mass and accurate mass for 116 & 117"	"UNIMOD:214"	"iTRAQ 4-plex of K"	"K"
+"23"	"Dehydrated"	"Dehydration"	"UNIMOD:23"	"Dehydration of T"	"T"
+"23"	"Dehydrated"	"Dehydration"	"UNIMOD:23"	"Dehydration of S"	"S"
+"24"	"Propionamide"	"Acrylamide adduct"	"UNIMOD:24"	"Propionamide of C"	"C"
+"24"	"Propionamide"	"Acrylamide adduct"	"UNIMOD:24"	"Propionamide of K"	"K"
+"24"	"Propionamide"	"Acrylamide adduct"	"UNIMOD:24"	"Propionamide of peptide N-term"	"peptide N-term"
+"243"	"IGBP"	"Light IDBEST tag for quantitation"	NA	NA	NA
+"25"	"Pyridylacetyl"	"pyridylacetyl"	NA	NA	NA
+"253"	"Crotonaldehyde"	"Crotonaldehyde"	NA	NA	NA
+"254"	"Delta:H(2)C(2)"	"Acetaldehyde +26"	"UNIMOD:254"	"Acetaldehyde +26"	NA
+"255"	"Delta:H(4)C(2)"	"Acetaldehyde +28"	NA	NA	NA
+"256"	"Delta:H(4)C(3)"	"Propionaldehyde +40"	NA	NA	NA
+"258"	"Label:18O(1)"	"O18 Labeling"	"UNIMOD:258"	"18O(1) of peptide C-term"	"peptide C-term"
+"259"	"Label:13C(6)15N(2)"	"13C(6) 15N(2) Silac label"	"UNIMOD:259"	"Lysine 13C(6) 15N(2)"	NA
+"26"	"Pyro-carbamidomethyl"	"S-carbamoylmethylcysteine cyclization (N-terminus)"	NA	NA	NA
+"260"	"Thiophospho"	"Thiophosphorylation"	NA	NA	NA
+"261"	"SPITC"	"4-sulfophenyl isothiocyanate"	NA	NA	NA
+"262"	"Label:2H(3)"	"Trideuteration"	NA	NA	NA
+"264"	"PET"	"phosphorylation to pyridyl thiol"	NA	NA	NA
+"267"	"Label:13C(6)15N(4)"	"13C(6) 15N(4) Silac label"	"UNIMOD:267"	"Arginine 13C(6) 15N(4)"	NA
+"268"	"Label:13C(5)15N(1)"	"13C(5) 15N(1) Silac label"	NA	NA	NA
+"269"	"Label:13C(9)15N(1)"	"13C(9) 15N(1) Silac label"	NA	NA	NA
+"27"	"Glu->pyro-Glu"	"Pyro-glu from E"	"UNIMOD:27"	"Pyrolidone from E"	NA
+"270"	"Cytopiloyne"	"nucleophilic addtion to cytopiloyne"	NA	NA	NA
+"271"	"Cytopiloyne+water"	"nucleophilic addition to cytopiloyne+H2O"	NA	NA	NA
+"272"	"CAF"	"sulfonation of N-terminus"	NA	NA	NA
+"273"	"Xlink:SSD"	"covalent modification of lysine by cross-linking reagent"	NA	NA	NA
+"275"	"Nitrosyl"	"S-nitrosylation"	NA	NA	NA
+"276"	"AEBS"	"Aminoethylbenzenesulfonylation"	NA	NA	NA
+"278"	"Ethanolyl"	"Ethanolation of Cys"	NA	NA	NA
+"28"	"Gln->pyro-Glu"	"Pyro-glu from Q"	"UNIMOD:28"	"Pyrolidone from Q"	NA
+"280"	"Ethyl"	"Ethylation"	NA	NA	NA
+"281"	"CoenzymeA"	"Cysteine modified Coenzyme A"	NA	NA	NA
+"284"	"Methyl:2H(2)"	"Deuterium Methylation of Lysine"	NA	NA	NA
+"285"	"SulfanilicAcid"	"Light Sulfanilic Acid (SA) C12"	NA	NA	NA
+"286"	"SulfanilicAcid:13C(6)"	"Heavy Sulfanilic Acid (SA) C13"	NA	NA	NA
+"288"	"Trp->Oxolactone"	"Tryptophan oxidation to oxolactone"	NA	NA	NA
+"289"	"Biotin-PEO-Amine"	"Biotin polyethyleneoxide amine"	NA	NA	NA
+"29"	"SMA"	"N-Succinimidyl-3-morpholine acetate"	NA	NA	NA
+"290"	"Biotin-HPDP"	"Pierce EZ-Link Biotin-HPDP"	NA	NA	NA
+"291"	"Delta:Hg(1)"	"Mercury Mercaptan"	NA	NA	NA
+"292"	"IodoU-AMP"	"Cross-link of (Iodo)-uracil MP with W,F,Y"	NA	NA	NA
+"293"	"CAMthiopropanoyl"	"3-(carbamidomethylthio)propanoyl"	NA	NA	NA
+"294"	"IED-Biotin"	"biotinoyl-iodoacetyl-ethylenediamine"	NA	NA	NA
+"295"	"dHex"	"Fucose"	NA	NA	NA
+"298"	"Methyl:2H(3)"	"deuterated methyl ester"	"UNIMOD:298"	"Trideuterated Methyl Ester of K"	"K"
+"298"	"Methyl:2H(3)"	"deuterated methyl ester"	"UNIMOD:298"	"Trideuterated Methyl Ester of E"	"E"
+"298"	"Methyl:2H(3)"	"deuterated methyl ester"	"UNIMOD:298"	"Trideuterated Methyl Ester of D"	"D"
+"298"	"Methyl:2H(3)"	"deuterated methyl ester"	"UNIMOD:298"	"Trideuterated Methyl Ester of peptide C-term"	"peptide C-term"
+"298"	"Methyl:2H(3)"	"deuterated methyl ester"	"UNIMOD:298"	"Trideuterated Methyl Ester of R"	"R"
+"299"	"Carboxy"	"Carboxylation"	NA	NA	NA
+"3"	"Biotin"	"Biotinylation"	NA	NA	NA
+"30"	"Cation:Na"	"Sodium adduct"	"UNIMOD:30"	"Sodium adduct to D"	NA
+"30"	"Cation:Na"	"Sodium adduct"	"UNIMOD:30"	"Sodium adduct to E"	NA
+"301"	"Bromobimane"	"Monobromobimane derivative"	NA	NA	NA
+"302"	"Menadione"	"Menadione quinone derivative"	NA	NA	NA
+"303"	"DeStreak"	"Cysteine mercaptoethanol"	NA	NA	NA
+"305"	"dHex(1)Hex(3)HexNAc(4)"	"Fucosylated biantennary (-2 galactose)"	NA	NA	NA
+"307"	"dHex(1)Hex(4)HexNAc(4)"	"Fucosylated biantennary (-1 galactose)"	NA	NA	NA
+"308"	"dHex(1)Hex(5)HexNAc(4)"	"Fucosylated biantennary"	NA	NA	NA
+"309"	"Hex(3)HexNAc(4)"	"Biantennary (-2 galactose)"	NA	NA	NA
+"31"	"Pyridylethyl"	"S-pyridylethylation"	"UNIMOD:31"	"Pyridylethyl of C"	"C"
+"310"	"Hex(4)HexNAc(4)"	"Biantennary (-1 galactose)"	NA	NA	NA
+"311"	"Hex(5)HexNAc(4)"	"Biantennary"	NA	NA	NA
+"312"	"Cysteinyl"	"Cysteinylation"	NA	NA	NA
+"313"	"Lys-loss"	"Loss of C-terminal K from Heavy Chain of MAb"	NA	NA	NA
+"314"	"Nmethylmaleimide"	"Nmethylmaleimide"	NA	NA	NA
+"316"	"DimethylpyrroleAdduct"	"2,5-dimethypyrrole"	NA	NA	NA
+"318"	"Delta:H(2)C(5)"	"MDA adduct +62"	NA	NA	NA
+"319"	"Delta:H(2)C(3)O(1)"	"MDA adduct +54"	NA	NA	NA
+"320"	"Nethylmaleimide+water"	"Nethylmaleimidehydrolysis"	NA	NA	NA
+"323"	"Xlink:B10621"	"bis-N-I-sulfonerahodamine"	NA	NA	NA
+"324"	"DTBP"	"dimethyl 3,3\'-dithiobispropionimidate"	NA	NA	NA
+"325"	"FP-Biotin"	"10-ethoxyphosphinyl-N-(biotinamidopentyl)decanamide"	NA	NA	NA
+"327"	"Delta:H(4)C(2)O(-1)S(1)"	"S-Ethylcystine from Serine"	NA	NA	NA
+"329"	"Methyl:2H(3)13C(1)"	"monomethylated arginine"	NA	NA	NA
+"330"	"Dimethyl:2H(6)13C(2)"	"dimethylated arginine"	"UNIMOD:330"	"Dimethylation of K 2H(6) 13C(2)"	"K 2H(6) 13C(2)"
+"330"	"Dimethyl:2H(6)13C(2)"	"dimethylated arginine"	"UNIMOD:330"	"Dimethylation of peptide N-term 2H(6) 13C(2)"	"peptide N-term 2H(6) 13C(2)"
+"332"	"Thiophos-S-S-biotin"	"thiophosphate labeled with biotin-HPDP"	NA	NA	NA
+"333"	"Can-FP-biotin"	"6-N-biotinylaminohexyl isopropyl phosphate"	NA	NA	NA
+"335"	"HNE+Delta:H(2)"	"reduced 4-Hydroxynonenal"	NA	NA	NA
+"337"	"Methylamine"	"Michael addition with methylamine"	NA	NA	NA
+"34"	"Methyl"	"Methylation"	"UNIMOD:34"	"Methylation of E"	"E"
+"34"	"Methyl"	"Methylation"	"UNIMOD:34"	"Methylation of C"	"C"
+"34"	"Methyl"	"Methylation"	"UNIMOD:34"	"Methylation of R"	"R"
+"34"	"Methyl"	"Methylation"	"UNIMOD:34"	"Methylation of K"	"K"
+"34"	"Methyl"	"Methylation"	"UNIMOD:34"	"Methylation of D"	"D"
+"34"	"Methyl"	"Methylation"	"UNIMOD:34"	"Methylation of S"	"S"
+"340"	"Bromo"	"bromination"	NA	NA	NA
+"342"	"Amino"	"Tyrosine oxidation to 2-aminotyrosine"	NA	NA	NA
+"343"	"Argbiotinhydrazide"	"oxidized Arginine biotinylated with biotin hydrazide"	NA	NA	NA
+"344"	"Arg->GluSA"	"Arginine oxidation to glutamic semialdehyde"	NA	NA	NA
+"345"	"Trioxidation"	"cysteine oxidation to cysteic acid"	"UNIMOD:345"	"Trioxidation of C"	"C"
+"348"	"His->Asn"	"histidine oxidation to aspargine"	NA	NA	NA
+"349"	"His->Asp"	"histidine oxidation to aspartic acid"	NA	NA	NA
+"35"	"Oxidation"	"Oxidation or Hydroxylation"	"UNIMOD:35"	"Oxidation of M"	"M"
+"35"	"Oxidation"	"Oxidation or Hydroxylation"	"UNIMOD:35"	"Oxidation of P"	"P"
+"35"	"Oxidation"	"Oxidation or Hydroxylation"	"UNIMOD:35"	"Oxidation of C"	"C"
+"35"	"Oxidation"	"Oxidation or Hydroxylation"	"UNIMOD:35"	"Oxidation of K"	"K"
+"350"	"Trp->Hydroxykynurenin"	"tryptophan oxidation to hydroxykynurenin"	NA	NA	NA
+"351"	"Trp->Kynurenin"	"tryptophan oxidation to kynurenin"	NA	NA	NA
+"352"	"Lys->Allysine"	"Lysine oxidation to aminoadipic semialdehyde"	NA	NA	NA
+"353"	"Lysbiotinhydrazide"	"oxidized Lysine biotinylated with biotin hydrazide"	NA	NA	NA
+"354"	"Nitro"	"Oxidation to nitro"	NA	NA	NA
+"357"	"probiotinhydrazide"	"oxidized proline biotinylated with biotin hydrazide"	NA	NA	NA
+"359"	"Pro->pyro-Glu"	"proline oxidation to pyroglutamic acid"	NA	NA	NA
+"36"	"Dimethyl"	"di-Methylation"	"UNIMOD:36"	"Dimethylation of R"	"R"
+"36"	"Dimethyl"	"di-Methylation"	"UNIMOD:36"	"Dimethylation of peptide N-term"	"peptide N-term"
+"36"	"Dimethyl"	"di-Methylation"	"UNIMOD:36"	"Dimethylation of K"	"K"
+"360"	"Pro->Pyrrolidinone"	"Proline oxidation to pyrrolidinone"	NA	NA	NA
+"361"	"Thrbiotinhydrazide"	"oxidized Threonine biotinylated with biotin hydrazide"	NA	NA	NA
+"362"	"Diisopropylphosphate"	"O-Diisopropylphosphorylation"	NA	NA	NA
+"363"	"Isopropylphospho"	"O-Isopropylphosphorylation"	NA	NA	NA
+"364"	"ICPL:13C(6)"	"Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, heavy form"	"UNIMOD:364"	"ICPL6 of peptide N-term"	"peptide N-term"
+"364"	"ICPL:13C(6)"	"Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, heavy form"	"UNIMOD:364"	"ICPL6 of K"	"K"
+"365"	"ICPL"	"Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, light form"	"UNIMOD:365"	"ICPL0 of peptide N-term"	"peptide N-term"
+"365"	"ICPL"	"Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, light form"	"UNIMOD:365"	"ICPL0 of K"	"K"
+"366"	"Deamidated:18O(1)"	"Deamidation in presence of O18"	"UNIMOD:366"	"Deamidation of N 18O"	"N 18O"
+"368"	"Cys->Dha"	"Dehydroalanine (from Cysteine)"	NA	NA	NA
+"369"	"Pro->Pyrrolidone"	"Pyrrolidone from Proline"	NA	NA	NA
+"37"	"Trimethyl"	"tri-Methylation"	"UNIMOD:37"	"Trimethylation of K"	"K"
+"37"	"Trimethyl"	"tri-Methylation"	"UNIMOD:37"	"Trimethylation of R"	"R"
+"37"	"Trimethyl"	"tri-Methylation"	"UNIMOD:37"	"Trimethylation of protein N-term A"	"protein N-term A"
+"371"	"HMVK"	"Michael addition of hydroxymethylvinyl ketone to cysteine"	NA	NA	NA
+"372"	"Arg->Orn"	"Ornithine from Arginine"	NA	NA	NA
+"374"	"Dehydro"	"Half of a disulfide bridge"	NA	NA	NA
+"375"	"Diphthamide"	"Diphthamide"	NA	NA	NA
+"376"	"Hydroxyfarnesyl"	"hydroxyfarnesyl"	NA	NA	NA
+"377"	"Diacylglycerol"	"diacylglycerol"	NA	NA	NA
+"378"	"Carboxyethyl"	"carboxyethyl"	NA	NA	NA
+"379"	"Hypusine"	"hypusine"	NA	NA	NA
+"380"	"Retinylidene"	"retinal"	NA	NA	NA
+"381"	"Lys->AminoadipicAcid"	"alpha-amino adipic acid"	NA	NA	NA
+"382"	"Cys->PyruvicAcid"	"pyruvic acid from N-term cys"	NA	NA	NA
+"385"	"Ammonia-loss"	"Loss of ammonia"	"UNIMOD:385"	"Pyrolidone from carbamidomethylated C"	NA
+"387"	"Phycocyanobilin"	"phycocyanobilin"	NA	NA	NA
+"388"	"Phycoerythrobilin"	"phycoerythrobilin"	NA	NA	NA
+"389"	"Phytochromobilin"	"phytochromobilin"	NA	NA	NA
+"39"	"Methylthio"	"Beta-methylthiolation"	"UNIMOD:39"	"Methylthio of C"	"C"
+"39"	"Methylthio"	"Beta-methylthiolation"	"UNIMOD:39"	"Methylthio of D"	"D"
+"39"	"Methylthio"	"Beta-methylthiolation"	"UNIMOD:39"	"Methylthio of N"	"N"
+"390"	"Heme"	"heme"	NA	NA	NA
+"391"	"Molybdopterin"	"molybdopterin"	NA	NA	NA
+"392"	"Quinone"	"quinone"	NA	NA	NA
+"393"	"Glucosylgalactosyl"	"glucosylgalactosyl hydroxylysine"	NA	NA	NA
+"394"	"GPIanchor"	"glycosylphosphatidylinositol"	NA	NA	NA
+"395"	"PhosphoribosyldephosphoCoA"	"phosphoribosyl dephospho-coenzyme A"	NA	NA	NA
+"396"	"GlycerylPE"	"glycerylphosphorylethanolamine"	NA	NA	NA
+"397"	"Triiodothyronine"	"triiodo"	NA	NA	NA
+"398"	"Thyroxine"	"tetraiodo"	NA	NA	NA
+"4"	"Carbamidomethyl"	"Iodoacetamide derivative"	"UNIMOD:4"	"Carbamidomethylation of K"	"K"
+"4"	"Carbamidomethyl"	"Iodoacetamide derivative"	"UNIMOD:4"	"Carbamidomethylation of C"	"C"
+"4"	"Carbamidomethyl"	"Iodoacetamide derivative"	"UNIMOD:4"	"Carbamidomethylation of E"	"E"
+"40"	"Sulfo"	"O-Sulfonation"	"UNIMOD:40"	"Sulfation of S"	"S"
+"40"	"Sulfo"	"O-Sulfonation"	"UNIMOD:40"	"Sulfation of Y"	"Y"
+"40"	"Sulfo"	"O-Sulfonation"	"UNIMOD:40"	"Sulfation of T"	"T"
+"400"	"Tyr->Dha"	"Dehydroalanine (from Tyrosine)"	NA	NA	NA
+"401"	"Didehydro"	"2-amino-3-oxo-butanoic_acid"	"UNIMOD:401"	"Didehydro of T"	"T"
+"402"	"Cys->Oxoalanine"	"oxoalanine"	NA	NA	NA
+"403"	"Ser->LacticAcid"	"lactic acid from N-term Ser"	NA	NA	NA
+"405"	"Phosphoadenosine"	"AMP binding site"	NA	NA	NA
+"407"	"Hydroxycinnamyl"	"hydroxycinnamyl"	NA	NA	NA
+"408"	"Glycosyl"	"glycosyl-L-hydroxyproline"	NA	NA	NA
+"409"	"FMNH"	"flavin mononucleotide"	NA	NA	NA
+"41"	"Hex"	"Hexose"	"UNIMOD:41"	"Hexose of K"	"K"
+"410"	"Archaeol"	"S-diphytanylglycerol diether"	NA	NA	NA
+"411"	"Phenylisocyanate"	"phenyl isocyanate"	NA	NA	NA
+"412"	"Phenylisocyanate:2H(5)"	"d5-phenyl isocyanate"	NA	NA	NA
+"413"	"Phosphoguanosine"	"phospho-guanosine"	NA	NA	NA
+"414"	"Hydroxymethyl"	"hydroxymethyl"	NA	NA	NA
+"415"	"MolybdopterinGD+Delta:S(-1)Se(1)"	"L-selenocysteinyl molybdenum bis(molybdopterin guanine dinucleotide)"	NA	NA	NA
+"416"	"Dipyrrolylmethanemethyl"	"dipyrrolylmethanemethyl"	NA	NA	NA
+"417"	"PhosphoUridine"	"uridine phosphodiester"	NA	NA	NA
+"419"	"Glycerophospho"	"glycerophospho"	NA	NA	NA
+"42"	"Lipoyl"	"Lipoyl"	"UNIMOD:42"	"Lipoyl of K"	"K"
+"420"	"Carboxy->Thiocarboxy"	"thiocarboxylic acid"	NA	NA	NA
+"421"	"Sulfide"	"persulfide"	NA	NA	NA
+"422"	"PyruvicAcidIminyl"	"N-pyruvic acid 2-iminyl"	NA	NA	NA
+"423"	"Delta:Se(1)"	"selenyl"	NA	NA	NA
+"424"	"MolybdopterinGD"	"molybdenum bis(molybdopterin guanine dinucleotide)"	NA	NA	NA
+"425"	"Dioxidation"	"dihydroxy"	"UNIMOD:425"	"Dioxidation of W"	"W"
+"425"	"Dioxidation"	"dihydroxy"	"UNIMOD:425"	"Dioxidation of M"	"M"
+"426"	"Octanoyl"	"octanoyl"	NA	NA	NA
+"428"	"PhosphoHexNAc"	"N-acetylglucosamine-1-phosphoryl"	NA	NA	NA
+"429"	"PhosphoHex"	"phosphoglycosyl-D-mannose-1-phosphoryl"	NA	NA	NA
+"43"	"HexNAc"	"N-Acetylhexosamine"	"UNIMOD:43"	"HexNAc of S"	"S"
+"43"	"HexNAc"	"N-Acetylhexosamine"	"UNIMOD:43"	"HexNAc of T"	"T"
+"431"	"Palmitoleyl"	"palmitoleyl"	NA	NA	NA
+"432"	"Cholesterol"	"cholesterol ester"	NA	NA	NA
+"433"	"Didehydroretinylidene"	"3,4-didehydroretinylidene"	NA	NA	NA
+"434"	"CHDH"	"cis-14-hydroxy-10,13-dioxo-7-heptadecenoic ester"	NA	NA	NA
+"435"	"Methylpyrroline"	"4-methyl-delta-1-pyrroline-5-carboxyl"	NA	NA	NA
+"436"	"Hydroxyheme"	"hydroxyheme"	NA	NA	NA
+"437"	"MicrocinC7"	"(3-aminopropyl)(L-aspartyl-1-amino)phosphoryl-5-adenosine"	NA	NA	NA
+"438"	"Cyano"	"cyano"	NA	NA	NA
+"439"	"Diironsubcluster"	"hydrogenase diiron subcluster"	NA	NA	NA
+"44"	"Farnesyl"	"Farnesylation"	"UNIMOD:44"	"Farnesylation of C"	"C"
+"440"	"Amidino"	"amidino"	NA	NA	NA
+"442"	"FMN"	"O3-(riboflavin phosphoryl)"	NA	NA	NA
+"443"	"FMNC"	"S-(4a-FMN)"	NA	NA	NA
+"444"	"CuSMo"	"copper sulfido molybdopterin cytosine dinuncleotide"	NA	NA	NA
+"445"	"Hydroxytrimethyl"	"5-hydroxy-N6,N6,N6-trimethyl"	NA	NA	NA
+"447"	"Deoxy"	"reduction"	NA	NA	NA
+"448"	"Microcin"	"microcin E492 siderophore ester from serine"	NA	NA	NA
+"449"	"Decanoyl"	"lipid"	NA	NA	NA
+"45"	"Myristoyl"	"Myristoylation"	NA	NA	NA
+"450"	"Glu"	"monoglutamyl"	NA	NA	NA
+"451"	"GluGlu"	"diglutamyl"	NA	NA	NA
+"452"	"GluGluGlu"	"triglutamyl"	NA	NA	NA
+"453"	"GluGluGluGlu"	"tetraglutamyl"	NA	NA	NA
+"454"	"HexN"	"Hexosamine"	NA	NA	NA
+"455"	"Xlink:DMP-s"	"One end of crosslink attached, one end free"	NA	NA	NA
+"456"	"Xlink:DMP"	"Both ends of crosslink attached to same peptide"	NA	NA	NA
+"457"	"NDA"	"naphthalene-2,3-dicarboxaldehyde"	NA	NA	NA
+"46"	"PyridoxalPhosphate"	"Pyridoxal phosphate"	NA	NA	NA
+"464"	"SPITC:13C(6)"	"4-sulfophenyl isothiocyanate (Heavy C13)"	NA	NA	NA
+"47"	"Palmitoyl"	"Palmitoylation"	"UNIMOD:47"	"Palmitoylation of protein N-term"	"protein N-term"
+"47"	"Palmitoyl"	"Palmitoylation"	"UNIMOD:47"	"Palmitoylation of T"	"T"
+"47"	"Palmitoyl"	"Palmitoylation"	"UNIMOD:47"	"Palmitoylation of C"	"C"
+"47"	"Palmitoyl"	"Palmitoylation"	"UNIMOD:47"	"Palmitoylation of S"	"S"
+"47"	"Palmitoyl"	"Palmitoylation"	"UNIMOD:47"	"Palmitoylation of K"	"K"
+"472"	"AEC-MAEC"	"aminoethylcysteine"	NA	NA	NA
+"476"	"TMAB"	"4-trimethyllammoniumbutyryl-"	NA	NA	NA
+"477"	"TMAB:2H(9)"	"d9-4-trimethyllammoniumbutyryl-"	NA	NA	NA
+"478"	"FTC"	"fluorescein-5-thiosemicarbazide"	NA	NA	NA
+"48"	"GeranylGeranyl"	"Geranyl-geranyl"	"UNIMOD:48"	"Geranyl-geranyl of C"	"C"
+"481"	"Label:2H(4)"	"4,4,5,5-D4 Lysine"	"UNIMOD:481"	"Label of K 2H(4)"	"K 2H(4)"
+"481"	"Label:2H(4)"	"4,4,5,5-D4 Lysine"	"UNIMOD:481"	"Lysine 2H(4)"	NA
+"488"	"DHP"	"Dehydropyrrolizidine alkaloid (dehydroretronecine) on cysteines"	NA	NA	NA
+"49"	"Phosphopantetheine"	"Phosphopantetheine"	NA	NA	NA
+"490"	"Hep"	"Heptose"	NA	NA	NA
+"493"	"BADGE"	"Bisphenol A diglycidyl ether derivative"	NA	NA	NA
+"494"	"CyDye-Cy3"	"Cy3 CyDye DIGE Fluor saturation dye"	NA	NA	NA
+"495"	"CyDye-Cy5"	"Cy5 CyDye DIGE Fluor saturation dye"	NA	NA	NA
+"498"	"BHTOH"	"Michael addition of t-butyl hydroxylated BHT (BHTOH) to C, H or K"	NA	NA	NA
+"499"	"IGBP:13C(2)"	"Heavy IDBEST tag for quantitation"	NA	NA	NA
+"5"	"Carbamyl"	"Carbamylation"	"UNIMOD:5"	"Carbamilation of K"	"K"
+"5"	"Carbamyl"	"Carbamylation"	"UNIMOD:5"	"Carbamilation of protein N-term"	"protein N-term"
+"50"	"FAD"	"Flavin adenine dinucleotide"	NA	NA	NA
+"500"	"Nmethylmaleimide+water"	"Nmethylmaleimidehydrolysis"	NA	NA	NA
+"501"	"PyMIC"	"3-methyl-2-pyridyl isocyanate"	NA	NA	NA
+"503"	"LG-lactam-K"	"Levuglandinyl - lysine lactam adduct"	NA	NA	NA
+"504"	"LG-Hlactam-K"	"Levuglandinyl - lysine hydroxylactam adduct"	NA	NA	NA
+"505"	"LG-lactam-R"	"Levuglandinyl - arginine lactam adduct"	NA	NA	NA
+"506"	"LG-Hlactam-R"	"Levuglandinyl - arginine hydroxylactam adduct"	NA	NA	NA
+"51"	"Tripalmitate"	"N-acyl diglyceride cysteine"	NA	NA	NA
+"510"	"Dimethyl:2H(4)13C(2)"	"DiMethyl-C13HD2"	NA	NA	NA
+"512"	"Hex(2)"	"Lactosylation"	NA	NA	NA
+"513"	"C8-QAT"	"[3-(2,5)-Dioxopyrrolidin-1-yloxycarbonyl)-propyl]dimethyloctylammonium"	NA	NA	NA
+"514"	"PropylNAGthiazoline"	"propyl-1,2-dideoxy-2\'-methyl-alpha-D-glucopyranoso-[2,1-d]-Delta2\'-thiazoline"	NA	NA	NA
+"515"	"FNEM"	"fluorescein-5-maleimide"	NA	NA	NA
+"518"	"Diethyl"	"Diethylation, analogous to Dimethylation"	NA	NA	NA
+"519"	"BisANS"	"4,4\'-dianilino-1,1\'-binaphthyl-5,5\'-disulfonic acid"	NA	NA	NA
+"52"	"Guanidinyl"	"Guanidination"	"UNIMOD:52"	"Guanidination of peptide N-term"	"peptide N-term"
+"52"	"Guanidinyl"	"Guanidination"	"UNIMOD:52"	"Guanidination of K"	"K"
+"520"	"Piperidine"	"Piperidination"	NA	NA	NA
+"522"	"Maleimide-PEO2-Biotin"	"Maleimide-PEO2-Biotin"	NA	NA	NA
+"523"	"Sulfo-NHS-LC-LC-Biotin"	"Sulfo-NHS-LC-LC-Biotin"	NA	NA	NA
+"524"	"CLIP_TRAQ_1"	"CLIP_TRAQ_1"	NA	NA	NA
+"525"	"CLIP_TRAQ_2"	"CLIP_TRAQ_2"	NA	NA	NA
+"526"	"Dethiomethyl"	"Prompt loss of side chain from oxidised Met"	NA	NA	NA
+"528"	"Methyl+Deamidated"	"Deamidation followed by a methylation"	NA	NA	NA
+"529"	"Delta:H(5)C(2)"	"Dimethylation of proline residue"	NA	NA	NA
+"53"	"HNE"	"4-hydroxynonenal (HNE)"	NA	NA	NA
+"530"	"Cation:K"	"Replacement of proton by potassium"	NA	NA	NA
+"531"	"Cation:Cu[I]"	"Replacement of proton by copper"	NA	NA	NA
+"532"	"iTRAQ4plex114"	"Accurate mass for 114"	NA	NA	NA
+"533"	"iTRAQ4plex115"	"Accurate mass for 115"	NA	NA	NA
+"534"	"Dibromo"	"Dibromo"	NA	NA	NA
+"535"	"LeuArgGlyGly"	"Ubiquitination"	NA	NA	NA
+"536"	"CLIP_TRAQ_3"	"CLIP_TRAQ_3"	NA	NA	NA
+"537"	"CLIP_TRAQ_4"	"CLIP_TRAQ_4"	NA	NA	NA
+"538"	"15dB-biotin"	"15-deoxy-delta 12,14-Prostaglandin J2-biotinimide"	NA	NA	NA
+"539"	"PGA1-biotin"	"Prostaglandin A1-biotinimide"	NA	NA	NA
+"54"	"Glucuronyl"	"N-glucuronylation"	NA	NA	NA
+"540"	"Ala->Ser"	"Ala->Ser substitution"	NA	NA	NA
+"541"	"Ala->Thr"	"Ala->Thr substitution"	NA	NA	NA
+"542"	"Ala->Asp"	"Ala->Asp substitution"	NA	NA	NA
+"543"	"Ala->Pro"	"Ala->Pro substitution"	NA	NA	NA
+"544"	"Ala->Gly"	"Ala->Gly substitution"	NA	NA	NA
+"545"	"Ala->Glu"	"Ala->Glu substitution"	NA	NA	NA
+"546"	"Ala->Val"	"Ala->Val substitution"	NA	NA	NA
+"547"	"Cys->Phe"	"Cys->Phe substitution"	NA	NA	NA
+"548"	"Cys->Ser"	"Cys->Ser substitution"	NA	NA	NA
+"549"	"Cys->Trp"	"Cys->Trp substitution"	NA	NA	NA
+"55"	"Glutathione"	"glutathione disulfide"	"UNIMOD:55"	"Glutathione of C"	"C"
+"550"	"Cys->Tyr"	"Cys->Tyr substitution"	NA	NA	NA
+"551"	"Cys->Arg"	"Cys->Arg substitution"	NA	NA	NA
+"552"	"Cys->Gly"	"Cys->Gly substitution"	NA	NA	NA
+"553"	"Asp->Ala"	"Asp->Ala substitution"	NA	NA	NA
+"554"	"Asp->His"	"Asp->His substitution"	NA	NA	NA
+"555"	"Asp->Asn"	"Asp->Asn substitution"	NA	NA	NA
+"556"	"Asp->Gly"	"Asp->Gly substitution"	NA	NA	NA
+"557"	"Asp->Tyr"	"Asp->Tyr substitution"	NA	NA	NA
+"558"	"Asp->Glu"	"Asp->Glu substitution"	NA	NA	NA
+"559"	"Asp->Val"	"Asp->Val substitution"	NA	NA	NA
+"56"	"Acetyl:2H(3)"	"Acetate labeling reagent (N-term & K) (heavy form, +3amu)"	NA	NA	NA
+"560"	"Glu->Ala"	"Glu->Ala substitution"	NA	NA	NA
+"561"	"Glu->Gln"	"Glu->Gln substitution"	NA	NA	NA
+"562"	"Glu->Asp"	"Glu->Asp substitution"	NA	NA	NA
+"563"	"Glu->Lys"	"Glu->Lys substitution"	NA	NA	NA
+"564"	"Glu->Gly"	"Glu->Gly substitution"	NA	NA	NA
+"565"	"Glu->Val"	"Glu->Val substitution"	NA	NA	NA
+"566"	"Phe->Ser"	"Phe->Ser substitution"	NA	NA	NA
+"567"	"Phe->Cys"	"Phe->Cys substitution"	NA	NA	NA
+"568"	"Phe->Ile"	"Phe->Ile or Phe->Leu substitution"	NA	NA	NA
+"569"	"Phe->Tyr"	"Phe->Tyr substitution"	NA	NA	NA
+"570"	"Phe->Val"	"Phe->Val substitution"	NA	NA	NA
+"571"	"Gly->Ala"	"Gly->Ala substitution"	NA	NA	NA
+"572"	"Gly->Ser"	"Gly->Ser substitution"	NA	NA	NA
+"573"	"Gly->Trp"	"Gly->Trp substitution"	NA	NA	NA
+"574"	"Gly->Glu"	"Gly->Glu substitution"	NA	NA	NA
+"575"	"Gly->Val"	"Gly->Val substitution"	NA	NA	NA
+"576"	"Gly->Asp"	"Gly->Asp substitution"	NA	NA	NA
+"577"	"Gly->Cys"	"Gly->Cys substitution"	NA	NA	NA
+"578"	"Gly->Arg"	"Gly->Arg substitution"	NA	NA	NA
+"58"	"Propionyl"	"Propionate labeling reagent light form (N-term & K)"	"UNIMOD:58"	"Propionyl of K light"	"K light"
+"58"	"Propionyl"	"Propionate labeling reagent light form (N-term & K)"	"UNIMOD:58"	"Propionyl of peptide N-term light"	"peptide N-term light"
+"580"	"His->Pro"	"His->Pro substitution"	NA	NA	NA
+"581"	"His->Tyr"	"His->Tyr substitution"	NA	NA	NA
+"582"	"His->Gln"	"His->Gln substitution"	NA	NA	NA
+"584"	"His->Arg"	"His->Arg substitution"	NA	NA	NA
+"585"	"His->Leu"	"His->Leu substitution"	NA	NA	NA
+"586"	"Ile->Phe"	"Ile->Phe substitution"	NA	NA	NA
+"587"	"Ile->Ser"	"Ile->Ser substitution"	NA	NA	NA
+"588"	"Ile->Thr"	"Ile->Thr substitution"	NA	NA	NA
+"589"	"Ile->Asn"	"Ile->Asn substitution"	NA	NA	NA
+"59"	"Propionyl:13C(3)"	"Propionate labeling reagent heavy form (+3amu), N-term & K"	"UNIMOD:59"	"Propionyl of peptide N-term heavy"	"peptide N-term heavy"
+"59"	"Propionyl:13C(3)"	"Propionate labeling reagent heavy form (+3amu), N-term & K"	"UNIMOD:59"	"Propionyl of K heavy"	"K heavy"
+"590"	"Ile->Lys"	"Ile->Lys substitution"	NA	NA	NA
+"591"	"Ile->Val"	"Ile->Val substitution"	NA	NA	NA
+"592"	"Ile->Met"	"Ile->Met substitution"	NA	NA	NA
+"593"	"Ile->Arg"	"Ile->Arg substitution"	NA	NA	NA
+"594"	"Lys->Thr"	"Lys->Thr substitution"	NA	NA	NA
+"595"	"Lys->Asn"	"Lys->Asn substitution"	NA	NA	NA
+"596"	"Lys->Glu"	"Lys->Glu substitution"	NA	NA	NA
+"597"	"Lys->Gln"	"Lys->Gln substitution"	NA	NA	NA
+"598"	"Lys->Met"	"Lys->Met substitution"	NA	NA	NA
+"599"	"Lys->Arg"	"Lys->Arg substitution"	NA	NA	NA
+"6"	"Carboxymethyl"	"Iodoacetic acid derivative"	"UNIMOD:6"	"Carboxymethylation of C"	"C"
+"60"	"GIST-Quat"	"Quaternary amine labeling reagent light form (N-term & K)"	NA	NA	NA
+"600"	"Lys->Ile"	"Lys->Ile substitution"	NA	NA	NA
+"601"	"Leu->Ser"	"Leu->Ser substitution"	NA	NA	NA
+"602"	"Leu->Phe"	"Leu->Phe substitution"	NA	NA	NA
+"603"	"Leu->Trp"	"Leu->Trp substitution"	NA	NA	NA
+"604"	"Leu->Pro"	"Leu->Pro substitution"	NA	NA	NA
+"605"	"Leu->Val"	"Leu->Val substitution"	NA	NA	NA
+"606"	"Leu->His"	"Leu->His substitution"	NA	NA	NA
+"607"	"Leu->Gln"	"Leu->Gln substitution"	NA	NA	NA
+"608"	"Leu->Met"	"Leu->Met substitution"	NA	NA	NA
+"609"	"Leu->Arg"	"Leu->Arg substitution"	NA	NA	NA
+"61"	"GIST-Quat:2H(3)"	"Quaternary amine labeling reagent heavy (+3amu) form, N-term & K"	NA	NA	NA
+"610"	"Met->Thr"	"Met->Thr substitution"	NA	NA	NA
+"611"	"Met->Arg"	"Met->Arg substitution"	NA	NA	NA
+"612"	"Met->Ile"	"Met->Ile substitution"	NA	NA	NA
+"613"	"Met->Lys"	"Met->Lys substitution"	NA	NA	NA
+"614"	"Met->Leu"	"Met->Leu substitution"	NA	NA	NA
+"615"	"Met->Val"	"Met->Val substitution"	NA	NA	NA
+"616"	"Asn->Ser"	"Asn->Ser substitution"	NA	NA	NA
+"617"	"Asn->Thr"	"Asn->Thr substitution"	NA	NA	NA
+"618"	"Asn->Lys"	"Asn->Lys substitution"	NA	NA	NA
+"619"	"Asn->Tyr"	"Asn->Tyr substitution"	NA	NA	NA
+"62"	"GIST-Quat:2H(6)"	"Quaternary amine labeling reagent heavy form (+6amu), N-term & K"	NA	NA	NA
+"620"	"Asn->His"	"Asn->His substitution"	NA	NA	NA
+"621"	"Asn->Asp"	"Asn->Asp substitution"	NA	NA	NA
+"622"	"Asn->Ile"	"Asn->Ile substitution"	NA	NA	NA
+"623"	"Pro->Ser"	"Pro->Ser substitution"	NA	NA	NA
+"624"	"Pro->Ala"	"Pro->Ala substitution"	NA	NA	NA
+"625"	"Pro->His"	"Pro->His substitution"	NA	NA	NA
+"626"	"Pro->Gln"	"Pro->Gln substitution"	NA	NA	NA
+"627"	"Pro->Thr"	"Pro->Thr substitution"	NA	NA	NA
+"628"	"Pro->Arg"	"Pro->Arg substitution"	NA	NA	NA
+"629"	"Pro->Leu"	"Pro->Leu substitution"	NA	NA	NA
+"63"	"GIST-Quat:2H(9)"	"Quaternary amine labeling reagent heavy form (+9amu), N-term & K"	NA	NA	NA
+"630"	"Gln->Pro"	"Gln->Pro substitution"	NA	NA	NA
+"631"	"Gln->Lys"	"Gln->Lys substitution"	NA	NA	NA
+"632"	"Gln->Glu"	"Gln->Glu substitution"	NA	NA	NA
+"633"	"Gln->His"	"Gln->His substitution"	NA	NA	NA
+"634"	"Gln->Arg"	"Gln->Arg substitution"	NA	NA	NA
+"635"	"Gln->Leu"	"Gln->Leu substitution"	NA	NA	NA
+"636"	"Arg->Ser"	"Arg->Ser substitution"	NA	NA	NA
+"637"	"Arg->Trp"	"Arg->Trp substitution"	NA	NA	NA
+"638"	"Arg->Thr"	"Arg->Thr substitution"	NA	NA	NA
+"639"	"Arg->Pro"	"Arg->Pro substitution"	NA	NA	NA
+"64"	"Succinyl"	"Succinic anhydride labeling reagent light form (N-term & K)"	NA	NA	NA
+"640"	"Arg->Lys"	"Arg->Lys substitution"	NA	NA	NA
+"641"	"Arg->His"	"Arg->His substitution"	NA	NA	NA
+"642"	"Arg->Gln"	"Arg->Gln substitution"	NA	NA	NA
+"643"	"Arg->Met"	"Arg->Met substitution"	NA	NA	NA
+"644"	"Arg->Cys"	"Arg->Cys substitution"	NA	NA	NA
+"645"	"Arg->Ile"	"Arg->Ile or Arg->Leu substitution"	NA	NA	NA
+"646"	"Arg->Gly"	"Arg->Gly substitution"	NA	NA	NA
+"647"	"Ser->Phe"	"Ser->Phe substitution"	NA	NA	NA
+"648"	"Ser->Ala"	"Ser->Ala substitution"	NA	NA	NA
+"649"	"Ser->Trp"	"Ser->Trp substitution"	NA	NA	NA
+"65"	"Succinyl:2H(4)"	"Succinic anhydride labeling reagent, heavy form (+4amu, 4H2), N-term & K"	NA	NA	NA
+"650"	"Ser->Thr"	"Ser->Thr substitution"	NA	NA	NA
+"651"	"Ser->Asn"	"Ser->Asn substitution"	NA	NA	NA
+"652"	"Ser->Pro"	"Ser->Pro substitution"	NA	NA	NA
+"653"	"Ser->Tyr"	"Ser->Tyr substitution"	NA	NA	NA
+"654"	"Ser->Cys"	"Ser->Cys substitution"	NA	NA	NA
+"655"	"Ser->Arg"	"Ser->Arg substitution"	NA	NA	NA
+"656"	"Ser->Ile"	"Ser->Ile or Ser->Leu substitution"	NA	NA	NA
+"657"	"Ser->Gly"	"Ser->Gly substitution"	NA	NA	NA
+"658"	"Thr->Ser"	"Thr->Ser substitution"	NA	NA	NA
+"659"	"Thr->Ala"	"Thr->Ala substitution"	NA	NA	NA
+"66"	"Succinyl:13C(4)"	"Succinic anhydride labeling reagent, heavy form (+4amu, 4C13), N-term & K"	NA	NA	NA
+"660"	"Thr->Asn"	"Thr->Asn substitution"	NA	NA	NA
+"661"	"Thr->Lys"	"Thr->Lys substitution"	NA	NA	NA
+"662"	"Thr->Pro"	"Thr->Pro substitution"	NA	NA	NA
+"663"	"Thr->Met"	"Thr->Met substitution"	NA	NA	NA
+"664"	"Thr->Ile"	"Thr->Ile substitution"	NA	NA	NA
+"665"	"Thr->Arg"	"Thr->Arg substitution"	NA	NA	NA
+"666"	"Val->Phe"	"Val->Phe substitution"	NA	NA	NA
+"667"	"Val->Ala"	"Val->Ala substitution"	NA	NA	NA
+"668"	"Val->Glu"	"Val->Glu substitution"	NA	NA	NA
+"669"	"Val->Met"	"Val->Met substitution"	NA	NA	NA
+"670"	"Val->Asp"	"Val->Asp substitution"	NA	NA	NA
+"671"	"Val->Ile"	"Val->Ile or Val->Leu substitution"	NA	NA	NA
+"672"	"Val->Gly"	"Val->Gly substitution"	NA	NA	NA
+"673"	"Trp->Ser"	"Trp->Ser substitution"	NA	NA	NA
+"674"	"Trp->Cys"	"Trp->Cys substitution"	NA	NA	NA
+"675"	"Trp->Arg"	"Trp->Arg substitution"	NA	NA	NA
+"676"	"Trp->Gly"	"Trp->Gly substitution"	NA	NA	NA
+"677"	"Trp->Leu"	"Trp->Leu substitution"	NA	NA	NA
+"678"	"Tyr->Phe"	"Tyr->Phe substitution"	NA	NA	NA
+"679"	"Tyr->Ser"	"Tyr->Ser substitution"	NA	NA	NA
+"680"	"Tyr->Asn"	"Tyr->Asn substitution"	NA	NA	NA
+"681"	"Tyr->His"	"Tyr->His substitution"	NA	NA	NA
+"682"	"Tyr->Asp"	"Tyr->Asp substitution"	NA	NA	NA
+"683"	"Tyr->Cys"	"Tyr->Cys substitution"	NA	NA	NA
+"684"	"BDMAPP"	"Mass Defect Tag on lysine e-amino"	NA	NA	NA
+"685"	"NA-LNO2"	"Nitroalkylation by Nitro Linoleic Acid"	NA	NA	NA
+"686"	"NA-OA-NO2"	"Nitroalkylation by Nitro Oleic Acid"	NA	NA	NA
+"687"	"ICPL:2H(4)"	"Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, medium form"	"UNIMOD:687"	"ICPL4 of peptide N-term"	"peptide N-term"
+"687"	"ICPL:2H(4)"	"Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, medium form"	"UNIMOD:687"	"ICPL4 of K"	"K"
+"695"	"Label:13C(6)15N(1)"	"13C(6) 15N(1) Silac label"	"UNIMOD:695"	"Isoleucine 13C(6) 15N(1)"	NA
+"695"	"Label:13C(6)15N(1)"	"13C(6) 15N(1) Silac label"	"UNIMOD:695"	"Leucine 13C(6) 15N(1)"	NA
+"696"	"Label:2H(9)13C(6)15N(2)"	"13C(6) 15N(2) (D)9 SILAC label"	NA	NA	NA
+"697"	"NIC"	"Nicotinic Acid"	NA	NA	NA
+"698"	"dNIC"	"deuterated Nicotinic Acid"	NA	NA	NA
+"7"	"Deamidated"	"Deamidation"	"UNIMOD:7"	"Deamidation of Q"	"Q"
+"7"	"Deamidated"	"Deamidation"	"UNIMOD:7"	"Deamidation of N"	"N"
+"7"	"Deamidated-N"	"Deamidation custom"	"UNIMOD:7"	"Deamidation of Q"	"Q"
+"7"	"Deamidated-N"	"Deamidation custom"	"UNIMOD:7"	"Deamidation of N"	"N"
+"720"	"HNE-Delta:H(2)O"	"Dehydrated 4-hydroxynonenal"	NA	NA	NA
+"721"	"4-ONE"	"4-Oxononenal (ONE)"	NA	NA	NA
+"723"	"O-Dimethylphosphate"	"O-Dimethylphosphorylation"	NA	NA	NA
+"724"	"O-Methylphosphate"	"O-Methylphosphorylation"	NA	NA	NA
+"725"	"O-Diethylphosphate"	"O-Diethylphosphorylation"	NA	NA	NA
+"726"	"O-Ethylphosphate"	"O-Ethylphosphorylation"	NA	NA	NA
+"727"	"O-pinacolylmethylphosphonate"	"O-pinacolylmethylphosphonylation"	NA	NA	NA
+"728"	"Methylphosphonate"	"Methylphosphonylation"	NA	NA	NA
+"729"	"O-Isopropylmethylphosphonate"	"O-Isopropylmethylphosphonylation"	NA	NA	NA
+"730"	"iTRAQ8plex"	"Representative mass and accurate mass for 113, 114, 116 & 117"	"UNIMOD:730"	"iTRAQ 8-plex of Y"	"Y"
+"730"	"iTRAQ8plex"	"Representative mass and accurate mass for 113, 114, 116 & 117"	"UNIMOD:730"	"iTRAQ 8-plex of peptide N-term"	"peptide N-term"
+"730"	"iTRAQ8plex"	"Representative mass and accurate mass for 113, 114, 116 & 117"	"UNIMOD:730"	"iTRAQ 8-plex of K"	"K"
+"731"	"iTRAQ8plex:13C(6)15N(2)"	"Accurate mass for 115, 118, 119 & 121"	NA	NA	NA
+"734"	"Ethanolamine"	"Carboxyl modification with ethanolamine"	NA	NA	NA
+"735"	"DTT_ST"	"Dithiothreitol (DTT)"	NA	NA	NA
+"736"	"DTT_C"	"Dithiothreitol (DTT) on Cys"	NA	NA	NA
+"737"	"TMT6plex"	"Sixplex Tandem Mass Tag®"	"UNIMOD:737"	"TMT 6-plex of K"	"K"
+"737"	"TMT6plex"	"Sixplex Tandem Mass Tag®"	"UNIMOD:737"	"TMT 10-plex of K"	"K"
+"737"	"TMT6plex"	"Sixplex Tandem Mass Tag®"	"UNIMOD:737"	"TMT 10-plex of peptide N-term"	"peptide N-term"
+"737"	"TMT6plex"	"Sixplex Tandem Mass Tag®"	"UNIMOD:737"	"TMT 6-plex of peptide N-term"	"peptide N-term"
+"738"	"TMT2plex"	"Duplex Tandem Mass Tag®"	"UNIMOD:738"	"TMT 2-plex of K"	"K"
+"738"	"TMT2plex"	"Duplex Tandem Mass Tag®"	"UNIMOD:738"	"TMT 2-plex of peptide N-term"	"peptide N-term"
+"739"	"TMT"	"Native Tandem Mass Tag®"	NA	NA	NA
+"740"	"ExacTagThiol"	"ExacTag Thiol label mass for 2-4-7-10 plex"	NA	NA	NA
+"741"	"ExacTagAmine"	"ExacTag Amine label mass for 2-4-7-10 plex"	NA	NA	NA
+"743"	"4-ONE+Delta:H(-2)O(-1)"	"Dehydrated 4-Oxononenal Michael adduct"	NA	NA	NA
+"744"	"NO_SMX_SEMD"	"Nitroso Sulfamethoxazole Sulphenamide thiol adduct"	NA	NA	NA
+"745"	"NO_SMX_SMCT"	"Nitroso Sulfamethoxazole semimercaptal thiol adduct"	NA	NA	NA
+"746"	"NO_SMX_SIMD"	"Nitroso Sulfamethoxazole Sulfinamide thiol adduct"	NA	NA	NA
+"747"	"Malonyl"	"Malonylation of C and S residues"	NA	NA	NA
+"748"	"3sulfo"	"derivatization by N-term modification using 3-Sulfobenzoic succinimidyl ester"	NA	NA	NA
+"750"	"trifluoro"	"trifluoroleucine replacement of leucine"	NA	NA	NA
+"751"	"TNBS"	"tri nitro benzene"	NA	NA	NA
+"762"	"IDEnT"	"Isotope Distribution Encoded Tag"	NA	NA	NA
+"763"	"DTT_ST:2H(6)"	"Isotopically labeled Dithiothreitol (DTT) modification of serines or threonines"	NA	NA	NA
+"764"	"DTT_C:2H(6)"	"Isotopically labeled Dithiothreitol (DTT) modification of cysteines"	NA	NA	NA
+"765"	"Met-loss"	"Removal of initiator methionine from protein N-terminus"	NA	NA	NA
+"766"	"Met-loss+Acetyl"	"Removal of initiator methionine from protein N-terminus, then acetylation of the new N-terminus"	NA	NA	NA
+"767"	"Menadione-HQ"	"Menadione hydroquinone derivative"	NA	NA	NA
+"768"	"Methyl+Acetyl:2H(3)"	"Mono-methylated lysine labelled with Acetyl_heavy"	NA	NA	NA
+"771"	"lapachenole"	"lapachenole photochemically added to cysteine"	NA	NA	NA
+"772"	"Label:13C(5)"	"13C(5) Silac label"	"UNIMOD:772"	"Proline 13C(5)"	NA
+"773"	"maleimide"	"maleimide"	NA	NA	NA
+"774"	"Biotin-phenacyl"	"Alkylation by biotinylated form of phenacyl bromide"	NA	NA	NA
+"775"	"Carboxymethyl:13C(2)"	"Iodoacetic acid derivative w/ 13C label"	NA	NA	NA
+"776"	"NEM:2H(5)"	"D5 N-ethylmaleimide on cysteines"	NA	NA	NA
+"792"	"AEC-MAEC:2H(4)"	"deuterium cysteamine modification to S or T"	NA	NA	NA
+"793"	"Hex1HexNAc1"	"Hex1HexNAc1"	"UNIMOD:793"	"Hex(1)NAc(1) of S"	"S"
+"793"	"Hex1HexNAc1"	"Hex1HexNAc1"	"UNIMOD:793"	"Hex(1)NAc(1) of T"	"T"
+"799"	"Label:13C(6)+GlyGly"	"13C6 labeled ubiquitinylation residue"	NA	NA	NA
+"8"	"ICAT-G"	"Gygi ICAT(TM) d0"	NA	NA	NA
+"800"	"PentylamineBiotin"	"Used for labeling glutamine-donor substrate of transglutaminase"	NA	NA	NA
+"801"	"Pentylamine"	"Labeling transglutaminase substrate on glutamine side chain"	NA	NA	NA
+"811"	"Biotin-PEO4-hydrazide"	"Pierce EZ link biotin hydrazide prod no. 21360"	NA	NA	NA
+"821"	"Cy3b-maleimide"	"fluorescent dye that labels cysteines"	NA	NA	NA
+"822"	"Gly-loss+Amide"	"Enzymatic glycine removal leaving an amidated C-terminus"	NA	NA	NA
+"824"	"BMOE"	"Addition of BMOE crosslinker"	NA	NA	NA
+"825"	"DFDNB"	"Addition of DFDNB crosslinker"	NA	NA	NA
+"827"	"TMPP-Ac"	"tris(2,4,6-trimethoxyphenyl)phosphonium acetic acid N-hydroxysuccinimide ester derivative"	NA	NA	NA
+"830"	"Dihydroxyimidazolidine"	"Dihydroxy methylglyoxal adduct"	NA	NA	NA
+"834"	"Label:2H(4)+Acetyl"	"Acetyl 4,4,5,5-D4 Lysine"	NA	NA	NA
+"835"	"Label:13C(6)+Acetyl"	"Acetyl 13C(6) Silac label"	NA	NA	NA
+"836"	"Label:13C(6)15N(2)+Acetyl"	"Acetyl_13C(6) 15N(2) Silac label"	NA	NA	NA
+"837"	"Arg->Npo"	"Arginine replacement by Nitropyrimidyl ornithine"	NA	NA	NA
+"846"	"EQIGG"	"Sumo mutant Smt3-WT tail following trypsin digestion"	NA	NA	NA
+"848"	"Arg2PG"	"Adduct of phenylglyoxal with Arg"	NA	NA	NA
+"849"	"cGMP"	"S-guanylation"	NA	NA	NA
+"851"	"cGMP+RMP-loss"	"S-guanylation-2"	NA	NA	NA
+"853"	"Label:2H(4)+GlyGly"	"Ubiquitination 2H4 lysine"	NA	NA	NA
+"854"	"Label:13C(8)15N(2)"	"13C(8) 15N(2) Silac label"	NA	NA	NA
+"859"	"MG-H1"	"Methylglyoxal-derived hydroimidazolone"	NA	NA	NA
+"860"	"G-H1"	"Glyoxal-derived hydroimiadazolone"	NA	NA	NA
+"861"	"ZGB"	"NHS ester linked Green Fluorescent Bodipy Dye"	NA	NA	NA
+"862"	"Label:13C(1)2H(3)"	"SILAC"	NA	NA	NA
+"864"	"Label:13C(6)15N(2)+GlyGly"	"13C(6) 15N(2) Lysine glygly"	NA	NA	NA
+"866"	"ICPL:13C(6)2H(4)"	"Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, +10 Da form"	"UNIMOD:866"	"ICPL10 of peptide N-term"	"peptide N-term"
+"866"	"ICPL:13C(6)2H(4)"	"Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, +10 Da form"	"UNIMOD:866"	"ICPL10 of K"	"K"
+"876"	"QEQTGG"	"SUMOylation by SUMO-1"	NA	NA	NA
+"877"	"QQQTGG"	"SUMOylation by SUMO-2/3"	NA	NA	NA
+"878"	"Bodipy"	"Bodipy modifications onto cysteine"	NA	NA	NA
+"884"	"ChromoBiotin"	"EZ-Link NHS-Chromogenic Biotin"	NA	NA	NA
+"885"	"Label:13C(1)2H(3)+Oxidation"	"Oxidised methionine 13C(1)2H(3) SILAC label"	NA	NA	NA
+"886"	"HydroxymethylOP"	"2-ammonio-6-[4-(hydroxymethyl)-3-oxidopyridinium-1-yl]- hexanoate"	NA	NA	NA
+"887"	"MDCC"	"covalent linkage of maleimidyl coumarin probe (Molecular Probes D-10253)"	NA	NA	NA
+"888"	"mTRAQ"	"mTRAQ light"	"UNIMOD:888"	"mTRAQ of peptide N-term light"	"peptide N-term light"
+"888"	"mTRAQ"	"mTRAQ light"	"UNIMOD:888"	"mTRAQ of K light"	"K light"
+"889"	"mTRAQ:13C(3)15N(1)"	"mTRAQ heavy"	"UNIMOD:889"	"mTRAQ of peptide N-term 13C(3) 15N"	"peptide N-term 13C(3) 15N"
+"889"	"mTRAQ:13C(3)15N(1)"	"mTRAQ heavy"	"UNIMOD:889"	"mTRAQ of K 13C(3) 15N"	"K 13C(3) 15N"
+"89"	"Iminobiotin"	"Iminobiotinylation"	NA	NA	NA
+"890"	"DyLight-maleimide"	"Thiol-reactive dye for fluorescence labelling of proteins"	NA	NA	NA
+"891"	"Methyl-PEO12-Maleimide"	"Methyl-PEO12-Maleimide"	NA	NA	NA
+"893"	"CarbamidomethylDTT"	"Carbamidomethylated DTT modification of cysteine"	NA	NA	NA
+"894"	"CarboxymethylDTT"	"Carboxymethylated DTT modification of cysteine"	NA	NA	NA
+"895"	"Biotin-PEG-PRA"	"Biotin polyethyleneoxide (n=3) alkyne"	NA	NA	NA
+"896"	"Met->Aha"	"Methionine replacement by azido homoalanine"	NA	NA	NA
+"897"	"Label:15N(4)"	"SILAC 15N(4)"	NA	NA	NA
+"898"	"pyrophospho"	"pyrophosphorylation of Ser/Thr"	NA	NA	NA
+"899"	"Met->Hpg"	"methionine replacement by homopropargylglycine"	NA	NA	NA
+"9"	"ICAT-G:2H(8)"	"Gygi ICAT(TM) d8"	NA	NA	NA
+"90"	"ESP"	"ESP-Tag light d0"	NA	NA	NA
+"901"	"4AcAllylGal"	"2,3,4,6-tetra-O-Acetyl-1-allyl-α-D-galactopyranoside modification of cysteine"	NA	NA	NA
+"902"	"DimethylArsino"	"Reaction with dimethylarsinous (AsIII) acid"	NA	NA	NA
+"903"	"Lys->CamCys"	"Lys->Cys substitution and carbamidomethylation"	NA	NA	NA
+"904"	"Phe->CamCys"	"Phe->Cys substitution and carbamidomethylation"	NA	NA	NA
+"905"	"Leu->MetOx"	"Leu->Met substitution and sulfoxidation"	NA	NA	NA
+"906"	"Lys->MetOx"	"Lys->Met substitution and sulfoxidation"	NA	NA	NA
+"907"	"Galactosyl"	"Galactosyl hydroxylysine"	NA	NA	NA
+"908"	"SMCC-maleimide"	"Modified SMCC maleimide with 3-(dimethylamino)-1-propylamine"	NA	NA	NA
+"91"	"ESP:2H(10)"	"ESP-Tag heavy d10"	NA	NA	NA
+"910"	"Bacillosamine"	"2,4-diacetamido-2,4,6-trideoxyglucopyranose"	NA	NA	NA
+"911"	"MTSL"	"Cys modification by (1-oxyl-2,2,5,5-tetramethyl-3-pyrroline-3-methyl)methanesulfonate (MTSL)"	NA	NA	NA
+"912"	"HNE-BAHAH"	"4-hydroxy-2-nonenal and biotinamidohexanoic acid hydrazide, reduced"	NA	NA	NA
+"914"	"Methylmalonylation"	"Methylmalonylation on Serine"	NA	NA	NA
+"915"	"Ethoxyformyl"	"Ethoxyformylation"	NA	NA	NA
+"92"	"NHS-LC-Biotin"	"NHS-LC-Biotin"	NA	NA	NA
+"923"	"Label:13C(4)15N(2)+GlyGly"	"13C(4) 15N(2) Lysine glygly"	NA	NA	NA
+"926"	"ethylamino"	"ethyl amino"	NA	NA	NA
+"928"	"MercaptoEthanol"	"2-OH-ethyl thio-Ser"	NA	NA	NA
+"93"	"EDT-maleimide-PEO-biotin"	"EDT-maleimide-PEO-biotin"	NA	NA	NA
+"931"	"EthylAmide"	"solvolysis of amide group on Asn or Gln by ethanol"	NA	NA	NA
+"932"	"VFQQQTGG"	"SUMOylation by SUMO-2/3 (formic acid cleavage)"	NA	NA	NA
+"933"	"VIEVYQEQTGG"	"SUMOylation by SUMO-1 (formic acid cleavage)"	NA	NA	NA
+"934"	"GalNAzBiotin"	"Photocleavable Biotin + GalNAz on O-GlcNAc"	NA	NA	NA
+"935"	"Atto495Maleimide"	"High molecular absorption maleimide label for proteins"	NA	NA	NA
+"936"	"Chlorination"	"Chlorination of tyrosine residues"	NA	NA	NA
+"937"	"dichlorination"	"Dichlorination of tyrosine residues"	NA	NA	NA
+"938"	"AROD"	"Cysteine modifier"	NA	NA	NA
+"939"	"Cys->methylaminoAla"	"carbamidomethylated Cys that undergoes beta-elimination and Michael addition of methylamine"	NA	NA	NA
+"94"	"IMID"	"IMID d0"	NA	NA	NA
+"940"	"Cys->ethylaminoAla"	"Carbamidomethylated Cys that undergoes beta-elimination and Michael addition of ethylamine"	NA	NA	NA
+"941"	"DNPS"	"2,4-Dinitrobenzenesulfenyl"	NA	NA	NA
+"942"	"SulfoGMBS"	"High molecular absorption label for proteins"	NA	NA	NA
+"943"	"DimethylamineGMBS"	"Modified GMBS X linker for proteins"	NA	NA	NA
+"944"	"Label:15N(2)2H(9)"	"SILAC label"	NA	NA	NA
+"946"	"LG-anhydrolactam"	"Levuglandinyl-lysine anhydrolactam adduct"	NA	NA	NA
+"947"	"LG-pyrrole"	"Levuglandinyl-lysine pyrrole adduct"	NA	NA	NA
+"948"	"LG-anhyropyrrole"	"Levuglandinyl-lysine anhyropyrrole adduct"	NA	NA	NA
+"949"	"3-deoxyglucosone"	"Condensation product of 3-deoxyglucosone"	NA	NA	NA
+"95"	"IMID:2H(4)"	"IMID d4"	NA	NA	NA
+"950"	"Cation:Li"	"Replacement of proton by lithium"	NA	NA	NA
+"951"	"Cation:Ca[II]"	"Replacement of 2 protons by calcium"	NA	NA	NA
+"952"	"Cation:Fe[II]"	"Replacement of 2 protons by iron"	NA	NA	NA
+"953"	"Cation:Ni[II]"	"Replacement of 2 protons by nickel"	NA	NA	NA
+"954"	"Cation:Zn[II]"	"Replacement of 2 protons by zinc"	NA	NA	NA
+"955"	"Cation:Ag"	"Replacement of proton by silver"	NA	NA	NA
+"956"	"Cation:Mg[II]"	"Replacement of 2 protons by magnesium"	NA	NA	NA
+"957"	"2-succinyl"	"S-(2-succinyl) cysteine"	NA	NA	NA
+"958"	"Propargylamine"	"propargylamine"	NA	NA	NA
+"959"	"Phosphopropargyl"	"phospho-propargylamine"	NA	NA	NA
+"960"	"SUMO2135"	"SUMOylation by SUMO-1 after tryptic cleavage"	NA	NA	NA
+"961"	"SUMO3549"	"SUMOylation by SUMO-2/3 after tryptic cleavage"	NA	NA	NA
+"967"	"thioacylpropionamide"	"membrane protein extraction"	NA	NA	NA
+"968"	"SerTyr"	"Serine-Tyrosine dipeptide"	NA	NA	NA
+"97"	"Propionamide:2H(3)"	"Acrylamide d3"	NA	NA	NA
+"970"	"Thiocarbamidomethylation"	"beta-thiocarbamidomethylation"	NA	NA	NA
+"971"	"maleimide-3-saccharide"	"maleimide-3-saccharide"	NA	NA	NA
+"972"	"maleimide-5-saccharide"	"maleimide-5-saccharide"	NA	NA	NA
+"973"	"Puromycin"	"Puromycin"	NA	NA	NA
+"974"	"Xlink:novobiocin"	"Experimental novobiocin crosslinking reagent"	NA	NA	NA

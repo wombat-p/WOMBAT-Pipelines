@@ -20,7 +20,7 @@ process SDRFMERGE {
 
     output:
       path "sdrf_local.tsv"         , emit: sdrf_local
-      path "params.yml"          , emit: parameters_out
+      path "params_out.yml"          , emit: parameters_out
       //value parameters_out, emit: parameters
 
 
