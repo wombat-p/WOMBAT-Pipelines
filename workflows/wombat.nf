@@ -94,6 +94,7 @@ workflow WOMBAT {
     // Reading parameter from created parameter yaml file
     // 
     ch_parameters = SDRFMERGE.out.parameters_out.map{ new Yaml().load(it)["params"] }
+    ch_parameters.view()
 
 
 //    CUSTOM_DUMPSOFTWAREVERSIONS (
