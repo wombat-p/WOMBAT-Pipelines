@@ -118,7 +118,7 @@ workflow WOMBAT {
     //
     // Proline-based
     if (params.workflow.contains("all") || params.workflow.contains("proline")) {
-        PROLINE (ch_fasta, PREPARE_FILES.out.raws, ch_parameters, PREPARE_FILES.out.exp_design, ch_ptm_mapping)
+        PROLINE (ch_fasta, PREPARE_FILES.out.raws, ch_parameters.flatten(), PREPARE_FILES.out.exp_design, ch_ptm_mapping)
 
     //
     // MODULE: calculate benchmarks
