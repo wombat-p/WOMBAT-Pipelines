@@ -94,7 +94,6 @@ workflow WOMBAT {
     // Reading parameter from created parameter yaml file
     // 
     ch_parameters = SDRFMERGE.out.parameters_out.map{ new Yaml().load(it)["params"] }
-    ch_parameters.view()
 
 
 //    CUSTOM_DUMPSOFTWAREVERSIONS (
@@ -119,7 +118,7 @@ workflow WOMBAT {
     //
     // Proline-based
     if (params.workflow.contains("all") || params.workflow.contains("proline")) {
-        PROLINE (ch_fasta, PREPARE_FILES.out.raws, ch_parameters.flatten(), PREPARE_FILES.out.exp_design, ch_ptm_mapping)
+        PROLINE (ch_fasta, PREPARE_FILES.out.raws.flatten(), ch_parameters, PREPARE_FILES.out.exp_design, ch_ptm_mapping)
 
     //
     // MODULE: calculate benchmarks
