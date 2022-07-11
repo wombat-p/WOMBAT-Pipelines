@@ -1,0 +1,116 @@
+import-result-files-config {
+  decoy_regex = ".+REVERSED.+"
+  peaklist_software_id = 10
+}
+
+validate-dataset-config {
+  dataset_name = "My dataset"
+  merge_result_sets = false
+  
+  validation_config = {
+  
+    pep_match_filters = [{
+      parameter = "PRETTY_RANK"
+      threshold = 1
+    }]
+    
+    pep_match_validator_config = {
+      parameter = "SCORE"
+      PEPFDR
+    }
+    
+    pep_set_score_type = "mascot:standard score"
+    
+    prot_set_validator_config = {
+      validation_method = "PROTEIN_SET_RULES"
+      parameter = "SCORE"
+      PROTFDR
+    }
+    
+    prot_set_filters = [{
+      parameter = "SPECIFIC_PEP"
+      NUMPEPS
+    }]
+  }
+
+}
+
+quantify-dataset-config {
+  dataset_name = "my dataset"
+  dataset_description = ""
+  quant_method_name = "label_free"
+  
+  quantitation_config = {
+  
+    config_version = "2.0"
+    detection_method_name = "DETECT_PEAKELS"
+    use_last_peakel_detection = false
+    
+    extraction_params = {
+      moz_tol = 5
+      moz_tol_unit = ppm
+    }
+    
+    detection_params = {
+      min_peakel_duration = 15
+      start_from_validated_peptides = false
+      psm_matching_params = {
+        moz_tol = 5
+        moz_tol_unit = ppm
+      }
+      isotope_matching_params : {
+        moz_tol = 5
+        moz_tol_unit = ppm
+      }
+    }
+      
+    clustering_params = {
+      moz_tol = 5
+      moz_tol_unit = ppm
+      time_tol = 15
+      time_computation = "MOST_INTENSE"
+      intensity_computation = "MOST_INTENSE"
+    }
+    
+    alignment_config = {
+      method_name = "ITERATIVE"
+      method_params = {
+        mass_interval = 20000
+        max_iterations = 3
+      }
+      
+      ignore_errors = false
+      
+      ft_mapping_method_name = "PEPTIDE_IDENTITY"
+      ft_mapping_method_params = {
+        moz_tol = 5
+        moz_tol_unit = ppm
+        time_tol = 600
+      }
+      
+      smoothing_method_name = "LANDMARK_RANGE"
+      smoothing_method_params = {
+        window_size = 50
+        window_overlap = 50
+        min_window_landmarks = 50
+      }
+    }
+    
+    cross_assignment_config = {
+      method_name = "BETWEEN_ALL_RUNS"
+      ft_mapping_params = {
+        moz_tol = 5
+        moz_tol_unit = ppm
+        time_tol = 60
+      }
+      restrain_to_reliable_features = false
+      ft_filter = {
+        name = INTENSITY
+        operator = GT
+        value = 0
+      }
+    }
+    
+  }
+
+}

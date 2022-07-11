@@ -35,7 +35,7 @@ ch_multiqc_config        = file("$projectDir/assets/multiqc_config.yml", checkIf
 ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(params.multiqc_config) : Channel.empty()
 
 ch_sdrfmapping = file("https://raw.githubusercontent.com/bigbio/proteomics-metadata-standard/master/sdrf-proteomics/assets/param2sdrf.yml", checkIfExists: true)
-
+ch_ptm_mapping = Channel.fromPath("assets/unimod2searchgui_mapping.tsv").splitCsv(header: true, sep:"\t", quote:'\"').map{ row -> [("$row.unimod_title of $row.residue".toString()): row.searchgui_name] }
 
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -118,12 +118,12 @@ workflow WOMBAT {
     //
     // Proline-based
     if (params.workflow.contains("all") || params.workflow.contains("proline")) {
-        PROLINE (ch_fasta, ch_raws, ch_parameters, PREPARE_FILES.out.exp_design)
+        PROLINE (ch_fasta, ch_raws, ch_parameters, PREPARE_FILES.out.exp_design, ch_ptm_mapping)
 
     //
     // MODULE: calculate benchmarks
     //
-    //CALCBENCHMARKS ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), PROLINE.out[0], PROLINE.out[1], PROLINE.out[2], ch_fasta )
+    CALCBENCHMARKS ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), PROLINE.out[0], PROLINE.out[1], PROLINE.out[2], ch_fasta )
     }
 
 

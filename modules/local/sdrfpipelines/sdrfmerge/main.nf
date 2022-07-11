@@ -14,14 +14,13 @@ process SDRFMERGE {
 
     input:
       path sdrf
-      file parameters
+      path parameters
       path map
      
 
     output:
       path "sdrf_local.tsv"         , emit: sdrf_local
       path "params_out.yml"          , emit: parameters_out
-      //value parameters_out, emit: parameters
 
 
     script:
@@ -47,6 +46,5 @@ process SDRFMERGE {
     # TODO change to package when available
     python $projectDir/scripts/add_data_analysis_param.py
     python $projectDir/scripts/sdrf2params.py
-    echo "preliminary version" > sdrf-merge.version.txt
     """
 }

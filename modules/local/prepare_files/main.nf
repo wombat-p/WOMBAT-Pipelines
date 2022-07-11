@@ -19,7 +19,7 @@ process PREPARE_FILES {
      
 
     output:
-      path "sdrf_local.tsv" , includeInputs:true         , emit: sdrf_local
+      path "sdrf_temp.tsv" , includeInputs:true         , emit: sdrf_local
       path "exp_design.txt" , includeInputs:true	    , emit: exp_design
       path "params.yml" , includeInputs:true		    , emit: params
       path "*.version.txt" , includeInputs:true          , emit: version
@@ -81,5 +81,6 @@ process PREPARE_FILES {
         cp "${parameters}" params.yml
     fi
     echo "See workflow version" > prepare_files.version.txt
+    cp sdrf_local.tsv sdrf_temp.tsv
     """
 }

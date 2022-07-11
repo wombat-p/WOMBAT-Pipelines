@@ -1,4 +1,4 @@
-"Unimod ID"	"Unimod title"	"Unimod full name"	"unimod entry"	"searchgui name"	"residue"
+unimod_id	unimod_title	unimod_full_name	unimod_entry	searchgui_name	residue
 "1"	"Acetyl"	"Acetylation"	"UNIMOD:1"	"Acetylation of K"	"K"
 "1"	"Acetyl"	"Acetylation"	"UNIMOD:1"	"Acetylation of protein N-term"	"protein N-term"
 "1"	"Acetyl"	"Acetylation"	"UNIMOD:1"	"Acetylation of peptide N-term"	"peptide N-term"

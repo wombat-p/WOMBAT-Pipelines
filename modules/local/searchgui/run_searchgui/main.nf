@@ -1,24 +1,41 @@
-process CREATE_DECOY_DATABASE {
-  label 'process_low'
-  label 'process_single_thread'
-    conda (params.enable_conda ? "bioconda::searchgui-4.0.41" : null)
-    if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
+process RUN_SEARCHGUI {
+label 'process_high'
+
+conda (params.enable_conda ? "bioconda::searchgui-4.0.41" : null)
+if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "docker://quay.io/biocontainers/searchgui:4.0.41--h779adbc_1"
-    } else {
+} else {
         container "quay.io/biocontainers/searchgui:4.0.41--h779adbc_1"
-    }
+}
   
-  publishDir "${params.outdir}/decoy_database", mode:'copy'
+publishDir "${params.outdir}/searchgui", mode:'copy', pattern: '*.zip'
   
   input:
-  path fasta
+  path mgffile
+  path paramfile
+  path fasta_decoy
   
   output:
-  path "${fasta.baseName}_concatenated_target_decoy.fasta" , emit: fasta_with_decoy
-  
+  tuple path("${mgffile.baseName}.zip"), path(mgffile), emit: searchfiles
   
   script:
+
+  def engine = [:]
+  for (i in ["xtandem", "msgf", "ms-amanda", "tide", "comet", "myrimatch", "meta_morpheus", "andromeda"]) {
+    t_engine = params.proline_engine.contains(i) ? 1 : 0
+    engine.put(i, t_engine)
+  }
   """
-  searchgui eu.isas.searchgui.cmd.FastaCLI -in ${fasta} -decoy
+  # needed for Myrimatch, see https://github.com/compomics/searchgui/issues/245
+        LANG=/usr/lib/locale/en_US
+        export LC_ALL=C; unset LANGUAGE
+  mkdir tmp
+  mkdir log
+  searchgui eu.isas.searchgui.cmd.PathSettingsCLI -temp_folder ./tmp -log ./log
+  searchgui eu.isas.searchgui.cmd.SearchCLI -spectrum_files ./  -output_folder ./ -fasta_file "./${fasta_decoy}"  -id_params "./${paramfile}" -threads ${task.cpus} \\
+      -xtandem ${engine["xtandem"]} -msgf ${engine["msgf"]} -comet ${engine["comet"]} -ms_amanda ${engine["ms-amanda"]} -myrimatch ${engine["myrimatch"]} \\
+      -tide ${engine["tide"]} -meta_morpheus ${engine["meta_morpheus"]} -andromeda ${engine["andromeda"]}
+  mv searchgui_out.zip ${mgffile.baseName}.zip
   """    
-}    
+  
+  }    
