@@ -42,8 +42,9 @@ workflow PROLINE {
     CONVERT_POLYSTEST ( EXP_DESIGN_PROLINE.out.exp_design, POLYSTEST.out.polystest_pep,  POLYSTEST.out.polystest_prot )
 
     emit:
-    POLYSTEST.out.polystest_prot
-    POLYSTEST.out.polystest_pep
     CONVERT_POLYSTEST.out.stdpepquant
     CONVERT_POLYSTEST.out.stdprotquant
+    CONVERT_POLYSTEST.out.exp_design
+    POLYSTEST.out.polystest_prot
+    POLYSTEST.out.polystest_pep
 }

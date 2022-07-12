@@ -5,14 +5,15 @@ library(stringi)
 peptides <- read.csv("polystest_pep_res.csv")
 proteins <- read.csv("polystest_prot_res.csv")
 exp_design <- read.csv("exp_design.txt", sep="\t")
+exp_design[,2] <- make.names(exp_design[,2])
 colnames(exp_design)[1:2] <- c("raw_file", "exp_condition")
 write.table(exp_design, "exp_design.txt", sep="\t", row.names=F)
 
 # Converting column names
 colnames(peptides) <- sub("^psm_count_", "number_of_psms_", colnames(peptides))
 colnames(peptides) <- sub("^log\\.ratios\\.", "log_ratios_", colnames(peptides))
-for (s in unique(exp_design$exp_condition)) colnames(peptides) <- sub(paste0("^X",s,"\\."), paste0("abundance_",s,"_"), colnames(peptides))
-colnames(peptides) <- sub("^FDR\\.PolySTest\\.X", "differential_abundance_qvalue_", colnames(peptides))
+for (s in unique(exp_design$exp_condition)) colnames(peptides) <- sub(paste0("^",s,"\\."), paste0("abundance_",s,"_"), colnames(peptides))
+colnames(peptides) <- sub("^FDR\\.PolySTest\\.", "differential_abundance_qvalue_", colnames(peptides))
 
 #Creating modified sequences
 modified_peptides <- strsplit(peptides$modifications, "; ")
@@ -39,6 +40,7 @@ for (i in 1:nrow(peptides)) {
   }
 }
 peptides$modified_sequence <- modified_sequence
+
 stand_peps <- data.frame("modified_peptide"=peptides$modified_sequence, protein_group=peptides$samesets_accessions, 
                          peptides[, grep("^number_of_psms", colnames(peptides))],
                          2^peptides[, grep("^abundance", colnames(peptides))],
@@ -55,7 +57,7 @@ colnames(proteins)
 # Converting column names
 colnames(proteins) <- sub("^peptides_count_", "number_of_peptides_", colnames(proteins))
 colnames(proteins) <- sub("^log\\.ratios\\.", "log_ratios_", colnames(proteins))
-for (s in unique(exp_design$exp_condition)) colnames(proteins) <- sub(paste0("^X",s,"\\."), paste0("abundance_",s,"_"), colnames(proteins))
+for (s in unique(exp_design$exp_condition)) colnames(proteins) <- sub(paste0("^",s,"\\."), paste0("abundance_",s,"_"), colnames(proteins))
 colnames(proteins) <- sub("^FDR\\.PolySTest\\.X", "differential_abundance_qvalue_", colnames(proteins))
 stand_prots <- data.frame(protein_group=proteins$samesets_accessions, 
                           proteins[, grep("^number_of_peptides", colnames(proteins))],
