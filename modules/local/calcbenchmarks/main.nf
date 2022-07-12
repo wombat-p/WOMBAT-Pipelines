@@ -22,7 +22,7 @@ import groovy.json.JsonOutput
  
   output:
 //   path "params.json",   emit: parameters
-   path "benchmarks.json",  emit:  benchmarks
+   path "benchmarks*.json",  emit:  benchmarks
   
   script:
   """
