@@ -35,8 +35,6 @@ import groovy.json.JsonOutput
   Rscript $baseDir/scripts/CalcBenchmarks.R
   mv benchmarks.json benchmarks_"${workflow}".json
   """
-  }
-  """
 }
 
 
