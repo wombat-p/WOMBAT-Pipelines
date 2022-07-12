@@ -33,7 +33,7 @@ import groovy.json.JsonOutput
     cp "${exp_design_file}" exp_design.txt
   fi
   Rscript $baseDir/scripts/CalcBenchmarks.R
-  mv benchmarks.json benchmarks_"${workflow}".json
+  mv benchmarks.json benchmarks_${workflow}.json
   """
 }
 
