@@ -112,7 +112,7 @@ workflow WOMBAT {
     //
     // MODULE: calculate benchmarks
     //
-    CALCBENCHMARKS ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), MAXQUANT.out[0], MAXQUANT.out[1], MAXQUANT.out[2], ch_fasta )
+    CALCBENCHMARKS ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), MAXQUANT.out[0], MAXQUANT.out[1], MAXQUANT.out[2], ch_fasta, channel.value("maxquant") )
     }
 
     //
@@ -125,7 +125,8 @@ workflow WOMBAT {
     //
     // MODULE: calculate benchmarks
     //
-    CALCBENCHMARKS ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), PROLINE.out[0], PROLINE.out[1], PROLINE.out[2], ch_fasta )
+    CALCBENCHMARKS ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), PROLINE.out[0], PROLINE.out[1], PROLINE.out[2], ch_fasta, Channel.value("proline") )
+
     }
 
 

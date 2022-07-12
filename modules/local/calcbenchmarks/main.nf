@@ -1,9 +1,9 @@
 import groovy.json.JsonOutput
 
-process CALCBENCHMARKS {
+  process CALCBENCHMARKS {
     label 'process_low'
     label 'process_single_thread'
-    publishDir "${params.outdir}/${params.workflow}", mode:'copy'
+    publishDir "${params.outdir}", mode:'copy'
     conda (params.enable_conda ? "conda-forge::notyetavailable" : null)
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "docker://wombatp/maxquant-pipeline:dev"
@@ -18,6 +18,7 @@ process CALCBENCHMARKS {
         path std_prot_file
         path std_pep_file
         path fasta_file
+        val workflow
  
   output:
 //   path "params.json",   emit: parameters
@@ -32,7 +33,9 @@ process CALCBENCHMARKS {
     cp "${exp_design_file}" exp_design.txt
   fi
   Rscript $baseDir/scripts/CalcBenchmarks.R
-
+  mv benchmarks.json benchmarks_"${workflow}".json
+  """
+  }
   """
 }
 
