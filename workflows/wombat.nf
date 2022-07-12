@@ -107,7 +107,7 @@ workflow WOMBAT {
     //
     // Maxquant-based
     if (params.workflow.contains("all") || params.workflow.contains("maxquant")) {
-       MAXQUANT (SDRFMERGE.out.params, ch_fasta, PREPARE_FILES.out.raws)
+       MAXQUANT (SDRFMERGE.out.sdrf_local, ch_fasta, PREPARE_FILES.out.raws)
 
     //
     // MODULE: calculate benchmarks

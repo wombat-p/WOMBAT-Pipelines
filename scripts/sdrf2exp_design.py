@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import pandas as pd
+import os
 
 sdrf = pd.read_csv("sdrf_local.tsv", sep='\t')
 sdrf = sdrf.astype(str)
@@ -15,7 +16,7 @@ for col in sdrf.columns:
 changing_columns = [x for x in changing_columns if "factor" in x  ]
 
 sdrf_out = pd.DataFrame()
-sdrf_out["raw_file"] = sdrf["comment[file uri]"]
+sdrf_out["raw_file"] = [os.path.basename() for item in sdrf["comment[file uri]"]]
 if (len(changing_columns) > 0):
 	sdrf_out["exp_conditions"] = sdrf[changing_columns].agg('_'.join, axis=1)
 else: 
