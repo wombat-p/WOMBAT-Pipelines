@@ -25,8 +25,8 @@ process CONFIG_PROLINE {
   precursor = parameters.precursor_mass_tolerance.split(' ')
   prec_tol = precursor[0]
   prec_ppm = precursor[1]
-  protein_fdr = parameters.fdr_protein * 100
-  peptide_fdr = parameters.fdr_peptide * 100
+  protein_fdr = parameters.ident_fdr_protein * 100
+  peptide_fdr = parameters.ident_fdr_peptide * 100
   """
   mkdir ./searchgui_results
   for file in *.zip

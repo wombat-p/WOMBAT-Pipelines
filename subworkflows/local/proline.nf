@@ -30,6 +30,7 @@ workflow PROLINE {
     main:
     RAW2MZDB ( raws )
     MZDB2MGF ( RAW2MZDB.out )
+
     CREATE_DECOY_DATABASE ( fasta , parameters["add_decoys"] )
     PREPARE_SEARCHGUI ( parameters, ptm_mapping.collect() )
     RUN_SEARCHGUI ( MZDB2MGF.out, PREPARE_SEARCHGUI.out,  CREATE_DECOY_DATABASE.out.ifEmpty(fasta) )

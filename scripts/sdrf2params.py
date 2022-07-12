@@ -122,9 +122,10 @@ for m in mod_columns.columns:
 out_yaml["fixed_mods"] = ",".join(fixed_mods)
 out_yaml["variable_mods"] = ",".join(variable_mods)
 
-
+out_all = dict()
+out_all["params"] = out_yaml
 
 print("--- Writing sdrf file into params.yml ---")
 with open('params_out.yml', 'w') as outfile:
-    yaml.dump(out_yaml, outfile, default_flow_style=False)
+    yaml.dump(out_all, outfile, default_flow_style=False)
     

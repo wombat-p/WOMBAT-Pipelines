@@ -35,11 +35,11 @@ process PREPARE_SEARCHGUI {
   touch /usr/local/share/searchgui-4.0.41-1/resources/conf/paths.txt
   searchgui eu.isas.searchgui.cmd.PathSettingsCLI -temp_folder ./tmp -log ./log
   searchgui eu.isas.searchgui.cmd.IdentificationParametersCLI -out searchgui \\
-    -frag_tol ${frag_tol} -frag_ppm ${frag_ppm} -prec_tol ${prec_tol} -prec_ppm ${prec_ppm} -enzyme "${parameters["enzyme"]}" -mc ${parameters["miscleavages"]} \\
+    -frag_tol ${frag_tol} -frag_ppm ${frag_ppm} -prec_tol ${prec_tol} -prec_ppm ${prec_ppm} -enzyme "${parameters["enzyme"]}" -mc ${parameters["allowed_miscleavages"]} \\
     -max_isotope ${parameters["isotope_error_range"]} \\
     -fixed_mods "${fixed_mods}" -variable_mods "${var_mods}"\\
-    -fi "${parameters["fions"]}" -ri "${parameters["rions"]}" -xtandem_quick_acetyl 0 -xtandem_quick_pyro 0 -peptide_fdr ${parameters["fdr_peptide"]}\\
-    -protein_fdr ${parameters["fdr_protein"]} -psm_fdr ${parameters["fdr_psm"]} \\
+    -fi "${parameters["fions"]}" -ri "${parameters["rions"]}" -xtandem_quick_acetyl 0 -xtandem_quick_pyro 0 -peptide_fdr ${parameters["ident_fdr_peptide"]}\\
+    -protein_fdr ${parameters["ident_fdr_protein"]} -psm_fdr ${parameters["ident_fdr_psm"]} \\
     -myrimatch_num_ptms ${parameters["max_mods"]} -ms_amanda_max_mod ${parameters["max_mods"]} -msgf_num_ptms ${parameters["max_mods"]} -meta_morpheus_max_mods_for_peptide\\
     ${parameters["max_mods"]} -directag_max_var_mods ${parameters["max_mods"]} -comet_num_ptms ${parameters["max_mods"]} \\#-tide_max_ptms ${parameters["max_mods"]}  \\
     -myrimatch_min_pep_length ${parameters["min_peptide_length"]} -myrimatch_max_pep_length ${parameters["max_peptide_length"]} -ms_amanda_min_pep_length ${parameters["min_peptide_length"]} \\

@@ -35,7 +35,8 @@ ch_multiqc_config        = file("$projectDir/assets/multiqc_config.yml", checkIf
 ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(params.multiqc_config) : Channel.empty()
 
 ch_sdrfmapping = file("https://raw.githubusercontent.com/bigbio/proteomics-metadata-standard/master/sdrf-proteomics/assets/param2sdrf.yml", checkIfExists: true)
-ch_ptm_mapping = Channel.fromPath("assets/unimod2searchgui_mapping.tsv").splitCsv(header: true, sep:"\t", quote:'\"')//.map{ row -> [("$row.unimod_title of $row.residue".toString()): row.searchgui_name] }
+ch_ptm_mapping = Channel.fromPath("assets/unimod2searchgui_mapping.tsv").splitCsv(header: true, sep:"\t", quote:'\"')
+                                    .map{ row -> [("$row.unimod_title of $row.residue".toString()): row.searchgui_name] }
 
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -89,6 +90,7 @@ workflow WOMBAT {
     // MODULE: Create sdrf with data analysis parameters
     //
     SDRFMERGE (PREPARE_FILES.out.sdrf_local, PREPARE_FILES.out.params, ch_sdrfmapping)
+
  
     // 
     // Reading parameter from created parameter yaml file
