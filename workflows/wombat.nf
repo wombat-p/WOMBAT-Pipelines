@@ -50,7 +50,7 @@ ch_ptm_mapping = Channel.fromPath("assets/unimod2searchgui_mapping.tsv").splitCs
 //include { TRANSPROTEOMICS } from '../subworkflows/local/transproteomics'
 include { PROLINE } from '../subworkflows/local/proline'
 include { MAXQUANT } from '../subworkflows/local/maxquant'
-//include { COMPOMICS } from '../subworkflows/local/compomics'
+include { COMPOMICS } from '../subworkflows/local/compomics'
 include { PREPARE_FILES } from '../modules/local/prepare_files/main'
 include { CALCBENCHMARKS } from '../modules/local/calcbenchmarks/main'
 include { SDRFMERGE } from '../modules/local/sdrfpipelines/sdrfmerge/main'
@@ -116,7 +116,7 @@ workflow WOMBAT {
     }
 
     //
-    // SUBWORKFLOW 1:
+    // SUBWORKFLOW 2:
     //
     // Proline-based
     if (params.workflow.contains("all") || params.workflow.contains("proline")) {
@@ -128,6 +128,21 @@ workflow WOMBAT {
     CALCBENCHMARKS ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), PROLINE.out[0], PROLINE.out[1], PROLINE.out[2], ch_fasta, Channel.value("proline") )
 
     }
+
+    //
+    // SUBWORKFLOW 3:
+    //
+    // Compomics-based
+    if (params.workflow.contains("all") || params.workflow.contains("compomics")) {
+        COMPOMICS (ch_fasta, PREPARE_FILES.out.raws.flatten(), ch_parameters, PREPARE_FILES.out.exp_design, ch_ptm_mapping)
+
+    //
+    // MODULE: calculate benchmarks
+    //
+    CALCBENCHMARKS ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), COMPOMICS.out[0], COMPOMICS.out[1], COMPOMICS.out[2], ch_fasta, Channel.value("compomics") )
+
+    }
+
 
 
 

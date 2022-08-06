@@ -11,8 +11,8 @@ process NORMALYZERDE {
 
 input:
     path maxquant
-    file exp_file
-    file comp_file
+    path exp_file
+    path comp_file
     val normalization
   
     output:
