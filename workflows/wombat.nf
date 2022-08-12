@@ -37,6 +37,8 @@ ch_multiqc_custom_config = params.multiqc_config ? Channel.fromPath(params.multi
 ch_sdrfmapping = file("https://raw.githubusercontent.com/bigbio/proteomics-metadata-standard/master/sdrf-proteomics/assets/param2sdrf.yml", checkIfExists: true)
 ch_ptm_mapping = Channel.fromPath("assets/unimod2searchgui_mapping.tsv").splitCsv(header: true, sep:"\t", quote:'\"')
                                     .map{ row -> [("$row.unimod_title of $row.residue".toString()): row.searchgui_name] }
+ch_ptm_mapping2 = Channel.fromPath("assets/unimod2searchgui_mapping.tsv").splitCsv(header: true, sep:"\t", quote:'\"')
+                                    .map{ row -> [("$row.unimod_title of $row.residue".toString()): [mass: "$row.MonoMass", residue: "$row.residue"]] }
 
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -51,8 +53,12 @@ ch_ptm_mapping = Channel.fromPath("assets/unimod2searchgui_mapping.tsv").splitCs
 include { PROLINE } from '../subworkflows/local/proline'
 include { MAXQUANT } from '../subworkflows/local/maxquant'
 include { COMPOMICS } from '../subworkflows/local/compomics'
+include { TPP } from '../subworkflows/local/tpp'
 include { PREPARE_FILES } from '../modules/local/prepare_files/main'
-include { CALCBENCHMARKS } from '../modules/local/calcbenchmarks/main'
+include { CALCBENCHMARKS as CALCBENCHMARKS_MQ} from '../modules/local/calcbenchmarks/main'
+include { CALCBENCHMARKS as CALCBENCHMARKS_PROLINE} from '../modules/local/calcbenchmarks/main'
+include { CALCBENCHMARKS as CALCBENCHMARKS_COMPOMICS} from '../modules/local/calcbenchmarks/main'
+include { CALCBENCHMARKS as CALCBENCHMARKS_TPP } from '../modules/local/calcbenchmarks/main'
 include { SDRFMERGE } from '../modules/local/sdrfpipelines/sdrfmerge/main'
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -112,7 +118,7 @@ workflow WOMBAT {
     //
     // MODULE: calculate benchmarks
     //
-    CALCBENCHMARKS ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), MAXQUANT.out[0], MAXQUANT.out[1], MAXQUANT.out[2], ch_fasta, channel.value("maxquant") )
+    CALCBENCHMARKS_MQ ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), MAXQUANT.out[0], MAXQUANT.out[1], MAXQUANT.out[2], ch_fasta, channel.value("maxquant") )
     }
 
     //
@@ -125,7 +131,7 @@ workflow WOMBAT {
     //
     // MODULE: calculate benchmarks
     //
-    CALCBENCHMARKS ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), PROLINE.out[0], PROLINE.out[1], PROLINE.out[2], ch_fasta, Channel.value("proline") )
+    CALCBENCHMARKS_PROLINE ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), PROLINE.out[0], PROLINE.out[1], PROLINE.out[2], ch_fasta, Channel.value("proline") )
 
     }
 
@@ -139,10 +145,23 @@ workflow WOMBAT {
     //
     // MODULE: calculate benchmarks
     //
-    CALCBENCHMARKS ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), COMPOMICS.out[0], COMPOMICS.out[1], COMPOMICS.out[2], ch_fasta, Channel.value("compomics") )
+    CALCBENCHMARKS_COMPOMICS ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), COMPOMICS.out[0], COMPOMICS.out[1], COMPOMICS.out[2], ch_fasta, Channel.value("compomics") )
 
     }
 
+    //
+    // SUBWORKFLOW 4:
+    //
+    // Transproteomic Pipeline-based
+    if (params.workflow.contains("all") || params.workflow.contains("tpp")) {
+        TPP (ch_fasta, PREPARE_FILES.out.raws.flatten(), ch_parameters, PREPARE_FILES.out.exp_design, ch_ptm_mapping2.collect())
+
+    //
+    // MODULE: calculate benchmarks
+    //
+    CALCBENCHMARKS_TPP ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), TPP.out[0], TPP.out[1], TPP.out[2], ch_fasta, Channel.value("tpp") )
+
+    }
 
 
 

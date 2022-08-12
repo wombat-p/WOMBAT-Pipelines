@@ -21,6 +21,7 @@ process SDRFMERGE {
     output:
       path "sdrf_local.tsv"         , emit: sdrf_local
       path "params_out.yml"          , emit: parameters_out
+      path "changed_params.txt"     , emit: changed_params
 
 
     script:
@@ -44,7 +45,7 @@ process SDRFMERGE {
         cp "${map}" params2sdrf.yml
     fi
     # TODO change to package when available
-    python $projectDir/scripts/add_data_analysis_param.py
+    python $projectDir/scripts/add_data_analysis_param.py > changed_params.txt
     python $projectDir/scripts/sdrf2params.py
     """
 }

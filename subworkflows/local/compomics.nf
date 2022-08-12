@@ -34,7 +34,7 @@ workflow COMPOMICS {
     PEPTIDESHAKER_REPORT ( RUN_PEPTIDESHAKER.out )
     FLASHLFQ ( PEPTIDESHAKER_REPORT.out.peptideshaker_tsv_file_filtered.collect(), RAW2MZML.out.collect(), parameters )
     MSQROB ( exp_design, raws.collect(), FLASHLFQ.out.flashlfq_peptides, FLASHLFQ.out.flashlfq_proteins, 
-             PEPTIDESHAKER_REPORT.out.peptideshaker_peptide_file.collect(), PEPTIDESHAKER_REPORT.out.peptideshaker_protein_file.collect() )
+             PEPTIDESHAKER_REPORT.out.peptideshaker_peptide_file.collect(), PEPTIDESHAKER_REPORT.out.peptideshaker_protein_file.collect() , parameters)
 
     emit:
     MSQROB.out.stdpepquant

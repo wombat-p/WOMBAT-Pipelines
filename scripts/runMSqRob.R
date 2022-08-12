@@ -1,5 +1,19 @@
 library(MSnbase)
 library(MSqRob)
+
+# reading cmd arguments
+args <- commandArgs(trailingOnly = TRUE)
+normalization_method <- strsplit(grep('--normalization', args, value = TRUE), split = '=')[[1]][[2]]
+min_peptides <- strsplit(grep('--min_peptides', args, value = TRUE), split = '=')[[1]][[2]]
+if (!any(normalization_method == c("sum", "median", "mean", "quantiles","none"))) {
+  stop("Invalid normalization method, should be one of: sum, median, mean, quantiles, none")
+}
+if (any(normalization_method == c("mean","median")))
+  normalization_method <- paste0("center.", normalization_method)
+if (any(normalization_method == c("quantiles")))
+  normalization_method <- "quantiles.robust"
+
+
 options(stringsAsFactors=T)
 peptides <- read2MSnSet("q_input.txt",pattern="Intensity_")
 #head(exprs(peptides))
@@ -14,13 +28,18 @@ for (c in 1:ncol(exp_annotation)) {
 
 ## Running MSqRob
 # Had to change normalization due to error in preprocesscore
-peptides <- preprocess_MSnSet(peptides,accession="Protein.Groups",split=",", useful_properties="Sequence", exp_annotation=exp_annotation, normalisation="center.median")
+# normalization methods: should be one of “sum”, “max”, “center.mean”, “center.median”, “div.mean”, “div.median”, “diff.median”, “quantiles”, “quantiles.robust”, “vsn”
+# we stick here with sum, center.mean, center.median and quantiles
+peptides <- preprocess_MSnSet(peptides,accession="Protein.Groups",split=",", useful_properties="Sequence", exp_annotation=exp_annotation, normalisation=normalization_method)
 
 # necessary due to change to R 4.x    
 fData(peptides)[,"Protein.Groups"] <- as.factor(fData(peptides)[,"Protein.Groups"])
 # Set data.frame for experimental design with columns run genotype biorep
 proteins <- MSnSet2protdata(peptides, accession="Protein.Groups")  
-#head(proteins)
+
+# filter for proteins with more than min_peptides peptides
+keep_prots <- sapply(proteins@data, function(x) length(unique(x$Sequence))) >= min_peptides
+proteins <- proteins[keep_prots]
 system.time(protLM <- fit.model(proteins, response="quant_value", fixed=c("genotype"),  random=c("run","Sequence"), add.intercept=TRUE))
 #create comparisons vs first
 contrasts <- NULL

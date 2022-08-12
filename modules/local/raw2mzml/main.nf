@@ -26,7 +26,7 @@ process RAW2MZML {
           cp "${rawfile}" "${rawfile.baseName}.mzML"
         fi
     else
-        thermorawfileparser -i "${rawfile}" -b "${rawfile.baseName}.mzML" -f 1
+        thermorawfileparser -i "${rawfile}" -b "${rawfile.baseName}.mzML" -f 2
   fi
   """
 }
