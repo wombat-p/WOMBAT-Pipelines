@@ -6,6 +6,7 @@ if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker
         container "docker://quay.io/biocontainers/comet-ms:2021010--h87f3376_1"
 } else {
         container "quay.io/biocontainers/comet-ms:2021010--h87f3376_1"
+      containerOptions = '-u $(id -u):$(id -g)'
 }
   
 publishDir "${params.outdir}/comet", mode:'copy'
