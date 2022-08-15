@@ -19,7 +19,7 @@ keep_columns_once <- c("protein_name", "n_indistinguishable_proteins")
 
 keep_columns_all <- c("probability","total_number_peptides","total_number_distinct_peptides","Spectral.index",
                       "Normalized.spectral.index","number.of.quantified.peptides","Normalized.spectral.abundance.factor")
-keep_pep_columns_once <- c("modified_peptide","peptide_sequence","protein_name","charge","probability","calc_neutral_pep_mass",
+keep_pep_columns_once <- c("modified_peptide","peptide_sequence","protein_name","charge","nsp_adjusted_probability","calc_neutral_pep_mass",
                            "pseudo_name","subsuming_protein_entry", "StPeterQuant_peptide.charge")
 keep_pep_columns_all <- c("fileName","pct_spectrum_ids","confidence","initial_probability",
                           "nsp_adjusted_probability","fpkm_adjusted_probability","weight",
