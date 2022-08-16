@@ -25,8 +25,8 @@ if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker
   enzyme = enzymemap[parameters.enzyme]
   
   """
-  cp ${pepxml_file} t
-  cp t ${pepxml_file}
+#  cp ${pepxml_file} t
+#  cp t ${pepxml_file}
   xinteract -N"${pepxml_file.baseName}.interact.pep.xml" -p"${parameters.ident_fdr_psm}" ${enzyme} -l"${parameters.min_peptide_length}" -THREADS=${task.cpus} -PPM -O -D"${fasta}" "${pepxml_file}"
   """
 
