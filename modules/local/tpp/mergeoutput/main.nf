@@ -1,10 +1,10 @@
 process MERGEOUTPUT {
   label 'process_medium'
-  conda (params.enable_conda ? "bioconda::r-dplyr-0.5.0-r3.3.2_1" : null)
+  conda (params.enable_conda ? "conda-forge::r-dplyr-1.0.9-r40ha35a809_0" : null)
 if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
-        container "docker://quay.io/biocontainers/r-dplyr:0.5.0--r3.3.2_1"
+        container "docker://rocker/tidyverse:4.2.1"
 } else {
-        container "quay.io/biocontainers/r-dplyr:0.5.0--r3.3.2_1"
+        container "rocker/tidyverse:4.2.1"
 }
   
 publishDir "${params.outdir}/tpp", mode:'copy'
