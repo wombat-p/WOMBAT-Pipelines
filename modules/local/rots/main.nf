@@ -1,4 +1,4 @@
-process MSQROB {
+process ROTS {
 label 'process_medium'
   label 'process_single_thread'
   conda (params.enable_conda ? "bioconda::bioconductor-rots::1.22.0" : null)
