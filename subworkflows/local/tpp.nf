@@ -15,6 +15,7 @@ include { PROTEINPROPHET }           from '../../modules/local/tpp/proteinprophe
 include { STPETER }                 from '../../modules/local/tpp/stpeter/main'
 include { PROTXML2CSV }            from '../../modules/local/tpp/protxml2csv/main'
 include { MERGEOUTPUT }            from '../../modules/local/tpp/mergeoutput/main'
+include { ROTS }            from '../../modules/local/rots/main'
 
 workflow TPP {
     take:
@@ -34,9 +35,10 @@ workflow TPP {
     STPETER( PROTEINPROPHET.out.proteinprophet_xml, RAW2MZML.out.collect(), fasta, parameters)
     PROTXML2CSV( STPETER.out, parameters )
     MERGEOUTPUT( PROTXML2CSV.out.collect(), raws.collect(), exp_design ) 
+    ROTS( MERGEOUTPUT.out.stdprotquant_qc, MERGEOUTPUT.out.stdpepquant_qc )
 
    emit:
    MERGEOUTPUT.out.expdesign
-   MERGEOUTPUT.out.stdprotquant_qc
-   MERGEOUTPUT.out.stdpepquant_qc
+   ROTS.out.protein_quants_rots
+   ROTS.out.peptide_quants_rots
 }
