@@ -16,6 +16,7 @@ publishDir "${params.outdir}/rots", mode:'copy'
 
   input:
   path protein_quants
+  path peptide_quants
 
   output:
   path "stand_prot_quant_merged.csv", includeInputs: true, emit: protein_quants_rots
