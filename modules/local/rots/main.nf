@@ -3,9 +3,9 @@ label 'process_medium'
   label 'process_single_thread'
   conda (params.enable_conda ? "bioconda::bioconductor-rots::1.22.0" : null)
 if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
-        container "quay.io/biocontainers/bioconductor-rots:1.22.0--r41h619a076_1"
+        container "wombatp/transproteomic-pipeline:0.24"
 } else {
-        container "quay.io/biocontainers/bioconductor-rots:1.22.0--r41h619a076_1"
+        container "wombatp/transproteomic-pipeline:0.24"
 }
   
 publishDir "${params.outdir}/rots", mode:'copy'
