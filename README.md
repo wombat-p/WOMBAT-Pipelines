@@ -1,65 +1,95 @@
-# ![nf-core/wombat](docs/images/nf-core-wombat_logo_light.png#gh-light-mode-only) ![nf-core/wombat](docs/images/nf-core-wombat_logo_dark.png#gh-dark-mode-only)
-
-[![GitHub Actions CI Status](https://github.com/nf-core/wombat/workflows/nf-core%20CI/badge.svg)](https://github.com/nf-core/wombat/actions?query=workflow%3A%22nf-core+CI%22)
-[![GitHub Actions Linting Status](https://github.com/nf-core/wombat/workflows/nf-core%20linting/badge.svg)](https://github.com/nf-core/wombat/actions?query=workflow%3A%22nf-core+linting%22)
-[![AWS CI](https://img.shields.io/badge/CI%20tests-full%20size-FF9900?logo=Amazon%20AWS)](https://nf-co.re/wombat/results)
-[![Cite with Zenodo](http://img.shields.io/badge/DOI-10.5281/zenodo.XXXXXXX-1073c8)](https://doi.org/10.5281/zenodo.XXXXXXX)
-
-[![Nextflow](https://img.shields.io/badge/nextflow%20DSL2-%E2%89%A521.10.3-23aa62.svg)](https://www.nextflow.io/)
-[![run with conda](http://img.shields.io/badge/run%20with-conda-3EB049?logo=anaconda)](https://docs.conda.io/en/latest/)
-[![run with docker](https://img.shields.io/badge/run%20with-docker-0db7ed?logo=docker)](https://www.docker.com/)
-[![run with singularity](https://img.shields.io/badge/run%20with-singularity-1d355c.svg)](https://sylabs.io/docs/)
-[![Launch on Nextflow Tower](https://img.shields.io/badge/Launch%20%F0%9F%9A%80-Nextflow%20Tower-%234256e7)](https://tower.nf/launch?pipeline=https://github.com/nf-core/wombat)
-
-[![Get help on Slack](http://img.shields.io/badge/slack-nf--core%20%23wombat-4A154B?logo=slack)](https://nfcore.slack.com/channels/wombat)
-[![Follow on Twitter](http://img.shields.io/badge/twitter-%40nf__core-1DA1F2?logo=twitter)](https://twitter.com/nf_core)
-[![Watch on YouTube](http://img.shields.io/badge/youtube-nf--core-FF0000?logo=youtube)](https://www.youtube.com/c/nf-core)
+# ![wombat-p pipelines](docs/images/wombatp-logo.png) 
 
 ## Introduction
 
-<!-- TODO nf-core: Write a 1-2 sentence summary of what data the pipeline is for and what it does -->
+**wombat-p pipelines** is a bioinformatics analysis pipeline that bundles different workflow for the analysis of label-free proteomics data with the purpose of comparison and benchmarking. It allows using files from the [proteomics metadata standard SDRF](https://github.com/bigbio/proteomics-metadata-standard).
 
-**nf-core/wombat** is a bioinformatics best-practice analysis pipeline for Bundled different workflow for the analysis of label-free proteomics data with the purpose of comparison and benchmarking.
+The pipeline is built using [Nextflow](https://www.nextflow.io), a workflow tool to run tasks across multiple compute infrastructures in a very portable manner. It uses Docker/Singularity containers making installation trivial and results highly reproducible. The [Nextflow DSL2](https://www.nextflow.io/docs/latest/dsl2.html) implementation of this pipeline uses one container per process which makes it much easier to maintain and update software dependencies. 
 
-The pipeline is built using [Nextflow](https://www.nextflow.io), a workflow tool to run tasks across multiple compute infrastructures in a very portable manner. It uses Docker/Singularity containers making installation trivial and results highly reproducible. The [Nextflow DSL2](https://www.nextflow.io/docs/latest/dsl2.html) implementation of this pipeline uses one container per process which makes it much easier to maintain and update software dependencies. Where possible, these processes have been submitted to and installed from [nf-core/modules](https://github.com/nf-core/modules) in order to make them available to all nf-core pipelines, and to everyone within the Nextflow community!
-
-<!-- TODO nf-core: Add full-sized test dataset and amend the paragraph below if applicable -->
-
-On release, automated continuous integration tests run the pipeline on a full-sized dataset on the AWS cloud infrastructure. This ensures that the pipeline runs on AWS, has sensible resource allocation defaults set to run on real-world datasets, and permits the persistent storage of results to benchmark between pipeline releases and other analysis sources. The results obtained from the full-sized test can be viewed on the [nf-core website](https://nf-co.re/wombat/results).
+<!-- TODO add continuous integration, preferably with statistics -->
 
 ## Pipeline summary
 
-<!-- TODO nf-core: Fill in short bullet-pointed list of the default steps in the pipeline -->
+This work contains four major different workflows for the analysis or label-free proteomics data, originating from LC-MS experiments.
+1. [MaxQuant](https://www.maxquant.org/) + [Normalyzer](http://normalyzer.immunoprot.lth.se/)
+2. [SearchGui](http://compomics.github.io/projects/searchgui) + [Proline](https://www.profiproteomics.fr/proline/) + [PolySTest](https://bitbucket.org/veitveit/polystest)
+3. [Compomics tools](http://compomics.github.io/) + [FlashLFQ](https://github.com/smith-chem-wisc/FlashLFQ) + [MSqRob](https://github.com/statOmics/MSqRob)
+4. Tools from the [Transproteomic Pipeline](http://tools.proteomecenter.org/TPP.php) + [ROTS](https://bioconductor.org/packages/release/bioc/html/ROTS.html)
 
-1. Read QC ([`FastQC`](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/))
-2. Present QC for raw reads ([`MultiQC`](http://multiqc.info/))
+Initialization and parameterization of the workflows is based on tools from the [SDRF pipelines](https://github.com/bigbio/sdrf-pipelines), the [ThermoRawFileParser](http://compomics.github.io/projects/ThermoRawFileParser) with our own contributions and additional programs from the wombat-p organizaion [https://github.com/wombat-p/Utilities] as well as our [fork](https://github.com/elixir-proteomics-community/sdrf-pipelines). This includes setting a generalized set of data analysis parameters and the calculation of a multiple benchmarks.
 
 ## Quick Start
 
 1. Install [`Nextflow`](https://www.nextflow.io/docs/latest/getstarted.html#installation) (`>=21.10.3`)
 
-2. Install any of [`Docker`](https://docs.docker.com/engine/installation/), [`Singularity`](https://www.sylabs.io/guides/3.0/user-guide/) (you can follow [this tutorial](https://singularity-tutorial.github.io/01-installation/)), [`Podman`](https://podman.io/), [`Shifter`](https://nersc.gitlab.io/development/shifter/how-to-use/) or [`Charliecloud`](https://hpc.github.io/charliecloud/) for full pipeline reproducibility _(you can use [`Conda`](https://conda.io/miniconda.html) both to install Nextflow itself and also to manage software within pipelines. Please only use it within pipelines as a last resort; see [docs](https://nf-co.re/usage/configuration#basic-configuration-profiles))_.
+2. Install [`Docker`](https://docs.docker.com/engine/installation/) or [`Singularity`](https://www.sylabs.io/guides/3.0/user-guide/) (you can follow [this tutorial](https://singularity-tutorial.github.io/01-installation/)) _(you can use [`Conda`](https://conda.io/miniconda.html) both to install Nextflow itself and also to manage software within pipelines. Please only use it within pipelines as a last resort; see [docs](https://nf-co.re/usage/configuration#basic-configuration-profiles))_.
 
 3. Download the pipeline and test it on a minimal dataset with a single command:
 
    ```console
-   nextflow run nf-core/wombat -profile test,YOURPROFILE --outdir <OUTDIR>
+   wget https://github.com/wombat-p/WOMBAT-Pipelines
+   nextflow run main.nf3 -profile test,YOURPROFILE 
    ```
+  Substitute `wget` with `curl`or alike.
 
-   Note that some form of configuration will be needed so that Nextflow knows how to fetch the required software. This is usually done in the form of a config profile (`YOURPROFILE` in the example command above). You can chain multiple config profiles in a comma-separated string.
+4. Setup of system for running the analysis
 
-   > - The pipeline comes with config profiles called `docker`, `singularity`, `podman`, `shifter`, `charliecloud` and `conda` which instruct the pipeline to use the named tool for software management. For example, `-profile test,docker`.
-   > - Please check [nf-core/configs](https://github.com/nf-core/configs#documentation) to see if a custom config file to run nf-core pipelines already exists for your Institute. If so, you can simply use `-profile <institute>` in your command. This will enable either `docker` or `singularity` and set the appropriate execution settings for your local compute environment.
-   > - If you are using `singularity`, please use the [`nf-core download`](https://nf-co.re/tools/#downloading-pipelines-for-offline-use) command to download images first, before running the pipeline. Setting the [`NXF_SINGULARITY_CACHEDIR` or `singularity.cacheDir`](https://www.nextflow.io/docs/latest/singularity.html?#singularity-docker-hub) Nextflow options enables you to store and re-use the images from a central location for future pipeline runs.
-   > - If you are using `conda`, it is highly recommended to use the [`NXF_CONDA_CACHEDIR` or `conda.cacheDir`](https://www.nextflow.io/docs/latest/conda.html) settings to store the environments in a central location for future pipeline runs.
+Note that some form of configuration will be needed so that Nextflow knows how to fetch the required software. This is usually done in the form of a config profile (`YOURPROFILE` in the example command above). You can chain multiple config profiles in a comma-separated string.
 
-4. Start running your own analysis!
+> - The pipeline comes with config profiles called `docker`, `singularity` and `conda` which instruct the pipeline to use the named tool for software management. For example, `-profile test,docker`.
+> - If you are using `docker`, your host system might need to set a parameters that should stop the mono-based programs from failing when running large data sets on multiple threads. For that please set `sudo sysctl -w vm.max_map_count=262144`
+> - If you are using `singularity`, setting the [`NXF_SINGULARITY_CACHEDIR` or `singularity.cacheDir`](https://www.nextflow.io/docs/latest/singularity.html?#singularity-docker-hub) Nextflow options enables you to store and re-use the images from a central location for future pipeline runs.
+> - If you are using `conda`, it is highly recommended to use the [`NXF_CONDA_CACHEDIR` or `conda.cacheDir`](https://www.nextflow.io/docs/latest/conda.html) settings to store the environments in a central location for future pipeline runs.
 
-   <!-- TODO nf-core: Update the example "typical command" below used to run the pipeline -->
+5. Start running your own analysis!
 
-   ```console
-   nextflow run nf-core/wombat --input samplesheet.csv --outdir <OUTDIR> --genome GRCh37 -profile <docker/singularity/podman/shifter/charliecloud/conda/institute>
-   ```
+For a detailed explanation of the parameters, see below. Not all parameters are needed. 
+
+```console
+nextflow run nf-core/wombat --sdrf experimental_metadata.sdrf --fasta your_fasta_file.fasta --parameters your_parameters_yaml --raws thermo_raw_files --exp_design simple_experimental_design --workflow [other more specific parameters] -profile <docker/singularity/conda>
+```
+
+<!-- TODO TODO: ADD DIAGRAM -->
+
+WOMBAT-P can run workflows using different (minimal) input, such as
+_1) with SDRF file (raw files can be given as parameter or are download from the location specified in the sdrf file):_
+a) SDRF file + fasta file
+b) SDRF file + fasta file + experimental design file (will overwrite experimental design in sdrf)
+c) SDRF file + fasta file + experimental design file + yaml parameter file (will overwrite default and sdrf parameters)
+
+_2) without SDRF file:_
+a) Raw files + fasta file + yaml parameter file
+b) Raw file + fasta file + yaml parameter file + experimental design file
+
+__-profile__ Set the profile and environment as described above
+
+__--sdrf__ This is a tab-delimited file containng details about experimental design and can also include all paramters given in the `--parameters` yaml`file. Several data sets on the PRIDE repository come with an sdrf file which is can then be found toghether with the other deposited files. For the PXD001819, this would be https://ftp.pride.ebi.ac.uk/pride/data/archive/2015/12/PXD001819/sdrf.tsv
+See also the URL for SDRF files: https://github.com/bigbio/proteomics-metadata-standard/tree/master/annotated-projects and the description of the extended SDRF including data analysis parameters: https://github.com/bigbio/proteomics-metadata-standard/blob/master/sdrf-proteomics/Data-analysis-metadata.adoc
+
+__--fasta__ You also need a fasta database to run the database search in the workflows. Standard databases can be downloaded from [UniProt](http:///uniprot.org)
+
+__--parameters__ When deviating from the standard settings, use a yaml file containing new parameters settings. For more details about the different parameters and an example file, see https://github.com/bigbio/proteomics-metadata-standard/blob/master/sdrf-proteomics/Data-analysis-metadata.adoc
+As not all of these parameters are avaailable for all workflows, see <!-- TODO Provide link -->  this table for an overview
+
+__--raws__ Without given sdrf file containing the paths to the raw data files (Thermo raw format) or if you have the files already downloaded, specify the wildcard (e.g. "*" or "?") to access the files on your system. We recommend putting this parameters in 'single quotes' as you might run into an error when using wildcards.
+
+__--exp_design__ An experimental design is automatically calculated from differences in the samples in the SDRF file. Alternatively, provide a tab-separated file with the two columns _raw_file_ and _exp_condition_. _raw_file_: raw file names without path. Incorrect or incomplete names will lead to errors. _exp_condition_: arbitrary names for the sample groups. Files with the same sample group name will be considered replicates. For in example, see TODO
+
+__--workflow__ Instead of running 'all' workflows (default), run only one of 'maxquant', 'proline', 'compomics' or 'tpp'
+
+__other parameters__:
+
+
+
+An experimental design file for the NormalyzerDE part can also be found in the data folder. 
+
+For the specification of the yaml parameter file, see https://github.com/bigbio/proteomics-metadata-standard/blob/master/sdrf-proteomics/Data-analysis-metadata.adoc and the example in the Nextflow/data folder
+
+
+
+#### Data analysis parameters
+
+
 
 ## Documentation
 

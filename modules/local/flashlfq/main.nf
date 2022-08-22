@@ -1,3 +1,4 @@
+// When running docker, you might need to use sudo sysctl -w vm.max_map_count=262144 as mono might fail
 process FLASHLFQ {
   label 'process_high'
   conda (params.enable_conda ? "bioconda::flashlfq-1.1.1" : null)
