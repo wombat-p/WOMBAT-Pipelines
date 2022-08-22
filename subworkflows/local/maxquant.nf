@@ -11,13 +11,13 @@ workflow MAXQUANT {
     sdrf_local // sdrf with parameter values 
     fasta // fasta file
     raws // raw files
+    parameters // map of parameters
 
 
     main:
     CONVERT_MAXQUANT (sdrf_local, fasta)
     MAXQUANT_LFQ ( fasta, CONVERT_MAXQUANT.out.maxquantpar, raws )
-    NORMALYZERDE (MAXQUANT_LFQ.out.maxquant_txt, CONVERT_MAXQUANT.out.exp_design,  CONVERT_MAXQUANT.out.comp_file,
-                  sdrf_local.splitCsv(sep: "\t", header: true).map{row -> row["comment[normalization method]"]}.unique())
+    NORMALYZERDE (MAXQUANT_LFQ.out.maxquant_txt, CONVERT_MAXQUANT.out.exp_design,  CONVERT_MAXQUANT.out.comp_file, parameters )
 
     emit:
     NORMALYZERDE.out.exp_design

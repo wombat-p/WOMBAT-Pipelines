@@ -4,7 +4,7 @@
 
 **wombat-p pipelines** is a bioinformatics analysis pipeline that bundles different workflow for the analysis of label-free proteomics data with the purpose of comparison and benchmarking. It allows using files from the [proteomics metadata standard SDRF](https://github.com/bigbio/proteomics-metadata-standard).
 
-The pipeline is built using [Nextflow](https://www.nextflow.io), a workflow tool to run tasks across multiple compute infrastructures in a very portable manner. It uses Docker/Singularity containers making installation trivial and results highly reproducible. The [Nextflow DSL2](https://www.nextflow.io/docs/latest/dsl2.html) implementation of this pipeline uses one container per process which makes it much easier to maintain and update software dependencies. 
+The pipeline is built using [Nextflow](https://www.nextflow.io), a workflow tool to run tasks across multiple compute infrastructures in a very portable manner. It uses Docker/Singularity containers making installation trivial and results highly reproducible. The [Nextflow DSL2](https://www.nextflow.io/docs/latest/dsl2.html) implementation of this pipeline uses one container per process which makes it much easier to maintain and update software dependencies. We used one of the [nf-core](https://nf-co.re/) templates. 
 
 <!-- TODO add continuous integration, preferably with statistics -->
 
@@ -63,7 +63,7 @@ b) Raw file + fasta file + yaml parameter file + experimental design file
 
 __-profile__ Set the profile and environment as described above
 
-__--sdrf__ This is a tab-delimited file containng details about experimental design and can also include all paramters given in the `--parameters` yaml`file. Several data sets on the PRIDE repository come with an sdrf file which is can then be found toghether with the other deposited files. For the PXD001819, this would be https://ftp.pride.ebi.ac.uk/pride/data/archive/2015/12/PXD001819/sdrf.tsv
+__--sdrf__ This is a tab-delimited file containng details about experimental design and can also include all paramters given in the `--parameters` yaml file. Several data sets on the PRIDE repository come with an sdrf file which is can then be found toghether with the other deposited files. For the PXD001819, this would be https://ftp.pride.ebi.ac.uk/pride/data/archive/2015/12/PXD001819/sdrf.tsv
 See also the URL for SDRF files: https://github.com/bigbio/proteomics-metadata-standard/tree/master/annotated-projects and the description of the extended SDRF including data analysis parameters: https://github.com/bigbio/proteomics-metadata-standard/blob/master/sdrf-proteomics/Data-analysis-metadata.adoc
 
 __--fasta__ You also need a fasta database to run the database search in the workflows. Standard databases can be downloaded from [UniProt](http:///uniprot.org)
@@ -73,27 +73,22 @@ As not all of these parameters are avaailable for all workflows, see <!-- TODO P
 
 __--raws__ Without given sdrf file containing the paths to the raw data files (Thermo raw format) or if you have the files already downloaded, specify the wildcard (e.g. "*" or "?") to access the files on your system. We recommend putting this parameters in 'single quotes' as you might run into an error when using wildcards.
 
-__--exp_design__ An experimental design is automatically calculated from differences in the samples in the SDRF file. Alternatively, provide a tab-separated file with the two columns _raw_file_ and _exp_condition_. _raw_file_: raw file names without path. Incorrect or incomplete names will lead to errors. _exp_condition_: arbitrary names for the sample groups. Files with the same sample group name will be considered replicates. For in example, see TODO
+__--exp_design__ An experimental design is automatically calculated from differences in the samples in the SDRF file. Alternatively, provide a tab-separated file with the two columns _raw_file_ and _exp_condition_. _raw_file_: raw file names without path. Incorrect or incomplete names will lead to errors. _exp_condition_: arbitrary names for the sample groups. Files with the same sample group name will be considered replicates. See [example](https://github.com/wombat-p/WOMBAT-Pipelines/blob/dev/docs/examples/pxd001819.txt).
 
 __--workflow__ Instead of running 'all' workflows (default), run only one of 'maxquant', 'proline', 'compomics' or 'tpp'
 
-__other parameters__:
+__other parameters__:  
+
+--comps (only maxquant workflow): Provide contrasts (specific comparisons) for the statistical tests. This is a list of comma-separated group names, e.g. "B-A,C-A" when having the three sample groups A, B and C 
+
+--proline_engine (only proline workflow): Define the search engine for the database search. Can be one or multiples of "xtandem", "msgf", "ms-amanda", "tide", "comet", "myrimatch", "meta_morpheus" and "andromeda". Note that not all engines necessarily work well with each data set.
+
+You can add other NextFlow parameters as described extensively [here](https://www.nextflow.io/docs/edge/cli.html?highlight=timeline#)
 
 
+## Valid data analysis parameters per workflow
 
-An experimental design file for the NormalyzerDE part can also be found in the data folder. 
-
-For the specification of the yaml parameter file, see https://github.com/bigbio/proteomics-metadata-standard/blob/master/sdrf-proteomics/Data-analysis-metadata.adoc and the example in the Nextflow/data folder
-
-
-
-#### Data analysis parameters
-
-
-
-## Documentation
-
-The nf-core/wombat pipeline comes with documentation about the pipeline [usage](https://nf-co.re/wombat/usage), [parameters](https://nf-co.re/wombat/parameters) and [output](https://nf-co.re/wombat/output).
+TODOOO
 
 ## Credits
 

@@ -9,7 +9,8 @@ if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker
   
 publishDir "${params.outdir}/msqrob", mode:'copy'
  
- 
+  when: parameters.run_statistics
+
   input:
   path exp_design
   path rawfiles

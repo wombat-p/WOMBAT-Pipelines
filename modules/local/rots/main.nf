@@ -12,11 +12,12 @@ publishDir "${params.outdir}/rots", mode:'copy'
  
  
   when:
-  params.run_statistics
+  parameters.run_statistics
 
   input:
   path protein_quants
   path peptide_quants
+  val parameters
 
   output:
   path "stand_prot_quant_merged.csv", includeInputs: true, emit: protein_quants_rots

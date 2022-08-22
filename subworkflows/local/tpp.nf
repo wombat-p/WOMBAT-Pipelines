@@ -35,7 +35,7 @@ workflow TPP {
     STPETER( PROTEINPROPHET.out.proteinprophet_xml, RAW2MZML.out.collect(), fasta, parameters)
     PROTXML2CSV( STPETER.out, parameters )
     MERGEOUTPUT( PROTXML2CSV.out.collect(), raws.collect(), exp_design ) 
-    ROTS( MERGEOUTPUT.out.stdprotquant_qc, MERGEOUTPUT.out.stdpepquant_qc )
+    ROTS( MERGEOUTPUT.out.stdprotquant_qc, MERGEOUTPUT.out.stdpepquant_qc, parameters )
 
    emit:
    MERGEOUTPUT.out.expdesign

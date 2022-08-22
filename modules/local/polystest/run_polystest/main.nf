@@ -11,11 +11,12 @@ process POLYSTEST {
   publishDir "${params.outdir}/polystest", mode:'copy'
   
   when:
-  params.run_statistics
+  parameters.run_statistics
 
   input:
   path exp_design
   path proline_res
+  val parameters
   
   output:
   path "polystest_prot_res.csv", emit: polystest_prot

@@ -41,8 +41,8 @@ process CONFIG_PROLINE {
   for file in \$all_id_files
   do
   echo "./\$file" >> import_file_list.txt
-  sed -i "s/PEPFDR/expected_fdr=${peptide_fdr}/g" "${param_file}"
-  sed -i "s/PROTFDR/expected_fdr=${protein_fdr}/g" "${param_file}"
+  sed -i "s/PEPFDR/expected_fdr=${ident_peptide_fdr}/g" "${param_file}"
+  sed -i "s/PROTFDR/expected_fdr=${ident_protein_fdr}/g" "${param_file}"
   sed -i "s/NUMPEPS/threshold=${parameters.min_num_peptides}/g" "${param_file}"
   sed -i "s/moz_tol = 5/moz_tol=${prec_tol}/g" "${param_file}"
   sed -i "s/moz_tol_unit = ppm/moz_tol_unit=${prec_ppm}/g" "${param_file}"
