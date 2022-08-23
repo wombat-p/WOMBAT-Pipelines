@@ -26,7 +26,7 @@ params:
   summarization_psms: sum_abs
   quant_transformation: log
   normalization_method: median
-  run_statistics: True
+  run_statistics: False
   fdr_method: qvalue
   fdr_threshold: 0.01
 rawfiles: None
