@@ -73,7 +73,7 @@ parameters:
   sdrf: num peptide hits
   default: 1
 
-- name: miscleavages
+- name: allowed_miscleavages
   type: integer
   sdrf: allowed miscleavages
   default: 1
@@ -103,17 +103,17 @@ parameters:
   sdrf: maximum allowed modification
   default: 4
 
-- name: fdr_psm
+- name: ident_fdr_psm
   type: float
   sdrf: fdr on psm level
   default: 0.01
 
-- name: fdr_peptide
+- name: ident_fdr_peptide
   type: float
   sdrf: fdr on peptide level
   default: 0.01
 
-- name: fdr_protein
+- name: ident_fdr_protein
   type: float
   sdrf: fdr on protein level
   default: 0.01
