@@ -18,7 +18,7 @@ params:
   ident_fdr_psm: 0.01
   ident_fdr_peptide: 0.01
   ident_fdr_protein: 0.01
-  match_between_runs: False
+  enable_match_between_runs: False
   protein_inference: unique
   quantification_method: precursor
   summarization_proteins: median

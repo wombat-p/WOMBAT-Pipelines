@@ -80,7 +80,8 @@ Note that it should be single residues")
             exit("ERROR: " + m + " not found in Unimod. Check the \"PSI-MS Names\" in unimod.org. Also check whether you \
 used space between the comma separated modifications")
         modtype = pname.replace("_mods", "")
-        if re.match("[A-Z]", modpos):
+        if re.fullmatch("[A-Z]", modpos):
+            print(modpos)
             mod_columns[len(mod_columns.columns)+1] = "NT=" + modname + ";AC=" + found[0].get_accession() + ";MT=" +\
                  modtype + ";TA=" + modpos
         elif modpos in ["Protein N-term", "Protein C-term", "Any N-term", "Any C-term"]:

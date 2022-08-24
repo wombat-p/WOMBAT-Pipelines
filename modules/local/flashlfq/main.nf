@@ -41,7 +41,7 @@ publishDir "${params.outdir}/flashlfq", mode:'copy'
     first_line=\$(head -n1 "\$file")
   done
   echo "\$first_line" | cat - tlfq_ident.tabular > lfq_ident.tabular
-  FlashLFQ --idt "lfq_ident.tabular" --rep "./" --out ./ --mbr ${parameters.match_between_runs} --ppm ${parameters.precursor_mass_tolerance} --sha ${protein_inference} --thr ${task.cpus}
+  FlashLFQ --idt "lfq_ident.tabular" --rep "./" --out ./ --mbr ${parameters.enable_match_between_runs} --ppm ${parameters.precursor_mass_tolerance} --sha ${protein_inference} --thr ${task.cpus}
   """
  
 }    
