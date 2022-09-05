@@ -28,7 +28,7 @@ Initialization and parameterization of the workflows is based on tools from the 
 
    ```console
    wget https://github.com/wombat-p/WOMBAT-Pipelines
-   nextflow run main.nf3 -profile test,YOURPROFILE 
+   nextflow run main.nf -profile test,YOURPROFILE 
    ```
   Substitute `wget` with `curl`or alike.
 
@@ -46,7 +46,7 @@ Note that some form of configuration will be needed so that Nextflow knows how t
 For a detailed explanation of the parameters, see below. Not all parameters are needed. 
 
 ```console
-nextflow run nf-core/wombat --sdrf experimental_metadata.sdrf --fasta your_fasta_file.fasta --parameters your_parameters_yaml --raws thermo_raw_files --exp_design simple_experimental_design --workflow [other more specific parameters] -profile <docker/singularity/conda>
+nextflow run main.nf --sdrf experimental_metadata.sdrf --fasta your_fasta_file.fasta --parameters your_parameters_yaml --raws thermo_raw_files --exp_design simple_experimental_design --workflow [other more specific parameters] -profile <docker/singularity/conda>
 ```
 
 <!-- TODO TODO: ADD DIAGRAM -->
