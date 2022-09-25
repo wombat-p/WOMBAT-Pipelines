@@ -46,6 +46,6 @@ publishDir "${params.outdir}/msqrob", mode:'copy'
   cp "${exp_design}" exp_design.txt
   mv "${quant_tab}" q_input.txt
   mv "${quant_prot_tab}" q_prot.txt
-  Rscript $baseDir/scripts/runMSqRob.R --normalization="${parameters.normalization_method}" --min_peptides="${parameters.min_num_peptides}"
+  Rscript $baseDir/bin/runMSqRob.R --normalization="${parameters.normalization_method}" --min_peptides="${parameters.min_num_peptides}"
   """
 }    

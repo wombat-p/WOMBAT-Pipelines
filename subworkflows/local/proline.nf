@@ -1,7 +1,7 @@
 //
 // Get assets like general parameter files
 //
-ch_proline_parameters = Channel.fromPath("assets/lfq_param_file_template.txt")
+ch_proline_parameters = Channel.fromPath("$projectDir/assets/lfq_param_file_template.txt")
 
 //
 // Run maxquant and normalyzer

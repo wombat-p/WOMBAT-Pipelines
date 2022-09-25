@@ -22,7 +22,7 @@ publishDir "${params.outdir}/tpp", mode:'copy'
   """
   cp "${stpeter}" StPeterOut.prot.xml 
   cp "${pepxml}" Sample.pep.xml
-  Rscript $baseDir/scripts/proxml2csv.R --xml=StPeterOut.prot.xml --fdr=${parameters.ident_protein_fdr} --npep ${parameters.min_num_peptides}
+  Rscript $baseDir/bin/proxml2csv.R --xml=StPeterOut.prot.xml --fdr=${parameters.ident_protein_fdr} --npep ${parameters.min_num_peptides}
   mv StPeterOut.prot.xml.csv "${stpeter.baseName}_pep.csv"
   mv StPeterOut.prot.xml_summary.csv "${stpeter.baseName}_prot.csv"
   """

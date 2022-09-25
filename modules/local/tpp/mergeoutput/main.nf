@@ -31,7 +31,7 @@ input:
     """
     touch exp_design.txt  
     echo "${expdesign_text}" >> exp_design.txt
-    R CMD BATCH $baseDir/scripts/MergeOutput.R
+    R CMD BATCH $baseDir/bin/MergeOutput.R
     """
   } else {
     """
@@ -40,7 +40,7 @@ input:
       cp "${exp_design_file}" exp_design.txt
     fi
     
-    Rscript $baseDir/scripts/MergeTPPOutput.R
+    Rscript $baseDir/bin/MergeTPPOutput.R
     """
     }
  

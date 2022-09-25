@@ -43,17 +43,17 @@ if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker
     "I": "I_isoleucine", "N": "N_asparagine", "D": "D_aspartic_acid", "K": "K_lysine", "Q": "Q_glutamine", "E": "E_glutamic_acid", "M": "M_methionine",
     "H": "H_histidine", "F": "F_phenylalanine", "R": "R_arginine", "Y": "Y_tyrosine", "W": "W_tryptophan"]
   fixed_out = ""
-  if (fixed_mods != null) {
-  for (int i=0; i<fixed_mods.size(); i++) {
-    tres = "add_" + fixed_map[fixed_mods[i].residue]
-    fixed_out += tres + " = " + fixed_mods[i].mass + "\\n"
-  }
+  if (fixed_mods[0] != null) {
+    for (int i=0; i<fixed_mods.size(); i++) {
+      tres = "add_" + fixed_map[fixed_mods[i].residue]
+      fixed_out += tres + " = " + fixed_mods[i].mass + "\\n"
+    }
   }
 
   String var_out = ""
   var_map = ["protein N-term": 0, "protein C-term": 1, "peptide N-term": 2, "peptide C-term": 3, "G": 0, "A": 0, "S": 0, "P": 0, "V": 0, "T": 0, "C": 0, "L": 0,
     "I": 0, "N": 0, "D": 0, "K": 0, "Q": 0, "E": 0, "M": 0, "H": 0, "F": 0, "R": 0, "Y": 0, "W": 0]
-  if (var_mods  != null) {
+  if (var_mods[0]  != null) {
   for (int i=0; i<var_mods.size(); i++) {
     tmod = var_mods[i]
     tres = tmod.residue
@@ -63,7 +63,7 @@ if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker
     } else if (tres.contains("Cterm")) {
       tres = "c"
     } 
-    tentry = "variable_mod" + i+1 + "=" + tmod.mass + " " + tres + " 0 5 " + (tres.isLowerCase() ? " 0 " : " -1 ") + var_map[tmod.residue] +
+    tentry = "variable_mod" + 0 + (i+1) + "=" + tmod.mass + " " + tres + " 0 5 " + (tres.isLowerCase() ? " 0 " : " -1 ") + var_map[tmod.residue] +
                               " 0 " + (tmod.residue.contains("Phosphorylation") ? 97-976896 : 0) + "\\n"
     var_out += tentry
   }

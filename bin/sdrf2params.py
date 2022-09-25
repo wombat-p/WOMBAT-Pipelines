@@ -102,6 +102,7 @@ for m in mod_columns.columns:
         if len(pvalue) > 1:
            exit("ERROR: multiple PTMs in the same column " + m)
         pvalue = pvalue.pop()
+        pvalue = pvalue.replace(" ;",";").replace("; ",";")
         pvalue = pvalue.split(";")
         mmod =  [s for s in pvalue if "NT=" in s][0]
         mmod = mmod.replace("NT=","")

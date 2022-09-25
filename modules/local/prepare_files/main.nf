@@ -55,12 +55,12 @@ process PREPARE_FILES {
 	        printf "\n\$a\tA" >> exp_design.txt
 	    done
         else 
-	    $baseDir/scripts/sdrf2exp_design.py
+	    $baseDir/bin/sdrf2exp_design.py
         fi        
     fi
     if [[ "$sdrf" == "no_sdrf" ]] 
     then
-	$baseDir/scripts/exp_design2sdrf.py
+	$baseDir/bin/exp_design2sdrf.py
     fi
     if [ "$raws" == "no_raws" ] && [ "$mzmls" == "no_mzmls" ]
     then

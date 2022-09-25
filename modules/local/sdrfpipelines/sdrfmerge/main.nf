@@ -45,7 +45,7 @@ process SDRFMERGE {
         cp "${map}" params2sdrf.yml
     fi
     # TODO change to package when available
-    python $projectDir/scripts/add_data_analysis_param.py > changed_params.txt
-    python $projectDir/scripts/sdrf2params.py
+    python $projectDir/bin/add_data_analysis_param.py > changed_params.txt
+    python $projectDir/bin/sdrf2params.py
     """
 }

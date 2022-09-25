@@ -25,7 +25,7 @@ publishDir "${params.outdir}/rots", mode:'copy'
 
   script:
   """
-  R CMD BATCH $baseDir/scripts/rots_analysis_proteins.R
-  R CMD BATCH $baseDir/scripts/rots_analysis_peptides.R
+  R CMD BATCH $baseDir/bin/rots_analysis_proteins.R
+  R CMD BATCH $baseDir/bin/rots_analysis_peptides.R
   """
 }    

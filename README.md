@@ -126,7 +126,7 @@ Here _TRUE_ means that the parameter can be changed.
 
 ## Output 
 
-Intermediate and final files are provided in the _results_ folder or the older specified via the `outdir` parameter. 
+Intermediate and final files are provided in the _results_ folder or the folder specified via the `outdir` parameter. 
 
 On top of the workflow-specific output, a standardized tabular format on both peptide (stand_pep_quant_merged.csv) and protein (stand_prot_quant_merged.csv) level is given. 
 
