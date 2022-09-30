@@ -30,7 +30,7 @@ input:
     """
     cp "proteinGroups.txt" protein_file.txt
     cp "peptides.txt" peptide_file.txt
-    Rscript $baseDir/bin/runNormalyzer.R --comps="${params.comps}" --method="${parameters.normalization}" --exp_design="${exp_file}" --comp_file="${comp_file}"
+    Rscript $baseDir/bin/runNormalyzer.R --comps="${params.comps}" --method="${parameters.normalization_method}" --exp_design="${exp_file}" --comp_file="${comp_file}"
     """
 
 }

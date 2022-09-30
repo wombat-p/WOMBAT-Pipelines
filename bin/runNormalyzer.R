@@ -49,12 +49,12 @@ for (c in cmods) {
 }
 peps$Sequence <- paste0(peps$Sequence, peps[,cmods])
 write.table(peps, "peptide_file.txt", row.names=F, sep="\t", quote=F)
-
 ## run Normalyzer
 if (min(table(final_exp[,"group"])) > 1 & length(unique(final_exp[,"group"])) > 1) {
    NormalyzerDE::normalyzer(jobName="NormalyzerProteins", designPath="Normalyzer_design.tsv", dataPath="protein_file.txt", zeroToNA = TRUE, inputFormat = "maxquantprot", outputDir="./", requireReplicates=F)
    NormalyzerDE::normalyzer(jobName="NormalyzerPeptides", designPath="Normalyzer_design.tsv", dataPath="peptide_file.txt", zeroToNA = TRUE, inputFormat = "maxquantpep", outputDir="./", requireReplicates=F) 
    print("Now running differential expression analysis")
+   print(paste0("./NormalyzerProteins/",normalyzerMethod,"-normalized.txt"))
    NormalyzerDE::normalyzerDE(jobName="NormalyzerProteins", comparisons=comps, designPath="Normalyzer_design.tsv", dataPath=paste0("./NormalyzerProteins/",normalyzerMethod,"-normalized.txt"), outputDir="./", leastRepCount="0")
    NormalyzerDE::normalyzerDE(jobName="NormalyzerPeptides", comparisons=comps, designPath="Normalyzer_design.tsv", dataPath=paste0("./NormalyzerPeptides/",normalyzerMethod,"-normalized.txt"), outputDir="./", leastRepCount="0")
 } else {
@@ -113,6 +113,11 @@ for (s in 1:nrow(final_exp))  {
   colnames(norm_proteins) <- sub(paste0("^",substitute_from), paste0("abundance_", substitute_with), colnames(norm_proteins))
   colnames(norm_peptides) <- sub(paste0("^",substitute_from), paste0("abundance_", substitute_with), colnames(norm_peptides))
 }
+colnames(proteins) <- make.unique(colnames(proteins))
+colnames(peptides) <- make.unique(colnames(peptides))
+colnames(norm_proteins) <- make.unique(colnames(norm_proteins))
+colnames(norm_peptides) <- make.unique(colnames(norm_peptides))
+
 
 # getting relevant columns
 norm_peptides[,grep("^abundance_", colnames(norm_peptides), value=T)] <- 2^(norm_peptides[,grep("^abundance_", colnames(norm_peptides), value=T)])

@@ -19,7 +19,6 @@ process RAW2MZDB {
   script:
   """
   ls -la
-  thermo2mzdb "${rawfile}"
-  mv "${rawfile}.mzDB" "${rawfile.baseName}.mzDB" 
+  thermo2mzdb -i "${rawfile}" -o "${rawfile.baseName}.mzDB" 
   """
 }
