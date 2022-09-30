@@ -20,8 +20,7 @@ process MZDB2MGF {
   
   script:
   """
-  mzdb2mgf "${mzdbfile}"
-  mv "${mzdbfile}.mgf" "${mzdbfile.baseName}.mgf" 
+  mzdb2mgf -i "${mzdbfile}" -o "${mzdbfile.baseName}.mgf" 
   """
 }
 
