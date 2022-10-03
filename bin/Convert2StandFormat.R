@@ -16,7 +16,7 @@ for (s in unique(exp_design$exp_condition)) colnames(peptides) <- sub(paste0("^"
 colnames(peptides) <- sub("^FDR\\.PolySTest\\.", "differential_abundance_qvalue_", colnames(peptides))
 
 #Creating modified sequences
-modified_peptides <- strsplit(peptides$modifications, "; ")
+modified_peptides <- strsplit(as.character(peptides$modifications), "; ")
 modified_peptides <- lapply(modified_peptides, function(x) {
   if(any(!is.na(x))) {
     tt <- matrix(unlist(strsplit(x, " \\(")), nrow=2)
