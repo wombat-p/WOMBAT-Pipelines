@@ -1,5 +1,5 @@
 process CONVERT_MAXQUANT {
-    publishDir "${params.outdir}/sdrfmerge"
+    publishDir "${params.outdir}/prepare_maxquant"
     label 'process_medium'
     conda (params.enable_conda ? "bioconda::sdrf-pipelines=0.0.21--py_0" : null)
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {

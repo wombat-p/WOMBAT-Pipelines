@@ -24,7 +24,7 @@ if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker
   fragments = parameters.fragment_mass_tolerance.split(' ')
   frag_tol = fragments[0] as Float
   // Binning requires half of the tolerance + transformation from ppm to Da 
-  frag_tol = fragments[1] == frag_tol ? frag_tol*0.0005  : frag_tol/2  
+  frag_tol = ((fragments[1] == "ppm") ? frag_tol*0.0005  : frag_tol/2)  
   """
   cp "${protxml}" stpeter_in.prot.xml
   StPeter -f ${parameters.ident_fdr_psm} -t ${frag_tol} stpeter_in.prot.xml

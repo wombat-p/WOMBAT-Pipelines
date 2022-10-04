@@ -61,7 +61,7 @@ def new_or_default(params_in, pname, p):
         print("Found in parameter file")
         pvalue = params_in[pname]
     else:
-        print("Setting to default: " + str(p["default"]))
+        print("Not found in params file. Taking default value: " + str(p["default"]))
         pvalue = p["default"]
     return(pvalue)
 
@@ -162,9 +162,10 @@ the file into parts with the same data analysis parameters")
 
         # Now finally writing the value
         elif pname not in ["fixed_mods", "variable_mods"]:
-            print("WARNING: Overwriting " + pname + " values in sdrf file with " + str(pvalue))
-            overwritten.add(pname)
-            sdrf_content[psdrf] = pvalue
+            if pname in list(params_in.keys()):
+                print("WARNING: Overwriting " + pname + " values in sdrf file with " + str(pvalue))
+                overwritten.add(pname)
+                sdrf_content[psdrf] = pvalue
 
     else:
         sdrf_content[psdrf] = pvalue
