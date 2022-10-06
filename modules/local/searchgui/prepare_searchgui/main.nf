@@ -23,6 +23,28 @@ process PREPARE_SEARCHGUI {
   precursor = parameters.precursor_mass_tolerance.split(' ')
   prec_tol = precursor[0]
   prec_ppm = precursor[1] == "ppm" ? 1 : 0
+  // mapping to searchgui enzyme names
+  enzyme_map = [
+    "Trypsin": "Trypsin",
+    "Trypsin/P": "Trypsin (no P rule)",
+    "Chymotrypsin": "Chymotrypsin",
+    "Chymotrypsin/P": "Chymotrypsin (no P rule)",
+    "Lys-C": "Lys-C",
+    "Lys-C/P": "Lys-C (no P rule)",
+    "Lys-N": "Lys-N",
+    "Arg-C": "Arg-C",
+    "Arg_N": "Arg-N",
+    "Arg-C/P": "Arg-C (no P rule)",
+    "Asp-N": "Asp-N",
+    "Asp-N_ambic": "Asp-N (ambic)",
+    "Glu-C": "Glu-C",
+    "Glu-C/P": "Glu-C/P",
+    "CNBr": "CNBr",
+    "LysargiNase": "LysargiNase",
+    "PepsinA": "Pepsin A",
+    "Thermolysin": "Thermolysin",
+  ]
+  def enzyme = enzyme_map[parameters["enzyme"]]
   // converting to searchgui format
   def ptm_mapping2 = ptm_mapping.sum()
   def var_mods = parameters["variable_mods"].replaceAll("Protein","protein")
@@ -46,7 +68,7 @@ process PREPARE_SEARCHGUI {
   touch /usr/local/share/searchgui-4.0.41-1/resources/conf/paths.txt
   searchgui eu.isas.searchgui.cmd.PathSettingsCLI -temp_folder ./tmp -log ./log
   searchgui eu.isas.searchgui.cmd.IdentificationParametersCLI -out searchgui \\
-    -frag_tol ${frag_tol} -frag_ppm ${frag_ppm} -prec_tol ${prec_tol} -prec_ppm ${prec_ppm} -enzyme "${parameters["enzyme"]}" -mc ${parameters["allowed_miscleavages"]} \\
+    -frag_tol ${frag_tol} -frag_ppm ${frag_ppm} -prec_tol ${prec_tol} -prec_ppm ${prec_ppm} -enzyme "${enzyme}" -mc ${parameters["allowed_miscleavages"]} \\
     -max_isotope ${parameters["isotope_error_range"]} \\
     "${fixed_mods}" "${var_mods}"\\
     -fi "${parameters["fions"]}" -ri "${parameters["rions"]}" -xtandem_quick_acetyl 0 -xtandem_quick_pyro 0 -peptide_fdr ${parameters["ident_fdr_peptide"]}\\
