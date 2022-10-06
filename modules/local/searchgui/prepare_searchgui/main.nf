@@ -24,7 +24,7 @@ process PREPARE_SEARCHGUI {
   prec_tol = precursor[0]
   prec_ppm = precursor[1] == "ppm" ? 1 : 0
   // mapping to searchgui enzyme names
-  enzyme_map = [
+  def enzyme_map = [
     "Trypsin": "Trypsin",
     "Trypsin/P": "Trypsin (no P rule)",
     "Chymotrypsin": "Chymotrypsin",
