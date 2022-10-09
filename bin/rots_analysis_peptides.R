@@ -19,7 +19,7 @@ rotsparam_K <- NULL # default: NULL
 D <- read.csv("stand_pep_quant_merged.csv")
 
 pep_sequence <- D$modified_peptide
-intensities <- D[, grepl("abundance_", colnames(D))]
+intensities <- D[, grepl("^abundance_", colnames(D))]
 
 ### extract group information
 group <- limma::strsplit2(colnames(intensities), "_")[,2]
