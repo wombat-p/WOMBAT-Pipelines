@@ -18,6 +18,9 @@ rotsparam_K <- NULL # default: NULL
 ### data input
 D <- read.csv("stand_pep_quant_merged.csv")
 
+### remove rows with only missing values
+D <- D[rowSums(is.na(D)) < sum(grepl("^abundance_", colnames(D))),]
+
 pep_sequence <- D$modified_peptide
 intensities <- D[, grepl("^abundance_", colnames(D))]
 
