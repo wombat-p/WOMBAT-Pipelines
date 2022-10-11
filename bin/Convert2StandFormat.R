@@ -42,10 +42,10 @@ for (i in 1:nrow(peptides)) {
 peptides$modified_sequence <- modified_sequence
 
 stand_peps <- data.frame("modified_peptide"=peptides$modified_sequence, protein_group=peptides$samesets_accessions, 
-                         peptides[, grep("^number_of_psms", colnames(peptides))],
-                         2^peptides[, grep("^abundance", colnames(peptides))],
-                         peptides[, grep("^log_ratios", colnames(peptides))],
-                         peptides[, grep("^differential_abundance_qvalue", colnames(peptides))])
+                         peptides[, grep("^number_of_psms", colnames(peptides)), drop=F],
+                         2^peptides[, grep("^abundance", colnames(peptides)), drop=F],
+                         peptides[, grep("^log_ratios", colnames(peptides)), drop=F],
+                         peptides[, grep("^differential_abundance_qvalue", colnames(peptides)), drop=F])
 
 # deleting charge states with lower intensities to maintain max. 1 (modified) peptide sequence
 stand_peps <- stand_peps[order(rowMeans(peptides[, grep("^abundance", colnames(peptides))], na.rm = T), decreasing=T),]
@@ -53,17 +53,16 @@ stand_peps <- stand_peps[!duplicated(stand_peps$modified_peptide), ]
 stand_peps <- stand_peps[order(stand_peps$protein_group), ]
 write.csv(stand_peps, "stand_pep_quant_merged.csv")
 
-colnames(proteins)
 # Converting column names
 colnames(proteins) <- sub("^peptides_count_", "number_of_peptides_", colnames(proteins))
 colnames(proteins) <- sub("^log\\.ratios\\.", "log_ratios_", colnames(proteins))
 for (s in unique(exp_design$exp_condition)) colnames(proteins) <- sub(paste0("^",s,"\\."), paste0("abundance_",s,"_"), colnames(proteins))
-colnames(proteins) <- sub("^FDR\\.PolySTest\\.X", "differential_abundance_qvalue_", colnames(proteins))
+colnames(proteins) <- sub("^FDR\\.PolySTest\\.[X]?", "differential_abundance_qvalue_", colnames(proteins))
 stand_prots <- data.frame(protein_group=proteins$samesets_accessions, 
-                          proteins[, grep("^number_of_peptides", colnames(proteins))],
-                          proteins[, grep("^abundance_", colnames(proteins))],
-                          proteins[, grep("^log_ratios", colnames(proteins))],
-                          proteins[, grep("^differential_abundance_qvalue_", colnames(proteins))]
+                          proteins[, grep("^number_of_peptides", colnames(proteins)), drop=F],
+                          proteins[, grep("^abundance_", colnames(proteins)), drop=F],
+                          proteins[, grep("^log_ratios", colnames(proteins)), drop=F],
+                          proteins[, grep("^differential_abundance_qvalue_", colnames(proteins)), drop=F]
                           )
 write.csv(stand_prots, "stand_prot_quant_merged.csv")
 
