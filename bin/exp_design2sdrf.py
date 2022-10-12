@@ -13,7 +13,7 @@ sdrf_out['comment[label]'] = 'AC=MS:1002038;NT=label free sample'
 sdrf_out["comment[cleavage agent details]"] = 'NT=trypsin/P;AC=MS:1001313'
 sample_nums = list(range(1, len(expd.index)+1))
 sdrf_out.insert(0, 'source name', [m + str(n) for m,n in zip(["Sample"]*len(expd.index), sample_nums)])
-sdrf_out['factor[condition]'] = expd['characteristics[experimental samples]']
+sdrf_out['factor value[condition]'] = expd['characteristics[experimental samples]']
 
 sdrf_out.to_csv("sdrf_local.tsv", sep="\t", index=False)
     
