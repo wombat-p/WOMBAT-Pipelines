@@ -55,7 +55,9 @@ process PREPARE_SEARCHGUI {
   } else {
     var_mods = ""
   }
-  def fixed_mods = parameters["fixed_mods"].split(",").collect { mod -> ptm_mapping2[mod] }.join(",")
+  def fixed_mods = parameters["fixed_mods"].replaceAll("Protein","protein")
+  fixed_mods = fixed_mods.replaceAll("Peptide","peptide")
+  fixed_mods = fixed_mods.split(",").collect { mod -> ptm_mapping2[mod] }.join(",")
   if(fixed_mods == null) {
     fixed_mods = "-fixed_mods " + fixed_mods
   } else {
