@@ -23,6 +23,8 @@ import groovy.json.JsonOutput
   output:
 //   path "params.json",   emit: parameters
    path "benchmarks*.json",  emit:  benchmarks
+   path "stand_pep_quant_merged${workflow}.csv"    , emit: std_peps
+   path "stand_prot_quant_merged${workflow}.csv"    , emit: std_prots
   
   script:
   """
@@ -34,6 +36,8 @@ import groovy.json.JsonOutput
   fi
   Rscript $baseDir/bin/CalcBenchmarks.R
   mv benchmarks.json benchmarks_${workflow}.json
+  cp stand_pep_quant_merged.csv stand_pep_quant_merged${workflow}.csv
+  cp stand_prot_quant_merged.csv stand_prot_quant_merged${workflow}.csv
   """
 }
 
