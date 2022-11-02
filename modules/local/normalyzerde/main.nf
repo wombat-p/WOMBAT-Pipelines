@@ -1,6 +1,6 @@
 process NORMALYZERDE {
-    label 'process_intermediate'
-    label 'process_single_thread'
+    label 'process_medium'
+//    label 'process_single_thread'
     publishDir "${params.outdir}/normalyzerde", mode:'copy'
     conda (params.enable_conda ? "bioconda:bionconductor-normalyzerde=1.14.0" : null)
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
