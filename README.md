@@ -14,7 +14,7 @@ This work contains four major different workflows for the analysis or label-free
 1. [MaxQuant](https://www.maxquant.org/) + [Normalyzer](http://normalyzer.immunoprot.lth.se/)
 2. [SearchGui](http://compomics.github.io/projects/searchgui) + [Proline](https://www.profiproteomics.fr/proline/) + [PolySTest](https://bitbucket.org/veitveit/polystest)
 3. [Compomics tools](http://compomics.github.io/) + [FlashLFQ](https://github.com/smith-chem-wisc/FlashLFQ) + [MSqRob](https://github.com/statOmics/MSqRob)
-4. Tools from the [Transproteomic Pipeline](http://tools.proteomecenter.org/TPP.php) + [ROTS](https://bioconductor.org/packages/release/bioc/html/ROTS.html)
+4. Tools from the [Trans-Proteomic Pipeline](http://tools.proteomecenter.org/TPP.php) + [ROTS](https://bioconductor.org/packages/release/bioc/html/ROTS.html)
 
 Initialization and parameterization of the workflows is based on tools from the [SDRF pipelines](https://github.com/bigbio/sdrf-pipelines), the [ThermoRawFileParser](http://compomics.github.io/projects/ThermoRawFileParser) with our own contributions and additional programs from the wombat-p organizaion [https://github.com/wombat-p/Utilities] as well as our [fork](https://github.com/elixir-proteomics-community/sdrf-pipelines). This includes setting a generalized set of data analysis parameters and the calculation of a multiple benchmarks.
 
