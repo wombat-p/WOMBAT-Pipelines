@@ -3,7 +3,7 @@ process PREPARE_SEARCHGUI {
   label 'process_single_thread'
     conda (params.enable_conda ? "bioconda::searchgui-4.0.41" : null)
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
-        container "docker://quay.io/biocontainers/searchgui:4.0.41--h779adbc_1"
+        container "docker://wombatp/compomics:v0.30"
     } else {
         container "quay.io/biocontainers/searchgui:4.0.41--h779adbc_1"
     }

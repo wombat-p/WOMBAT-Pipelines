@@ -11,7 +11,7 @@ The pipeline is built using [Nextflow](https://www.nextflow.io), a workflow tool
 ## Pipeline summary
 
 This work contains four major different workflows for the analysis or label-free proteomics data, originating from LC-MS experiments.
-1. [MaxQuant](https://www.maxquant.org/) + [Normalyzer](http://normalyzer.immunoprot.lth.se/)
+1. [MaxQuant](https://www.maxquant.org/) + [NormalyzerDE](https://normalyzerde.immunoprot.lth.se/)
 2. [SearchGui](http://compomics.github.io/projects/searchgui) + [Proline](https://www.profiproteomics.fr/proline/) + [PolySTest](https://bitbucket.org/veitveit/polystest)
 3. [Compomics tools](http://compomics.github.io/) + [FlashLFQ](https://github.com/smith-chem-wisc/FlashLFQ) + [MSqRob](https://github.com/statOmics/MSqRob)
 4. Tools from the [Transproteomic Pipeline](http://tools.proteomecenter.org/TPP.php) + [ROTS](https://bioconductor.org/packages/release/bioc/html/ROTS.html)
