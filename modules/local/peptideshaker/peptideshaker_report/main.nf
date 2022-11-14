@@ -3,7 +3,7 @@ process PEPTIDESHAKER_REPORT {
   label 'process_single_thread'
 conda (params.enable_conda ? "bioconda::peptideshaker-2.2.6" : null)
 if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
-        container "docker://quay.io/biocontainers/peptide-shaker:2.2.6--hec16e2b_1"
+        container "docker://peptide-shaker:2.2.6--hec16e2b_1"
 } else {
         container "quay.io/biocontainers/peptide-shaker:2.2.6--hec16e2b_1"
 }
