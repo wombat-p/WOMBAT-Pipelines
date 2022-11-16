@@ -3,7 +3,7 @@ params:
   variable_mods: Acetyl of Protein N-term,Propionamide of C
   precursor_mass_tolerance: 20 ppm
   fragment_mass_tolerance: 0.2 Da
-  enzyme: Trypsin
+  enzyme: Trypsin/P
   fions: b
   rions: y
   isotope_error_range: 1

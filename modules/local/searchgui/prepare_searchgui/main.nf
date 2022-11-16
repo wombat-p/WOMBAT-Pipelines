@@ -25,26 +25,26 @@ process PREPARE_SEARCHGUI {
   prec_ppm = precursor[1] == "ppm" ? 1 : 0
   // mapping to searchgui enzyme names
   def enzyme_map = [
-    "Trypsin": "Trypsin",
-    "Trypsin/P": "Trypsin (no P rule)",
-    "Chymotrypsin": "Chymotrypsin",
-    "Chymotrypsin/P": "Chymotrypsin (no P rule)",
-    "Lys-C": "Lys-C",
-    "Lys-C/P": "Lys-C (no P rule)",
-    "Lys-N": "Lys-N",
-    "Arg-C": "Arg-C",
-    "Arg_N": "Arg-N",
-    "Arg-C/P": "Arg-C (no P rule)",
-    "Asp-N": "Asp-N",
-    "Asp-N_ambic": "Asp-N (ambic)",
-    "Glu-C": "Glu-C",
-    "Glu-C/P": "Glu-C/P",
-    "CNBr": "CNBr",
-    "LysargiNase": "LysargiNase",
-    "PepsinA": "Pepsin A",
-    "Thermolysin": "Thermolysin",
+    "trypsin": "Trypsin",
+    "trypsin/p": "Trypsin (no P rule)",
+    "chymotrypsin": "Chymotrypsin",
+    "chymotrypsin/p": "Chymotrypsin (no P rule)",
+    "lys-c": "Lys-C",
+    "lys-c/p": "Lys-C (no P rule)",
+    "lys-n": "Lys-N",
+    "arg-c": "Arg-C",
+    "arg_n": "Arg-N",
+    "arg-c/p": "Arg-C (no P rule)",
+    "asp-n": "Asp-N",
+    "asp-n_ambic": "Asp-N (ambic)",
+    "glu-c": "Glu-C",
+    "glu-c/p": "Glu-C/P",
+    "cNBr": "CNBr",
+    "lysarginase": "LysargiNase",
+    "pepsina": "Pepsin A",
+    "thermolysin": "Thermolysin",
   ]
-  def enzyme = enzyme_map[parameters["enzyme"]]
+  def enzyme = enzyme_map[parameters["enzyme"].toLowerCase()]
   // converting to searchgui format
   def ptm_mapping2 = ptm_mapping.sum()
   def var_mods = parameters["variable_mods"].replaceAll("Protein","protein")
