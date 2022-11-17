@@ -50,7 +50,7 @@ process PREPARE_FILES {
         if [[ "$sdrf" == "no_sdrf" ]] 
         then
             printf "raw_file\texp_condition" >> exp_design.txt
-	    for a in "$raws"
+	    for a in $raws
 	    do
 	        printf "\n\$a\tA" >> exp_design.txt
 	    done
