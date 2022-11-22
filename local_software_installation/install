@@ -1,0 +1,62 @@
+#!/bin/bash
+#conda install -c conda-forge -n base mamba
+mamba env create -y -f environment.yml && mamba clean -a
+#### TODO somehow this does not put the environment in place
+mamba activate wombat-pipelines
+
+# recent sdrf-pipelines
+git clone -b extended https://github.com/elixir-proteomics-community/sdrf-pipelines
+cd sdrf-pipelines; python setup.py install; cd ..
+rm -rf sdrf-pipelines*
+
+# tpp
+cd $CONDA_PREFIX
+wget "http://www.tppms.org/sw/TPP5.2/TPP5.2_ubuntu.tgz" 
+tar xvfz TPP5.2_ubuntu.tgz 
+chmod -R a+rwx tpp 
+rm -f TPP5.2_ubuntu.tgz
+mv tpp/* .
+mv tpp/bin/* bin/
+mv tpp/conf conf/
+mv tpp/lib lib
+cd -
+
+# set folder rights compomics
+chmod -R a+rwx $CONDA_PREFIX/share/searchgui-*/resources
+chmod -R a+rwx $CONDA_PREFIX/share/peptide-shaker-*/resources
+
+# This one will be tricky:
+apt-get update
+apt-get install -y apt-transport-https ca-certificates dirmngr gnupg software-properties-common wget
+wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add  -
+add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+apt update; apt install -y adoptopenjdk-8-hotspot;
+ln -s /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/bin/java /usr/bin/java8
+
+### Install mzDB tools
+mkdir $CONDA_PREFIX/share/mzdb-tools 
+cd $CONDA_PREFIX/share/mzdb-tools
+wget https://github.com/mzdb/mzdb4s/releases/download/0.4.3/mzdbtools_0.4.3_linux_x64.zip
+unzip mzdbtools_0.4.3_linux_x64.zip
+chmod a+x run_thermo2mzdb.sh
+ln -s $PWD/run_thermo2mzdb.sh $CONDA_PREFIX/bin/thermo2mzdb
+chmod a+x mzdbtools
+chmod a+x run_mzdb2mgf.sh
+ln -s $PWD/run_mzdb2mgf.sh $CONDA_PREFIX/bin/mzdb2mgf
+cp $CONDA_PREFIX/lib/libmonosgen-2.0.so.1 lib/
+cd -
+
+### Install Proline CLI
+mkdir $CONDA_PREFIX/share/proline
+cd $CONDA_PREFIX/share/proline
+wget https://github.com/profiproteomics/proline-cli/releases/download/0.2.0-SNAPSHOT-2019-10-04/proline-cli-0.2.0-SNAPSHOT-bin.zip
+unzip proline-cli-0.2.0-SNAPSHOT-bin.zip
+mv proline-cli-0.2.0-SNAPSHOT/* .
+echo '#!/bin/bash' > run_proline.sh
+echo 'java -cp "CONDAPATH/config:CONDAPATH/lib/*:CONDAPATH/proline-cli-0.2.0-SNAPSHOT.jar" -Dlogback.configurationFile=CONDAPATH/config/logback.xml fr.proline.cli.ProlineCLI $@' >> run_proline.sh
+sed -i "s,CONDAPATH,$PWD,g"  run_proline.sh
+chmod -R a+rwx ./* 
+ln -s $PWD/run_proline.sh $CONDA_PREFIX/bin/run_proline.sh
+mkdir proline_results 
+#chmod -R a+rwx ./proline_results/
+cd -
