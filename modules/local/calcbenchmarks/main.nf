@@ -6,9 +6,9 @@ import groovy.json.JsonOutput
     publishDir "${params.outdir}", mode:'copy'
     conda (params.enable_conda ? "conda-forge::notyetavailable" : null)
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
-        container "docker://wombatp/maxquant-pipeline:dev"
+        container "docker://wombatp/maxquant-pipeline:v0.2"
     } else {
-        container "wombatp/maxquant-pipeline:dev"
+        container "wombatp/maxquant-pipeline:v0.2"
     }
 
 

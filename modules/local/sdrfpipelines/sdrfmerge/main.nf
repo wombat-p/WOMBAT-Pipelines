@@ -4,9 +4,9 @@ process SDRFMERGE {
     label 'process_medium'
     conda (params.enable_conda ? "bioconda::sdrf-pipelines=0.0.21" : null)
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
-        container "docker://wombatp/maxquant-pipeline:dev"
+        container "docker://wombatp/maxquant-pipeline:v0.2"
     } else {
-        container "wombatp/maxquant-pipeline:dev"
+        container "wombatp/maxquant-pipeline:v0.2"
     }
 
     publishDir "${params.outdir}/sdrf_merge", mode:'copy'
