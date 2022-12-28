@@ -22,7 +22,7 @@ publishDir "${params.outdir}/peptideshaker", mode:'copy'
   script:
   """
   peptide-shaker eu.isas.peptideshaker.cmd.PathSettingsCLI  -temp_folder ./tmp -log ./log
-  peptide-shaker eu.isas.peptideshaker.cmd.ReportCLI -in "./${pepshaker}" -out_reports "./" -reports "3,4,6,9"
+  peptide-shaker eu.isas.peptideshaker.cmd.ReportCLI -in "./${pepshaker}" -out_reports "./" -reports "3,4,6,9" || true
         mv "wombat_Default_PSM_Report_with_non-validated_matches.txt" "${pepshaker.baseName}.txt"
         mv "wombat_Default_PSM_Report.txt" "${pepshaker.baseName}_filtered.txt"
         mv "wombat_Default_Peptide_Report.txt" "${pepshaker.baseName}_peptides.txt"
