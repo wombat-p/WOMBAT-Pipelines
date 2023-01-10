@@ -86,6 +86,8 @@ write.csv(stand_pep_quant, "stand_pep_quant_merged.csv", row.names=F)
 quant_prots <- read.csv("q_prot.txt", sep="\t")
 rownames(quant_prots) <- quant_prots[, "Protein.Groups"]
 quant_prots <- quant_prots[, grep("^Intensity",colnames(quant_prots))]
+# making zeroes to NA
+quant_prots[quant_prots == 0] <- NA
 all_proteins <- list()
 for (type in exp_annotation$raw_file) {
   tin <- read.csv(paste0(type,"_proteins.txt"), sep="\t")
