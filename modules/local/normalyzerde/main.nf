@@ -9,15 +9,12 @@ process NORMALYZERDE {
         container "computationalproteomics/normalyzerde:1.14.0"
     }
 
-    input:
-      path maxquant
-      path exp_file
-      path comp_file
-      val parameters
+input:
+    path maxquant
+    path exp_file
+    path comp_file
+    val parameters
   
-    when:
-      parameters.run_statistics
-
     output:
 	path "Normalyzer_design.tsv" , emit: exp_design
 	path "NormalyzerProteins/*"   , emit:  normalyzer_proteins
@@ -26,6 +23,8 @@ process NORMALYZERDE {
         path "stand_pep_quant_merged.csv"    , emit: std_peps
         path "exp_design_calcb.tsv"    , emit: std_exp_design
 
+    when:
+    parameters.run_statistics
 
     script:
     """

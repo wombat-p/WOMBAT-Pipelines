@@ -69,7 +69,7 @@ See also the URL for SDRF files: https://github.com/bigbio/proteomics-metadata-s
 __--fasta__ You also need a fasta database to run the database search in the workflows. Standard databases can be downloaded from [UniProt](http:///uniprot.org)
 
 __--parameters__ When deviating from the standard settings, use a yaml file containing new parameters settings. For more details about the different parameters and an example file, see https://github.com/bigbio/proteomics-metadata-standard/blob/master/sdrf-proteomics/Data-analysis-metadata.adoc
-As not all of these parameters are available for all workflows, see <!-- TODO Provide link -->  this table for an overview
+As not all of these parameters are avaailable for all workflows, see <!-- TODO Provide link -->  this table for an overview
 
 __--raws__ Without given sdrf file containing the paths to the raw data files (Thermo raw format) or if you have the files already downloaded, specify the wildcard (e.g. "*" or "?") to access the files on your system. We recommend putting this parameters in 'single quotes' as you might run into an error when using wildcards.
 
