@@ -1,5 +1,5 @@
 name: Feature request
-description: Suggest an idea for the nf-core/wombat pipeline
+description: Suggest an idea for the wombat pipeline
 labels: enhancement
 body:
   - type: textarea
