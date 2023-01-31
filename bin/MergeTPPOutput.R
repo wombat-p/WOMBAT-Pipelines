@@ -98,6 +98,6 @@ for (c in grep("^abundance", colnames(stand_pep_quant))) {
   stand_pep_quant[stand_pep_quant[,c] == 0, c] <- NA
 }
 
-write.csv(stand_prot_quant, "stand_prot_quant_merged.csv", row.names=F)
-write.csv(stand_pep_quant, "stand_pep_quant_merged.csv", row.names=F)
+write.csv(stand_prot_quant, "stand_prot_quant_merged_pre.csv", row.names=F)
+write.csv(stand_pep_quant, "stand_pep_quant_merged_pre.csv", row.names=F)
 

@@ -17,8 +17,8 @@ input:
   output:
   path "all_prot_quant_merged.csv" , emit: allprotquant
   path "all_pep_quant_merged.csv" , emit: allpepquant
-  path "stand_prot_quant_merged.csv" , emit: stdprotquant_qc
-  path "stand_pep_quant_merged.csv" , emit: stdpepquant_qc
+  path "stand_prot_quant_merged_pre.csv" , emit: stdprotquant_qc
+  path "stand_pep_quant_merged_pre.csv" , emit: stdpepquant_qc
   path "exp_design.txt" , emit: expdesign
   
   script:
