@@ -142,7 +142,7 @@ if (is.null(stats_peptides)) {
 write.csv(proteins, "stand_prot_quant_merged.csv", row.names = F)
 write.csv(peptides, "stand_pep_quant_merged.csv", row.names = F)
 exp_design_out <- final_exp[, c("Run","group" )]
-colnames(exp_design_out) <- c("raw_file","exp_condition")
+colnames(exp_design_out) <- c("raw_file","exp_conditions")
 write.table(exp_design_out, "exp_design_calcb.tsv", quote=F, sep="\t", row.names=F)
 
 cat("Done\n")
