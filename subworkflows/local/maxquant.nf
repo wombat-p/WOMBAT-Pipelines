@@ -20,7 +20,7 @@ workflow MAXQUANT {
     NORMALYZERDE (MAXQUANT_LFQ.out.maxquant_txt, CONVERT_MAXQUANT.out.exp_design,  CONVERT_MAXQUANT.out.comp_file, parameters )
 
     emit:
-    NORMALYZERDE.out.exp_design
+    NORMALYZERDE.out.std_exp_design
     NORMALYZERDE.out.std_prots
     NORMALYZERDE.out.std_peps
  
