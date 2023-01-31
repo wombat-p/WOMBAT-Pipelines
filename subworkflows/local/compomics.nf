@@ -36,8 +36,8 @@ workflow COMPOMICS {
              PEPTIDESHAKER_REPORT.out.peptideshaker_peptide_file.collect(), PEPTIDESHAKER_REPORT.out.peptideshaker_protein_file.collect() , parameters)
 
     emit:
+    MSQROB.out.exp_design_final
     MSQROB.out.stdpepquant
     MSQROB.out.stdprotquant
-    MSQROB.out.exp_design_final
     MSQROB.out.msqrob_prot_out
 }
