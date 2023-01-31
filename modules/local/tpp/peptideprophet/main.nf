@@ -21,8 +21,8 @@ if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker
   path("${pepxml_file.baseName}.interact.pep.xml"), emit: peptideprophet
   
   script:
-  enzymemap = ["Trypsin": "", "Trypsin/P": "", "Lys_C": "-eN", "Lys_N": "-eL", "Arg_C": "-eN", "Asp_N": "-eA", "CNBr": "-eM", "Glu_C": "-eG", "PepsinA": "-eN", "Chymotrypsin": "-eC", "Unspecified": "-eN"]
-  enzyme = enzymemap[parameters.enzyme]
+  enzymemap = ["trypsin": "", "trypsin/p": "", "lys_c": "-eN", "lys_n": "-eL", "arg_c": "-eN", "asp_n": "-eA", "cnbr": "-eM", "glu_c": "-eG", "pepsina": "-eN", "chymotrypsin": "-eC", "unspecified": "-eN"]
+  enzyme = enzymemap[parameters.enzyme.toLowerCase()]
   
   """
 #  cp ${pepxml_file} t
