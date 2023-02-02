@@ -38,5 +38,6 @@ process MAXQUANT_LFQ {
     chmod -R a+rw *
     maxquant mqpar_changed.xml
     mv combined/txt/*.txt .
+    mv combined/proc/*unningTimes.txt runningTimes.txt
     """
 }
