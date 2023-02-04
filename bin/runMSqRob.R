@@ -39,7 +39,9 @@ proteins <- MSnSet2protdata(peptides, accession="Protein.Groups")
 
 # filter for proteins with more than min_peptides peptides
 keep_prots <- sapply(proteins@data, function(x) length(unique(x$Sequence))) >= min_peptides
-proteins <- proteins[which(keep_prots)]
+# needed to fix problem when accession numbers are actual numbers
+proteins[as.character(proteins@accession[which(keep_prots)])]
+#proteins <- proteins[which(keep_prots)]
 system.time(protLM <- fit.model(proteins, response="quant_value", fixed=c("genotype"),  random=c("run","Sequence"), add.intercept=TRUE))
 #create comparisons vs first
 contrasts <- NULL
