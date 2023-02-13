@@ -24,6 +24,14 @@ exp_annotation$run <- paste0("Intensity_",exp_annotation$raw_file)
 for (c in 1:ncol(exp_annotation)) {
   exp_annotation[,c] <- as.factor(exp_annotation[,c])
 }
+# Create column for replicate number if not existing already
+if (is.null(exp_annotation$biorep)) {
+  exp_annotation$biorep <- 1
+  for (i in unique(exp_annotation$exp_condition)) {
+    ttt <- exp_annotation[exp_annotation$exp_condition == i, "biorep"]
+    exp_annotation[exp_annotation$exp_condition == i, "biorep"] <- 1:length(ttt)
+  }
+}
 
 
 ## Running MSqRob
@@ -67,7 +75,7 @@ for (type in exp_annotation$raw_file) {
   tin <- read.csv(paste0(type,"_peptides.txt"), sep="\t")
   protnames <- tin[, c("Modified.Sequence","Protein.s.")]
   tin <- tin[,c( "Modified.Sequence","X.Validated.PSMs")]
-  colnames(tin) <- paste0(c("modified_peptide", "number_psms"), "_", type)
+  colnames(tin) <- paste0(c("modified_peptide", "number_of_psms"), "_", type)
   all_peptides[[type]] <- tin
 }
 protnames <- unique(protnames)
@@ -76,11 +84,18 @@ all_pep <- Reduce(function(x, y) merge(x, y, by=1, all=TRUE), all_peptides)
 
 rownames(all_pep) <- all_pep[,1]
 # merging with quant data
-stand_pep_quant <- cbind(all_pep[fData(peptides)$Sequence,], protnames[fData(peptides)$Sequence, 2], 2^exprs(peptides))
+stand_pep_quant <- cbind(all_pep[fData(peptides)$Sequence,], protein_group=protnames[fData(peptides)$Sequence, 2], 2^exprs(peptides))
 for (r in 1:nrow(exp_annotation)) {
-  colnames(stand_pep_quant) <- sub(paste0("Intensity_", exp_annotation$raw_file[r]), paste0("abundance_", exp_annotation$exp_condition[r], "_",
-                                                                                             exp_annotation$biorep[r]), colnames(stand_pep_quant))
+  colnames(stand_pep_quant) <- sub(paste0("Intensity_", exp_annotation$raw_file[r]), 
+                                   paste0("abundance_", exp_annotation$exp_condition[r], "_",
+                                          exp_annotation$biorep[r]), colnames(stand_pep_quant))
+  colnames(stand_pep_quant) <- sub(paste0("number_of_psms_", exp_annotation$raw_file[r]), 
+                                   paste0("number_of_psms_", exp_annotation$exp_condition[r], "_",
+                                          exp_annotation$biorep[r]), colnames(stand_pep_quant))
 }
+# standardizing colnames
+colnames(stand_pep_quant)[1] <- "modified_peptide"
+
 write.csv(stand_pep_quant, "stand_pep_quant_merged.csv", row.names=F)
 
 
@@ -103,18 +118,29 @@ rownames(all_prot) <- all_prot[,1]
 stand_prot_quant <- cbind(all_prot[rownames(result),], log2(quant_prots[rownames(result), ]), result[,grep("estimate$|qval$|pval$", colnames(result))])
 # Exchanging file name based columns names to the ones defined in the experimental design
 for (r in 1:nrow(exp_annotation)) {
-  colnames(stand_prot_quant) <- sub(paste0("Intensity_", exp_annotation$raw_file[r]), paste0("abundance_", exp_annotation$exp_condition[r], "_",
-                                                                                             exp_annotation$biorep[r]), colnames(stand_prot_quant))
+  colnames(stand_prot_quant) <- sub(paste0("Intensity_", exp_annotation$raw_file[r]), 
+                                    paste0("abundance_", exp_annotation$exp_condition[r], "_",
+                                           exp_annotation$biorep[r]), colnames(stand_prot_quant))
+  colnames(stand_prot_quant) <- sub(paste0("number_of_peptides_", exp_annotation$raw_file[r]), 
+                                    paste0("number_of_peptides_", exp_annotation$exp_condition[r], "_",
+                                           exp_annotation$biorep[r]), colnames(stand_prot_quant))
 }
 
+# Change column names for statistics
 ttt <- colnames(stand_prot_quant)[grep("estimate$", colnames(stand_prot_quant))] 
 ttt <- sub("estimate$", "", ttt)
+if (ttt == "")
+  ttt <- paste(rev(unique(exp_annotation$exp_condition)), collapse = "_vs_")
 colnames(stand_prot_quant)[grep("estimate$", colnames(stand_prot_quant))] <- paste0("log_fold_change_", ttt)
 ttt <- colnames(stand_prot_quant)[grep("qval$", colnames(stand_prot_quant))] 
 ttt <- sub("qval$", "", ttt)
+if (ttt == "")
+  ttt <- paste(rev(unique(exp_annotation$exp_condition)), collapse = "_vs_")
 colnames(stand_prot_quant)[grep("qval$", colnames(stand_prot_quant))] <- paste0("differential_abundance_qvalue_", ttt)
 ttt <- colnames(stand_prot_quant)[grep("pval$", colnames(stand_prot_quant))] 
 ttt <- sub("pval$", "", ttt)
+if (ttt == "")
+  ttt <- paste(rev(unique(exp_annotation$exp_condition)), collapse = "_vs_")
 colnames(stand_prot_quant)[grep("pval$", colnames(stand_prot_quant))] <- paste0("differential_abundance_pvalue_", ttt)
 write.csv(stand_prot_quant, "stand_prot_quant_merged.csv", row.names=F)
 
