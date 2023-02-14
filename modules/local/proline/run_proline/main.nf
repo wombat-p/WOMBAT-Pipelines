@@ -3,9 +3,9 @@ label 'process_high'
 
 conda (params.enable_conda ? "bioconda::proline_todo" : null)
 if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
-        container "docker://wombatp/proline-pipeline:v0.17"
+        container "docker://wombatp/proline-pipeline:v0.18"
 } else {
-        container "wombatp/proline-pipeline:v0.17"
+        container "wombatp/proline-pipeline:v0.18"
 }
   
   publishDir "${params.outdir}/proline", mode:'copy'
