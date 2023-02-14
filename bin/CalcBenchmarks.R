@@ -109,7 +109,7 @@ all_prot_samples <- grep("^abundance_", colnames(StatsProt))
 Identification[["ProteinCoverage"]] <- sum(rowSums(is.na(StatsProt[,all_prot_samples,drop=F])) == 0) / nrow(StatsProt)
 
 # distribution of peptides per protein group (only 1-10)
-tab <- table(StatsPep[,"protein_group"])
+tab <- table(table(StatsPep[,"protein_group"]))
 
 Identification[["PeptidesPerProtein"]] <- as.data.frame(tab[1:10])
 Performance[["Identification"]] <- Identification
