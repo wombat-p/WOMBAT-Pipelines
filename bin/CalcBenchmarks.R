@@ -1,6 +1,6 @@
 ###### Script to calculate general benchmarks
 ## For more details about the metrics, see
-## https://docs.google.com/spreadsheets/d/1tH08Sc78h3oHyRoWgjyqoL4r_943PaDvQwUbjldn2fo/edit#gid=728728122
+# https://docs.google.com/spreadsheets/d/1tH08Sc78h3oHyRoWgjyqoL4r_943PaDvQwUbjldn2fo/edit#gid=728728122
 
 
 library(stringr)
@@ -109,7 +109,7 @@ all_prot_samples <- grep("^abundance_", colnames(StatsProt))
 Identification[["ProteinCoverage"]] <- sum(rowSums(is.na(StatsProt[,all_prot_samples,drop=F])) == 0) / nrow(StatsProt)
 
 # distribution of peptides per protein group (only 1-10)
-tab <- table(unlist(StatsProt[,grep("^number_of_peptides_", colnames(StatsProt)),drop=F]))
+tab <- table(StatsPep[,"protein_group"]))
 
 Identification[["PeptidesPerProtein"]] <- as.data.frame(tab[1:10])
 Performance[["Identification"]] <- Identification
