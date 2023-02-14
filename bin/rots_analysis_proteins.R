@@ -18,11 +18,14 @@ rotsparam_K <- NULL # default: NULL
 ### data input
 D <- read.csv("stand_prot_quant_merged_pre.csv")
 
+## abundance columns
+ab_cols <- grepl("^abundance_", colnames(D))
+
 ### remove rows with only missing values
-D <- D[rowSums(is.na(D)) < sum(grepl("^abundance_", colnames(D))),]
+D <- D[rowSums(is.na(D[, ab_cols])) < sum(ab_cols),]
 
 protein_name <- D$protein_group
-intensities <- D[, grepl("^abundance_", colnames(D))]
+intensities <- D[, ab_cols]
 
 ### extract group information
 group <- limma::strsplit2(colnames(intensities), "_")[,2]
