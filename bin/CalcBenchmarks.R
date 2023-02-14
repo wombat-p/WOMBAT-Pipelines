@@ -102,11 +102,11 @@ Identification[["ProteinGroupNumber"]] <- nrow(StatsProt)
 
 # percentage of peptides identified in all samples
 all_pep_samples <- grep("^abundance_", colnames(StatsPep))
-Identification[["PeptideCoverage"]] <- sum(rowSums(is.na(StatsPep[,all_pep_samples,drop=F])) == 0)
+Identification[["PeptideCoverage"]] <- sum(rowSums(is.na(StatsPep[,all_pep_samples,drop=F])) == 0) / nrow(StatsPep)
 
 # precentage of proteins identified in all samples
 all_prot_samples <- grep("^abundance_", colnames(StatsProt))
-Identification[["ProteinCoverage"]] <- sum(rowSums(is.na(StatsProt[,all_prot_samples,drop=F])) == 0)
+Identification[["ProteinCoverage"]] <- sum(rowSums(is.na(StatsProt[,all_prot_samples,drop=F])) == 0) / nrow(StatsProt)
 
 # distribution of peptides per protein group (only 1-10)
 tab <- table(unlist(StatsProt[,grep("^number_of_peptides_", colnames(StatsProt)),drop=F]))
