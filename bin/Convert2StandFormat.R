@@ -6,6 +6,10 @@ peptides <- read.csv("polystest_pep_res.csv")
 proteins <- read.csv("polystest_prot_res.csv")
 exp_design <- read.csv("exp_design.txt", sep="\t")
 exp_design[,2] <- make.names(exp_design[,2])
+
+if(is.null(exp_design$raw_file))
+     exp_design$raw_file <- exp_design$mzdb_file
+
 exp_design$sample_name <- sub("\\.mzDB","", sub("\\.\\/", "", exp_design$raw_file))
 colnames(exp_design)[1:2] <- c("raw_file", "exp_condition")
 # Create column for (biological) replicate number if not existing already
