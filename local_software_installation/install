@@ -1,6 +1,6 @@
 #!/bin/bash
 #conda install -c conda-forge -n base mamba
-mamba env create -y -f environment.yml && mamba clean -a
+mamba env create -f environment.yml && mamba clean -a
 #### TODO somehow this does not put the environment in place
 mamba activate wombat-pipelines
 
@@ -25,13 +25,14 @@ cd -
 chmod -R a+rwx $CONDA_PREFIX/share/searchgui-*/resources
 chmod -R a+rwx $CONDA_PREFIX/share/peptide-shaker-*/resources
 
-# This one will be tricky:
-apt-get update
-apt-get install -y apt-transport-https ca-certificates dirmngr gnupg software-properties-common wget
-wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add  -
-add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
-apt update; apt install -y adoptopenjdk-8-hotspot;
-ln -s /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/bin/java /usr/bin/java8
+# This one is outdated
+sudo apt-get update
+sudo apt-get install -y apt-transport-https ca-certificates dirmngr gnupg software-properties-common wget
+#wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add  -
+#sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+#sudo apt update; sudo apt install -y adoptopenjdk-8-hotspot;
+sudo apt-get install openjdk-8-jdk
+sudo ln -s /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java /usr/bin/java8
 
 ### Install mzDB tools
 mkdir $CONDA_PREFIX/share/mzdb-tools 
