@@ -61,3 +61,5 @@ ln -s $PWD/run_proline.sh $CONDA_PREFIX/bin/run_proline.sh
 mkdir proline_results 
 #chmod -R a+rwx ./proline_results/
 cd -
+
+curl -s https://get.nextflow.io | bash
