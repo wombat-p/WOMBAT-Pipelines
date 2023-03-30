@@ -31,7 +31,7 @@ sudo apt-get install -y apt-transport-https ca-certificates dirmngr gnupg softwa
 #wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add  -
 #sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
 #sudo apt update; sudo apt install -y adoptopenjdk-8-hotspot;
-sudo apt-get install openjdk-8-jdk
+sudo apt-get install -y openjdk-8-jdk
 sudo ln -s /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java /usr/bin/java8
 
 ### Install mzDB tools
