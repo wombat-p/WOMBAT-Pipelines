@@ -119,7 +119,21 @@ Quantification=list()
 
 # CV and correlation of peptides within replicates
 tPep <- tProt <- tPep2 <- tProt2 <-tprotquant <- tpepquant <-  NULL
-for (i in make.names(unique(ExpDesign$exp_condition))) {
+
+# Creating R compatible columns names
+comp_names <- make.names(unique(ExpDesign$exp_condition))
+# Check whether ExpDesign$exp_condition) starts with a number or a dot
+if (any(grepl("^[0-9]", unique(ExpDesign$exp_condition))) | any(grepl("^\\.", unique(ExpDesign$exp_condition)))) {
+  # Remove the prefix X from comp_names if ExpDesign$exp_condition starts with a number or a dot
+  comp_names <- gsub("^X", "", comp_names)
+} 
+
+# Calculate CV and correlation
+for (i in comp_names) {
+  # create an error when no i in colnames(StatsPep)
+  if (!i %in% colnames(StatsPep)) {
+    stop(paste0("Sample name ", i, " not found in stand_pep_quant_merged.csv."))
+  }
   tquant <- as.matrix(StatsPep[,grep(paste0("^abundance_", i), colnames(StatsPep)), drop=F])
   tPep <- c(tPep, rowSds(tquant, na.rm=T) / rowMeans(tquant, na.rm=T))
   tPep2 <- c(tPep2, cor(log2(tquant), use="pairwise.complete.obs"))
