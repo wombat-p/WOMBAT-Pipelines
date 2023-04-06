@@ -29,7 +29,9 @@ StatsPep <- read.csv("stand_pep_quant_merged.csv")
 StatsProt <- read.csv("stand_prot_quant_merged.csv")
 ExpDesign <- read.csv("exp_design.txt", sep="\t")
 Params <- read_json("params.json")
-  
+
+cat("\n### Calculating benchmarks ###\n")
+
 #### Functionality
 Functionality = list()
 ### Traceability
@@ -120,18 +122,20 @@ Quantification=list()
 # CV and correlation of peptides within replicates
 tPep <- tProt <- tPep2 <- tProt2 <-tprotquant <- tpepquant <-  NULL
 
+cat("\n### Calculating CV and correlation ###\n")
+
 # Creating R compatible columns names
 comp_names <- make.names(unique(ExpDesign$exp_condition))
 # Check whether ExpDesign$exp_condition) starts with a number or a dot
 if (any(grepl("^[0-9]", unique(ExpDesign$exp_condition))) | any(grepl("^\\.", unique(ExpDesign$exp_condition)))) {
   # Remove the prefix X from comp_names if ExpDesign$exp_condition starts with a number or a dot
   comp_names <- gsub("^X", "", comp_names)
-} 
+}
 
 # Calculate CV and correlation
 for (i in comp_names) {
   # create an error when no i in colnames(StatsPep)
-  if (!i %in% colnames(StatsPep)) {
+  if (all(!grepl(paste0("^abundance_", i), colnames(StatsPep)))) {
     stop(paste0("Sample name ", i, " not found in stand_pep_quant_merged.csv."))
   }
   tquant <- as.matrix(StatsPep[,grep(paste0("^abundance_", i), colnames(StatsPep)), drop=F])
@@ -177,6 +181,8 @@ Performance[["Quantification"]] <- Quantification
 #   FDRs1Perc=vector(),
 #   ProteinLinearity=NA
 # ),
+
+cat("\n### Calculating statistics ###\n")
 
 ## Statistics
 Statistics=list()

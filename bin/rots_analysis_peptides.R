@@ -35,7 +35,7 @@ nr_groups <- length(levels(group))
 RES_complete <- NULL
 
 ### statistical test with ROTS package for each combination of groups
-for (i in 1:(nr_groups-1)) {
+for (i in seq_len(nr_groups-1)) {
   for(j in (i+1):nr_groups) {
     print(paste("calculating ", i, ":", j, " of ", (nr_groups-1), ":", nr_groups))
 
@@ -63,6 +63,12 @@ for (i in 1:(nr_groups-1)) {
     D_tmp2 <- D_tmp[id_keep,]
     pep_sequence2 <- pep_sequence[id_keep]
 
+    ### Get out of for loop when no valid rows are left
+    if (nrow(D_tmp2) == 0) {
+      print("No valid rows left, skipping this combination of groups")
+      next
+    }
+
     ### ROTS test
     RES <- ROTS(D_tmp2, groups = as.numeric(group_tmp), log = TRUE,
         paired = FALSE, B = rotsparam_B, K = rotsparam_K, progress = TRUE)
@@ -84,7 +90,11 @@ for (i in 1:(nr_groups-1)) {
 }
 
 # put all data together
-RES_complete <- merge(D, RES_complete, by.x = "modified_peptide", by.y = "pep_sequence", all = TRUE)
-colnames(RES_complete)[1] <- "modified_peptide"
+if (!is.null(RES_complete)) {
+  RES_complete <- merge(D, RES_complete, by.x = "modified_peptide", by.y = "pep_sequence", all = TRUE)
+  colnames(RES_complete)[1] <- "modified_peptide"
+} else {
+  RES_complete <- D
+}
 
 write.csv(RES_complete, "stand_pep_quant_merged.csv", row.names = FALSE)
