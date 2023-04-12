@@ -124,7 +124,7 @@ for (s in 1:nrow(final_exp))  {
 substitute_from <- paste0(make.names(final_exp$source_name[s]),"_Tr_",final_exp$technical_replicate[s])
 substitute_with <- paste0(make.names(final_exp$group[s]),"_",final_exp$biorep[s])
 # avoid setting X in front 
-#  if (grepl("^X", substitute_with)) substitute_with <- sub("^X","",substitute_with)
+if (grepl("^X", substitute_with)) substitute_with <- sub("^X","",substitute_with)
 colnames(proteins) <- sub(substitute_from, substitute_with, colnames(proteins))
 colnames(peptides) <- sub(substitute_from, substitute_with, colnames(peptides))
 colnames(norm_proteins) <- sub(paste0("^",substitute_from), paste0("abundance_", substitute_with), colnames(norm_proteins))
