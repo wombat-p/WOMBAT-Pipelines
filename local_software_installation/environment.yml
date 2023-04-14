@@ -45,6 +45,6 @@ dependencies:
   - perl 5.22.0*
   - perl-findbin-libs
   - perl-xml-parser
-  - zlib 1.2.11*
+#  - zlib 1.2.11*
   - libgomp
   - future
