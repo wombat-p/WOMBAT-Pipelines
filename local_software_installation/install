@@ -11,10 +11,11 @@ rm -rf sdrf-pipelines*
 
 # tpp
 cd $CONDA_PREFIX
-wget "http://www.tppms.org/sw/TPP5.2/TPP5.2_ubuntu.tgz" 
-tar xvfz TPP5.2_ubuntu.tgz 
+tpp_version=6.1
+wget "http://www.tppms.org/sw/TPP${tpp_version}/TPP${tpp_version}_ubuntu.tgz" 
+tar xvfz TPP${tpp_version}_ubuntu.tgz 
 chmod -R a+rwx tpp 
-rm -f TPP5.2_ubuntu.tgz
+rm -f TPP${tpp_version}_ubuntu.tgz
 mv tpp/* .
 mv tpp/bin/* bin/
 mv tpp/conf conf/

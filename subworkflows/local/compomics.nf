@@ -31,7 +31,7 @@ workflow COMPOMICS {
     RUN_SEARCHGUI ( RAW2MZML.out, PREPARE_SEARCHGUI.out,  CREATE_DECOY_DATABASE.out.ifEmpty(fasta) )
     RUN_PEPTIDESHAKER ( RUN_SEARCHGUI.out,  CREATE_DECOY_DATABASE.out.ifEmpty(fasta) )
     PEPTIDESHAKER_REPORT ( RUN_PEPTIDESHAKER.out )
-    FLASHLFQ ( PEPTIDESHAKER_REPORT.out.peptideshaker_tsv_file_filtered.collect(), RAW2MZML.out.collect(), parameters )
+    FLASHLFQ ( PEPTIDESHAKER_REPORT.out.peptideshaker_tsv_file_filtered.collect(), RAW2MZML.out.collect(), parameters, exp_design )
     MSQROB ( exp_design, raws.collect(), FLASHLFQ.out.flashlfq_peptides, FLASHLFQ.out.flashlfq_proteins, 
              PEPTIDESHAKER_REPORT.out.peptideshaker_peptide_file.collect(), PEPTIDESHAKER_REPORT.out.peptideshaker_protein_file.collect() , parameters)
 
