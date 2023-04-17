@@ -4,7 +4,7 @@ description: Make sure that all files are there and make minimal ones for the on
 keywords:
   - convert
 tools:
-  - prepare_files:      
+  - prepare_files:
       description: Some simple bash and python scripts
       homepage: None
       documentation: None

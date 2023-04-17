@@ -67,7 +67,6 @@ process PREPARE_SEARCHGUI {
   """
   mkdir tmp
   mkdir log
-  touch /usr/local/share/searchgui-4.0.41-1/resources/conf/paths.txt
   searchgui eu.isas.searchgui.cmd.PathSettingsCLI -temp_folder ./tmp -log ./log
   searchgui eu.isas.searchgui.cmd.IdentificationParametersCLI -out searchgui \\
     -frag_tol ${frag_tol} -frag_ppm ${frag_ppm} -prec_tol ${prec_tol} -prec_ppm ${prec_ppm} -enzyme "${enzyme}" -mc ${parameters["allowed_miscleavages"]} \\

@@ -1,4 +1,4 @@
-params: 
+params:
   fixed_mods: Carbamidomethyl of C
   variable_mods: Oxidation of M,Acetyl of Protein N-term
   precursor_mass_tolerance: 20 ppm

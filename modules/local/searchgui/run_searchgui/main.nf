@@ -1,11 +1,11 @@
 process RUN_SEARCHGUI {
 label 'process_high'
 
-conda (params.enable_conda ? "bioconda::searchgui-4.0.41" : null)
+conda (params.enable_conda ? "bioconda::searchgui-4.2.9" : null)
 if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
-        container "docker://veitveit/searchgui:4.0.41--h779adbc_1"
+        container "docker://veitveit/searchgui:4.2.9--hdfd78af_0"
 } else {
-        container "quay.io/biocontainers/searchgui:4.0.41--h779adbc_1"
+        container "quay.io/biocontainers/searchgui:4.2.9--hdfd78af_0"
 }
   
 publishDir "${params.outdir}/searchgui", mode:'copy', pattern: '*.zip'

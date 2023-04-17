@@ -8,10 +8,10 @@ dependencies:
   - python=3.7
   - flashlfq=1.1.1
   - pandas
-  - thermorawfileparser=1.4.0
-  - searchgui=4.0.41
+  - thermorawfileparser=1.4.2
+  - searchgui=4.2.9
   - peptide-shaker=2.2.6
-  - unzip=6.0 
+  - unzip=6.0
   - bioconductor-preprocesscore=1.56.0
   - bioconductor-msnbase=2.20.0
   - r-msqrob=0.7.7
@@ -45,6 +45,6 @@ dependencies:
   - perl 5.22.0*
   - perl-findbin-libs
   - perl-xml-parser
-#  - zlib 1.2.11*
+  #  - zlib 1.2.11*
   - libgomp
   - future

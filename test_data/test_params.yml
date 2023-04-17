@@ -1,4 +1,4 @@
-params: 
+params:
   fixed_mods: Carbamidomethyl of C
   variable_mods: Acetyl of Protein N-term,Propionamide of C
   precursor_mass_tolerance: 20 ppm
