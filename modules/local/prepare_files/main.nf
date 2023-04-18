@@ -69,7 +69,7 @@ process PREPARE_FILES {
 	for a in \$(awk -F '\t' -v column_val='comment[file uri]' '{ if (NR==1) {val=-1; for(i=1;i<=NF;i++) { if (\$i == column_val) {val=i;}}} if(val != -1) { if (NR!=1) print \$val} } ' "$sdrf")
 	do
             echo "Downloading \$a\n"
-	    wget "\$a"
+	    wget -c -T 100 -t 5 "\$a"
         done
     fi
 
