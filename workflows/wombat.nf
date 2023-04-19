@@ -24,7 +24,7 @@ if (params.raws) { ch_raws = Channel.fromPath(params.raws) }  else { ch_raws = [
 if (params.mzmls) { ch_mzmls = Channel.fromPath(params.mzmls) }  else { ch_mzmls = [file("no_mzmls")] }
 if (!params.raws && !params.mzmls && !params.sdrf) { exit 1, 'Neither raw files, mzml files nor sdrf file provided!' }
 if (params.parameters) { ch_params = file(params.parameters) } else { ch_params = file("no_params") }
-if (!params.add_decoys) { params.add_decoys = true } 
+
 
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
