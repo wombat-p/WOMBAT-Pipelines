@@ -38,6 +38,9 @@ if (exp_design.getName() == "none") {
     sed -i 's/.mzML/.mzDB/g' quant_exp_design.txt
     sed -i 's/.mzml/.mzDB/g' quant_exp_design.txt
     sed -i '2,\$s|^|./|' quant_exp_design.txt
+    # keep first two columns of quant_exp_design.txt
+    cut -f1,2 quant_exp_design.txt > quant_exp_design.txt.tmp
+    mv quant_exp_design.txt.tmp quant_exp_design.txt
     """
   }
 }    

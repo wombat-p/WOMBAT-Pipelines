@@ -1,0 +1,7 @@
+raw_file	exp_condition	biorep
+OVEMB150205_12.raw	A	1
+OVEMB150205_14.raw	A	1
+OVEMB150205_14.raw	A	2
+OVEMB150205_14.raw	A	3
+OVEMB150205_14.raw	B	1
+OVEMB150205_14.raw	B	1
