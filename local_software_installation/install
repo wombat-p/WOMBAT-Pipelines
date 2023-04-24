@@ -38,7 +38,7 @@ sudo ln -s /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java /usr/bin/java8
 ### Install mzDB tools
 mkdir $CONDA_PREFIX/share/mzdb-tools 
 cd $CONDA_PREFIX/share/mzdb-tools
-wget https://github.com/mzdb/mzdb4s/releases/download/0.4.3/mzdbtools_0.4.5_linux_x64.zip
+wget https://github.com/mzdb/mzdb4s/releases/download/0.4.5/mzdbtools_0.4.5_linux_x64.zip
 unzip mzdbtools_0.4.5_linux_x64.zip
 chmod a+x run_thermo2mzdb.sh
 ln -s $PWD/run_thermo2mzdb.sh $CONDA_PREFIX/bin/thermo2mzdb
