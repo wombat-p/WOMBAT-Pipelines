@@ -44,10 +44,10 @@ if "comment[fraction identifier]" not in sdrf.columns:
 
 # Add column biorep from the column "characteristics[biological replicate]"
 sdrf_out["biorep"] = sdrf["characteristics[biological replicate]"]
-# Add column techrep from the column "comment[technical replicate]"
-sdrf_out["techrep"] = sdrf["comment[technical replicate]"]
 # Add column fraction from the column "comment[fraction identifier]"
 sdrf_out["fraction"] = sdrf["comment[technical replicate]"]
+# Add column techrep from the column "comment[technical replicate]"
+sdrf_out["techrep"] = sdrf["comment[technical replicate]"]
 
 sdrf_out.to_csv("exp_design.txt", sep="\t", index=False)
     

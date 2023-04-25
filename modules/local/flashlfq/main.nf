@@ -47,7 +47,7 @@ publishDir "${params.outdir}/flashlfq", mode:'copy'
     first_line=\$(head -n1 "\$file")
   done
   # Use awk to add 3 new columns rep, frac, trep with ones to exp_design file
-  awk 'NR==1{print \$0"\trep\tfrac\ttrep"} NR>1{print \$0"\t1\t1\t1"}' "exp_design.tsv" > ExperimentalDesign.tsv
+  #awk 'NR==1{print \$0"\trep\tfrac\ttrep"} NR>1{print \$0"\t1\t1\t1"}' "exp_design.tsv" > ExperimentalDesign.tsv
   
   # Remove .raw and .mzml from file names in first column of ExperimentalDesign.tsv
   sed -i 's/.mzML//g' ExperimentalDesign.tsv
