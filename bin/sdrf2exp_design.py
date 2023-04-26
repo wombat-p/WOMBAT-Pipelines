@@ -27,9 +27,9 @@ changing_columns = [x for x in changing_columns if "factor" in x  ]
 sdrf_out = pd.DataFrame()
 sdrf_out["raw_file"] = [os.path.basename(item) for item in sdrf["comment[file uri]"]]
 if (len(changing_columns) > 0):
-	sdrf_out["exp_conditions"] = sdrf[changing_columns].agg('_'.join, axis=1)
+	sdrf_out["exp_condition"] = sdrf[changing_columns].agg('_'.join, axis=1)
 else: 
-	sdrf_out["exp_conditions"] = "A"
+	sdrf_out["exp_condition"] = "A"
         
 # Error when there are not column characteristics[biological replicate] and comment[technical replicate] and comment[fraction identifier] in sdrf file
 if "characteristics[biological replicate]" not in sdrf.columns:
@@ -42,7 +42,7 @@ if "comment[fraction identifier]" not in sdrf.columns:
     print("Error: There is not column comment[fraction identifier] in sdrf file")
     exit()
 
-# Add column biorep from the column "characteristics[biological replicate]"
+# Add column biorep from the column "characteristics[biological replicate]" 
 sdrf_out["biorep"] = sdrf["characteristics[biological replicate]"]
 # Add column fraction from the column "comment[fraction identifier]"
 sdrf_out["fraction"] = sdrf["comment[fraction identifier]"]

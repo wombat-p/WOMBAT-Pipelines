@@ -1,7 +1,7 @@
-raw_file	exp_condition	biorep
-OVEMB150205_12.raw	A	1
-OVEMB150205_14.raw	A	1
-OVEMB150205_14.raw	A	2
-OVEMB150205_14.raw	A	3
-OVEMB150205_14.raw	B	1
-OVEMB150205_14.raw	B	1
+raw_file	exp_condition	biorep	fraction	techrep
+OVEMB150205_12.raw	A	L	1	1
+OVEMB150205_14.raw	A	L	1	2
+OVEMB150205_14.raw	A	G	1	1
+OVEMB150205_14.raw	A	H	1	1
+OVEMB150205_14.raw	B	L	1	1
+OVEMB150205_14.raw	B	L	1	2
