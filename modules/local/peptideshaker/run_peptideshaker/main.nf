@@ -3,7 +3,7 @@ label 'process_high'
 
 conda (params.enable_conda ? "bioconda::peptideshaker-2.2.6" : null)
 if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
-        container "docker://veitveit/peptide-shaker:2.2.23--hdfd78af_0"
+        container "docker://quay.io/biocontainers/peptide-shaker:2.2.23--hdfd78af_0"
 } else {
         container "quay.io/biocontainers/peptide-shaker:2.2.23--hdfd78af_0"
 }
