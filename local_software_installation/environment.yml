@@ -24,8 +24,8 @@ dependencies:
   - r-matrixstats=0.62.0
   - r-stringr=1.4.0
   - r-jsonlite=1.8.0
-  - dotnet
-  - maxquant=2.0.3.0
+#  - dotnet
+#  - maxquant=2.0.3.0
   - unzip=6.0
   - polystest=1.3.2
   - r-stringi=1.7.6
