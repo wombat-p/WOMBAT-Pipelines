@@ -63,4 +63,20 @@ mkdir proline_results
 #chmod -R a+rwx ./proline_results/
 cd -
 
+### temporary solution to install maxquant manually so it uses mono from the system
+mkdir tmp
+cd tmp
+wget http://computproteomics.bmb.sdu.dk/share/MaxQuant_2.0.3.zip
+unzip MaxQuant_2.0.3.zip
+cp -r * $PREFIX
+cp maxquant $PREFIX/bin/maxquant
+chmod +x $PREFIX/bin/maxquant
+chmod +x $PREFIX/bin/MaxQuantCmd.exe
+chmod +x $PREFIX/bin/MaxQuantGui.exe
+rm MaxQuant_2.0.3.zip
+cd ..
+
+
+
+
 curl -s https://get.nextflow.io | bash
