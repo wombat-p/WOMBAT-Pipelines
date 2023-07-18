@@ -1,4 +1,5 @@
 // When running docker, you might need to use sudo sysctl -w vm.max_map_count=262144 as mono might fail
+// Also a dirty fix for setting the environmental variables
 process FLASHLFQ {
   label 'process_high'
   conda (params.enable_conda ? "bioconda::flashlfq-1.2.4" : null)
@@ -33,6 +34,7 @@ publishDir "${params.outdir}/flashlfq", mode:'copy'
   }
 
 
+  if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
   """
   first_line=""
   # avoid exp_design ending with .txt
@@ -56,9 +58,33 @@ publishDir "${params.outdir}/flashlfq", mode:'copy'
   echo "\$first_line" | cat - tlfq_ident.tabular > lfq_ident.tabular
   # Needed as path is overwritten when running with singularity
   PATH=\$PATH:/usr/local/lib/dotnet:/usr/local/lib/dotnet/tools
-  echo $workflow
   CONDA_PREFIX=/usr/local
   FlashLFQ --idt "lfq_ident.tabular" --rep "./" --out ./ --mbr ${parameters.enable_match_between_runs} --ppm ${parameters.precursor_mass_tolerance} --sha ${protein_inference} --thr ${task.cpus}
   """
+  } else {
+  """
+  first_line=""
+  # avoid exp_design ending with .txt
+  mv "${exp_design}" exp_design.tsv
+  for file in *.txt
+  do
+    echo \$file
+    tail -n +2 "\$file" >> tlfq_ident.tabular
+    first_line=\$(head -n1 "\$file")
+  done
+  # Use awk to add 3 new columns rep, frac, trep with ones to exp_design file
+  #awk 'NR==1{print \$0"\trep\tfrac\ttrep"} NR>1{print \$0"\t1\t1\t1"}' "exp_design.tsv" > ExperimentalDesign.tsv
+  cp exp_design.tsv ExperimentalDesign.tsv
+  
+  # Remove .raw and .mzml from file names in first column of ExperimentalDesign.tsv
+  sed -i 's/.mzML//g' ExperimentalDesign.tsv
+  sed -i 's/.raw//g' ExperimentalDesign.tsv
+  sed       -i 's/.Raw//g' ExperimentalDesign.tsv
+  sed -i 's/.RAW//g' ExperimentalDesign.tsv
+  # Add first line to tlfq_ident.tabular
+  echo "\$first_line" | cat - tlfq_ident.tabular > lfq_ident.tabular
+  FlashLFQ --idt "lfq_ident.tabular" --rep "./" --out ./ --mbr ${parameters.enable_match_between_runs} --ppm ${parameters.precursor_mass_tolerance} --sha ${protein_inference} --thr ${task.cpus}
+  """
+
  
 }    
