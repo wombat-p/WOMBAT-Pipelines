@@ -4,11 +4,8 @@ process FLASHLFQ {
   conda (params.enable_conda ? "bioconda::flashlfq-1.2.4" : null)
   if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "docker://quay.io/biocontainers/flashlfq:1.2.4--hdfd78af_0"
-   process.container.env:
-          - CONDA_PREFIX=/usr/local
   } else {
         container "quay.io/biocontainers/flashlfq:1.2.4--hdfd78af_0"
-        env.CONDA_PREFIX = "/usr/local"
   }
   
 publishDir "${params.outdir}/flashlfq", mode:'copy'
@@ -59,6 +56,8 @@ publishDir "${params.outdir}/flashlfq", mode:'copy'
   echo "\$first_line" | cat - tlfq_ident.tabular > lfq_ident.tabular
   # Needed as path is overwritten when running with singularity
   PATH=\$PATH:/usr/local/lib/dotnet:/usr/local/lib/dotnet/tools
+  echo $workflow
+  CONDA_PREFIX=/usr/local
   FlashLFQ --idt "lfq_ident.tabular" --rep "./" --out ./ --mbr ${parameters.enable_match_between_runs} --ppm ${parameters.precursor_mass_tolerance} --sha ${protein_inference} --thr ${task.cpus}
   """
  
