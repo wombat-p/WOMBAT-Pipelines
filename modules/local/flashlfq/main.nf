@@ -58,8 +58,7 @@ process FLASHLFQ {
   echo "\$first_line" | cat - tlfq_ident.tabular > lfq_ident.tabular
   # Needed as path is overwritten when running with singularity
   PATH=\$PATH:/usr/local/lib/dotnet:/usr/local/lib/dotnet/tools
-  CONDA_PREFIX=/usr/local
-  FlashLFQ --idt "lfq_ident.tabular" --rep "./" --out ./ --mbr ${parameters.enable_match_between_runs} --ppm ${parameters.precursor_mass_tolerance} --sha ${protein_inference} --thr ${task.cpus}
+  CONDA_PREFIX=/usr/local FlashLFQ --idt "lfq_ident.tabular" --rep "./" --out ./ --mbr ${parameters.enable_match_between_runs} --ppm ${parameters.precursor_mass_tolerance} --sha ${protein_inference} --thr ${task.cpus}
   """
   } else {
   """
