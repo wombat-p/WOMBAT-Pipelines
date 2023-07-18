@@ -9,7 +9,7 @@ process FLASHLFQ {
         container "quay.io/biocontainers/flashlfq:1.2.4--hdfd78af_0"
   }
   
-publishDir "${params.outdir}/flashlfq", mode:'copy'
+  publishDir "${params.outdir}/flashlfq", mode:'copy'
  
   input:
   path peptideshaker_out
@@ -85,6 +85,6 @@ publishDir "${params.outdir}/flashlfq", mode:'copy'
   echo "\$first_line" | cat - tlfq_ident.tabular > lfq_ident.tabular
   FlashLFQ --idt "lfq_ident.tabular" --rep "./" --out ./ --mbr ${parameters.enable_match_between_runs} --ppm ${parameters.precursor_mass_tolerance} --sha ${protein_inference} --thr ${task.cpus}
   """
-
- 
+  }
+  
 }    
