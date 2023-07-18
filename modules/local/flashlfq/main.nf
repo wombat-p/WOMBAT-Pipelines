@@ -4,14 +4,10 @@ process FLASHLFQ {
   conda (params.enable_conda ? "bioconda::flashlfq-1.2.4" : null)
   if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "docker://quay.io/biocontainers/flashlfq:1.2.4--hdfd78af_0"
-        env {
-           CONDA_PREFIX = '/usr/local'  
-        }
+        env.CONDA_PREFIX = "/usr/local"
   } else {
         container "quay.io/biocontainers/flashlfq:1.2.4--hdfd78af_0"
-        env {
-           CONDA_PREFIX = '/usr/local'  
-        }
+        env.CONDA_PREFIX = "/usr/local"
   }
   
 publishDir "${params.outdir}/flashlfq", mode:'copy'
