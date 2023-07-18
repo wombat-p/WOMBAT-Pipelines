@@ -45,4 +45,4 @@ jobs:
       - name: Run compomics pipeline with test data
         # Remember that you can parallelise this by using strategy.matrix
         run: |
-          nextflow run ${GITHUB_WORKSPACE} -profile test,docker --outdir ./results --workflow $workflow
+          nextflow run ${GITHUB_WORKSPACE} -profile test,docker --outdir ./results --workflow ${{ workflow }}
