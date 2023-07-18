@@ -58,7 +58,7 @@ publishDir "${params.outdir}/flashlfq", mode:'copy'
   # Add first line to tlfq_ident.tabular
   echo "\$first_line" | cat - tlfq_ident.tabular > lfq_ident.tabular
   # Needed as path is overwritten when running with singularity
-  PATH=$PATH:/usr/local/lib/dotnet
+  PATH=$PATH:/usr/local/lib/dotnet:/usr/local/lib/dotnet/tools
   FlashLFQ --idt "lfq_ident.tabular" --rep "./" --out ./ --mbr ${parameters.enable_match_between_runs} --ppm ${parameters.precursor_mass_tolerance} --sha ${protein_inference} --thr ${task.cpus}
   """
  
