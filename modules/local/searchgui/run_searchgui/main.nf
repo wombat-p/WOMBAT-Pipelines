@@ -3,7 +3,7 @@ label 'process_high'
 
 conda (params.enable_conda ? "bioconda::searchgui-4.2.9" : null)
 if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
-        container "docker://quay.io/biocontainers/searchgui:4.2.9--hdfd78af_0"
+        container "docker://veitveit/searchgui:4.2.9--hdfd78af_0"
 } else {
         container "quay.io/biocontainers/searchgui:4.2.9--hdfd78af_0"
 }
@@ -21,7 +21,7 @@ publishDir "${params.outdir}/searchgui", mode:'copy', pattern: '*.zip'
   script:
 
   def engine = [:]
-  for (i in ["xtandem", "msgf", "ms-amanda", "tide", "cosmet", "myrimatch", "meta_morpheus", "andromeda"]) {
+  for (i in ["xtandem", "msgf", "ms-amanda", "tide", "comet", "myrimatch", "meta_morpheus", "andromeda"]) {
     t_engine = params.proline_engine.contains(i) ? 1 : 0
     engine.put(i, t_engine)
   }
