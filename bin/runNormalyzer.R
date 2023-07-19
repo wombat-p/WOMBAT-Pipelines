@@ -11,10 +11,10 @@ exp_file <- strsplit(grep('--exp_design', args, value = TRUE), split = '=')[[1]]
 compfile <- strsplit(grep('--comp_file', args, value = TRUE), split = '=')[[1]][[2]]
 
 # merging experimental design file from sdrf parser with actual design
-final_exp<-read.csv(exp_file,sep="\t")
+final_exp<-read.csv(exp_file, sep="\t")
 
 # Reduce to unique rows
-final_exp <- unique(final_exp)
+final_exp <- final_exp[!duplicated(final_exp[, !grepl("Assay|Run", colnames(final_exp))]),]
 
 # Create column for (biological) replicate number if not existing already
 if (is.null(final_exp$biorep)) {
