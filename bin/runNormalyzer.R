@@ -13,6 +13,9 @@ compfile <- strsplit(grep('--comp_file', args, value = TRUE), split = '=')[[1]][
 # merging experimental design file from sdrf parser with actual design
 final_exp<-read.csv(exp_file,sep="\t")
 
+# Reduce to unique rows
+final_exp <- unique(final_exp)
+
 # Create column for (biological) replicate number if not existing already
 if (is.null(final_exp$biorep)) {
   final_exp$biorep <- 1
@@ -21,8 +24,6 @@ if (is.null(final_exp$biorep)) {
     final_exp[final_exp$group == i, "biorep"] <- 1:length(ttt)
   }
 }
-
-
 
 # comparison set to everything versus first
 if (comps == "") {
