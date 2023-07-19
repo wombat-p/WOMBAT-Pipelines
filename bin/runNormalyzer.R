@@ -14,7 +14,8 @@ compfile <- strsplit(grep('--comp_file', args, value = TRUE), split = '=')[[1]][
 final_exp<-read.csv(exp_file, sep="\t")
 
 # Reduce to unique rows
-final_exp <- final_exp[!duplicated(final_exp[, !grepl("Assay|Run", colnames(final_exp))]),]
+final_exp <- final_exp[!duplicated(final_exp[, !grepl("Assay|Run", colnames(final_exp))]),, drop=F]
+print(final_exp)
 
 # Create column for (biological) replicate number if not existing already
 if (is.null(final_exp$biorep)) {
