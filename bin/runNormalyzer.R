@@ -15,7 +15,6 @@ final_exp<-read.csv(exp_file, sep="\t")
 
 # Reduce to unique rows
 final_exp <- final_exp[!duplicated(final_exp[, !grepl("Assay|Run", colnames(final_exp))]),, drop=F]
-print(final_exp)
 
 # Create column for (biological) replicate number if not existing already
 if (is.null(final_exp$biorep)) {
@@ -25,6 +24,9 @@ if (is.null(final_exp$biorep)) {
     final_exp[final_exp$group == i, "biorep"] <- 1:length(ttt)
   }
 }
+
+# Write to file again
+write.table(final_exp, exp_file, sep="\t", quote=F, row.names=F)
 
 # comparison set to everything versus first
 if (comps == "") {
