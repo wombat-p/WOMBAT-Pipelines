@@ -57,6 +57,7 @@ for (c in cmods) {
 }
 peps$Sequence <- paste0(peps$Sequence, peps[,cmods])
 write.table(peps, "peptide_file.txt", row.names=F, sep="\t", quote=F)
+
 ## run Normalyzer
 if (min(table(final_exp[,"group"])) > 1 & length(unique(final_exp[,"group"])) > 1) {
    NormalyzerDE::normalyzer(jobName="NormalyzerProteins", designPath="Normalyzer_design.tsv", dataPath="protein_file.txt", zeroToNA = TRUE, inputFormat = "maxquantprot", outputDir="./", requireReplicates=F)
