@@ -75,18 +75,12 @@ As not all of these parameters are available for all workflows, see <!-- TODO Pr
 
 **--raws** Without given sdrf file containing the paths to the raw data files (Thermo raw format) or if you have the files already downloaded, specify the wildcard (e.g. "\*" or "?") to access the files on your system. We recommend putting this parameters in 'single quotes' as you might run into an error when using wildcards.
 
-**--exp_design** An experimental design is automatically calculated from differences in the samples in the SDRF file. Alternatively, provide a tab-separated file with the five columns _raw_file_, _exp_condition_, _biorep_, _fraction_ and _techrep_.   
-
-_raw_file_: raw file names without path. Incorrect or incomplete names will lead to errors.  
-
-_exp_condition_: arbitrary names for the sample groups. Files with the same sample group name will be considered replicates. 
-
-_biorep_: biological replicate with numbering starting with 1.  
-
-_fraction_: fraction number with numbering starting with 1.
-
-_techrep_: technical replicate with numbering starting with 1.
-
+**--exp_design** An experimental design is automatically calculated from differences in the samples in the SDRF file. Alternatively, provide a tab-separated file with the five columns _raw_file_, _exp_condition_, _biorep_, _fraction_ and _techrep_.<br/>
+_raw_file_: raw file names without path. Incorrect or incomplete names will lead to errors.<br/>
+_exp_condition_: arbitrary names for the sample groups. Files with the same sample group name will be considered replicates.<br/>
+_biorep_: biological replicate with numbering starting with 1.<br/>
+_fraction_: fraction number with numbering starting with 1.<br/>
+_techrep_: technical replicate with numbering starting with 1.<br/>
 __Note:__ The numbering needs to be consistent _and_ each line needs to be unique in the combination of _exp_condition_, _biorep_, _fraction_ and _techrep_.
 See [example](https://github.com/wombat-p/WOMBAT-Pipelines/blob/dev/docs/examples/pxd001819.txt).
 
