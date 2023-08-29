@@ -24,7 +24,7 @@ if (params.raws) { ch_raws = Channel.fromPath(params.raws) }  else { ch_raws = [
 if (params.mzmls) { ch_mzmls = Channel.fromPath(params.mzmls) }  else { ch_mzmls = [file("no_mzmls")] }
 if (!params.raws && !params.mzmls && !params.sdrf) { exit 1, 'Neither raw files, mzml files nor sdrf file provided!' }
 if (params.parameters) { ch_params = file(params.parameters) } else { ch_params = file("no_params") }
-if (!params.sdrfmapping) { ch_sdrfmapping = file("https://raw.githubusercontent.com/bigbio/proteomics-metadata-standard/master/sdrf-proteomics/assets/param2sdrf.yml", checkIfExists: true) } else { c_sdrfmapping = Channel.fromPath(params.sdrfmapping) }
+if (!params.sdrfmapping) { ch_sdrfmapping = file("https://raw.githubusercontent.com/bigbio/proteomics-metadata-standard/master/sdrf-proteomics/assets/param2sdrf.yml", checkIfExists: true) } else { ch_sdrfmapping = file(params.sdrfmapping, checkIfExists: true) }
 
 
 /*
