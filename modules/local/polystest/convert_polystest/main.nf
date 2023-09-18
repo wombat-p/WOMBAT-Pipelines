@@ -1,11 +1,11 @@
 process CONVERT_POLYSTEST {
 label 'process_low'
 
-conda (params.enable_conda ? "bioconda::polystest-1.1" : null)
-if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
-        container "docker://quay.io/biocontainers/polystest:1.1--hdfd78af_2"
+conda (params.enable_conda ? "bioconda::polystest-1.3.4" : null)
+if (workflow.containerEngine == 'singularity'|| workflow.containerEngine == 'apptainer') {
+        container "docker://quay.io/biocontainers/polystest:1.3.4--hdfd78af_0"
 } else {
-        container "quay.io/biocontainers/polystest:1.1--hdfd78af_2"
+        container "quay.io/biocontainers/polystest:1.3.4--hdfd78af_0"
 }
   
   publishDir "${params.outdir}/polystest", mode:'copy'

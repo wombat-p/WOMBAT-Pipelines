@@ -11,7 +11,10 @@ exp_file <- strsplit(grep('--exp_design', args, value = TRUE), split = '=')[[1]]
 compfile <- strsplit(grep('--comp_file', args, value = TRUE), split = '=')[[1]][[2]]
 
 # merging experimental design file from sdrf parser with actual design
-final_exp<-read.csv(exp_file,sep="\t")
+final_exp<-read.csv(exp_file, sep="\t")
+
+# Reduce to unique rows
+final_exp <- final_exp[!duplicated(final_exp[, !grepl("Assay|Run", colnames(final_exp))]),, drop=F]
 
 # Create column for (biological) replicate number if not existing already
 if (is.null(final_exp$biorep)) {
@@ -22,7 +25,8 @@ if (is.null(final_exp$biorep)) {
   }
 }
 
-
+# Write to file again
+write.table(final_exp, exp_file, sep="\t", quote=F, row.names=F)
 
 # comparison set to everything versus first
 if (comps == "") {
@@ -53,6 +57,7 @@ for (c in cmods) {
 }
 peps$Sequence <- paste0(peps$Sequence, peps[,cmods])
 write.table(peps, "peptide_file.txt", row.names=F, sep="\t", quote=F)
+
 ## run Normalyzer
 if (min(table(final_exp[,"group"])) > 1 & length(unique(final_exp[,"group"])) > 1) {
    NormalyzerDE::normalyzer(jobName="NormalyzerProteins", designPath="Normalyzer_design.tsv", dataPath="protein_file.txt", zeroToNA = TRUE, inputFormat = "maxquantprot", outputDir="./", requireReplicates=F)

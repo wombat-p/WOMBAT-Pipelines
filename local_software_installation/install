@@ -1,8 +1,9 @@
 #!/bin/bash
 #conda install -c conda-forge -n base mamba
-mamba env create -f environment.yml && mamba clean -a
+### TODO this outside the script as otherwise still in base conda environment
+#mamba env create -f environment.yml && mamba clean -a
 #### TODO somehow this does not put the environment in place
-mamba activate wombat-pipelines
+#mamba activate wombat-pipelines
 
 # recent sdrf-pipelines
 git clone -b extended https://github.com/elixir-proteomics-community/sdrf-pipelines
@@ -63,4 +64,19 @@ mkdir proline_results
 #chmod -R a+rwx ./proline_results/
 cd -
 
-curl -s https://get.nextflow.io | bash
+### temporary solution to install maxquant manually so it uses mono from the system
+#wget http://computproteomics.bmb.sdu.dk/share/MaxQuant_2.0.3.zip
+unzip MaxQuant_2.0.3.1.zip
+cd MaxQuant_2.0.3.1
+cp -r * $CONDA_PREFIX
+cp ../maxquant $CONDA_PREFIX/bin/maxquant
+chmod +x $CONDA_PREFIX/bin/maxquant
+chmod +x $CONDA_PREFIX/bin/MaxQuantCmd.exe
+chmod +x $CONDA_PREFIX/bin/MaxQuantGui.exe
+cd ..
+rm -rf MaxQuant_2.0.3.1
+
+
+
+
+#curl -s https://get.nextflow.io | bash

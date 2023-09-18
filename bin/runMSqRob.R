@@ -102,7 +102,7 @@ write.csv(stand_pep_quant, "stand_pep_quant_merged.csv", row.names=F)
 # Merging data from peptideshaker, flashlfq and msqrob
 quant_prots <- read.csv("q_prot.txt", sep="\t")
 rownames(quant_prots) <- quant_prots[, "Protein.Groups"]
-quant_prots <- quant_prots[, grep("^Intensity",colnames(quant_prots))]
+quant_prots <- quant_prots[, grep("^Intensity",colnames(quant_prots)), drop=FALSE]
 # making zeroes to NA
 quant_prots[quant_prots == 0] <- NA
 all_proteins <- list()
