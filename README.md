@@ -191,7 +191,7 @@ nf-core/wombat was originally written by the members of the ELIXIR Implementatio
 
 ## Citations
 
-Manuscript in preparation
+Preprint available: https://www.biorxiv.org/content/10.1101/2023.10.02.560412v1
 
 As the workflows are using an nf-core template, we refer to the publication:
 
