@@ -1,15 +1,15 @@
 # WOMBAT-P Pipelines
 <img src="docs/images/wombatp-logo.png" width="200"></img>
 
-## Introduction
+## Summary
 
 **wombat-p pipelines** is a bioinformatics analysis pipeline that bundles different workflow for the analysis of label-free proteomics data with the purpose of comparison and benchmarking. It allows using files from the [proteomics metadata standard SDRF](https://github.com/bigbio/proteomics-metadata-standard).
+
+It aims both for experienced end-users that want to test different workflows and configurations and developers that want to e.g. test a new software in a workflow setting. Contributions to this project are most welcome.
 
 The pipeline is built using [Nextflow](https://www.nextflow.io), a workflow tool to run tasks across multiple compute infrastructures in a very portable manner. It uses Docker/Singularity containers making installation trivial and results highly reproducible. The [Nextflow DSL2](https://www.nextflow.io/docs/latest/dsl2.html) implementation of this pipeline uses one container per process which makes it much easier to maintain and update software dependencies. We used one of the [nf-core](https://nf-co.re/) templates.
 
 <!-- TODO add continuous integration, preferably with statistics -->
-
-## Pipeline summary
 
 This work contains four major different workflows for the analysis or label-free proteomics data, originating from LC-MS experiments.
 
@@ -20,7 +20,9 @@ This work contains four major different workflows for the analysis or label-free
 
 Initialization and parameterization of the workflows is based on tools from the [SDRF pipelines](https://github.com/bigbio/sdrf-pipelines), the [ThermoRawFileParser](http://compomics.github.io/projects/ThermoRawFileParser) with our own contributions and additional programs from the wombat-p organizaion [https://github.com/wombat-p/Utilities] as well as our [fork](https://github.com/elixir-proteomics-community/sdrf-pipelines). This includes setting a generalized set of data analysis parameters and the calculation of a multiple benchmarks.
 
-## Quick Start
+## Usage
+
+### Installation and testing
 
 1. Install [`Nextflow`](https://www.nextflow.io/docs/latest/getstarted.html#installation) (`>=23.0.4`)
 
@@ -34,6 +36,8 @@ Initialization and parameterization of the workflows is based on tools from the 
    ```
 
    Substitute `wget` with `curl`or alike.
+
+### Configuration and execution
 
 4. Setup of system for running the analysis
 
@@ -52,7 +56,7 @@ For a detailed explanation of the parameters, see below. Not all parameters are 
 nextflow run main.nf --sdrf experimental_metadata.sdrf --fasta your_fasta_file.fasta --parameters your_parameters_yaml --raws thermo_raw_files --exp_design simple_experimental_design --workflow [other more specific parameters] -profile <docker/singularity/conda>
 ```
 
-<!-- TODO TODO: ADD DIAGRAM -->
+### Input options and parameters
 
 WOMBAT-P can run workflows using different (minimal) input, such as
 _1) with SDRF file (raw files can be given as parameter or are download from the location specified in the sdrf file):_
@@ -95,9 +99,10 @@ See [example](https://github.com/wombat-p/WOMBAT-Pipelines/blob/dev/docs/example
 
 You can add other NextFlow parameters as described extensively [here](https://www.nextflow.io/docs/edge/cli.html?highlight=timeline#)
 
-## Valid data analysis parameters per workflow
+### Valid data analysis parameters per workflow
+The following parameters can be provided via the parameter yaml file (`--parameters` flag)
 
-Here _TRUE_ means that the parameter can be changed.
+As not all parameters are available for each workflow, the last columns describe their applicability. Here, _TRUE_ means that the parameter is available and can be modified.
 
 | parameter                | type     | sdrf name                                 | default                                      | maxquant                 | proline                  | compomics                | tpp                      |
 | ------------------------ | -------- | ----------------------------------------- | -------------------------------------------- | ------------------------ | ------------------------ | ------------------------ | ------------------------ |
@@ -132,11 +137,11 @@ Here _TRUE_ means that the parameter can be changed.
 | fdr_method               | class    | method for correction of multiple testing | benjamini-hochberg                           | FALSE                    | FALSE                    | FALSE                    | FALSE                    |
 | fdr_threshold            | float    | threshold for statistical test fdr        | 0.01                                         | By filtering the results | By filtering the results | By filtering the results | By filtering the results |
 
-## Output
+## Workflow output
 
 Intermediate and final files are provided in the _results_ folder or the folder specified via the `outdir` parameter.
 
-On top of the workflow-specific output, a standardized tabular format on both peptide (stand_pep_quant_merged.csv) and protein (stand_prot_quant_merged.csv) level is given.
+On top of the workflow-specific output, a standardized tabular format on both peptide (`stand_pep_quant_merged.csv`) and protein (`stand_prot_quant_merged.csv`) level is given.
 
 For each of the workflows, WOMBAT-Pipelines calculated the same set of benchmarks for more systematic and thorough comparison between workflows and/or between different values of the data analysis parameters. For details about the benchmarks, see the following table:
 
@@ -174,6 +179,11 @@ For each of the workflows, WOMBAT-Pipelines calculated the same set of benchmark
 | Functionality | Parameter    | Identification | Database size                        | DatabaseSize                       | Number of entries in fasta file                                                    | Integer        |
 | Functionality | Parameter    | Identification | Canonical sequences                  | CanonicalSequences                 | Database includes canonical sequences                                              | Y/N            |
 | Functionality | Parameter    | identification | PTM localization                     | PTMLocalization                    | Is PTM localization scoring software included in the workflow                      | Y/N            |
+
+## Contribute
+
+Contributions to change and modify the workflows are most welcome. For this, please create a fork and add your changes. We strongly recommend reaching out to us either via email or by creating an issue in this repository, as we then help adding the new implementation.
+
 
 ## Credits
 
