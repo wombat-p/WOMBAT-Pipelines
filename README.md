@@ -1,4 +1,5 @@
-# ![wombat-p pipelines](docs/images/wombatp-logo.png)
+# WOMBAT-P Pipelines
+<img src="docs/images/wombatp-logo.png" width="200"></img>
 
 ## Introduction
 
