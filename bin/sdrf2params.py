@@ -82,21 +82,23 @@ for p in mapping:
           exit("ERROR: " + pname + " allows only units of \"Da\" and \"ppm\", separated by space from the value!!\nWe found " + unit)
 
 
-     ## ENZYME AND MODIFICATIONS: LOOK UP ONTOLOGY VALUES
+     ## ENZYME 
      elif pname == "enzyme":
        pvalue = pvalue.split(";")
        pvalue =  [s for s in pvalue if "NT=" in s][0]
        pvalue = pvalue.replace("NT=","")
-       ols_out = olsclient.search(pvalue, ontology="MS", exact=True)
-       if ols_out == None or len(ols_out) > 1 :
-         exit("ERROR: enzyme " + pvalue + " not found in the MS ontology, see https://bioportal.bioontology.org/ontologies/MS/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMS_1001045 for available terms")
+       # not working due to changes in olsclient and ontology access
+       #ols_out = olsclient.search(pvalue, ontology="MS", exact=True)
+       #if ols_out == None or len(ols_out) > 1 :
+       #  exit("ERROR: enzyme " + pvalue + " not found in the MS ontology, see https://bioportal.bioontology.org/ontologies/MS/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMS_1001045 for available terms")
 
      ## Now finally writing the value
      print("Wrote " + str(pvalue))
      out_yaml[pname] = pvalue
 
 
-## Modifications: look up in Unimod
+## Modifications: extract
+## TODO later: look up in Unimod
 for m in mod_columns.columns: 
         pvalue = set(mod_columns[m])
         if len(pvalue) > 1:
