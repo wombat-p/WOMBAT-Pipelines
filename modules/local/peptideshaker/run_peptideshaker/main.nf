@@ -1,5 +1,5 @@
 process RUN_PEPTIDESHAKER {
-label 'process_high'
+label 'process_medium'
 
 conda (params.enable_conda ? "bioconda::peptideshaker-2.2.6" : null)
 if (workflow.containerEngine == 'singularity'|| workflow.containerEngine == 'apptainer') {
