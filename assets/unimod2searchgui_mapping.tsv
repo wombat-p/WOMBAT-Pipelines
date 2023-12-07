@@ -1,694 +1,694 @@
-"unimod_id"	"unimod_title"	"unimod_full_name"	"unimod_entry"	"searchgui_name"	"residue"	"Composition"	"MonoMass"	"NeutralLoss"
-"1"	"Acetyl"	"Acetylation"	"UNIMOD:1"	"Acetylation of K"	"K"	"H(2) C(2) O"	42.010565	FALSE
-"1"	"Acetyl"	"Acetylation"	"UNIMOD:1"	"Acetylation of protein N-term"	"protein N-term"	"H(2) C(2) O"	42.010565	FALSE
-"1"	"Acetyl"	"Acetylation"	"UNIMOD:1"	"Acetylation of peptide N-term"	"peptide N-term"	"H(2) C(2) O"	42.010565	FALSE
-"10"	"Met->Hse"	"Homoserine"	"UNIMOD:10"	"Homoserine of peptide C-term M"	"peptide C-term M"	"H(-2) C(-1) O S(-1)"	-29.992806	FALSE
-"105"	"ICAT-C"	"Applied Biosystems cleavable ICAT(TM) light"	"UNIMOD:105"	"ICAT-O"	NA	"H(17) C(10) N(3) O(3)"	227.126991	FALSE
-"106"	"ICAT-C:13C(9)"	"Applied Biosystems cleavable ICAT(TM) heavy"	"UNIMOD:106"	"ICAT-9"	NA	"H(17) C 13C(9) N(3) O(3)"	236.157185	FALSE
-"107"	"FormylMet"	"Addition of N-formyl met"	"UNIMOD:107"	"FormylMet of protein N-term"	"protein N-term"	"H(9) C(6) N O(2) S"	159.035399	FALSE
-"108"	"Nethylmaleimide"	"N-ethylmaleimide on cysteines"	"UNIMOD:108"	"Nethylmaleimide of C"	"C"	"H(7) C(6) N O(2)"	125.047679	FALSE
-"11"	"Met->Hsl"	"Homoserine lactone"	"UNIMOD:11"	"Homoserine lactone of peptide C-term M"	"peptide C-term M"	"H(-4) C(-1) S(-1)"	-48.003371	FALSE
-"112"	"OxLysBiotinRed"	"Oxidized lysine biotinylated with biotin-LC-hydrazide, reduced"	NA	NA	NA	"H(26) C(16) N(4) O(3) S"	354.172562	FALSE
-"113"	"OxLysBiotin"	"Oxidized lysine biotinylated with biotin-LC-hydrazide"	NA	NA	NA	"H(24) C(16) N(4) O(3) S"	352.156911	FALSE
-"114"	"OxProBiotinRed"	"Oxidized proline biotinylated with biotin-LC-hydrazide, reduced"	NA	NA	NA	"H(29) C(16) N(5) O(3) S"	371.199111	FALSE
-"115"	"OxProBiotin"	"Oxidized Proline biotinylated with biotin-LC-hydrazide"	NA	NA	NA	"H(27) C(16) N(5) O(3) S"	369.183461	FALSE
-"116"	"OxArgBiotin"	"Oxidized arginine biotinylated with biotin-LC-hydrazide"	NA	NA	NA	"H(22) C(15) N(2) O(3) S"	310.135113	FALSE
-"117"	"OxArgBiotinRed"	"Oxidized arginine biotinylated with biotin-LC-hydrazide, reduced"	NA	NA	NA	"H(24) C(15) N(2) O(3) S"	312.150763	FALSE
-"118"	"EDT-iodoacetyl-PEO-biotin"	"EDT-iodo-PEO-biotin"	NA	NA	NA	"H(34) C(20) N(4) O(4) S(3)"	490.174218	FALSE
-"119"	"IBTP"	"Thio Ether Formation - BTP Adduct"	NA	NA	NA	"H(21) C(22) P"	316.138088	FALSE
-"12"	"ICAT-D:2H(8)"	"Applied Biosystems original ICAT(TM) d8"	NA	NA	NA	"H(26) 2H(8) C(20) N(4) O(5) S"	450.275205	FALSE
-"121"	"GlyGly"	"ubiquitinylation residue"	"UNIMOD:121"	"Ubiquitination of K"	"K"	"H(6) C(4) N(2) O(2)"	114.042927	FALSE
-"122"	"Formyl"	"Formylation"	"UNIMOD:122"	"Formylation of peptide N-term"	"peptide N-term"	"C O"	27.994915	FALSE
-"122"	"Formyl"	"Formylation"	"UNIMOD:122"	"Formylation of T"	"T"	"C O"	27.994915	FALSE
-"122"	"Formyl"	"Formylation"	"UNIMOD:122"	"Formylation of S"	"S"	"C O"	27.994915	FALSE
-"122"	"Formyl"	"Formylation"	"UNIMOD:122"	"Formylation of K"	"K"	"C O"	27.994915	FALSE
-"122"	"Formyl"	"Formylation"	"UNIMOD:122"	"Formylation of protein N-term"	"protein N-term"	"C O"	27.994915	FALSE
-"123"	"ICAT-H"	"N-iodoacetyl, p-chlorobenzyl-12C6-glucamine"	NA	NA	NA	"H(20) C(15) N O(6) Cl"	345.097915	FALSE
-"124"	"ICAT-H:13C(6)"	"N-iodoacetyl, p-chlorobenzyl-13C6-glucamine"	NA	NA	NA	"H(20) C(9) 13C(6) N O(6) Cl"	351.118044	FALSE
-"126"	"Thioacyl"	"thioacylation of primary amines (N-term and Lys)"	"UNIMOD:126"	"Thioacyl of peptide N-term"	"peptide N-term"	"H(4) C(3) O S"	87.998285	FALSE
-"127"	"Fluoro"	"fluorophenylalanine replacement of phenylalanine"	NA	NA	NA	"H(-1) F"	17.990578	FALSE
-"128"	"Fluorescein"	"5-Iodoacetamidofluorescein (Molecular Probe, Eugene, OR)"	NA	NA	NA	"H(13) C(22) N O(6)"	387.074287	FALSE
-"129"	"Iodo"	"Iodination"	NA	NA	NA	"H(-1) I"	125.896648	FALSE
-"1291"	NA	NA	"UNIMOD:1291"	"Dimethylation of K 2H(6)"	"K 2H(6)"	"H(-2) 2H(6) C(2)"	34.068961	FALSE
-"1291"	NA	NA	"UNIMOD:1291"	"Dimethylation of peptide N-term 2H(6)"	"peptide N-term 2H(6)"	"H(-2) 2H(6) C(2)"	34.068961	FALSE
-"13"	"ICAT-D"	"Applied Biosystems original ICAT(TM) d0"	NA	NA	NA	"H(34) C(20) N(4) O(5) S"	442.224991	FALSE
-"130"	"Diiodo"	"di-Iodination"	"UNIMOD:130"	"Diiodination of Y"	"Y"	"H(-2) I(2)"	251.793296	FALSE
-"1302"	NA	NA	"UNIMOD:1302"	"mTRAQ of 13C(6) 15N(2)"	"13C(6) 15N(2)"	"H(12) C 13C(6) 15N(2) O"	148.109162	FALSE
-"1302"	NA	NA	"UNIMOD:1302"	"mTRAQ of peptide N-term 13C(6) 15N(2)"	"peptide N-term 13C(6) 15N(2)"	"H(12) C 13C(6) 15N(2) O"	148.109162	FALSE
-"131"	"Triiodo"	"tri-Iodination"	NA	NA	NA	"H(-3) I(3)"	377.689944	FALSE
-"134"	"Myristoleyl"	"(cis-delta 5)-tetradecaenoyl"	NA	NA	NA	"H(24) C(14) O"	208.182715	FALSE
-"135"	"Myristoyl+Delta:H(-4)"	"(cis,cis-delta 5, delta 8)-tetradecadienoyl"	NA	NA	NA	"H(22) C(14) O"	206.167065	FALSE
-"136"	"Benzoyl"	"labeling reagent light form (N-term & K)"	NA	NA	NA	"H(4) C(7) O"	104.026215	FALSE
-"137"	"Hex(5)HexNAc(2)"	"N-linked glycan core"	NA	NA	NA	"Hex(5) HexNAc(2)"	1216.422863	FALSE
-"139"	"Dansyl"	"5-dimethylaminonaphthalene-1-sulfonyl"	NA	NA	NA	"H(11) C(12) N O(2) S"	233.051049	FALSE
-"140"	"a-type-ion"	"ISD a-series (C-Term)"	NA	NA	NA	"H(-2) C(-1) O(-2)"	-46.005479	FALSE
-"1408"	NA	NA	"UNIMOD:1408"	"Hex(5) HexNAc(4) NeuAc(2) Na of N"	"N"	"Hex(5) HexNAc(4) NeuAc(2)"	2204.772441	FALSE
-"141"	"Amidine"	"amidination of lysines or N-terminal amines with methyl acetimidate"	NA	NA	NA	"H(3) C(2) N"	41.026549	FALSE
-"142"	"HexNAc(1)dHex(1)"	"HexNAc1dHex1"	NA	NA	NA	"dHex HexNAc"	349.137281	FALSE
-"143"	"HexNAc(2)"	"HexNAc2"	NA	NA	NA	"HexNAc(2)"	406.158745	FALSE
-"144"	"Hex(3)"	"Hex3"	NA	NA	NA	"Hex(3)"	486.158471	FALSE
-"145"	"HexNAc(1)dHex(2)"	"HexNAc1dHex2"	NA	NA	NA	"dHex(2) HexNAc"	495.19519	FALSE
-"146"	"Hex(1)HexNAc(1)dHex(1)"	"Hex1HexNAc1dHex1"	NA	NA	NA	"dHex Hex HexNAc"	511.190105	FALSE
-"147"	"HexNAc(2)dHex(1)"	"HexNAc2dHex1"	NA	NA	NA	"dHex HexNAc(2)"	552.216654	FALSE
-"148"	"Hex(1)HexNAc(2)"	"Hex1HexNAc2"	NA	NA	NA	"Hex HexNAc(2)"	568.211569	FALSE
-"149"	"Hex(1)HexNAc(1)NeuAc(1)"	"Hex1HexNAc1NeuAc1"	NA	NA	NA	"Hex HexNAc NeuAc"	656.227613	FALSE
-"150"	"HexNAc(2)dHex(2)"	"HexNAc2dHex2"	NA	NA	NA	"dHex(2) HexNAc(2)"	698.274563	FALSE
-"151"	"Hex(1)HexNAc(2)Pent(1)"	"Hex1HexNAc2Pent1"	NA	NA	NA	"Pent Hex HexNAc(2)"	700.253828	FALSE
-"152"	"Hex(1)HexNAc(2)dHex(1)"	"Hex1HexNAc2dHex1"	NA	NA	NA	"dHex Hex HexNAc(2)"	714.269478	FALSE
-"153"	"Hex(2)HexNAc(2)"	"Hex2HexNAc2"	NA	NA	NA	"Hex(2) HexNAc(2)"	730.264392	FALSE
-"154"	"Hex(3)HexNAc(1)Pent(1)"	"Hex3HexNAc1Pent1"	NA	NA	NA	"Pent Hex(3) HexNAc"	821.280102	FALSE
-"155"	"Hex(1)HexNAc(2)dHex(1)Pent(1)"	"Hex1HexNAc2dHex1Pent1"	NA	NA	NA	"Pent dHex Hex HexNAc(2)"	846.311736	FALSE
-"156"	"Hex(1)HexNAc(2)dHex(2)"	"Hex1HexNAc2dHex2"	NA	NA	NA	"dHex(2) Hex HexNAc(2)"	860.327386	FALSE
-"157"	"Hex(2)HexNAc(2)Pent(1)"	"Hex2HexNAc2Pent1"	NA	NA	NA	"Pent Hex(2) HexNAc(2)"	862.306651	FALSE
-"158"	"Hex(2)HexNAc(2)dHex(1)"	"Hex2HexNAc2dHex1"	NA	NA	NA	"dHex Hex(2) HexNAc(2)"	876.322301	FALSE
-"159"	"Hex(3)HexNAc(2)"	"Hex3HexNAc2"	NA	NA	NA	"Hex(3) HexNAc(2)"	892.317216	FALSE
-"160"	"Hex(1)HexNAc(1)NeuAc(2)"	"Hex1HexNAc1NeuAc2"	NA	NA	NA	"Hex HexNAc NeuAc(2)"	947.323029	FALSE
-"161"	"Hex(3)HexNAc(2)P(1)"	"Hex3HexNAc2P1"	NA	NA	NA	"H O(3) P Hex(3) HexNAc(2)"	972.283547	FALSE
-"162"	"Delta:S(-1)Se(1)"	"Selenium replaces sulphur"	NA	NA	NA	"S(-1) Se"	47.944449	FALSE
-"17"	"NIPCAM"	"N-isopropylcarboxamidomethyl"	"UNIMOD:17"	"NIPCAM of C"	"C"	"H(9) C(5) N O"	99.068414	FALSE
-"170"	"Delta:H(1)O(-1)18O(1)"	"glycosylated asparagine 18O labeling"	NA	NA	NA	"H(-1) N(-1) 18O"	2.988261	FALSE
-"171"	"NBS:13C(6)"	"Shimadzu NBS-13C"	NA	NA	NA	"H(3) 13C(6) N O(2) S"	159.008578	FALSE
-"172"	"NBS"	"Shimadzu NBS-12C"	NA	NA	NA	"H(3) C(6) N O(2) S"	152.988449	FALSE
-"176"	"BHT"	"Michael addition of BHT quinone methide to Cysteine and Lysine"	NA	NA	NA	"H(22) C(15) O"	218.167065	FALSE
-"178"	"DAET"	"phosphorylation to amine thiol"	NA	NA	NA	"H(9) C(4) N O(-1) S"	87.050655	FALSE
-"184"	"Label:13C(9)"	"13C(9) Silac label"	NA	NA	NA	"C(-9) 13C(9)"	9.030193	FALSE
-"185"	"Label:13C(9)+Phospho"	"C13 label (Phosphotyrosine)"	NA	NA	NA	"H C(-9) 13C(9) O(3) P"	88.996524	FALSE
-"186"	"HPG"	"Hydroxyphenylglyoxal arginine"	NA	NA	NA	"H(4) C(8) O(2)"	132.021129	FALSE
-"187"	"2HPG"	"bis(hydroxphenylglyoxal) arginine"	NA	NA	NA	"H(10) C(16) O(5)"	282.052824	FALSE
-"188"	"Label:13C(6)"	"13C(6) Silac label"	"UNIMOD:188"	"Lysine 13C(6)"	NA	"C(-6) 13C(6)"	6.020129	FALSE
-"188"	"Label:13C(6)"	"13C(6) Silac label"	"UNIMOD:188"	"Arginine 13C(6)"	NA	"C(-6) 13C(6)"	6.020129	FALSE
-"193"	"Label:18O(2)"	"O18 label at both C-terminal oxygens"	"UNIMOD:193"	"18O(2) of peptide C-term"	"peptide C-term"	"O(-2) 18O(2)"	4.008491	FALSE
-"194"	"AccQTag"	"6-aminoquinolyl-N-hydroxysuccinimidyl carbamate"	NA	NA	NA	"H(6) C(10) N(2) O"	170.048013	FALSE
-"195"	"QAT"	"APTA-d0"	NA	NA	NA	"H(19) C(9) N(2) O"	171.149738	FALSE
-"196"	"QAT:2H(3)"	"APTA d3"	NA	NA	NA	"H(16) 2H(3) C(9) N(2) O"	174.168569	FALSE
-"197"	"EQAT"	"EAPTA d0"	NA	NA	NA	"H(20) C(10) N(2) O"	184.157563	FALSE
-"198"	"EQAT:2H(5)"	"EAPTA d5"	NA	NA	NA	"H(15) 2H(5) C(10) N(2) O"	189.188947	FALSE
-"199"	"Dimethyl:2H(4)"	"DiMethyl-CHD2"	"UNIMOD:199"	"Dimethylation of peptide N-term 2H(4)"	"peptide N-term 2H(4)"	"2H(4) C(2)"	32.056407	FALSE
-"2"	"Amidated"	"Amidation"	"UNIMOD:2"	"Amidation of the peptide C-term"	"the peptide C-term"	"H N O(-1)"	-0.984016	FALSE
-"2"	"Amidated"	"Amidation"	"UNIMOD:2"	"Amidation of the protein C-term"	"the protein C-term"	"H N O(-1)"	-0.984016	FALSE
-"20"	"PEO-Iodoacetyl-LC-Biotin"	"Biotinyl-iodoacetamidyl-3,6-dioxaoctanediamine"	NA	NA	NA	"H(30) C(18) N(4) O(5) S"	414.193691	FALSE
-"200"	"Ethanedithiol"	"EDT"	NA	NA	NA	"H(4) C(2) O(-1) S(2)"	75.980527	FALSE
-"205"	"Delta:H(6)C(6)O(1)"	"Acrolein addition +94"	NA	NA	NA	"H(6) C(6) O"	94.041865	FALSE
-"206"	"Delta:H(4)C(3)O(1)"	"Acrolein addition +56"	NA	NA	NA	"H(4) C(3) O"	56.026215	FALSE
-"207"	"Delta:H(2)C(3)"	"Acrolein addition +38"	NA	NA	NA	"H(2) C(3)"	38.01565	FALSE
-"208"	"Delta:H(4)C(6)"	"Acrolein addition +76"	NA	NA	NA	"H(4) C(6)"	76.0313	FALSE
-"209"	"Delta:H(8)C(6)O(2)"	"Acrolein addition +112"	NA	NA	NA	"H(8) C(6) O(2)"	112.05243	FALSE
-"21"	"Phospho"	"Phosphorylation"	"UNIMOD:21"	"Phosphorylation of Y"	"Y"	"H O(3) P"	79.966331	FALSE
-"21"	"Phospho"	"Phosphorylation"	"UNIMOD:21"	"Phosphorylation of S"	"S"	"H O(3) P"	79.966331	FALSE
-"21"	"Phospho"	"Phosphorylation"	"UNIMOD:21"	"Phosphorylation of T"	"T"	"H O(3) P"	79.966331	FALSE
-"211"	"NEIAA"	"N-ethyl iodoacetamide-d0"	NA	NA	NA	"H(7) C(4) N O"	85.052764	FALSE
-"212"	"NEIAA:2H(5)"	"N-ethyl iodoacetamide-d5"	NA	NA	NA	"H(2) 2H(5) C(4) N O"	90.084148	FALSE
-"213"	"ADP-Ribosyl"	"ADP  Ribose addition"	NA	NA	NA	"H(13) C(10) N(5) O(9) P(2) Pent"	541.06111	FALSE
-"214"	"iTRAQ4plex"	"Representative mass and accurate mass for 116 & 117"	"UNIMOD:214"	"iTRAQ 4-plex of peptide N-term"	"peptide N-term"	"H(12) C(4) 13C(3) N 15N O"	144.102063	FALSE
-"214"	"iTRAQ4plex"	"Representative mass and accurate mass for 116 & 117"	"UNIMOD:214"	"iTRAQ 4-plex of Y"	"Y"	"H(12) C(4) 13C(3) N 15N O"	144.102063	FALSE
-"214"	"iTRAQ4plex"	"Representative mass and accurate mass for 116 & 117"	"UNIMOD:214"	"iTRAQ 4-plex of K"	"K"	"H(12) C(4) 13C(3) N 15N O"	144.102063	FALSE
-"23"	"Dehydrated"	"Dehydration"	"UNIMOD:23"	"Dehydration of T"	"T"	"H(-2) O(-1)"	-18.010565	FALSE
-"23"	"Dehydrated"	"Dehydration"	"UNIMOD:23"	"Dehydration of S"	"S"	"H(-2) O(-1)"	-18.010565	FALSE
-"24"	"Propionamide"	"Acrylamide adduct"	"UNIMOD:24"	"Propionamide of C"	"C"	"H(5) C(3) N O"	71.037114	FALSE
-"24"	"Propionamide"	"Acrylamide adduct"	"UNIMOD:24"	"Propionamide of K"	"K"	"H(5) C(3) N O"	71.037114	FALSE
-"24"	"Propionamide"	"Acrylamide adduct"	"UNIMOD:24"	"Propionamide of peptide N-term"	"peptide N-term"	"H(5) C(3) N O"	71.037114	FALSE
-"243"	"IGBP"	"Light IDBEST tag for quantitation"	NA	NA	NA	"H(13) C(12) N(2) O(2) Br"	296.016039	FALSE
-"25"	"Pyridylacetyl"	"pyridylacetyl"	NA	NA	NA	"H(5) C(7) N O"	119.037114	FALSE
-"253"	"Crotonaldehyde"	"Crotonaldehyde"	NA	NA	NA	"H(6) C(4) O"	70.041865	FALSE
-"254"	"Delta:H(2)C(2)"	"Acetaldehyde +26"	"UNIMOD:254"	"Acetaldehyde +26"	NA	"H(2) C(2)"	26.01565	FALSE
-"255"	"Delta:H(4)C(2)"	"Acetaldehyde +28"	NA	NA	NA	"H(4) C(2)"	28.0313	FALSE
-"256"	"Delta:H(4)C(3)"	"Propionaldehyde +40"	NA	NA	NA	"H(4) C(3)"	40.0313	FALSE
-"258"	"Label:18O(1)"	"O18 Labeling"	"UNIMOD:258"	"18O(1) of peptide C-term"	"peptide C-term"	"O(-1) 18O"	2.004246	FALSE
-"259"	"Label:13C(6)15N(2)"	"13C(6) 15N(2) Silac label"	"UNIMOD:259"	"Lysine 13C(6) 15N(2)"	NA	"C(-6) 13C(6) N(-2) 15N(2)"	8.014199	FALSE
-"26"	"Pyro-carbamidomethyl"	"S-carbamoylmethylcysteine cyclization (N-terminus)"	NA	NA	NA	"C(2) O"	39.994915	FALSE
-"260"	"Thiophospho"	"Thiophosphorylation"	NA	NA	NA	"H O(2) P S"	95.943487	FALSE
-"261"	"SPITC"	"4-sulfophenyl isothiocyanate"	NA	NA	NA	"H(5) C(7) N O(3) S(2)"	214.971084	FALSE
-"262"	"Label:2H(3)"	"Trideuteration"	NA	NA	NA	"H(-3) 2H(3)"	3.01883	FALSE
-"264"	"PET"	"phosphorylation to pyridyl thiol"	NA	NA	NA	"H(7) C(7) N O(-1) S"	121.035005	FALSE
-"267"	"Label:13C(6)15N(4)"	"13C(6) 15N(4) Silac label"	"UNIMOD:267"	"Arginine 13C(6) 15N(4)"	NA	"C(-6) 13C(6) N(-4) 15N(4)"	10.008269	FALSE
-"268"	"Label:13C(5)15N(1)"	"13C(5) 15N(1) Silac label"	NA	NA	NA	"C(-5) 13C(5) N(-1) 15N"	6.013809	FALSE
-"269"	"Label:13C(9)15N(1)"	"13C(9) 15N(1) Silac label"	NA	NA	NA	"C(-9) 13C(9) N(-1) 15N"	10.027228	FALSE
-"27"	"Glu->pyro-Glu"	"Pyro-glu from E"	"UNIMOD:27"	"Pyrolidone from E"	NA	"H(-2) O(-1)"	-18.010565	FALSE
-"270"	"Cytopiloyne"	"nucleophilic addtion to cytopiloyne"	NA	NA	NA	"H(22) C(19) O(7)"	362.136553	FALSE
-"271"	"Cytopiloyne+water"	"nucleophilic addition to cytopiloyne+H2O"	NA	NA	NA	"H(24) C(19) O(8)"	380.147118	FALSE
-"272"	"CAF"	"sulfonation of N-terminus"	NA	NA	NA	"H(4) C(3) O(4) S"	135.983029	FALSE
-"275"	"Nitrosyl"	"S-nitrosylation"	NA	NA	NA	"H(-1) N O"	28.990164	FALSE
-"276"	"AEBS"	"Aminoethylbenzenesulfonylation"	NA	NA	NA	"H(9) C(8) N O(2) S"	183.035399	FALSE
-"278"	"Ethanolyl"	"Ethanolation of Cys"	NA	NA	NA	"H(4) C(2) O"	44.026215	FALSE
-"28"	"Gln->pyro-Glu"	"Pyro-glu from Q"	"UNIMOD:28"	"Pyrolidone from Q"	NA	"H(-3) N(-1)"	-17.026549	FALSE
-"280"	"Ethyl"	"Ethylation"	NA	NA	NA	"H(4) C(2)"	28.0313	FALSE
-"281"	"CoenzymeA"	"Cysteine modified Coenzyme A"	NA	NA	NA	"H(34) C(21) N(7) O(16) P(3) S"	765.09956	FALSE
-"284"	"Methyl:2H(2)"	"Deuterium Methylation of Lysine"	NA	NA	NA	"2H(2) C"	16.028204	FALSE
-"285"	"SulfanilicAcid"	"Light Sulfanilic Acid (SA) C12"	NA	NA	NA	"H(5) C(6) N O(2) S"	155.004099	FALSE
-"286"	"SulfanilicAcid:13C(6)"	"Heavy Sulfanilic Acid (SA) C13"	NA	NA	NA	"H(5) 13C(6) N O(2) S"	161.024228	FALSE
-"288"	"Trp->Oxolactone"	"Tryptophan oxidation to oxolactone"	NA	NA	NA	"H(-2) O"	13.979265	FALSE
-"289"	"Biotin-PEO-Amine"	"Biotin polyethyleneoxide amine"	NA	NA	NA	"H(28) C(16) N(4) O(3) S"	356.188212	FALSE
-"29"	"SMA"	"N-Succinimidyl-3-morpholine acetate"	NA	NA	NA	"H(9) C(6) N O(2)"	127.063329	FALSE
-"290"	"Biotin-HPDP"	"Pierce EZ-Link Biotin-HPDP"	NA	NA	NA	"H(32) C(19) N(4) O(3) S(2)"	428.191582	FALSE
-"291"	"Delta:Hg(1)"	"Mercury Mercaptan"	NA	NA	NA	"Hg"	201.970617	FALSE
-"292"	"IodoU-AMP"	"Cross-link of (Iodo)-uracil MP with W,F,Y"	NA	NA	NA	"H(11) C(9) N(2) O(9) P"	322.020217	FALSE
-"293"	"CAMthiopropanoyl"	"3-(carbamidomethylthio)propanoyl"	NA	NA	NA	"H(7) C(5) N O(2) S"	145.019749	FALSE
-"294"	"IED-Biotin"	"biotinoyl-iodoacetyl-ethylenediamine"	NA	NA	NA	"H(22) C(14) N(4) O(3) S"	326.141261	FALSE
-"295"	"dHex"	"Fucose"	NA	NA	NA	"dHex"	146.057909	FALSE
-"298"	"Methyl:2H(3)"	"deuterated methyl ester"	"UNIMOD:298"	"Trideuterated Methyl Ester of K"	"K"	"H(-1) 2H(3) C"	17.03448	FALSE
-"298"	"Methyl:2H(3)"	"deuterated methyl ester"	"UNIMOD:298"	"Trideuterated Methyl Ester of E"	"E"	"H(-1) 2H(3) C"	17.03448	FALSE
-"298"	"Methyl:2H(3)"	"deuterated methyl ester"	"UNIMOD:298"	"Trideuterated Methyl Ester of D"	"D"	"H(-1) 2H(3) C"	17.03448	FALSE
-"298"	"Methyl:2H(3)"	"deuterated methyl ester"	"UNIMOD:298"	"Trideuterated Methyl Ester of peptide C-term"	"peptide C-term"	"H(-1) 2H(3) C"	17.03448	FALSE
-"298"	"Methyl:2H(3)"	"deuterated methyl ester"	"UNIMOD:298"	"Trideuterated Methyl Ester of R"	"R"	"H(-1) 2H(3) C"	17.03448	FALSE
-"299"	"Carboxy"	"Carboxylation"	NA	NA	NA	"C O(2)"	43.989829	FALSE
-"3"	"Biotin"	"Biotinylation"	NA	NA	NA	"H(14) C(10) N(2) O(2) S"	226.077598	FALSE
-"30"	"Cation:Na"	"Sodium adduct"	"UNIMOD:30"	"Sodium adduct to D"	NA	"H(-1) Na"	21.981943	FALSE
-"30"	"Cation:Na"	"Sodium adduct"	"UNIMOD:30"	"Sodium adduct to E"	NA	"H(-1) Na"	21.981943	FALSE
-"301"	"Bromobimane"	"Monobromobimane derivative"	NA	NA	NA	"H(10) C(10) N(2) O(2)"	190.074228	FALSE
-"302"	"Menadione"	"Menadione quinone derivative"	NA	NA	NA	"H(6) C(11) O(2)"	170.036779	FALSE
-"303"	"DeStreak"	"Cysteine mercaptoethanol"	NA	NA	NA	"H(4) C(2) O S"	75.998285	FALSE
-"305"	"dHex(1)Hex(3)HexNAc(4)"	"Fucosylated biantennary (-2 galactose)"	NA	NA	NA	"dHex Hex(3) HexNAc(4)"	1444.53387	FALSE
-"307"	"dHex(1)Hex(4)HexNAc(4)"	"Fucosylated biantennary (-1 galactose)"	NA	NA	NA	"dHex Hex(4) HexNAc(4)"	1606.586693	FALSE
-"308"	"dHex(1)Hex(5)HexNAc(4)"	"Fucosylated biantennary"	NA	NA	NA	"dHex Hex(5) HexNAc(4)"	1768.639517	FALSE
-"309"	"Hex(3)HexNAc(4)"	"Biantennary (-2 galactose)"	NA	NA	NA	"Hex(3) HexNAc(4)"	1298.475961	FALSE
-"31"	"Pyridylethyl"	"S-pyridylethylation"	"UNIMOD:31"	"Pyridylethyl of C"	"C"	"H(7) C(7) N"	105.057849	FALSE
-"310"	"Hex(4)HexNAc(4)"	"Biantennary (-1 galactose)"	NA	NA	NA	"Hex(4) HexNAc(4)"	1460.528784	FALSE
-"311"	"Hex(5)HexNAc(4)"	"Biantennary"	NA	NA	NA	"Hex(5) HexNAc(4)"	1622.581608	FALSE
-"312"	"Cysteinyl"	"Cysteinylation"	NA	NA	NA	"H(5) C(3) N O(2) S"	119.004099	FALSE
-"313"	"Lys-loss"	"Loss of C-terminal K from Heavy Chain of MAb"	NA	NA	NA	"H(-12) C(-6) N(-2) O(-1)"	-128.094963	FALSE
-"314"	"Nmethylmaleimide"	"Nmethylmaleimide"	NA	NA	NA	"H(5) C(5) N O(2)"	111.032028	FALSE
-"316"	"DimethylpyrroleAdduct"	"2,5-dimethypyrrole"	NA	NA	NA	"H(6) C(6)"	78.04695	FALSE
-"318"	"Delta:H(2)C(5)"	"MDA adduct +62"	NA	NA	NA	"H(2) C(5)"	62.01565	FALSE
-"319"	"Delta:H(2)C(3)O(1)"	"MDA adduct +54"	NA	NA	NA	"H(2) C(3) O"	54.010565	FALSE
-"320"	"Nethylmaleimide+water"	"Nethylmaleimidehydrolysis"	NA	NA	NA	"H(9) C(6) N O(3)"	143.058243	FALSE
-"323"	"Xlink:B10621"	"bis-N-I-sulfonerahodamine"	NA	NA	NA	"H(30) C(31) N(4) O(6) S I"	713.093079	FALSE
-"324"	"DTBP"	"dimethyl 3,3\'-dithiobispropionimidate"	NA	NA	NA	"H(5) C(3) N S"	87.01427	FALSE
-"325"	"FP-Biotin"	"10-ethoxyphosphinyl-N-(biotinamidopentyl)decanamide"	NA	NA	NA	"H(49) C(27) N(4) O(5) P S"	572.316129	FALSE
-"327"	"Delta:H(4)C(2)O(-1)S(1)"	"S-Ethylcystine from Serine"	NA	NA	NA	"H(4) C(2) O(-1) S"	44.008456	FALSE
-"329"	"Methyl:2H(3)13C(1)"	"monomethylated arginine"	NA	NA	NA	"H(-1) 2H(3) 13C"	18.037835	FALSE
-"330"	"Dimethyl:2H(6)13C(2)"	"dimethylated arginine"	"UNIMOD:330"	"Dimethylation of K 2H(6) 13C(2)"	"K 2H(6) 13C(2)"	"H(-2) 2H(6) 13C(2)"	36.07567	FALSE
-"330"	"Dimethyl:2H(6)13C(2)"	"dimethylated arginine"	"UNIMOD:330"	"Dimethylation of peptide N-term 2H(6) 13C(2)"	"peptide N-term 2H(6) 13C(2)"	"H(-2) 2H(6) 13C(2)"	36.07567	FALSE
-"332"	"Thiophos-S-S-biotin"	"thiophosphate labeled with biotin-HPDP"	NA	NA	NA	"H(34) C(19) N(4) O(5) P S(3)"	525.142894	FALSE
-"333"	"Can-FP-biotin"	"6-N-biotinylaminohexyl isopropyl phosphate"	NA	NA	NA	"H(34) C(19) N(3) O(5) P S"	447.195679	FALSE
-"335"	"HNE+Delta:H(2)"	"reduced 4-Hydroxynonenal"	NA	NA	NA	"H(18) C(9) O(2)"	158.13068	FALSE
-"337"	"Methylamine"	"Michael addition with methylamine"	NA	NA	NA	"H(3) C N O(-1)"	13.031634	FALSE
-"34"	"Methyl"	"Methylation"	"UNIMOD:34"	"Methylation of E"	"E"	"H(2) C"	14.01565	FALSE
-"34"	"Methyl"	"Methylation"	"UNIMOD:34"	"Methylation of C"	"C"	"H(2) C"	14.01565	FALSE
-"34"	"Methyl"	"Methylation"	"UNIMOD:34"	"Methylation of R"	"R"	"H(2) C"	14.01565	FALSE
-"34"	"Methyl"	"Methylation"	"UNIMOD:34"	"Methylation of K"	"K"	"H(2) C"	14.01565	FALSE
-"34"	"Methyl"	"Methylation"	"UNIMOD:34"	"Methylation of D"	"D"	"H(2) C"	14.01565	FALSE
-"34"	"Methyl"	"Methylation"	"UNIMOD:34"	"Methylation of S"	"S"	"H(2) C"	14.01565	FALSE
-"340"	"Bromo"	"bromination"	NA	NA	NA	"H(-1) Br"	77.910511	FALSE
-"342"	"Amino"	"Tyrosine oxidation to 2-aminotyrosine"	NA	NA	NA	"H N"	15.010899	FALSE
-"343"	"Argbiotinhydrazide"	"oxidized Arginine biotinylated with biotin hydrazide"	NA	NA	NA	"H(13) C(9) N O(2) S"	199.066699	FALSE
-"344"	"Arg->GluSA"	"Arginine oxidation to glutamic semialdehyde"	NA	NA	NA	"H(-5) C(-1) N(-3) O"	-43.053433	FALSE
-"345"	"Trioxidation"	"cysteine oxidation to cysteic acid"	"UNIMOD:345"	"Trioxidation of C"	"C"	"O(3)"	47.984744	FALSE
-"348"	"His->Asn"	"histidine oxidation to aspargine"	NA	NA	NA	"H(-1) C(-2) N(-1) O"	-23.015984	FALSE
-"349"	"His->Asp"	"histidine oxidation to aspartic acid"	NA	NA	NA	"H(-2) C(-2) N(-2) O(2)"	-22.031969	FALSE
-"35"	"Oxidation"	"Oxidation or Hydroxylation"	"UNIMOD:35"	"Oxidation of M"	"M"	"O"	15.994915	FALSE
-"35"	"Oxidation"	"Oxidation or Hydroxylation"	"UNIMOD:35"	"Oxidation of P"	"P"	"O"	15.994915	FALSE
-"35"	"Oxidation"	"Oxidation or Hydroxylation"	"UNIMOD:35"	"Oxidation of C"	"C"	"O"	15.994915	FALSE
-"35"	"Oxidation"	"Oxidation or Hydroxylation"	"UNIMOD:35"	"Oxidation of K"	"K"	"O"	15.994915	FALSE
-"350"	"Trp->Hydroxykynurenin"	"tryptophan oxidation to hydroxykynurenin"	NA	NA	NA	"C(-1) O(2)"	19.989829	FALSE
-"351"	"Trp->Kynurenin"	"tryptophan oxidation to kynurenin"	NA	NA	NA	"C(-1) O"	3.994915	FALSE
-"352"	"Lys->Allysine"	"Lysine oxidation to aminoadipic semialdehyde"	NA	NA	NA	"H(-3) N(-1) O"	-1.031634	FALSE
-"353"	"Lysbiotinhydrazide"	"oxidized Lysine biotinylated with biotin hydrazide"	NA	NA	NA	"H(15) C(10) N(3) O(2) S"	241.088497	FALSE
-"354"	"Nitro"	"Oxidation to nitro"	NA	NA	NA	"H(-1) N O(2)"	44.985078	FALSE
-"357"	"probiotinhydrazide"	"oxidized proline biotinylated with biotin hydrazide"	NA	NA	NA	"H(18) C(10) N(4) O(2) S"	258.115047	FALSE
-"359"	"Pro->pyro-Glu"	"proline oxidation to pyroglutamic acid"	NA	NA	NA	"H(-2) O"	13.979265	FALSE
-"36"	"Dimethyl"	"di-Methylation"	"UNIMOD:36"	"Dimethylation of R"	"R"	"H(4) C(2)"	28.0313	FALSE
-"36"	"Dimethyl"	"di-Methylation"	"UNIMOD:36"	"Dimethylation of peptide N-term"	"peptide N-term"	"H(4) C(2)"	28.0313	FALSE
-"36"	"Dimethyl"	"di-Methylation"	"UNIMOD:36"	"Dimethylation of K"	"K"	"H(4) C(2)"	28.0313	FALSE
-"360"	"Pro->Pyrrolidinone"	"Proline oxidation to pyrrolidinone"	NA	NA	NA	"H(-2) C(-1) O(-1)"	-30.010565	FALSE
-"361"	"Thrbiotinhydrazide"	"oxidized Threonine biotinylated with biotin hydrazide"	NA	NA	NA	"H(16) C(10) N(4) O S"	240.104482	FALSE
-"362"	"Diisopropylphosphate"	"O-Diisopropylphosphorylation"	NA	NA	NA	"H(13) C(6) O(3) P"	164.060231	FALSE
-"363"	"Isopropylphospho"	"O-Isopropylphosphorylation"	NA	NA	NA	"H(7) C(3) O(3) P"	122.013281	FALSE
-"364"	"ICPL:13C(6)"	"Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, heavy form"	"UNIMOD:364"	"ICPL6 of peptide N-term"	"peptide N-term"	"H(3) 13C(6) N O"	111.041593	FALSE
-"364"	"ICPL:13C(6)"	"Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, heavy form"	"UNIMOD:364"	"ICPL6 of K"	"K"	"H(3) 13C(6) N O"	111.041593	FALSE
-"365"	"ICPL"	"Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, light form"	"UNIMOD:365"	"ICPL0 of peptide N-term"	"peptide N-term"	"H(3) C(6) N O"	105.021464	FALSE
-"365"	"ICPL"	"Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, light form"	"UNIMOD:365"	"ICPL0 of K"	"K"	"H(3) C(6) N O"	105.021464	FALSE
-"366"	"Deamidated:18O(1)"	"Deamidation in presence of O18"	"UNIMOD:366"	"Deamidation of N 18O"	"N 18O"	"H(-1) N(-1) 18O"	2.988261	FALSE
-"368"	"Cys->Dha"	"Dehydroalanine (from Cysteine)"	NA	NA	NA	"H(-2) S(-1)"	-33.987721	FALSE
-"369"	"Pro->Pyrrolidone"	"Pyrrolidone from Proline"	NA	NA	NA	"C(-1) O(-1)"	-27.994915	FALSE
-"37"	"Trimethyl"	"tri-Methylation"	"UNIMOD:37"	"Trimethylation of K"	"K"	"H(6) C(3)"	42.04695	FALSE
-"37"	"Trimethyl"	"tri-Methylation"	"UNIMOD:37"	"Trimethylation of R"	"R"	"H(6) C(3)"	42.04695	FALSE
-"37"	"Trimethyl"	"tri-Methylation"	"UNIMOD:37"	"Trimethylation of protein N-term A"	"protein N-term A"	"H(6) C(3)"	42.04695	FALSE
-"371"	"HMVK"	"Michael addition of hydroxymethylvinyl ketone to cysteine"	NA	NA	NA	"H(6) C(4) O(2)"	86.036779	FALSE
-"372"	"Arg->Orn"	"Ornithine from Arginine"	NA	NA	NA	"H(-2) C(-1) N(-2)"	-42.021798	FALSE
-"374"	"Dehydro"	"Half of a disulfide bridge"	NA	NA	NA	"H(-1)"	-1.007825	FALSE
-"375"	"Diphthamide"	"Diphthamide"	NA	NA	NA	"H(14) C(7) N(2) O"	142.110613	FALSE
-"376"	"Hydroxyfarnesyl"	"hydroxyfarnesyl"	NA	NA	NA	"H(24) C(15) O"	220.182715	FALSE
-"377"	"Diacylglycerol"	"diacylglycerol"	NA	NA	NA	"H(68) C(37) O(4)"	576.511761	FALSE
-"378"	"Carboxyethyl"	"carboxyethyl"	NA	NA	NA	"H(4) C(3) O(2)"	72.021129	FALSE
-"379"	"Hypusine"	"hypusine"	NA	NA	NA	"H(9) C(4) N O"	87.068414	FALSE
-"380"	"Retinylidene"	"retinal"	NA	NA	NA	"H(26) C(20)"	266.203451	FALSE
-"381"	"Lys->AminoadipicAcid"	"alpha-amino adipic acid"	NA	NA	NA	"H(-3) N(-1) O(2)"	14.96328	FALSE
-"382"	"Cys->PyruvicAcid"	"pyruvic acid from N-term cys"	NA	NA	NA	"H(-3) N(-1) O S(-1)"	-33.003705	FALSE
-"385"	"Ammonia-loss"	"Loss of ammonia"	"UNIMOD:385"	"Pyrolidone from carbamidomethylated C"	NA	"H(-3) N(-1)"	-17.026549	FALSE
-"387"	"Phycocyanobilin"	"phycocyanobilin"	NA	NA	NA	"H(38) C(33) N(4) O(6)"	586.279135	FALSE
-"388"	"Phycoerythrobilin"	"phycoerythrobilin"	NA	NA	NA	"H(40) C(33) N(4) O(6)"	588.294785	FALSE
-"389"	"Phytochromobilin"	"phytochromobilin"	NA	NA	NA	"H(36) C(33) N(4) O(6)"	584.263485	FALSE
-"39"	"Methylthio"	"Beta-methylthiolation"	"UNIMOD:39"	"Methylthio of C"	"C"	"H(2) C S"	45.987721	FALSE
-"39"	"Methylthio"	"Beta-methylthiolation"	"UNIMOD:39"	"Methylthio of D"	"D"	"H(2) C S"	45.987721	FALSE
-"39"	"Methylthio"	"Beta-methylthiolation"	"UNIMOD:39"	"Methylthio of N"	"N"	"H(2) C S"	45.987721	FALSE
-"390"	"Heme"	"heme"	NA	NA	NA	"H(32) C(34) N(4) O(4) Fe"	616.177295	FALSE
-"391"	"Molybdopterin"	"molybdopterin"	NA	NA	NA	"H(11) C(10) N(5) O(8) P S(2) Mo"	521.884073	FALSE
-"392"	"Quinone"	"quinone"	NA	NA	NA	"H(-2) O(2)"	29.974179	FALSE
-"393"	"Glucosylgalactosyl"	"glucosylgalactosyl hydroxylysine"	NA	NA	NA	"O Hex(2)"	340.100562	FALSE
-"394"	"GPIanchor"	"glycosylphosphatidylinositol"	NA	NA	NA	"H(6) C(2) N O(3) P"	123.00853	FALSE
-"395"	"PhosphoribosyldephosphoCoA"	"phosphoribosyl dephospho-coenzyme A"	NA	NA	NA	"H(42) C(26) N(7) O(19) P(3) S"	881.146904	FALSE
-"396"	"GlycerylPE"	"glycerylphosphorylethanolamine"	NA	NA	NA	"H(12) C(5) N O(5) P"	197.04531	FALSE
-"397"	"Triiodothyronine"	"triiodo"	NA	NA	NA	"H C(6) O I(3)"	469.716159	FALSE
-"398"	"Thyroxine"	"tetraiodo"	NA	NA	NA	"C(6) O I(4)"	595.612807	FALSE
-"4"	"Carbamidomethyl"	"Iodoacetamide derivative"	"UNIMOD:4"	"Carbamidomethylation of K"	"K"	"H(3) C(2) N O"	57.021464	FALSE
-"4"	"Carbamidomethyl"	"Iodoacetamide derivative"	"UNIMOD:4"	"Carbamidomethylation of C"	"C"	"H(3) C(2) N O"	57.021464	FALSE
-"4"	"Carbamidomethyl"	"Iodoacetamide derivative"	"UNIMOD:4"	"Carbamidomethylation of E"	"E"	"H(3) C(2) N O"	57.021464	FALSE
-"40"	"Sulfo"	"O-Sulfonation"	"UNIMOD:40"	"Sulfation of S"	"S"	"O(3) S"	79.956815	FALSE
-"40"	"Sulfo"	"O-Sulfonation"	"UNIMOD:40"	"Sulfation of Y"	"Y"	"O(3) S"	79.956815	FALSE
-"40"	"Sulfo"	"O-Sulfonation"	"UNIMOD:40"	"Sulfation of T"	"T"	"O(3) S"	79.956815	FALSE
-"400"	"Tyr->Dha"	"Dehydroalanine (from Tyrosine)"	NA	NA	NA	"H(-6) C(-6) O(-1)"	-94.041865	FALSE
-"401"	"Didehydro"	"2-amino-3-oxo-butanoic_acid"	"UNIMOD:401"	"Didehydro of T"	"T"	"H(-2)"	-2.01565	FALSE
-"402"	"Cys->Oxoalanine"	"oxoalanine"	NA	NA	NA	"H(-2) O S(-1)"	-17.992806	FALSE
-"403"	"Ser->LacticAcid"	"lactic acid from N-term Ser"	NA	NA	NA	"H(-1) N(-1)"	-15.010899	FALSE
-"405"	"Phosphoadenosine"	"AMP binding site"	NA	NA	NA	"H(12) C(10) N(5) O(6) P"	329.05252	FALSE
-"407"	"Hydroxycinnamyl"	"hydroxycinnamyl"	NA	NA	NA	"H(6) C(9) O(2)"	146.036779	FALSE
-"408"	"Glycosyl"	"glycosyl-L-hydroxyproline"	NA	NA	NA	"H(-2) C(-1) Hex"	148.037173	FALSE
-"409"	"FMNH"	"flavin mononucleotide"	NA	NA	NA	"H(19) C(17) N(4) O(9) P"	454.088965	FALSE
-"41"	"Hex"	"Hexose"	"UNIMOD:41"	"Hexose of K"	"K"	"Hex"	162.052824	FALSE
-"410"	"Archaeol"	"S-diphytanylglycerol diether"	NA	NA	NA	"H(86) C(43) O(2)"	634.662782	FALSE
-"411"	"Phenylisocyanate"	"phenyl isocyanate"	NA	NA	NA	"H(5) C(7) N O"	119.037114	FALSE
-"412"	"Phenylisocyanate:2H(5)"	"d5-phenyl isocyanate"	NA	NA	NA	"2H(5) C(7) N O"	124.068498	FALSE
-"413"	"Phosphoguanosine"	"phospho-guanosine"	NA	NA	NA	"H(12) C(10) N(5) O(7) P"	345.047435	FALSE
-"414"	"Hydroxymethyl"	"hydroxymethyl"	NA	NA	NA	"H(2) C O"	30.010565	FALSE
-"415"	"MolybdopterinGD+Delta:S(-1)Se(1)"	"L-selenocysteinyl molybdenum bis(molybdopterin guanine dinucleotide)"	NA	NA	NA	"H(47) C(40) N(20) O(26) P(4) S(3) Se Mo"	1620.930224	FALSE
-"416"	"Dipyrrolylmethanemethyl"	"dipyrrolylmethanemethyl"	NA	NA	NA	"H(22) C(20) N(2) O(8)"	418.137616	FALSE
-"417"	"PhosphoUridine"	"uridine phosphodiester"	NA	NA	NA	"H(11) C(9) N(2) O(8) P"	306.025302	FALSE
-"419"	"Glycerophospho"	"glycerophospho"	NA	NA	NA	"H(7) C(3) O(5) P"	154.00311	FALSE
-"42"	"Lipoyl"	"Lipoyl"	"UNIMOD:42"	"Lipoyl of K"	"K"	"H(12) C(8) O S(2)"	188.032956	FALSE
-"420"	"Carboxy->Thiocarboxy"	"thiocarboxylic acid"	NA	NA	NA	"O(-1) S"	15.977156	FALSE
-"421"	"Sulfide"	"persulfide"	NA	NA	NA	"S"	31.972071	FALSE
-"422"	"PyruvicAcidIminyl"	"N-pyruvic acid 2-iminyl"	NA	NA	NA	"H(2) C(3) O(2)"	70.005479	FALSE
-"423"	"Delta:Se(1)"	"selenyl"	NA	NA	NA	"Se"	79.91652	FALSE
-"424"	"MolybdopterinGD"	"molybdenum bis(molybdopterin guanine dinucleotide)"	NA	NA	NA	"H(47) C(40) N(20) O(26) P(4) S(4) Mo"	1572.985775	FALSE
-"425"	"Dioxidation"	"dihydroxy"	"UNIMOD:425"	"Dioxidation of W"	"W"	"O(2)"	31.989829	FALSE
-"425"	"Dioxidation"	"dihydroxy"	"UNIMOD:425"	"Dioxidation of M"	"M"	"O(2)"	31.989829	FALSE
-"426"	"Octanoyl"	"octanoyl"	NA	NA	NA	"H(14) C(8) O"	126.104465	FALSE
-"428"	"PhosphoHexNAc"	"N-acetylglucosamine-1-phosphoryl"	NA	NA	NA	"H O(3) P HexNAc"	283.045704	FALSE
-"429"	"PhosphoHex"	"phosphoglycosyl-D-mannose-1-phosphoryl"	NA	NA	NA	"H O(3) P Hex"	242.019154	FALSE
-"43"	"HexNAc"	"N-Acetylhexosamine"	"UNIMOD:43"	"HexNAc of S"	"S"	"HexNAc"	203.079373	FALSE
-"43"	"HexNAc"	"N-Acetylhexosamine"	"UNIMOD:43"	"HexNAc of T"	"T"	"HexNAc"	203.079373	FALSE
-"431"	"Palmitoleyl"	"palmitoleyl"	NA	NA	NA	"H(28) C(16) O"	236.214016	FALSE
-"432"	"Cholesterol"	"cholesterol ester"	NA	NA	NA	"H(44) C(27)"	368.344302	FALSE
-"433"	"Didehydroretinylidene"	"3,4-didehydroretinylidene"	NA	NA	NA	"H(24) C(20)"	264.187801	FALSE
-"434"	"CHDH"	"cis-14-hydroxy-10,13-dioxo-7-heptadecenoic ester"	NA	NA	NA	"H(26) C(17) O(4)"	294.183109	FALSE
-"435"	"Methylpyrroline"	"4-methyl-delta-1-pyrroline-5-carboxyl"	NA	NA	NA	"H(7) C(6) N O"	109.052764	FALSE
-"436"	"Hydroxyheme"	"hydroxyheme"	NA	NA	NA	"H(30) C(34) N(4) O(4) Fe"	614.161645	FALSE
-"437"	"MicrocinC7"	"(3-aminopropyl)(L-aspartyl-1-amino)phosphoryl-5-adenosine"	NA	NA	NA	"H(19) C(13) N(6) O(6) P"	386.110369	FALSE
-"438"	"Cyano"	"cyano"	NA	NA	NA	"H(-1) C N"	24.995249	FALSE
-"439"	"Diironsubcluster"	"hydrogenase diiron subcluster"	NA	NA	NA	"H(-1) C(5) N(2) O(5) S(2) Fe(2)"	342.786916	FALSE
-"44"	"Farnesyl"	"Farnesylation"	"UNIMOD:44"	"Farnesylation of C"	"C"	"H(24) C(15)"	204.187801	FALSE
-"440"	"Amidino"	"amidino"	NA	NA	NA	"H(2) C N(2)"	42.021798	FALSE
-"442"	"FMN"	"O3-(riboflavin phosphoryl)"	NA	NA	NA	"H(19) C(17) N(4) O(8) P"	438.094051	FALSE
-"443"	"FMNC"	"S-(4a-FMN)"	NA	NA	NA	"H(21) C(17) N(4) O(9) P"	456.104615	FALSE
-"444"	"CuSMo"	"copper sulfido molybdopterin cytosine dinuncleotide"	NA	NA	NA	"H(24) C(19) N(8) O(15) P(2) S(3) Cu Mo"	922.834855	FALSE
-"445"	"Hydroxytrimethyl"	"5-hydroxy-N6,N6,N6-trimethyl"	NA	NA	NA	"H(7) C(3) O"	59.04969	FALSE
-"447"	"Deoxy"	"reduction"	NA	NA	NA	"O(-1)"	-15.994915	FALSE
-"448"	"Microcin"	"microcin E492 siderophore ester from serine"	NA	NA	NA	"H(37) C(36) N(3) O(20)"	831.197041	FALSE
-"449"	"Decanoyl"	"lipid"	NA	NA	NA	"H(18) C(10) O"	154.135765	FALSE
-"45"	"Myristoyl"	"Myristoylation"	NA	NA	NA	"H(26) C(14) O"	210.198366	FALSE
-"450"	"Glu"	"monoglutamyl"	NA	NA	NA	"H(7) C(5) N O(3)"	129.042593	FALSE
-"451"	"GluGlu"	"diglutamyl"	NA	NA	NA	"H(14) C(10) N(2) O(6)"	258.085186	FALSE
-"452"	"GluGluGlu"	"triglutamyl"	NA	NA	NA	"H(21) C(15) N(3) O(9)"	387.127779	FALSE
-"453"	"GluGluGluGlu"	"tetraglutamyl"	NA	NA	NA	"H(28) C(20) N(4) O(12)"	516.170373	FALSE
-"454"	"HexN"	"Hexosamine"	NA	NA	NA	"HexN"	161.068808	FALSE
-"455"	"Xlink:DMP-s"	"One end of crosslink attached, one end free"	NA	NA	NA	"H(14) C(8) N(2) O"	154.110613	FALSE
-"457"	"NDA"	"naphthalene-2,3-dicarboxaldehyde"	NA	NA	NA	"H(5) C(13) N"	175.042199	FALSE
-"46"	"PyridoxalPhosphate"	"Pyridoxal phosphate"	NA	NA	NA	"H(8) C(8) N O(5) P"	229.014009	FALSE
-"464"	"SPITC:13C(6)"	"4-sulfophenyl isothiocyanate (Heavy C13)"	NA	NA	NA	"H(5) C 13C(6) N O(3) S(2)"	220.991213	FALSE
-"47"	"Palmitoyl"	"Palmitoylation"	"UNIMOD:47"	"Palmitoylation of protein N-term"	"protein N-term"	"H(30) C(16) O"	238.229666	FALSE
-"47"	"Palmitoyl"	"Palmitoylation"	"UNIMOD:47"	"Palmitoylation of T"	"T"	"H(30) C(16) O"	238.229666	FALSE
-"47"	"Palmitoyl"	"Palmitoylation"	"UNIMOD:47"	"Palmitoylation of C"	"C"	"H(30) C(16) O"	238.229666	FALSE
-"47"	"Palmitoyl"	"Palmitoylation"	"UNIMOD:47"	"Palmitoylation of S"	"S"	"H(30) C(16) O"	238.229666	FALSE
-"47"	"Palmitoyl"	"Palmitoylation"	"UNIMOD:47"	"Palmitoylation of K"	"K"	"H(30) C(16) O"	238.229666	FALSE
-"472"	"AEC-MAEC"	"aminoethylcysteine"	NA	NA	NA	"H(5) C(2) N O(-1) S"	59.019355	FALSE
-"476"	"TMAB"	"4-trimethyllammoniumbutyryl-"	NA	NA	NA	"H(14) C(7) N O"	128.107539	FALSE
-"477"	"TMAB:2H(9)"	"d9-4-trimethyllammoniumbutyryl-"	NA	NA	NA	"H(5) 2H(9) C(7) N O"	137.16403	FALSE
-"478"	"FTC"	"fluorescein-5-thiosemicarbazide"	NA	NA	NA	"H(15) C(21) N(3) O(5) S"	421.073241	FALSE
-"48"	"GeranylGeranyl"	"Geranyl-geranyl"	"UNIMOD:48"	"Geranyl-geranyl of C"	"C"	"H(32) C(20)"	272.250401	FALSE
-"481"	"Label:2H(4)"	"4,4,5,5-D4 Lysine"	"UNIMOD:481"	"Label of K 2H(4)"	"K 2H(4)"	"H(-4) 2H(4)"	4.025107	FALSE
-"481"	"Label:2H(4)"	"4,4,5,5-D4 Lysine"	"UNIMOD:481"	"Lysine 2H(4)"	NA	"H(-4) 2H(4)"	4.025107	FALSE
-"488"	"DHP"	"Dehydropyrrolizidine alkaloid (dehydroretronecine) on cysteines"	NA	NA	NA	"H(8) C(8) N"	118.065674	FALSE
-"49"	"Phosphopantetheine"	"Phosphopantetheine"	NA	NA	NA	"H(21) C(11) N(2) O(6) P S"	340.085794	FALSE
-"490"	"Hep"	"Heptose"	NA	NA	NA	"Hep"	192.063388	FALSE
-"493"	"BADGE"	"Bisphenol A diglycidyl ether derivative"	NA	NA	NA	"H(24) C(21) O(4)"	340.167459	FALSE
-"494"	"CyDye-Cy3"	"Cy3 CyDye DIGE Fluor saturation dye"	NA	NA	NA	"H(44) C(37) N(4) O(6) S"	672.298156	FALSE
-"495"	"CyDye-Cy5"	"Cy5 CyDye DIGE Fluor saturation dye"	NA	NA	NA	"H(44) C(38) N(4) O(6) S"	684.298156	FALSE
-"498"	"BHTOH"	"Michael addition of t-butyl hydroxylated BHT (BHTOH) to C, H or K"	NA	NA	NA	"H(22) C(15) O(2)"	234.16198	FALSE
-"499"	"IGBP:13C(2)"	"Heavy IDBEST tag for quantitation"	NA	NA	NA	"H(13) C(10) 13C(2) N(2) O(2) Br"	298.022748	FALSE
-"5"	"Carbamyl"	"Carbamylation"	"UNIMOD:5"	"Carbamilation of K"	"K"	"H C N O"	43.005814	FALSE
-"5"	"Carbamyl"	"Carbamylation"	"UNIMOD:5"	"Carbamilation of protein N-term"	"protein N-term"	"H C N O"	43.005814	FALSE
-"50"	"FAD"	"Flavin adenine dinucleotide"	NA	NA	NA	"H(31) C(27) N(9) O(15) P(2)"	783.141486	FALSE
-"500"	"Nmethylmaleimide+water"	"Nmethylmaleimidehydrolysis"	NA	NA	NA	"H(7) C(5) N O(3)"	129.042593	FALSE
-"501"	"PyMIC"	"3-methyl-2-pyridyl isocyanate"	NA	NA	NA	"H(6) C(7) N(2) O"	134.048013	FALSE
-"503"	"LG-lactam-K"	"Levuglandinyl - lysine lactam adduct"	NA	NA	NA	"H(28) C(20) O(4)"	332.19876	FALSE
-"504"	"LG-Hlactam-K"	"Levuglandinyl - lysine hydroxylactam adduct"	NA	NA	NA	"H(28) C(20) O(5)"	348.193674	FALSE
-"505"	"LG-lactam-R"	"Levuglandinyl - arginine lactam adduct"	NA	NA	NA	"H(26) C(19) N(-2) O(4)"	290.176961	FALSE
-"506"	"LG-Hlactam-R"	"Levuglandinyl - arginine hydroxylactam adduct"	NA	NA	NA	"H(26) C(19) N(-2) O(5)"	306.171876	FALSE
-"51"	"Tripalmitate"	"N-acyl diglyceride cysteine"	NA	NA	NA	"H(96) C(51) O(5)"	788.725777	FALSE
-"510"	"Dimethyl:2H(4)13C(2)"	"DiMethyl-C13HD2"	NA	NA	NA	"2H(4) 13C(2)"	34.063117	FALSE
-"512"	"Hex(2)"	"Lactosylation"	NA	NA	NA	"Hex(2)"	324.105647	FALSE
-"513"	"C8-QAT"	"[3-(2,5)-Dioxopyrrolidin-1-yloxycarbonyl)-propyl]dimethyloctylammonium"	NA	NA	NA	"H(29) C(14) N O"	227.224915	FALSE
-"514"	"PropylNAGthiazoline"	"propyl-1,2-dideoxy-2\'-methyl-alpha-D-glucopyranoso-[2,1-d]-Delta2\'-thiazoline"	NA	NA	NA	"H(14) C(9) N O(4) S"	232.064354	FALSE
-"515"	"FNEM"	"fluorescein-5-maleimide"	NA	NA	NA	"H(13) C(24) N O(7)"	427.069202	FALSE
-"518"	"Diethyl"	"Diethylation, analogous to Dimethylation"	NA	NA	NA	"H(8) C(4)"	56.0626	FALSE
-"519"	"BisANS"	"4,4\'-dianilino-1,1\'-binaphthyl-5,5\'-disulfonic acid"	NA	NA	NA	"H(22) C(32) N(2) O(6) S(2)"	594.091928	FALSE
-"52"	"Guanidinyl"	"Guanidination"	"UNIMOD:52"	"Guanidination of peptide N-term"	"peptide N-term"	"H(2) C N(2)"	42.021798	FALSE
-"52"	"Guanidinyl"	"Guanidination"	"UNIMOD:52"	"Guanidination of K"	"K"	"H(2) C N(2)"	42.021798	FALSE
-"520"	"Piperidine"	"Piperidination"	NA	NA	NA	"H(8) C(5)"	68.0626	FALSE
-"522"	"Maleimide-PEO2-Biotin"	"Maleimide-PEO2-Biotin"	NA	NA	NA	"H(35) C(23) N(5) O(7) S"	525.225719	FALSE
-"523"	"Sulfo-NHS-LC-LC-Biotin"	"Sulfo-NHS-LC-LC-Biotin"	NA	NA	NA	"H(36) C(22) N(4) O(4) S"	452.245726	FALSE
-"525"	"CLIP_TRAQ_2"	"CLIP_TRAQ_2"	NA	NA	NA	"H(12) C(6) 13C N(2) O"	141.098318	FALSE
-"526"	"Dethiomethyl"	"Prompt loss of side chain from oxidised Met"	NA	NA	NA	"H(-4) C(-1) S(-1)"	-48.003371	FALSE
-"528"	"Methyl+Deamidated"	"Deamidation followed by a methylation"	NA	NA	NA	"H C N(-1) O"	14.999666	FALSE
-"529"	"Delta:H(5)C(2)"	"Dimethylation of proline residue"	NA	NA	NA	"H(5) C(2)"	29.039125	FALSE
-"53"	"HNE"	"4-hydroxynonenal (HNE)"	NA	NA	NA	"H(16) C(9) O(2)"	156.11503	FALSE
-"530"	"Cation:K"	"Replacement of proton by potassium"	NA	NA	NA	"H(-1) K"	37.955882	FALSE
-"531"	"Cation:Cu[I]"	"Replacement of proton by copper"	NA	NA	NA	"H(-1) Cu"	61.921774	FALSE
-"532"	"iTRAQ4plex114"	"Accurate mass for 114"	NA	NA	NA	"H(12) C(5) 13C(2) N(2) 18O"	144.105918	FALSE
-"533"	"iTRAQ4plex115"	"Accurate mass for 115"	NA	NA	NA	"H(12) C(6) 13C N 15N 18O"	144.099599	FALSE
-"534"	"Dibromo"	"Dibromo"	NA	NA	NA	"H(-2) Br(2)"	155.821022	FALSE
-"535"	"LeuArgGlyGly"	"Ubiquitination"	NA	NA	NA	"H(29) C(16) N(7) O(4)"	383.228103	FALSE
-"536"	"CLIP_TRAQ_3"	"CLIP_TRAQ_3"	NA	NA	NA	"H(20) C(11) 13C N(3) O(4)"	271.148736	FALSE
-"537"	"CLIP_TRAQ_4"	"CLIP_TRAQ_4"	NA	NA	NA	"H(15) C(9) 13C N(2) O(5)"	244.101452	FALSE
-"538"	"15dB-biotin"	"15-deoxy-delta 12,14-Prostaglandin J2-biotinimide"	NA	NA	NA	"H(54) C(35) N(4) O(4) S"	626.386577	FALSE
-"539"	"PGA1-biotin"	"Prostaglandin A1-biotinimide"	NA	NA	NA	"H(60) C(36) N(4) O(5) S"	660.428442	FALSE
-"54"	"Glucuronyl"	"N-glucuronylation"	NA	NA	NA	"HexA"	176.032088	FALSE
-"540"	"Ala->Ser"	"Ala->Ser substitution"	NA	NA	NA	"O"	15.994915	FALSE
-"541"	"Ala->Thr"	"Ala->Thr substitution"	NA	NA	NA	"H(2) C O"	30.010565	FALSE
-"542"	"Ala->Asp"	"Ala->Asp substitution"	NA	NA	NA	"C O(2)"	43.989829	FALSE
-"543"	"Ala->Pro"	"Ala->Pro substitution"	NA	NA	NA	"H(2) C(2)"	26.01565	FALSE
-"544"	"Ala->Gly"	"Ala->Gly substitution"	NA	NA	NA	"H(-2) C(-1)"	-14.01565	FALSE
-"545"	"Ala->Glu"	"Ala->Glu substitution"	NA	NA	NA	"H(2) C(2) O(2)"	58.005479	FALSE
-"546"	"Ala->Val"	"Ala->Val substitution"	NA	NA	NA	"H(4) C(2)"	28.0313	FALSE
-"547"	"Cys->Phe"	"Cys->Phe substitution"	NA	NA	NA	"H(4) C(6) S(-1)"	44.059229	FALSE
-"548"	"Cys->Ser"	"Cys->Ser substitution"	NA	NA	NA	"O S(-1)"	-15.977156	FALSE
-"549"	"Cys->Trp"	"Cys->Trp substitution"	NA	NA	NA	"H(5) C(8) N S(-1)"	83.070128	FALSE
-"55"	"Glutathione"	"glutathione disulfide"	"UNIMOD:55"	"Glutathione of C"	"C"	"H(15) C(10) N(3) O(6) S"	305.068156	FALSE
-"550"	"Cys->Tyr"	"Cys->Tyr substitution"	NA	NA	NA	"H(4) C(6) O S(-1)"	60.054144	FALSE
-"551"	"Cys->Arg"	"Cys->Arg substitution"	NA	NA	NA	"H(7) C(3) N(3) S(-1)"	53.091927	FALSE
-"552"	"Cys->Gly"	"Cys->Gly substitution"	NA	NA	NA	"H(-2) C(-1) S(-1)"	-45.987721	FALSE
-"553"	"Asp->Ala"	"Asp->Ala substitution"	NA	NA	NA	"C(-1) O(-2)"	-43.989829	FALSE
-"554"	"Asp->His"	"Asp->His substitution"	NA	NA	NA	"H(2) C(2) N(2) O(-2)"	22.031969	FALSE
-"555"	"Asp->Asn"	"Asp->Asn substitution"	NA	NA	NA	"H N O(-1)"	-0.984016	FALSE
-"556"	"Asp->Gly"	"Asp->Gly substitution"	NA	NA	NA	"H(-2) C(-2) O(-2)"	-58.005479	FALSE
-"557"	"Asp->Tyr"	"Asp->Tyr substitution"	NA	NA	NA	"H(4) C(5) O(-1)"	48.036386	FALSE
-"558"	"Asp->Glu"	"Asp->Glu substitution"	NA	NA	NA	"H(2) C"	14.01565	FALSE
-"559"	"Asp->Val"	"Asp->Val substitution"	NA	NA	NA	"H(4) C O(-2)"	-15.958529	FALSE
-"56"	"Acetyl:2H(3)"	"Acetate labeling reagent (N-term & K) (heavy form, +3amu)"	NA	NA	NA	"H(-1) 2H(3) C(2) O"	45.029395	FALSE
-"560"	"Glu->Ala"	"Glu->Ala substitution"	NA	NA	NA	"H(-2) C(-2) O(-2)"	-58.005479	FALSE
-"561"	"Glu->Gln"	"Glu->Gln substitution"	NA	NA	NA	"H N O(-1)"	-0.984016	FALSE
-"562"	"Glu->Asp"	"Glu->Asp substitution"	NA	NA	NA	"H(-2) C(-1)"	-14.01565	FALSE
-"563"	"Glu->Lys"	"Glu->Lys substitution"	NA	NA	NA	"H(5) C N O(-2)"	-0.94763	FALSE
-"564"	"Glu->Gly"	"Glu->Gly substitution"	NA	NA	NA	"H(-4) C(-3) O(-2)"	-72.021129	FALSE
-"565"	"Glu->Val"	"Glu->Val substitution"	NA	NA	NA	"H(2) O(-2)"	-29.974179	FALSE
-"566"	"Phe->Ser"	"Phe->Ser substitution"	NA	NA	NA	"H(-4) C(-6) O"	-60.036386	FALSE
-"567"	"Phe->Cys"	"Phe->Cys substitution"	NA	NA	NA	"H(-4) C(-6) S"	-44.059229	FALSE
-"568"	"Phe->Ile"	"Phe->Ile or Phe->Leu substitution"	NA	NA	NA	"H(2) C(-3)"	-33.98435	FALSE
-"569"	"Phe->Tyr"	"Phe->Tyr substitution"	NA	NA	NA	"O"	15.994915	FALSE
-"570"	"Phe->Val"	"Phe->Val substitution"	NA	NA	NA	"C(-4)"	-48	FALSE
-"571"	"Gly->Ala"	"Gly->Ala substitution"	NA	NA	NA	"H(2) C"	14.01565	FALSE
-"572"	"Gly->Ser"	"Gly->Ser substitution"	NA	NA	NA	"H(2) C O"	30.010565	FALSE
-"573"	"Gly->Trp"	"Gly->Trp substitution"	NA	NA	NA	"H(7) C(9) N"	129.057849	FALSE
-"574"	"Gly->Glu"	"Gly->Glu substitution"	NA	NA	NA	"H(4) C(3) O(2)"	72.021129	FALSE
-"575"	"Gly->Val"	"Gly->Val substitution"	NA	NA	NA	"H(6) C(3)"	42.04695	FALSE
-"576"	"Gly->Asp"	"Gly->Asp substitution"	NA	NA	NA	"H(2) C(2) O(2)"	58.005479	FALSE
-"577"	"Gly->Cys"	"Gly->Cys substitution"	NA	NA	NA	"H(2) C S"	45.987721	FALSE
-"578"	"Gly->Arg"	"Gly->Arg substitution"	NA	NA	NA	"H(9) C(4) N(3)"	99.079647	FALSE
-"58"	"Propionyl"	"Propionate labeling reagent light form (N-term & K)"	"UNIMOD:58"	"Propionyl of K light"	"K light"	"H(4) C(3) O"	56.026215	FALSE
-"58"	"Propionyl"	"Propionate labeling reagent light form (N-term & K)"	"UNIMOD:58"	"Propionyl of peptide N-term light"	"peptide N-term light"	"H(4) C(3) O"	56.026215	FALSE
-"580"	"His->Pro"	"His->Pro substitution"	NA	NA	NA	"C(-1) N(-2)"	-40.006148	FALSE
-"581"	"His->Tyr"	"His->Tyr substitution"	NA	NA	NA	"H(2) C(3) N(-2) O"	26.004417	FALSE
-"582"	"His->Gln"	"His->Gln substitution"	NA	NA	NA	"H C(-1) N(-1) O"	-9.000334	FALSE
-"584"	"His->Arg"	"His->Arg substitution"	NA	NA	NA	"H(5) N"	19.042199	FALSE
-"585"	"His->Leu"	"His->Leu substitution"	NA	NA	NA	"H(4) N(-2)"	-23.974848	FALSE
-"588"	"Ile->Thr"	"Ile->Thr substitution"	NA	NA	NA	"H(-4) C(-2) O"	-12.036386	FALSE
-"589"	"Ile->Asn"	"Ile->Asn substitution"	NA	NA	NA	"H(-5) C(-2) N O"	0.958863	FALSE
-"59"	"Propionyl:13C(3)"	"Propionate labeling reagent heavy form (+3amu), N-term & K"	"UNIMOD:59"	"Propionyl of peptide N-term heavy"	"peptide N-term heavy"	"H(4) 13C(3) O"	59.036279	FALSE
-"59"	"Propionyl:13C(3)"	"Propionate labeling reagent heavy form (+3amu), N-term & K"	"UNIMOD:59"	"Propionyl of K heavy"	"K heavy"	"H(4) 13C(3) O"	59.036279	FALSE
-"590"	"Ile->Lys"	"Ile->Lys substitution"	NA	NA	NA	"H N"	15.010899	FALSE
-"594"	"Lys->Thr"	"Lys->Thr substitution"	NA	NA	NA	"H(-5) C(-2) N(-1) O"	-27.047285	FALSE
-"595"	"Lys->Asn"	"Lys->Asn substitution"	NA	NA	NA	"H(-6) C(-2) O"	-14.052036	FALSE
-"596"	"Lys->Glu"	"Lys->Glu substitution"	NA	NA	NA	"H(-5) C(-1) N(-1) O(2)"	0.94763	FALSE
-"597"	"Lys->Gln"	"Lys->Gln substitution"	NA	NA	NA	"H(-4) C(-1) O"	-0.036386	FALSE
-"598"	"Lys->Met"	"Lys->Met substitution"	NA	NA	NA	"H(-3) C(-1) N(-1) S"	2.945522	FALSE
-"599"	"Lys->Arg"	"Lys->Arg substitution"	NA	NA	NA	"N(2)"	28.006148	FALSE
-"6"	"Carboxymethyl"	"Iodoacetic acid derivative"	"UNIMOD:6"	"Carboxymethylation of C"	"C"	"H(2) C(2) O(2)"	58.005479	FALSE
-"60"	"GIST-Quat"	"Quaternary amine labeling reagent light form (N-term & K)"	NA	NA	NA	"H(13) C(7) N O"	127.099714	FALSE
-"600"	"Lys->Ile"	"Lys->Ile substitution"	NA	NA	NA	"H(-1) N(-1)"	-15.010899	FALSE
-"601"	"Leu->Ser"	"Leu->Ser substitution"	NA	NA	NA	"H(-6) C(-3) O"	-26.052036	FALSE
-"602"	"Leu->Phe"	"Leu->Phe substitution"	NA	NA	NA	"H(-2) C(3)"	33.98435	FALSE
-"603"	"Leu->Trp"	"Leu->Trp substitution"	NA	NA	NA	"H(-1) C(5) N"	72.995249	FALSE
-"604"	"Leu->Pro"	"Leu->Pro substitution"	NA	NA	NA	"H(-4) C(-1)"	-16.0313	FALSE
-"605"	"Leu->Val"	"Leu->Val substitution"	NA	NA	NA	"H(-2) C(-1)"	-14.01565	FALSE
-"606"	"Leu->His"	"Leu->His substitution"	NA	NA	NA	"H(-4) N(2)"	23.974848	FALSE
-"607"	"Leu->Gln"	"Leu->Gln substitution"	NA	NA	NA	"H(-3) C(-1) N O"	14.974514	FALSE
-"608"	"Leu->Met"	"Leu->Met substitution"	NA	NA	NA	"H(-2) C(-1) S"	17.956421	FALSE
-"609"	"Leu->Arg"	"Leu->Arg substitution"	NA	NA	NA	"H N(3)"	43.017047	FALSE
-"61"	"GIST-Quat:2H(3)"	"Quaternary amine labeling reagent heavy (+3amu) form, N-term & K"	NA	NA	NA	"H(10) 2H(3) C(7) N O"	130.118544	FALSE
-"610"	"Met->Thr"	"Met->Thr substitution"	NA	NA	NA	"H(-2) C(-1) O S(-1)"	-29.992806	FALSE
-"611"	"Met->Arg"	"Met->Arg substitution"	NA	NA	NA	"H(3) C N(3) S(-1)"	25.060626	FALSE
-"613"	"Met->Lys"	"Met->Lys substitution"	NA	NA	NA	"H(3) C N S(-1)"	-2.945522	FALSE
-"614"	"Met->Leu"	"Met->Leu substitution"	NA	NA	NA	"H(2) C S(-1)"	-17.956421	FALSE
-"615"	"Met->Val"	"Met->Val substitution"	NA	NA	NA	"S(-1)"	-31.972071	FALSE
-"616"	"Asn->Ser"	"Asn->Ser substitution"	NA	NA	NA	"H(-1) C(-1) N(-1)"	-27.010899	FALSE
-"617"	"Asn->Thr"	"Asn->Thr substitution"	NA	NA	NA	"H N(-1)"	-12.995249	FALSE
-"618"	"Asn->Lys"	"Asn->Lys substitution"	NA	NA	NA	"H(6) C(2) O(-1)"	14.052036	FALSE
-"619"	"Asn->Tyr"	"Asn->Tyr substitution"	NA	NA	NA	"H(3) C(5) N(-1)"	49.020401	FALSE
-"62"	"GIST-Quat:2H(6)"	"Quaternary amine labeling reagent heavy form (+6amu), N-term & K"	NA	NA	NA	"H(7) 2H(6) C(7) N O"	133.137375	FALSE
-"620"	"Asn->His"	"Asn->His substitution"	NA	NA	NA	"H C(2) N O(-1)"	23.015984	FALSE
-"621"	"Asn->Asp"	"Asn->Asp substitution"	NA	NA	NA	"H(-1) N(-1) O"	0.984016	FALSE
-"622"	"Asn->Ile"	"Asn->Ile substitution"	NA	NA	NA	"H(5) C(2) N(-1) O(-1)"	-0.958863	FALSE
-"623"	"Pro->Ser"	"Pro->Ser substitution"	NA	NA	NA	"H(-2) C(-2) O"	-10.020735	FALSE
-"624"	"Pro->Ala"	"Pro->Ala substitution"	NA	NA	NA	"H(-2) C(-2)"	-26.01565	FALSE
-"625"	"Pro->His"	"Pro->His substitution"	NA	NA	NA	"C N(2)"	40.006148	FALSE
-"626"	"Pro->Gln"	"Pro->Gln substitution"	NA	NA	NA	"H N O"	31.005814	FALSE
-"627"	"Pro->Thr"	"Pro->Thr substitution"	NA	NA	NA	"C(-1) O"	3.994915	FALSE
-"628"	"Pro->Arg"	"Pro->Arg substitution"	NA	NA	NA	"H(5) C N(3)"	59.048347	FALSE
-"629"	"Pro->Leu"	"Pro->Leu substitution"	NA	NA	NA	"H(4) C"	16.0313	FALSE
-"63"	"GIST-Quat:2H(9)"	"Quaternary amine labeling reagent heavy form (+9amu), N-term & K"	NA	NA	NA	"H(4) 2H(9) C(7) N O"	136.156205	FALSE
-"630"	"Gln->Pro"	"Gln->Pro substitution"	NA	NA	NA	"H(-1) N(-1) O(-1)"	-31.005814	FALSE
-"631"	"Gln->Lys"	"Gln->Lys substitution"	NA	NA	NA	"H(4) C O(-1)"	0.036386	FALSE
-"632"	"Gln->Glu"	"Gln->Glu substitution"	NA	NA	NA	"H(-1) N(-1) O"	0.984016	FALSE
-"633"	"Gln->His"	"Gln->His substitution"	NA	NA	NA	"H(-1) C N O(-1)"	9.000334	FALSE
-"634"	"Gln->Arg"	"Gln->Arg substitution"	NA	NA	NA	"H(4) C N(2) O(-1)"	28.042534	FALSE
-"635"	"Gln->Leu"	"Gln->Leu substitution"	NA	NA	NA	"H(3) C N(-1) O(-1)"	-14.974514	FALSE
-"636"	"Arg->Ser"	"Arg->Ser substitution"	NA	NA	NA	"H(-7) C(-3) N(-3) O"	-69.069083	FALSE
-"637"	"Arg->Trp"	"Arg->Trp substitution"	NA	NA	NA	"H(-2) C(5) N(-2)"	29.978202	FALSE
-"638"	"Arg->Thr"	"Arg->Thr substitution"	NA	NA	NA	"H(-5) C(-2) N(-3) O"	-55.053433	FALSE
-"639"	"Arg->Pro"	"Arg->Pro substitution"	NA	NA	NA	"H(-5) C(-1) N(-3)"	-59.048347	FALSE
-"64"	"Succinyl"	"Succinic anhydride labeling reagent light form (N-term & K)"	NA	NA	NA	"H(4) C(4) O(3)"	100.016044	FALSE
-"640"	"Arg->Lys"	"Arg->Lys substitution"	NA	NA	NA	"N(-2)"	-28.006148	FALSE
-"641"	"Arg->His"	"Arg->His substitution"	NA	NA	NA	"H(-5) N(-1)"	-19.042199	FALSE
-"642"	"Arg->Gln"	"Arg->Gln substitution"	NA	NA	NA	"H(-4) C(-1) N(-2) O"	-28.042534	FALSE
-"643"	"Arg->Met"	"Arg->Met substitution"	NA	NA	NA	"H(-3) C(-1) N(-3) S"	-25.060626	FALSE
-"644"	"Arg->Cys"	"Arg->Cys substitution"	NA	NA	NA	"H(-7) C(-3) N(-3) S"	-53.091927	FALSE
-"645"	"Arg->Ile"	"Arg->Ile or Arg->Leu substitution"	NA	NA	NA	"H(-1) N(-3)"	-43.017047	FALSE
-"646"	"Arg->Gly"	"Arg->Gly substitution"	NA	NA	NA	"H(-9) C(-4) N(-3)"	-99.079647	FALSE
-"647"	"Ser->Phe"	"Ser->Phe substitution"	NA	NA	NA	"H(4) C(6) O(-1)"	60.036386	FALSE
-"648"	"Ser->Ala"	"Ser->Ala substitution"	NA	NA	NA	"O(-1)"	-15.994915	FALSE
-"649"	"Ser->Trp"	"Ser->Trp substitution"	NA	NA	NA	"H(5) C(8) N O(-1)"	99.047285	FALSE
-"65"	"Succinyl:2H(4)"	"Succinic anhydride labeling reagent, heavy form (+4amu, 4H2), N-term & K"	NA	NA	NA	"2H(4) C(4) O(3)"	104.041151	FALSE
-"650"	"Ser->Thr"	"Ser->Thr substitution"	NA	NA	NA	"H(2) C"	14.01565	FALSE
-"651"	"Ser->Asn"	"Ser->Asn substitution"	NA	NA	NA	"H C N"	27.010899	FALSE
-"652"	"Ser->Pro"	"Ser->Pro substitution"	NA	NA	NA	"H(2) C(2) O(-1)"	10.020735	FALSE
-"653"	"Ser->Tyr"	"Ser->Tyr substitution"	NA	NA	NA	"H(4) C(6)"	76.0313	FALSE
-"654"	"Ser->Cys"	"Ser->Cys substitution"	NA	NA	NA	"O(-1) S"	15.977156	FALSE
-"655"	"Ser->Arg"	"Ser->Arg substitution"	NA	NA	NA	"H(7) C(3) N(3) O(-1)"	69.069083	FALSE
-"656"	"Ser->Ile"	"Ser->Ile or Ser->Leu substitution"	NA	NA	NA	"H(6) C(3) O(-1)"	26.052036	FALSE
-"657"	"Ser->Gly"	"Ser->Gly substitution"	NA	NA	NA	"H(-2) C(-1) O(-1)"	-30.010565	FALSE
-"658"	"Thr->Ser"	"Thr->Ser substitution"	NA	NA	NA	"H(-2) C(-1)"	-14.01565	FALSE
-"659"	"Thr->Ala"	"Thr->Ala substitution"	NA	NA	NA	"H(-2) C(-1) O(-1)"	-30.010565	FALSE
-"66"	"Succinyl:13C(4)"	"Succinic anhydride labeling reagent, heavy form (+4amu, 4C13), N-term & K"	NA	NA	NA	"H(4) 13C(4) O(3)"	104.029463	FALSE
-"660"	"Thr->Asn"	"Thr->Asn substitution"	NA	NA	NA	"H(-1) N"	12.995249	FALSE
-"661"	"Thr->Lys"	"Thr->Lys substitution"	NA	NA	NA	"H(5) C(2) N O(-1)"	27.047285	FALSE
-"662"	"Thr->Pro"	"Thr->Pro substitution"	NA	NA	NA	"C O(-1)"	-3.994915	FALSE
-"663"	"Thr->Met"	"Thr->Met substitution"	NA	NA	NA	"H(2) C O(-1) S"	29.992806	FALSE
-"664"	"Thr->Ile"	"Thr->Ile substitution"	NA	NA	NA	"H(4) C(2) O(-1)"	12.036386	FALSE
-"665"	"Thr->Arg"	"Thr->Arg substitution"	NA	NA	NA	"H(5) C(2) N(3) O(-1)"	55.053433	FALSE
-"666"	"Val->Phe"	"Val->Phe substitution"	NA	NA	NA	"C(4)"	48	FALSE
-"667"	"Val->Ala"	"Val->Ala substitution"	NA	NA	NA	"H(-4) C(-2)"	-28.0313	FALSE
-"668"	"Val->Glu"	"Val->Glu substitution"	NA	NA	NA	"H(-2) O(2)"	29.974179	FALSE
-"669"	"Val->Met"	"Val->Met substitution"	NA	NA	NA	"S"	31.972071	FALSE
-"670"	"Val->Asp"	"Val->Asp substitution"	NA	NA	NA	"H(-4) C(-1) O(2)"	15.958529	FALSE
-"671"	"Val->Ile"	"Val->Ile or Val->Leu substitution"	NA	NA	NA	"H(2) C"	14.01565	FALSE
-"672"	"Val->Gly"	"Val->Gly substitution"	NA	NA	NA	"H(-6) C(-3)"	-42.04695	FALSE
-"673"	"Trp->Ser"	"Trp->Ser substitution"	NA	NA	NA	"H(-5) C(-8) N(-1) O"	-99.047285	FALSE
-"674"	"Trp->Cys"	"Trp->Cys substitution"	NA	NA	NA	"H(-5) C(-8) N(-1) S"	-83.070128	FALSE
-"675"	"Trp->Arg"	"Trp->Arg substitution"	NA	NA	NA	"H(2) C(-5) N(2)"	-29.978202	FALSE
-"676"	"Trp->Gly"	"Trp->Gly substitution"	NA	NA	NA	"H(-7) C(-9) N(-1)"	-129.057849	FALSE
-"677"	"Trp->Leu"	"Trp->Leu substitution"	NA	NA	NA	"H C(-5) N(-1)"	-72.995249	FALSE
-"678"	"Tyr->Phe"	"Tyr->Phe substitution"	NA	NA	NA	"O(-1)"	-15.994915	FALSE
-"679"	"Tyr->Ser"	"Tyr->Ser substitution"	NA	NA	NA	"H(-4) C(-6)"	-76.0313	FALSE
-"680"	"Tyr->Asn"	"Tyr->Asn substitution"	NA	NA	NA	"H(-3) C(-5) N"	-49.020401	FALSE
-"681"	"Tyr->His"	"Tyr->His substitution"	NA	NA	NA	"H(-2) C(-3) N(2) O(-1)"	-26.004417	FALSE
-"682"	"Tyr->Asp"	"Tyr->Asp substitution"	NA	NA	NA	"H(-4) C(-5) O"	-48.036386	FALSE
-"683"	"Tyr->Cys"	"Tyr->Cys substitution"	NA	NA	NA	"H(-4) C(-6) O(-1) S"	-60.054144	FALSE
-"684"	"BDMAPP"	"Mass Defect Tag on lysine e-amino"	NA	NA	NA	"H(12) C(11) N O Br"	253.010225	FALSE
-"685"	"NA-LNO2"	"Nitroalkylation by Nitro Linoleic Acid"	NA	NA	NA	"H(31) C(18) N O(4)"	325.225309	FALSE
-"686"	"NA-OA-NO2"	"Nitroalkylation by Nitro Oleic Acid"	NA	NA	NA	"H(33) C(18) N O(4)"	327.240959	FALSE
-"687"	"ICPL:2H(4)"	"Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, medium form"	"UNIMOD:687"	"ICPL4 of peptide N-term"	"peptide N-term"	"H(-1) 2H(4) C(6) N O"	109.046571	FALSE
-"687"	"ICPL:2H(4)"	"Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, medium form"	"UNIMOD:687"	"ICPL4 of K"	"K"	"H(-1) 2H(4) C(6) N O"	109.046571	FALSE
-"695"	"Label:13C(6)15N(1)"	"13C(6) 15N(1) Silac label"	"UNIMOD:695"	"Isoleucine 13C(6) 15N(1)"	NA	"C(-6) 13C(6) N(-1) 15N"	7.017164	FALSE
-"695"	"Label:13C(6)15N(1)"	"13C(6) 15N(1) Silac label"	"UNIMOD:695"	"Leucine 13C(6) 15N(1)"	NA	"C(-6) 13C(6) N(-1) 15N"	7.017164	FALSE
-"696"	"Label:2H(9)13C(6)15N(2)"	"13C(6) 15N(2) (D)9 SILAC label"	NA	NA	NA	"H(-9) 2H(9) C(-6) 13C(6) N(-2) 15N(2)"	17.07069	FALSE
-"697"	"NIC"	"Nicotinic Acid"	NA	NA	NA	"H(3) C(6) N O"	105.021464	FALSE
-"698"	"dNIC"	"deuterated Nicotinic Acid"	NA	NA	NA	"H 2H(3) C(6) N O"	109.048119	FALSE
-"7"	"Deamidated"	"Deamidation"	"UNIMOD:7"	"Deamidation of Q"	"Q"	"H(-1) N(-1) O"	0.984016	FALSE
-"7"	"Deamidated"	"Deamidation"	"UNIMOD:7"	"Deamidation of N"	"N"	"H(-1) N(-1) O"	0.984016	FALSE
-"7"	"Deamidated-N"	"Deamidation custom"	"UNIMOD:7"	"Deamidation of Q"	"Q"	"H(-1) N(-1) O"	0.984016	FALSE
-"7"	"Deamidated-N"	"Deamidation custom"	"UNIMOD:7"	"Deamidation of N"	"N"	"H(-1) N(-1) O"	0.984016	FALSE
-"720"	"HNE-Delta:H(2)O"	"Dehydrated 4-hydroxynonenal"	NA	NA	NA	"H(14) C(9) O"	138.104465	FALSE
-"721"	"4-ONE"	"4-Oxononenal (ONE)"	NA	NA	NA	"H(14) C(9) O(2)"	154.09938	FALSE
-"723"	"O-Dimethylphosphate"	"O-Dimethylphosphorylation"	NA	NA	NA	"H(5) C(2) O(3) P"	107.997631	FALSE
-"724"	"O-Methylphosphate"	"O-Methylphosphorylation"	NA	NA	NA	"H(3) C O(3) P"	93.981981	FALSE
-"725"	"O-Diethylphosphate"	"O-Diethylphosphorylation"	NA	NA	NA	"H(9) C(4) O(3) P"	136.028931	FALSE
-"726"	"O-Ethylphosphate"	"O-Ethylphosphorylation"	NA	NA	NA	"H(5) C(2) O(3) P"	107.997631	FALSE
-"727"	"O-pinacolylmethylphosphonate"	"O-pinacolylmethylphosphonylation"	NA	NA	NA	"H(15) C(7) O(2) P"	162.080967	FALSE
-"728"	"Methylphosphonate"	"Methylphosphonylation"	NA	NA	NA	"H(3) C O(2) P"	77.987066	FALSE
-"729"	"O-Isopropylmethylphosphonate"	"O-Isopropylmethylphosphonylation"	NA	NA	NA	"H(9) C(4) O(2) P"	120.034017	FALSE
-"730"	"iTRAQ8plex"	"Representative mass and accurate mass for 113, 114, 116 & 117"	"UNIMOD:730"	"iTRAQ 8-plex of Y"	"Y"	"H(24) C(7) 13C(7) N(3) 15N O(3)"	304.20536	FALSE
-"730"	"iTRAQ8plex"	"Representative mass and accurate mass for 113, 114, 116 & 117"	"UNIMOD:730"	"iTRAQ 8-plex of peptide N-term"	"peptide N-term"	"H(24) C(7) 13C(7) N(3) 15N O(3)"	304.20536	FALSE
-"730"	"iTRAQ8plex"	"Representative mass and accurate mass for 113, 114, 116 & 117"	"UNIMOD:730"	"iTRAQ 8-plex of K"	"K"	"H(24) C(7) 13C(7) N(3) 15N O(3)"	304.20536	FALSE
-"731"	"iTRAQ8plex:13C(6)15N(2)"	"Accurate mass for 115, 118, 119 & 121"	NA	NA	NA	"H(24) C(8) 13C(6) N(2) 15N(2) O(3)"	304.19904	FALSE
-"734"	"Ethanolamine"	"Carboxyl modification with ethanolamine"	NA	NA	NA	"H(5) C(2) N"	43.042199	FALSE
-"735"	"DTT_ST"	"Dithiothreitol (DTT)"	NA	NA	NA	"H(8) C(4) O S(2)"	136.001656	FALSE
-"736"	"DTT_C"	"Dithiothreitol (DTT) on Cys"	NA	NA	NA	"H(8) C(4) O(2) S"	120.0245	FALSE
-"737"	"TMT6plex"	"Sixplex Tandem Mass Tag®"	"UNIMOD:737"	"TMT 6-plex of K"	"K"	"H(20) C(8) 13C(4) N 15N O(2)"	229.162932	FALSE
-"737"	"TMT6plex"	"Sixplex Tandem Mass Tag®"	"UNIMOD:737"	"TMT 10-plex of K"	"K"	"H(20) C(8) 13C(4) N 15N O(2)"	229.162932	FALSE
-"737"	"TMT6plex"	"Sixplex Tandem Mass Tag®"	"UNIMOD:737"	"TMT 10-plex of peptide N-term"	"peptide N-term"	"H(20) C(8) 13C(4) N 15N O(2)"	229.162932	FALSE
-"737"	"TMT6plex"	"Sixplex Tandem Mass Tag®"	"UNIMOD:737"	"TMT 6-plex of peptide N-term"	"peptide N-term"	"H(20) C(8) 13C(4) N 15N O(2)"	229.162932	FALSE
-"738"	"TMT2plex"	"Duplex Tandem Mass Tag®"	"UNIMOD:738"	"TMT 2-plex of K"	"K"	"H(20) C(11) 13C N(2) O(2)"	225.155833	FALSE
-"738"	"TMT2plex"	"Duplex Tandem Mass Tag®"	"UNIMOD:738"	"TMT 2-plex of peptide N-term"	"peptide N-term"	"H(20) C(11) 13C N(2) O(2)"	225.155833	FALSE
-"739"	"TMT"	"Native Tandem Mass Tag®"	NA	NA	NA	"H(20) C(12) N(2) O(2)"	224.152478	FALSE
-"740"	"ExacTagThiol"	"ExacTag Thiol label mass for 2-4-7-10 plex"	NA	NA	NA	"H(50) C(23) 13C(12) N(8) 15N(6) O(18)"	972.365219	FALSE
-"741"	"ExacTagAmine"	"ExacTag Amine label mass for 2-4-7-10 plex"	NA	NA	NA	"H(52) C(25) 13C(12) N(8) 15N(6) O(19) S"	1046.347854	FALSE
-"743"	"4-ONE+Delta:H(-2)O(-1)"	"Dehydrated 4-Oxononenal Michael adduct"	NA	NA	NA	"H(12) C(9) O"	136.088815	FALSE
-"744"	"NO_SMX_SEMD"	"Nitroso Sulfamethoxazole Sulphenamide thiol adduct"	NA	NA	NA	"H(10) C(10) N(3) O(3) S"	252.044287	FALSE
-"745"	"NO_SMX_SMCT"	"Nitroso Sulfamethoxazole semimercaptal thiol adduct"	NA	NA	NA	"H(10) C(10) N(3) O(4) S"	268.039202	FALSE
-"746"	"NO_SMX_SIMD"	"Nitroso Sulfamethoxazole Sulfinamide thiol adduct"	NA	NA	NA	"H(9) C(10) N(3) O(4) S"	267.031377	FALSE
-"747"	"Malonyl"	"Malonylation of C and S residues"	NA	NA	NA	"H(2) C(3) O(3)"	86.000394	FALSE
-"748"	"3sulfo"	"derivatization by N-term modification using 3-Sulfobenzoic succinimidyl ester"	NA	NA	NA	"H(4) C(7) O(4) S"	183.983029	FALSE
-"750"	"trifluoro"	"trifluoroleucine replacement of leucine"	NA	NA	NA	"H(-3) F(3)"	53.971735	FALSE
-"751"	"TNBS"	"tri nitro benzene"	NA	NA	NA	"H C(6) N(3) O(6)"	210.986535	FALSE
-"762"	"IDEnT"	"Isotope Distribution Encoded Tag"	NA	NA	NA	"H(7) C(9) N O Cl(2)"	214.990469	FALSE
-"763"	"DTT_ST:2H(6)"	"Isotopically labeled Dithiothreitol (DTT) modification of serines or threonines"	NA	NA	NA	"H(2) 2H(6) C(4) O S(2)"	142.039317	FALSE
-"764"	"DTT_C:2H(6)"	"Isotopically labeled Dithiothreitol (DTT) modification of cysteines"	NA	NA	NA	"H(2) 2H(6) C(4) O(2) S"	126.062161	FALSE
-"765"	"Met-loss"	"Removal of initiator methionine from protein N-terminus"	NA	NA	NA	"H(-9) C(-5) N(-1) O(-1) S(-1)"	-131.040485	FALSE
-"766"	"Met-loss+Acetyl"	"Removal of initiator methionine from protein N-terminus, then acetylation of the new N-terminus"	NA	NA	NA	"H(-7) C(-3) N(-1) S(-1)"	-89.02992	FALSE
-"767"	"Menadione-HQ"	"Menadione hydroquinone derivative"	NA	NA	NA	"H(8) C(11) O(2)"	172.05243	FALSE
-"768"	"Methyl+Acetyl:2H(3)"	"Mono-methylated lysine labelled with Acetyl_heavy"	NA	NA	NA	"H 2H(3) C(3) O"	59.045045	FALSE
-"771"	"lapachenole"	"lapachenole photochemically added to cysteine"	NA	NA	NA	"H(16) C(16) O(2)"	240.11503	FALSE
-"772"	"Label:13C(5)"	"13C(5) Silac label"	"UNIMOD:772"	"Proline 13C(5)"	NA	"C(-5) 13C(5)"	5.016774	FALSE
-"773"	"maleimide"	"maleimide"	NA	NA	NA	"H(3) C(4) N O(2)"	97.016378	FALSE
-"774"	"Biotin-phenacyl"	"Alkylation by biotinylated form of phenacyl bromide"	NA	NA	NA	"H(38) C(29) N(8) O(6) S"	626.263502	FALSE
-"775"	"Carboxymethyl:13C(2)"	"Iodoacetic acid derivative w/ 13C label"	NA	NA	NA	"H(2) 13C(2) O(2)"	60.012189	FALSE
-"776"	"NEM:2H(5)"	"D5 N-ethylmaleimide on cysteines"	NA	NA	NA	"H(2) 2H(5) C(6) N O(2)"	130.079062	FALSE
-"792"	"AEC-MAEC:2H(4)"	"deuterium cysteamine modification to S or T"	NA	NA	NA	"H 2H(4) C(2) N O(-1) S"	63.044462	FALSE
-"793"	"Hex1HexNAc1"	"Hex1HexNAc1"	"UNIMOD:793"	"Hex(1)NAc(1) of S"	"S"	"Hex HexNAc"	365.132196	FALSE
-"793"	"Hex1HexNAc1"	"Hex1HexNAc1"	"UNIMOD:793"	"Hex(1)NAc(1) of T"	"T"	"Hex HexNAc"	365.132196	FALSE
-"799"	"Label:13C(6)+GlyGly"	"13C6 labeled ubiquitinylation residue"	NA	NA	NA	"H(6) C(-2) 13C(6) N(2) O(2)"	120.063056	FALSE
-"8"	"ICAT-G"	"Gygi ICAT(TM) d0"	NA	NA	NA	"H(38) C(22) N(4) O(6) S"	486.251206	FALSE
-"800"	"PentylamineBiotin"	"Used for labeling glutamine-donor substrate of transglutaminase"	NA	NA	NA	"H(25) C(15) N(3) O(2) S"	311.166748	FALSE
-"801"	"Pentylamine"	"Labeling transglutaminase substrate on glutamine side chain"	NA	NA	NA	"H(11) C(5) N"	85.089149	FALSE
-"811"	"Biotin-PEO4-hydrazide"	"Pierce EZ link biotin hydrazide prod no. 21360"	NA	NA	NA	"H(37) C(21) N(5) O(6) S"	487.246455	FALSE
-"821"	"Cy3b-maleimide"	"fluorescent dye that labels cysteines"	NA	NA	NA	"H(38) C(37) N(4) O(7) S"	682.24612	FALSE
-"822"	"Gly-loss+Amide"	"Enzymatic glycine removal leaving an amidated C-terminus"	NA	NA	NA	"H(-2) C(-2) O(-2)"	-58.005479	FALSE
-"824"	"BMOE"	"Addition of BMOE crosslinker"	NA	NA	NA	"H(8) C(10) N(2) O(4)"	220.048407	FALSE
-"825"	"DFDNB"	"Addition of DFDNB crosslinker"	NA	NA	NA	"C(6) N(2) O(4)"	163.985807	FALSE
-"827"	"TMPP-Ac"	"tris(2,4,6-trimethoxyphenyl)phosphonium acetic acid N-hydroxysuccinimide ester derivative"	NA	NA	NA	"H(33) C(29) O(10) P"	572.181134	FALSE
-"830"	"Dihydroxyimidazolidine"	"Dihydroxy methylglyoxal adduct"	NA	NA	NA	"H(4) C(3) O(2)"	72.021129	FALSE
-"834"	"Label:2H(4)+Acetyl"	"Acetyl 4,4,5,5-D4 Lysine"	NA	NA	NA	"H(-2) 2H(4) C(2) O"	46.035672	FALSE
-"835"	"Label:13C(6)+Acetyl"	"Acetyl 13C(6) Silac label"	NA	NA	NA	"H(2) C(-4) 13C(6) O"	48.030694	FALSE
-"836"	"Label:13C(6)15N(2)+Acetyl"	"Acetyl_13C(6) 15N(2) Silac label"	NA	NA	NA	"H(2) C(-4) 13C(6) N(-2) 15N(2) O"	50.024764	FALSE
-"837"	"Arg->Npo"	"Arginine replacement by Nitropyrimidyl ornithine"	NA	NA	NA	"H(-1) C(3) N O(2)"	80.985078	FALSE
-"846"	"EQIGG"	"Sumo mutant Smt3-WT tail following trypsin digestion"	NA	NA	NA	"H(32) C(20) N(6) O(8)"	484.228162	FALSE
-"848"	"Arg2PG"	"Adduct of phenylglyoxal with Arg"	NA	NA	NA	"H(10) C(16) O(4)"	266.057909	FALSE
-"849"	"cGMP"	"S-guanylation"	NA	NA	NA	"H(10) C(10) N(5) O(7) P"	343.031785	FALSE
-"851"	"cGMP+RMP-loss"	"S-guanylation-2"	NA	NA	NA	"H(4) C(5) N(5) O"	150.041585	FALSE
-"853"	"Label:2H(4)+GlyGly"	"Ubiquitination 2H4 lysine"	NA	NA	NA	"H(2) 2H(4) C(4) N(2) O(2)"	118.068034	FALSE
-"859"	"MG-H1"	"Methylglyoxal-derived hydroimidazolone"	NA	NA	NA	"H(2) C(3) O"	54.010565	FALSE
-"860"	"G-H1"	"Glyoxal-derived hydroimiadazolone"	NA	NA	NA	"C(2) O"	39.994915	FALSE
-"861"	"ZGB"	"NHS ester linked Green Fluorescent Bodipy Dye"	NA	NA	NA	"H(53) B C(37) N(6) O(6) F(2) S"	758.380841	FALSE
-"862"	"Label:13C(1)2H(3)"	"SILAC"	NA	NA	NA	"H(-3) 2H(3) C(-1) 13C"	4.022185	FALSE
-"864"	"Label:13C(6)15N(2)+GlyGly"	"13C(6) 15N(2) Lysine glygly"	NA	NA	NA	"H(6) C(-2) 13C(6) 15N(2) O(2)"	122.057126	FALSE
-"866"	"ICPL:13C(6)2H(4)"	"Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, +10 Da form"	"UNIMOD:866"	"ICPL10 of peptide N-term"	"peptide N-term"	"H(-1) 2H(4) 13C(6) N O"	115.0667	FALSE
-"866"	"ICPL:13C(6)2H(4)"	"Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, +10 Da form"	"UNIMOD:866"	"ICPL10 of K"	"K"	"H(-1) 2H(4) 13C(6) N O"	115.0667	FALSE
-"876"	"QEQTGG"	"SUMOylation by SUMO-1"	NA	NA	NA	"H(36) C(23) N(8) O(11)"	600.250354	FALSE
-"877"	"QQQTGG"	"SUMOylation by SUMO-2/3"	NA	NA	NA	"H(37) C(23) N(9) O(10)"	599.266339	FALSE
-"878"	"Bodipy"	"Bodipy modifications onto cysteine"	NA	NA	NA	"H(21) B C(20) N(4) O(3) F(2)"	414.167478	FALSE
-"884"	"ChromoBiotin"	"EZ-Link NHS-Chromogenic Biotin"	NA	NA	NA	"H(45) C(34) N(7) O(7) S"	695.310118	FALSE
-"885"	"Label:13C(1)2H(3)+Oxidation"	"Oxidised methionine 13C(1)2H(3) SILAC label"	NA	NA	NA	"H(-3) 2H(3) C(-1) 13C O"	20.0171	FALSE
-"886"	"HydroxymethylOP"	"2-ammonio-6-[4-(hydroxymethyl)-3-oxidopyridinium-1-yl]- hexanoate"	NA	NA	NA	"H(4) C(6) O(2)"	108.021129	FALSE
-"887"	"MDCC"	"covalent linkage of maleimidyl coumarin probe (Molecular Probes D-10253)"	NA	NA	NA	"H(21) C(20) N(3) O(5)"	383.148121	FALSE
-"888"	"mTRAQ"	"mTRAQ light"	"UNIMOD:888"	"mTRAQ of peptide N-term light"	"peptide N-term light"	"H(12) C(7) N(2) O"	140.094963	FALSE
-"888"	"mTRAQ"	"mTRAQ light"	"UNIMOD:888"	"mTRAQ of K light"	"K light"	"H(12) C(7) N(2) O"	140.094963	FALSE
-"889"	"mTRAQ:13C(3)15N(1)"	"mTRAQ heavy"	"UNIMOD:889"	"mTRAQ of peptide N-term 13C(3) 15N"	"peptide N-term 13C(3) 15N"	"H(12) C(4) 13C(3) N 15N O"	144.102063	FALSE
-"889"	"mTRAQ:13C(3)15N(1)"	"mTRAQ heavy"	"UNIMOD:889"	"mTRAQ of K 13C(3) 15N"	"K 13C(3) 15N"	"H(12) C(4) 13C(3) N 15N O"	144.102063	FALSE
-"89"	"Iminobiotin"	"Iminobiotinylation"	NA	NA	NA	"H(15) C(10) N(3) O S"	225.093583	FALSE
-"890"	"DyLight-maleimide"	"Thiol-reactive dye for fluorescence labelling of proteins"	NA	NA	NA	"H(48) C(39) N(4) O(15) S(4)"	940.1999	FALSE
-"891"	"Methyl-PEO12-Maleimide"	"Methyl-PEO12-Maleimide"	NA	NA	NA	"H(58) C(32) N(2) O(15)"	710.383719	FALSE
-"893"	"CarbamidomethylDTT"	"Carbamidomethylated DTT modification of cysteine"	NA	NA	NA	"H(11) C(6) N O(3) S(2)"	209.018035	FALSE
-"894"	"CarboxymethylDTT"	"Carboxymethylated DTT modification of cysteine"	NA	NA	NA	"H(10) C(6) O(4) S(2)"	210.00205	FALSE
-"895"	"Biotin-PEG-PRA"	"Biotin polyethyleneoxide (n=3) alkyne"	NA	NA	NA	"H(42) C(26) N(8) O(7)"	578.317646	FALSE
-"896"	"Met->Aha"	"Methionine replacement by azido homoalanine"	NA	NA	NA	"H(-3) C(-1) N(3) S(-1)"	-4.986324	FALSE
-"897"	"Label:15N(4)"	"SILAC 15N(4)"	NA	NA	NA	"N(-4) 15N(4)"	3.98814	FALSE
-"898"	"pyrophospho"	"pyrophosphorylation of Ser/Thr"	NA	NA	NA	"H(2) O(6) P(2)"	159.932662	FALSE
-"899"	"Met->Hpg"	"methionine replacement by homopropargylglycine"	NA	NA	NA	"H(-2) C S(-1)"	-21.987721	FALSE
-"9"	"ICAT-G:2H(8)"	"Gygi ICAT(TM) d8"	NA	NA	NA	"H(30) 2H(8) C(22) N(4) O(6) S"	494.30142	FALSE
-"90"	"ESP"	"ESP-Tag light d0"	NA	NA	NA	"H(26) C(16) N(4) O(2) S"	338.177647	FALSE
-"901"	"4AcAllylGal"	"2,3,4,6-tetra-O-Acetyl-1-allyl-α-D-galactopyranoside modification of cysteine"	NA	NA	NA	"H(24) C(17) O(9)"	372.142033	FALSE
-"902"	"DimethylArsino"	"Reaction with dimethylarsinous (AsIII) acid"	NA	NA	NA	"H(5) C(2) As"	103.960719	FALSE
-"903"	"Lys->CamCys"	"Lys->Cys substitution and carbamidomethylation"	NA	NA	NA	"H(-4) C(-1) O S"	31.935685	FALSE
-"904"	"Phe->CamCys"	"Phe->Cys substitution and carbamidomethylation"	NA	NA	NA	"H(-1) C(-4) N O S"	12.962234	FALSE
-"905"	"Leu->MetOx"	"Leu->Met substitution and sulfoxidation"	NA	NA	NA	"H(-2) C(-1) O S"	33.951335	FALSE
-"906"	"Lys->MetOx"	"Lys->Met substitution and sulfoxidation"	NA	NA	NA	"H(-3) C(-1) N(-1) O S"	18.940436	FALSE
-"907"	"Galactosyl"	"Galactosyl hydroxylysine"	NA	NA	NA	"O Hex"	178.047738	FALSE
-"908"	"SMCC-maleimide"	"Modified SMCC maleimide with 3-(dimethylamino)-1-propylamine"	NA	NA	NA	"H(27) C(17) N(3) O(3)"	321.205242	FALSE
-"91"	"ESP:2H(10)"	"ESP-Tag heavy d10"	NA	NA	NA	"H(16) 2H(10) C(16) N(4) O(2) S"	348.240414	FALSE
-"910"	"Bacillosamine"	"2,4-diacetamido-2,4,6-trideoxyglucopyranose"	NA	NA	NA	"H(6) C(4) N(2) dHex"	228.111007	FALSE
-"911"	"MTSL"	"Cys modification by (1-oxyl-2,2,5,5-tetramethyl-3-pyrroline-3-methyl)methanesulfonate (MTSL)"	NA	NA	NA	"H(14) C(9) N O S"	184.07961	FALSE
-"912"	"HNE-BAHAH"	"4-hydroxy-2-nonenal and biotinamidohexanoic acid hydrazide, reduced"	NA	NA	NA	"H(45) C(25) N(5) O(4) S"	511.319226	FALSE
-"914"	"Methylmalonylation"	"Methylmalonylation on Serine"	NA	NA	NA	"H(4) C(4) O(3)"	100.016044	FALSE
-"915"	"Ethoxyformyl"	"Ethoxyformylation"	NA	NA	NA	"H(4) C(3) O(2)"	72.021129	FALSE
-"92"	"NHS-LC-Biotin"	"NHS-LC-Biotin"	NA	NA	NA	"H(25) C(16) N(3) O(3) S"	339.161662	FALSE
-"923"	"Label:13C(4)15N(2)+GlyGly"	"13C(4) 15N(2) Lysine glygly"	NA	NA	NA	"H(6) 13C(4) 15N(2) O(2)"	120.050417	FALSE
-"926"	"ethylamino"	"ethyl amino"	NA	NA	NA	"H(5) C(2) N O(-1)"	27.047285	FALSE
-"928"	"MercaptoEthanol"	"2-OH-ethyl thio-Ser"	NA	NA	NA	"H(4) C(2) S"	60.003371	FALSE
-"93"	"EDT-maleimide-PEO-biotin"	"EDT-maleimide-PEO-biotin"	NA	NA	NA	"H(39) C(25) N(5) O(6) S(3)"	601.206246	FALSE
-"931"	"EthylAmide"	"solvolysis of amide group on Asn or Gln by ethanol"	NA	NA	NA	"H(3) C(2) N(-1) O"	29.015316	FALSE
-"932"	"VFQQQTGG"	"SUMOylation by SUMO-2/3 (formic acid cleavage)"	NA	NA	NA	"H(55) C(37) N(11) O(12)"	845.403166	FALSE
-"933"	"VIEVYQEQTGG"	"SUMOylation by SUMO-1 (formic acid cleavage)"	NA	NA	NA	"H(81) C(53) N(13) O(19)"	1203.577168	FALSE
-"934"	"GalNAzBiotin"	"Photocleavable Biotin + GalNAz on O-GlcNAc"	NA	NA	NA	"H(30) C(19) N(6) O(10)"	502.202341	FALSE
-"935"	"Atto495Maleimide"	"High molecular absorption maleimide label for proteins"	NA	NA	NA	"H(32) C(27) N(5) O(3)"	474.250515	FALSE
-"936"	"Chlorination"	"Chlorination of tyrosine residues"	NA	NA	NA	"H(-1) Cl"	33.961028	FALSE
-"937"	"dichlorination"	"Dichlorination of tyrosine residues"	NA	NA	NA	"H(-2) Cl(2)"	67.922055	FALSE
-"938"	"AROD"	"Cysteine modifier"	NA	NA	NA	"H(52) C(35) N(10) O(9) S(2)"	820.336015	FALSE
-"939"	"Cys->methylaminoAla"	"carbamidomethylated Cys that undergoes beta-elimination and Michael addition of methylamine"	NA	NA	NA	"H(3) C N S(-1)"	-2.945522	FALSE
-"94"	"IMID"	"IMID d0"	NA	NA	NA	"H(4) C(3) N(2)"	68.037448	FALSE
-"940"	"Cys->ethylaminoAla"	"Carbamidomethylated Cys that undergoes beta-elimination and Michael addition of ethylamine"	NA	NA	NA	"H(5) C(2) N S(-1)"	11.070128	FALSE
-"941"	"DNPS"	"2,4-Dinitrobenzenesulfenyl"	NA	NA	NA	"H(3) C(6) N(2) O(4) S"	198.981352	FALSE
-"942"	"SulfoGMBS"	"High molecular absorption label for proteins"	NA	NA	NA	"H(26) C(22) N(4) O(5) S"	458.162391	FALSE
-"943"	"DimethylamineGMBS"	"Modified GMBS X linker for proteins"	NA	NA	NA	"H(21) C(13) N(3) O(3)"	267.158292	FALSE
-"944"	"Label:15N(2)2H(9)"	"SILAC label"	NA	NA	NA	"H(-9) 2H(9) N(-2) 15N(2)"	11.050561	FALSE
-"946"	"LG-anhydrolactam"	"Levuglandinyl-lysine anhydrolactam adduct"	NA	NA	NA	"H(26) C(20) O(3)"	314.188195	FALSE
-"947"	"LG-pyrrole"	"Levuglandinyl-lysine pyrrole adduct"	NA	NA	NA	"H(28) C(20) O(3)"	316.203845	FALSE
-"948"	"LG-anhyropyrrole"	"Levuglandinyl-lysine anhyropyrrole adduct"	NA	NA	NA	"H(26) C(20) O(2)"	298.19328	FALSE
-"949"	"3-deoxyglucosone"	"Condensation product of 3-deoxyglucosone"	NA	NA	NA	"H(8) C(6) O(4)"	144.042259	FALSE
-"95"	"IMID:2H(4)"	"IMID d4"	NA	NA	NA	"2H(4) C(3) N(2)"	72.062555	FALSE
-"950"	"Cation:Li"	"Replacement of proton by lithium"	NA	NA	NA	"H(-1) Li"	6.008178	FALSE
-"951"	"Cation:Ca[II]"	"Replacement of 2 protons by calcium"	NA	NA	NA	"H(-2) Ca"	37.946941	FALSE
-"952"	"Cation:Fe[II]"	"Replacement of 2 protons by iron"	NA	NA	NA	"H(-2) Fe"	53.919289	FALSE
-"953"	"Cation:Ni[II]"	"Replacement of 2 protons by nickel"	NA	NA	NA	"H(-2) Ni"	55.919696	FALSE
-"954"	"Cation:Zn[II]"	"Replacement of 2 protons by zinc"	NA	NA	NA	"H(-2) Zn"	61.913495	FALSE
-"955"	"Cation:Ag"	"Replacement of proton by silver"	NA	NA	NA	"H(-1) Ag"	105.897267	FALSE
-"956"	"Cation:Mg[II]"	"Replacement of 2 protons by magnesium"	NA	NA	NA	"H(-2) Mg"	21.969392	FALSE
-"957"	"2-succinyl"	"S-(2-succinyl) cysteine"	NA	NA	NA	"H(4) C(4) O(4)"	116.010959	FALSE
-"958"	"Propargylamine"	"propargylamine"	NA	NA	NA	"H(3) C(3) N O(-1)"	37.031634	FALSE
-"959"	"Phosphopropargyl"	"phospho-propargylamine"	NA	NA	NA	"H(4) C(3) N O(2) P"	116.997965	FALSE
-"960"	"SUMO2135"	"SUMOylation by SUMO-1 after tryptic cleavage"	NA	NA	NA	"H(137) C(90) N(21) O(37) S"	2135.920496	FALSE
-"961"	"SUMO3549"	"SUMOylation by SUMO-2/3 after tryptic cleavage"	NA	NA	NA	"H(224) C(150) N(38) O(60) S"	3549.536568	FALSE
-"967"	"thioacylpropionamide"	"membrane protein extraction"	NA	NA	NA	"H(9) C(6) N O(2) S"	159.035399	FALSE
-"97"	"Propionamide:2H(3)"	"Acrylamide d3"	NA	NA	NA	"H(2) 2H(3) C(3) N O"	74.055944	FALSE
-"971"	"maleimide-3-saccharide"	"maleimide-3-saccharide"	NA	NA	NA	"H(59) C(37) N(7) O(23)"	969.366232	FALSE
-"972"	"maleimide-5-saccharide"	"maleimide-5-saccharide"	NA	NA	NA	"H(79) C(49) N(7) O(33)"	1293.471879	FALSE
-"973"	"Puromycin"	"Puromycin"	NA	NA	NA	"H(27) C(22) N(7) O(4)"	453.212452	FALSE
+unimod_id	unimod_title	unimod_full_name	unimod_entry	searchgui_name	residue	Composition	MonoMass	NeutralLoss
+1	Acetyl	Acetylation	UNIMOD:1	Acetylation of K	K	H(2) C(2) O	42.010565	FALSE
+1	Acetyl	Acetylation	UNIMOD:1	Acetylation of protein N-term	protein N-term	H(2) C(2) O	42.010565	FALSE
+1	Acetyl	Acetylation	UNIMOD:1	Acetylation of peptide N-term	peptide N-term	H(2) C(2) O	42.010565	FALSE
+2	Amidated	Amidation	UNIMOD:2	Amidation of the peptide C-term	the peptide C-term	H N O(-1)	-0.984016	FALSE
+2	Amidated	Amidation	UNIMOD:2	Amidation of the protein C-term	the protein C-term	H N O(-1)	-0.984016	FALSE
+3	Biotin	Biotinylation	NA	NA	NA	H(14) C(10) N(2) O(2) S	226.077598	FALSE
+4	Carbamidomethyl	Iodoacetamide derivative	UNIMOD:4	Carbamidomethylation of K	K	H(3) C(2) N O	57.021464	FALSE
+4	Carbamidomethyl	Iodoacetamide derivative	UNIMOD:4	Carbamidomethylation of C	C	H(3) C(2) N O	57.021464	FALSE
+4	Carbamidomethyl	Iodoacetamide derivative	UNIMOD:4	Carbamidomethylation of E	E	H(3) C(2) N O	57.021464	FALSE
+5	Carbamyl	Carbamylation	UNIMOD:5	Carbamilation of K	K	H C N O	43.005814	FALSE
+5	Carbamyl	Carbamylation	UNIMOD:5	Carbamilation of protein N-term	protein N-term	H C N O	43.005814	FALSE
+6	Carboxymethyl	Iodoacetic acid derivative	UNIMOD:6	Carboxymethylation of C	C	H(2) C(2) O(2)	58.005479	FALSE
+7	Deamidated	Deamidation	UNIMOD:7	Deamidation of Q	Q	H(-1) N(-1) O	0.984016	FALSE
+7	Deamidated	Deamidation	UNIMOD:7	Deamidation of N	N	H(-1) N(-1) O	0.984016	FALSE
+7	Deamidated-N	Deamidation custom	UNIMOD:7	Deamidation of Q	Q	H(-1) N(-1) O	0.984016	FALSE
+7	Deamidated-N	Deamidation custom	UNIMOD:7	Deamidation of N	N	H(-1) N(-1) O	0.984016	FALSE
+8	ICAT-G	Gygi ICAT(TM) d0	NA	NA	NA	H(38) C(22) N(4) O(6) S	486.251206	FALSE
+9	ICAT-G:2H(8)	Gygi ICAT(TM) d8	NA	NA	NA	H(30) 2H(8) C(22) N(4) O(6) S	494.30142	FALSE
+10	Met->Hse	Homoserine	UNIMOD:10	Homoserine of peptide C-term M	peptide C-term M	H(-2) C(-1) O S(-1)	-29.992806	FALSE
+11	Met->Hsl	Homoserine lactone	UNIMOD:11	Homoserine lactone of peptide C-term M	peptide C-term M	H(-4) C(-1) S(-1)	-48.003371	FALSE
+12	ICAT-D:2H(8)	Applied Biosystems original ICAT(TM) d8	NA	NA	NA	H(26) 2H(8) C(20) N(4) O(5) S	450.275205	FALSE
+13	ICAT-D	Applied Biosystems original ICAT(TM) d0	NA	NA	NA	H(34) C(20) N(4) O(5) S	442.224991	FALSE
+17	NIPCAM	N-isopropylcarboxamidomethyl	UNIMOD:17	NIPCAM of C	C	H(9) C(5) N O	99.068414	FALSE
+20	PEO-Iodoacetyl-LC-Biotin	Biotinyl-iodoacetamidyl-3,6-dioxaoctanediamine	NA	NA	NA	H(30) C(18) N(4) O(5) S	414.193691	FALSE
+21	Phospho	Phosphorylation	UNIMOD:21	Phosphorylation of Y	Y	H O(3) P	79.966331	FALSE
+21	Phospho	Phosphorylation	UNIMOD:21	Phosphorylation of S	S	H O(3) P	79.966331	FALSE
+21	Phospho	Phosphorylation	UNIMOD:21	Phosphorylation of T	T	H O(3) P	79.966331	FALSE
+23	Dehydrated	Dehydration	UNIMOD:23	Dehydration of T	T	H(-2) O(-1)	-18.010565	FALSE
+23	Dehydrated	Dehydration	UNIMOD:23	Dehydration of S	S	H(-2) O(-1)	-18.010565	FALSE
+24	Propionamide	Acrylamide adduct	UNIMOD:24	Propionamide of C	C	H(5) C(3) N O	71.037114	FALSE
+24	Propionamide	Acrylamide adduct	UNIMOD:24	Propionamide of K	K	H(5) C(3) N O	71.037114	FALSE
+24	Propionamide	Acrylamide adduct	UNIMOD:24	Propionamide of peptide N-term	peptide N-term	H(5) C(3) N O	71.037114	FALSE
+25	Pyridylacetyl	pyridylacetyl	NA	NA	NA	H(5) C(7) N O	119.037114	FALSE
+26	Pyro-carbamidomethyl	S-carbamoylmethylcysteine cyclization (N-terminus)	NA	NA	NA	C(2) O	39.994915	FALSE
+27	Glu->pyro-Glu	Pyro-glu from E	UNIMOD:27	Pyrolidone from E	E	H(-2) O(-1)	-18.010565	FALSE
+28	Gln->pyro-Glu	Pyro-glu from Q	UNIMOD:28	Pyrolidone from Q	Q	H(-3) N(-1)	-17.026549	FALSE
+29	SMA	N-Succinimidyl-3-morpholine acetate	NA	NA	NA	H(9) C(6) N O(2)	127.063329	FALSE
+30	Cation:Na	Sodium adduct	UNIMOD:30	Sodium adduct to D	D	H(-1) Na	21.981943	FALSE
+30	Cation:Na	Sodium adduct	UNIMOD:30	Sodium adduct to E	E	H(-1) Na	21.981943	FALSE
+31	Pyridylethyl	S-pyridylethylation	UNIMOD:31	Pyridylethyl of C	C	H(7) C(7) N	105.057849	FALSE
+34	Methyl	Methylation	UNIMOD:34	Methylation of E	E	H(2) C	14.01565	FALSE
+34	Methyl	Methylation	UNIMOD:34	Methylation of C	C	H(2) C	14.01565	FALSE
+34	Methyl	Methylation	UNIMOD:34	Methylation of R	R	H(2) C	14.01565	FALSE
+34	Methyl	Methylation	UNIMOD:34	Methylation of K	K	H(2) C	14.01565	FALSE
+34	Methyl	Methylation	UNIMOD:34	Methylation of D	D	H(2) C	14.01565	FALSE
+34	Methyl	Methylation	UNIMOD:34	Methylation of S	S	H(2) C	14.01565	FALSE
+35	Oxidation	Oxidation or Hydroxylation	UNIMOD:35	Oxidation of M	M	O	15.994915	FALSE
+35	Oxidation	Oxidation or Hydroxylation	UNIMOD:35	Oxidation of P	P	O	15.994915	FALSE
+35	Oxidation	Oxidation or Hydroxylation	UNIMOD:35	Oxidation of C	C	O	15.994915	FALSE
+35	Oxidation	Oxidation or Hydroxylation	UNIMOD:35	Oxidation of K	K	O	15.994915	FALSE
+36	Dimethyl	di-Methylation	UNIMOD:36	Dimethylation of R	R	H(4) C(2)	28.0313	FALSE
+36	Dimethyl	di-Methylation	UNIMOD:36	Dimethylation of peptide N-term	peptide N-term	H(4) C(2)	28.0313	FALSE
+36	Dimethyl	di-Methylation	UNIMOD:36	Dimethylation of K	K	H(4) C(2)	28.0313	FALSE
+37	Trimethyl	tri-Methylation	UNIMOD:37	Trimethylation of K	K	H(6) C(3)	42.04695	FALSE
+37	Trimethyl	tri-Methylation	UNIMOD:37	Trimethylation of R	R	H(6) C(3)	42.04695	FALSE
+37	Trimethyl	tri-Methylation	UNIMOD:37	Trimethylation of protein N-term A	protein N-term A	H(6) C(3)	42.04695	FALSE
+39	Methylthio	Beta-methylthiolation	UNIMOD:39	Methylthio of C	C	H(2) C S	45.987721	FALSE
+39	Methylthio	Beta-methylthiolation	UNIMOD:39	Methylthio of D	D	H(2) C S	45.987721	FALSE
+39	Methylthio	Beta-methylthiolation	UNIMOD:39	Methylthio of N	N	H(2) C S	45.987721	FALSE
+40	Sulfo	O-Sulfonation	UNIMOD:40	Sulfation of S	S	O(3) S	79.956815	FALSE
+40	Sulfo	O-Sulfonation	UNIMOD:40	Sulfation of Y	Y	O(3) S	79.956815	FALSE
+40	Sulfo	O-Sulfonation	UNIMOD:40	Sulfation of T	T	O(3) S	79.956815	FALSE
+41	Hex	Hexose	UNIMOD:41	Hexose of K	K	Hex	162.052824	FALSE
+42	Lipoyl	Lipoyl	UNIMOD:42	Lipoyl of K	K	H(12) C(8) O S(2)	188.032956	FALSE
+43	HexNAc	N-Acetylhexosamine	UNIMOD:43	HexNAc of S	S	HexNAc	203.079373	FALSE
+43	HexNAc	N-Acetylhexosamine	UNIMOD:43	HexNAc of T	T	HexNAc	203.079373	FALSE
+44	Farnesyl	Farnesylation	UNIMOD:44	Farnesylation of C	C	H(24) C(15)	204.187801	FALSE
+45	Myristoyl	Myristoylation	NA	NA	NA	H(26) C(14) O	210.198366	FALSE
+46	PyridoxalPhosphate	Pyridoxal phosphate	NA	NA	NA	H(8) C(8) N O(5) P	229.014009	FALSE
+47	Palmitoyl	Palmitoylation	UNIMOD:47	Palmitoylation of protein N-term	protein N-term	H(30) C(16) O	238.229666	FALSE
+47	Palmitoyl	Palmitoylation	UNIMOD:47	Palmitoylation of T	T	H(30) C(16) O	238.229666	FALSE
+47	Palmitoyl	Palmitoylation	UNIMOD:47	Palmitoylation of C	C	H(30) C(16) O	238.229666	FALSE
+47	Palmitoyl	Palmitoylation	UNIMOD:47	Palmitoylation of S	S	H(30) C(16) O	238.229666	FALSE
+47	Palmitoyl	Palmitoylation	UNIMOD:47	Palmitoylation of K	K	H(30) C(16) O	238.229666	FALSE
+48	GeranylGeranyl	Geranyl-geranyl	UNIMOD:48	Geranyl-geranyl of C	C	H(32) C(20)	272.250401	FALSE
+49	Phosphopantetheine	Phosphopantetheine	NA	NA	NA	H(21) C(11) N(2) O(6) P S	340.085794	FALSE
+50	FAD	Flavin adenine dinucleotide	NA	NA	NA	H(31) C(27) N(9) O(15) P(2)	783.141486	FALSE
+51	Tripalmitate	N-acyl diglyceride cysteine	NA	NA	NA	H(96) C(51) O(5)	788.725777	FALSE
+52	Guanidinyl	Guanidination	UNIMOD:52	Guanidination of peptide N-term	peptide N-term	H(2) C N(2)	42.021798	FALSE
+52	Guanidinyl	Guanidination	UNIMOD:52	Guanidination of K	K	H(2) C N(2)	42.021798	FALSE
+53	HNE	4-hydroxynonenal (HNE)	NA	NA	NA	H(16) C(9) O(2)	156.11503	FALSE
+54	Glucuronyl	N-glucuronylation	NA	NA	NA	HexA	176.032088	FALSE
+55	Glutathione	glutathione disulfide	UNIMOD:55	Glutathione of C	C	H(15) C(10) N(3) O(6) S	305.068156	FALSE
+56	Acetyl:2H(3)	Acetate labeling reagent (N-term & K) (heavy form, +3amu)	NA	NA	NA	H(-1) 2H(3) C(2) O	45.029395	FALSE
+58	Propionyl	Propionate labeling reagent light form (N-term & K)	UNIMOD:58	Propionyl of K light	K light	H(4) C(3) O	56.026215	FALSE
+58	Propionyl	Propionate labeling reagent light form (N-term & K)	UNIMOD:58	Propionyl of peptide N-term light	peptide N-term light	H(4) C(3) O	56.026215	FALSE
+59	Propionyl:13C(3)	Propionate labeling reagent heavy form (+3amu), N-term & K	UNIMOD:59	Propionyl of peptide N-term heavy	peptide N-term heavy	H(4) 13C(3) O	59.036279	FALSE
+59	Propionyl:13C(3)	Propionate labeling reagent heavy form (+3amu), N-term & K	UNIMOD:59	Propionyl of K heavy	K heavy	H(4) 13C(3) O	59.036279	FALSE
+60	GIST-Quat	Quaternary amine labeling reagent light form (N-term & K)	NA	NA	NA	H(13) C(7) N O	127.099714	FALSE
+61	GIST-Quat:2H(3)	Quaternary amine labeling reagent heavy (+3amu) form, N-term & K	NA	NA	NA	H(10) 2H(3) C(7) N O	130.118544	FALSE
+62	GIST-Quat:2H(6)	Quaternary amine labeling reagent heavy form (+6amu), N-term & K	NA	NA	NA	H(7) 2H(6) C(7) N O	133.137375	FALSE
+63	GIST-Quat:2H(9)	Quaternary amine labeling reagent heavy form (+9amu), N-term & K	NA	NA	NA	H(4) 2H(9) C(7) N O	136.156205	FALSE
+64	Succinyl	Succinic anhydride labeling reagent light form (N-term & K)	NA	NA	NA	H(4) C(4) O(3)	100.016044	FALSE
+65	Succinyl:2H(4)	Succinic anhydride labeling reagent, heavy form (+4amu, 4H2), N-term & K	NA	NA	NA	2H(4) C(4) O(3)	104.041151	FALSE
+66	Succinyl:13C(4)	Succinic anhydride labeling reagent, heavy form (+4amu, 4C13), N-term & K	NA	NA	NA	H(4) 13C(4) O(3)	104.029463	FALSE
+89	Iminobiotin	Iminobiotinylation	NA	NA	NA	H(15) C(10) N(3) O S	225.093583	FALSE
+90	ESP	ESP-Tag light d0	NA	NA	NA	H(26) C(16) N(4) O(2) S	338.177647	FALSE
+91	ESP:2H(10)	ESP-Tag heavy d10	NA	NA	NA	H(16) 2H(10) C(16) N(4) O(2) S	348.240414	FALSE
+92	NHS-LC-Biotin	NHS-LC-Biotin	NA	NA	NA	H(25) C(16) N(3) O(3) S	339.161662	FALSE
+93	EDT-maleimide-PEO-biotin	EDT-maleimide-PEO-biotin	NA	NA	NA	H(39) C(25) N(5) O(6) S(3)	601.206246	FALSE
+94	IMID	IMID d0	NA	NA	NA	H(4) C(3) N(2)	68.037448	FALSE
+95	IMID:2H(4)	IMID d4	NA	NA	NA	2H(4) C(3) N(2)	72.062555	FALSE
+97	Propionamide:2H(3)	Acrylamide d3	NA	NA	NA	H(2) 2H(3) C(3) N O	74.055944	FALSE
+105	ICAT-C	Applied Biosystems cleavable ICAT(TM) light	UNIMOD:105	ICAT-O	NA	H(17) C(10) N(3) O(3)	227.126991	FALSE
+106	ICAT-C:13C(9)	Applied Biosystems cleavable ICAT(TM) heavy	UNIMOD:106	ICAT-9	NA	H(17) C 13C(9) N(3) O(3)	236.157185	FALSE
+107	FormylMet	Addition of N-formyl met	UNIMOD:107	FormylMet of protein N-term	protein N-term	H(9) C(6) N O(2) S	159.035399	FALSE
+108	Nethylmaleimide	N-ethylmaleimide on cysteines	UNIMOD:108	Nethylmaleimide of C	C	H(7) C(6) N O(2)	125.047679	FALSE
+112	OxLysBiotinRed	Oxidized lysine biotinylated with biotin-LC-hydrazide, reduced	NA	NA	NA	H(26) C(16) N(4) O(3) S	354.172562	FALSE
+113	OxLysBiotin	Oxidized lysine biotinylated with biotin-LC-hydrazide	NA	NA	NA	H(24) C(16) N(4) O(3) S	352.156911	FALSE
+114	OxProBiotinRed	Oxidized proline biotinylated with biotin-LC-hydrazide, reduced	NA	NA	NA	H(29) C(16) N(5) O(3) S	371.199111	FALSE
+115	OxProBiotin	Oxidized Proline biotinylated with biotin-LC-hydrazide	NA	NA	NA	H(27) C(16) N(5) O(3) S	369.183461	FALSE
+116	OxArgBiotin	Oxidized arginine biotinylated with biotin-LC-hydrazide	NA	NA	NA	H(22) C(15) N(2) O(3) S	310.135113	FALSE
+117	OxArgBiotinRed	Oxidized arginine biotinylated with biotin-LC-hydrazide, reduced	NA	NA	NA	H(24) C(15) N(2) O(3) S	312.150763	FALSE
+118	EDT-iodoacetyl-PEO-biotin	EDT-iodo-PEO-biotin	NA	NA	NA	H(34) C(20) N(4) O(4) S(3)	490.174218	FALSE
+119	IBTP	Thio Ether Formation - BTP Adduct	NA	NA	NA	H(21) C(22) P	316.138088	FALSE
+121	GlyGly	ubiquitinylation residue	UNIMOD:121	Ubiquitination of K	K	H(6) C(4) N(2) O(2)	114.042927	FALSE
+122	Formyl	Formylation	UNIMOD:122	Formylation of peptide N-term	peptide N-term	C O	27.994915	FALSE
+122	Formyl	Formylation	UNIMOD:122	Formylation of T	T	C O	27.994915	FALSE
+122	Formyl	Formylation	UNIMOD:122	Formylation of S	S	C O	27.994915	FALSE
+122	Formyl	Formylation	UNIMOD:122	Formylation of K	K	C O	27.994915	FALSE
+122	Formyl	Formylation	UNIMOD:122	Formylation of protein N-term	protein N-term	C O	27.994915	FALSE
+123	ICAT-H	N-iodoacetyl, p-chlorobenzyl-12C6-glucamine	NA	NA	NA	H(20) C(15) N O(6) Cl	345.097915	FALSE
+124	ICAT-H:13C(6)	N-iodoacetyl, p-chlorobenzyl-13C6-glucamine	NA	NA	NA	H(20) C(9) 13C(6) N O(6) Cl	351.118044	FALSE
+126	Thioacyl	thioacylation of primary amines (N-term and Lys)	UNIMOD:126	Thioacyl of peptide N-term	peptide N-term	H(4) C(3) O S	87.998285	FALSE
+127	Fluoro	fluorophenylalanine replacement of phenylalanine	NA	NA	NA	H(-1) F	17.990578	FALSE
+128	Fluorescein	5-Iodoacetamidofluorescein (Molecular Probe, Eugene, OR)	NA	NA	NA	H(13) C(22) N O(6)	387.074287	FALSE
+129	Iodo	Iodination	NA	NA	NA	H(-1) I	125.896648	FALSE
+130	Diiodo	di-Iodination	UNIMOD:130	Diiodination of Y	Y	H(-2) I(2)	251.793296	FALSE
+131	Triiodo	tri-Iodination	NA	NA	NA	H(-3) I(3)	377.689944	FALSE
+134	Myristoleyl	(cis-delta 5)-tetradecaenoyl	NA	NA	NA	H(24) C(14) O	208.182715	FALSE
+135	Myristoyl+Delta:H(-4)	(cis,cis-delta 5, delta 8)-tetradecadienoyl	NA	NA	NA	H(22) C(14) O	206.167065	FALSE
+136	Benzoyl	labeling reagent light form (N-term & K)	NA	NA	NA	H(4) C(7) O	104.026215	FALSE
+137	Hex(5)HexNAc(2)	N-linked glycan core	NA	NA	NA	Hex(5) HexNAc(2)	1216.422863	FALSE
+139	Dansyl	5-dimethylaminonaphthalene-1-sulfonyl	NA	NA	NA	H(11) C(12) N O(2) S	233.051049	FALSE
+140	a-type-ion	ISD a-series (C-Term)	NA	NA	NA	H(-2) C(-1) O(-2)	-46.005479	FALSE
+141	Amidine	amidination of lysines or N-terminal amines with methyl acetimidate	NA	NA	NA	H(3) C(2) N	41.026549	FALSE
+142	HexNAc(1)dHex(1)	HexNAc1dHex1	NA	NA	NA	dHex HexNAc	349.137281	FALSE
+143	HexNAc(2)	HexNAc2	NA	NA	NA	HexNAc(2)	406.158745	FALSE
+144	Hex(3)	Hex3	NA	NA	NA	Hex(3)	486.158471	FALSE
+145	HexNAc(1)dHex(2)	HexNAc1dHex2	NA	NA	NA	dHex(2) HexNAc	495.19519	FALSE
+146	Hex(1)HexNAc(1)dHex(1)	Hex1HexNAc1dHex1	NA	NA	NA	dHex Hex HexNAc	511.190105	FALSE
+147	HexNAc(2)dHex(1)	HexNAc2dHex1	NA	NA	NA	dHex HexNAc(2)	552.216654	FALSE
+148	Hex(1)HexNAc(2)	Hex1HexNAc2	NA	NA	NA	Hex HexNAc(2)	568.211569	FALSE
+149	Hex(1)HexNAc(1)NeuAc(1)	Hex1HexNAc1NeuAc1	NA	NA	NA	Hex HexNAc NeuAc	656.227613	FALSE
+150	HexNAc(2)dHex(2)	HexNAc2dHex2	NA	NA	NA	dHex(2) HexNAc(2)	698.274563	FALSE
+151	Hex(1)HexNAc(2)Pent(1)	Hex1HexNAc2Pent1	NA	NA	NA	Pent Hex HexNAc(2)	700.253828	FALSE
+152	Hex(1)HexNAc(2)dHex(1)	Hex1HexNAc2dHex1	NA	NA	NA	dHex Hex HexNAc(2)	714.269478	FALSE
+153	Hex(2)HexNAc(2)	Hex2HexNAc2	NA	NA	NA	Hex(2) HexNAc(2)	730.264392	FALSE
+154	Hex(3)HexNAc(1)Pent(1)	Hex3HexNAc1Pent1	NA	NA	NA	Pent Hex(3) HexNAc	821.280102	FALSE
+155	Hex(1)HexNAc(2)dHex(1)Pent(1)	Hex1HexNAc2dHex1Pent1	NA	NA	NA	Pent dHex Hex HexNAc(2)	846.311736	FALSE
+156	Hex(1)HexNAc(2)dHex(2)	Hex1HexNAc2dHex2	NA	NA	NA	dHex(2) Hex HexNAc(2)	860.327386	FALSE
+157	Hex(2)HexNAc(2)Pent(1)	Hex2HexNAc2Pent1	NA	NA	NA	Pent Hex(2) HexNAc(2)	862.306651	FALSE
+158	Hex(2)HexNAc(2)dHex(1)	Hex2HexNAc2dHex1	NA	NA	NA	dHex Hex(2) HexNAc(2)	876.322301	FALSE
+159	Hex(3)HexNAc(2)	Hex3HexNAc2	NA	NA	NA	Hex(3) HexNAc(2)	892.317216	FALSE
+160	Hex(1)HexNAc(1)NeuAc(2)	Hex1HexNAc1NeuAc2	NA	NA	NA	Hex HexNAc NeuAc(2)	947.323029	FALSE
+161	Hex(3)HexNAc(2)P(1)	Hex3HexNAc2P1	NA	NA	NA	H O(3) P Hex(3) HexNAc(2)	972.283547	FALSE
+162	Delta:S(-1)Se(1)	Selenium replaces sulphur	NA	NA	NA	S(-1) Se	47.944449	FALSE
+170	Delta:H(1)O(-1)18O(1)	glycosylated asparagine 18O labeling	NA	NA	NA	H(-1) N(-1) 18O	2.988261	FALSE
+171	NBS:13C(6)	Shimadzu NBS-13C	NA	NA	NA	H(3) 13C(6) N O(2) S	159.008578	FALSE
+172	NBS	Shimadzu NBS-12C	NA	NA	NA	H(3) C(6) N O(2) S	152.988449	FALSE
+176	BHT	Michael addition of BHT quinone methide to Cysteine and Lysine	NA	NA	NA	H(22) C(15) O	218.167065	FALSE
+178	DAET	phosphorylation to amine thiol	NA	NA	NA	H(9) C(4) N O(-1) S	87.050655	FALSE
+184	Label:13C(9)	13C(9) Silac label	NA	NA	NA	C(-9) 13C(9)	9.030193	FALSE
+185	Label:13C(9)+Phospho	C13 label (Phosphotyrosine)	NA	NA	NA	H C(-9) 13C(9) O(3) P	88.996524	FALSE
+186	HPG	Hydroxyphenylglyoxal arginine	NA	NA	NA	H(4) C(8) O(2)	132.021129	FALSE
+187	2HPG	bis(hydroxphenylglyoxal) arginine	NA	NA	NA	H(10) C(16) O(5)	282.052824	FALSE
+188	Label:13C(6)	13C(6) Silac label	UNIMOD:188	Lysine 13C(6)	NA	C(-6) 13C(6)	6.020129	FALSE
+188	Label:13C(6)	13C(6) Silac label	UNIMOD:188	Arginine 13C(6)	NA	C(-6) 13C(6)	6.020129	FALSE
+193	Label:18O(2)	O18 label at both C-terminal oxygens	UNIMOD:193	18O(2) of peptide C-term	peptide C-term	O(-2) 18O(2)	4.008491	FALSE
+194	AccQTag	6-aminoquinolyl-N-hydroxysuccinimidyl carbamate	NA	NA	NA	H(6) C(10) N(2) O	170.048013	FALSE
+195	QAT	APTA-d0	NA	NA	NA	H(19) C(9) N(2) O	171.149738	FALSE
+196	QAT:2H(3)	APTA d3	NA	NA	NA	H(16) 2H(3) C(9) N(2) O	174.168569	FALSE
+197	EQAT	EAPTA d0	NA	NA	NA	H(20) C(10) N(2) O	184.157563	FALSE
+198	EQAT:2H(5)	EAPTA d5	NA	NA	NA	H(15) 2H(5) C(10) N(2) O	189.188947	FALSE
+199	Dimethyl:2H(4)	DiMethyl-CHD2	UNIMOD:199	Dimethylation of peptide N-term 2H(4)	peptide N-term 2H(4)	2H(4) C(2)	32.056407	FALSE
+200	Ethanedithiol	EDT	NA	NA	NA	H(4) C(2) O(-1) S(2)	75.980527	FALSE
+205	Delta:H(6)C(6)O(1)	Acrolein addition +94	NA	NA	NA	H(6) C(6) O	94.041865	FALSE
+206	Delta:H(4)C(3)O(1)	Acrolein addition +56	NA	NA	NA	H(4) C(3) O	56.026215	FALSE
+207	Delta:H(2)C(3)	Acrolein addition +38	NA	NA	NA	H(2) C(3)	38.01565	FALSE
+208	Delta:H(4)C(6)	Acrolein addition +76	NA	NA	NA	H(4) C(6)	76.0313	FALSE
+209	Delta:H(8)C(6)O(2)	Acrolein addition +112	NA	NA	NA	H(8) C(6) O(2)	112.05243	FALSE
+211	NEIAA	N-ethyl iodoacetamide-d0	NA	NA	NA	H(7) C(4) N O	85.052764	FALSE
+212	NEIAA:2H(5)	N-ethyl iodoacetamide-d5	NA	NA	NA	H(2) 2H(5) C(4) N O	90.084148	FALSE
+213	ADP-Ribosyl	ADP  Ribose addition	NA	NA	NA	H(13) C(10) N(5) O(9) P(2) Pent	541.06111	FALSE
+214	iTRAQ4plex	Representative mass and accurate mass for 116 & 117	UNIMOD:214	iTRAQ 4-plex of peptide N-term	peptide N-term	H(12) C(4) 13C(3) N 15N O	144.102063	FALSE
+214	iTRAQ4plex	Representative mass and accurate mass for 116 & 117	UNIMOD:214	iTRAQ 4-plex of Y	Y	H(12) C(4) 13C(3) N 15N O	144.102063	FALSE
+214	iTRAQ4plex	Representative mass and accurate mass for 116 & 117	UNIMOD:214	iTRAQ 4-plex of K	K	H(12) C(4) 13C(3) N 15N O	144.102063	FALSE
+243	IGBP	Light IDBEST tag for quantitation	NA	NA	NA	H(13) C(12) N(2) O(2) Br	296.016039	FALSE
+253	Crotonaldehyde	Crotonaldehyde	NA	NA	NA	H(6) C(4) O	70.041865	FALSE
+254	Delta:H(2)C(2)	Acetaldehyde +26	UNIMOD:254	Acetaldehyde +26	NA	H(2) C(2)	26.01565	FALSE
+255	Delta:H(4)C(2)	Acetaldehyde +28	NA	NA	NA	H(4) C(2)	28.0313	FALSE
+256	Delta:H(4)C(3)	Propionaldehyde +40	NA	NA	NA	H(4) C(3)	40.0313	FALSE
+258	Label:18O(1)	O18 Labeling	UNIMOD:258	18O(1) of peptide C-term	peptide C-term	O(-1) 18O	2.004246	FALSE
+259	Label:13C(6)15N(2)	13C(6) 15N(2) Silac label	UNIMOD:259	Lysine 13C(6) 15N(2)	L	C(-6) 13C(6) N(-2) 15N(2)	8.014199	FALSE
+260	Thiophospho	Thiophosphorylation	NA	NA	NA	H O(2) P S	95.943487	FALSE
+261	SPITC	4-sulfophenyl isothiocyanate	NA	NA	NA	H(5) C(7) N O(3) S(2)	214.971084	FALSE
+262	Label:2H(3)	Trideuteration	NA	NA	NA	H(-3) 2H(3)	3.01883	FALSE
+264	PET	phosphorylation to pyridyl thiol	NA	NA	NA	H(7) C(7) N O(-1) S	121.035005	FALSE
+267	Label:13C(6)15N(4)	13C(6) 15N(4) Silac label	UNIMOD:267	Arginine 13C(6) 15N(4)	A	C(-6) 13C(6) N(-4) 15N(4)	10.008269	FALSE
+268	Label:13C(5)15N(1)	13C(5) 15N(1) Silac label	NA	NA	NA	C(-5) 13C(5) N(-1) 15N	6.013809	FALSE
+269	Label:13C(9)15N(1)	13C(9) 15N(1) Silac label	NA	NA	NA	C(-9) 13C(9) N(-1) 15N	10.027228	FALSE
+270	Cytopiloyne	nucleophilic addtion to cytopiloyne	NA	NA	NA	H(22) C(19) O(7)	362.136553	FALSE
+271	Cytopiloyne+water	nucleophilic addition to cytopiloyne+H2O	NA	NA	NA	H(24) C(19) O(8)	380.147118	FALSE
+272	CAF	sulfonation of N-terminus	NA	NA	NA	H(4) C(3) O(4) S	135.983029	FALSE
+275	Nitrosyl	S-nitrosylation	NA	NA	NA	H(-1) N O	28.990164	FALSE
+276	AEBS	Aminoethylbenzenesulfonylation	NA	NA	NA	H(9) C(8) N O(2) S	183.035399	FALSE
+278	Ethanolyl	Ethanolation of Cys	NA	NA	NA	H(4) C(2) O	44.026215	FALSE
+280	Ethyl	Ethylation	NA	NA	NA	H(4) C(2)	28.0313	FALSE
+281	CoenzymeA	Cysteine modified Coenzyme A	NA	NA	NA	H(34) C(21) N(7) O(16) P(3) S	765.09956	FALSE
+284	Methyl:2H(2)	Deuterium Methylation of Lysine	NA	NA	NA	2H(2) C	16.028204	FALSE
+285	SulfanilicAcid	Light Sulfanilic Acid (SA) C12	NA	NA	NA	H(5) C(6) N O(2) S	155.004099	FALSE
+286	SulfanilicAcid:13C(6)	Heavy Sulfanilic Acid (SA) C13	NA	NA	NA	H(5) 13C(6) N O(2) S	161.024228	FALSE
+288	Trp->Oxolactone	Tryptophan oxidation to oxolactone	NA	NA	NA	H(-2) O	13.979265	FALSE
+289	Biotin-PEO-Amine	Biotin polyethyleneoxide amine	NA	NA	NA	H(28) C(16) N(4) O(3) S	356.188212	FALSE
+290	Biotin-HPDP	Pierce EZ-Link Biotin-HPDP	NA	NA	NA	H(32) C(19) N(4) O(3) S(2)	428.191582	FALSE
+291	Delta:Hg(1)	Mercury Mercaptan	NA	NA	NA	Hg	201.970617	FALSE
+292	IodoU-AMP	Cross-link of (Iodo)-uracil MP with W,F,Y	NA	NA	NA	H(11) C(9) N(2) O(9) P	322.020217	FALSE
+293	CAMthiopropanoyl	3-(carbamidomethylthio)propanoyl	NA	NA	NA	H(7) C(5) N O(2) S	145.019749	FALSE
+294	IED-Biotin	biotinoyl-iodoacetyl-ethylenediamine	NA	NA	NA	H(22) C(14) N(4) O(3) S	326.141261	FALSE
+295	dHex	Fucose	NA	NA	NA	dHex	146.057909	FALSE
+298	Methyl:2H(3)	deuterated methyl ester	UNIMOD:298	Trideuterated Methyl Ester of K	K	H(-1) 2H(3) C	17.03448	FALSE
+298	Methyl:2H(3)	deuterated methyl ester	UNIMOD:298	Trideuterated Methyl Ester of E	E	H(-1) 2H(3) C	17.03448	FALSE
+298	Methyl:2H(3)	deuterated methyl ester	UNIMOD:298	Trideuterated Methyl Ester of D	D	H(-1) 2H(3) C	17.03448	FALSE
+298	Methyl:2H(3)	deuterated methyl ester	UNIMOD:298	Trideuterated Methyl Ester of peptide C-term	peptide C-term	H(-1) 2H(3) C	17.03448	FALSE
+298	Methyl:2H(3)	deuterated methyl ester	UNIMOD:298	Trideuterated Methyl Ester of R	R	H(-1) 2H(3) C	17.03448	FALSE
+299	Carboxy	Carboxylation	NA	NA	NA	C O(2)	43.989829	FALSE
+301	Bromobimane	Monobromobimane derivative	NA	NA	NA	H(10) C(10) N(2) O(2)	190.074228	FALSE
+302	Menadione	Menadione quinone derivative	NA	NA	NA	H(6) C(11) O(2)	170.036779	FALSE
+303	DeStreak	Cysteine mercaptoethanol	NA	NA	NA	H(4) C(2) O S	75.998285	FALSE
+305	dHex(1)Hex(3)HexNAc(4)	Fucosylated biantennary (-2 galactose)	NA	NA	NA	dHex Hex(3) HexNAc(4)	1444.53387	FALSE
+307	dHex(1)Hex(4)HexNAc(4)	Fucosylated biantennary (-1 galactose)	NA	NA	NA	dHex Hex(4) HexNAc(4)	1606.586693	FALSE
+308	dHex(1)Hex(5)HexNAc(4)	Fucosylated biantennary	NA	NA	NA	dHex Hex(5) HexNAc(4)	1768.639517	FALSE
+309	Hex(3)HexNAc(4)	Biantennary (-2 galactose)	NA	NA	NA	Hex(3) HexNAc(4)	1298.475961	FALSE
+310	Hex(4)HexNAc(4)	Biantennary (-1 galactose)	NA	NA	NA	Hex(4) HexNAc(4)	1460.528784	FALSE
+311	Hex(5)HexNAc(4)	Biantennary	NA	NA	NA	Hex(5) HexNAc(4)	1622.581608	FALSE
+312	Cysteinyl	Cysteinylation	NA	NA	NA	H(5) C(3) N O(2) S	119.004099	FALSE
+313	Lys-loss	Loss of C-terminal K from Heavy Chain of MAb	NA	NA	NA	H(-12) C(-6) N(-2) O(-1)	-128.094963	FALSE
+314	Nmethylmaleimide	Nmethylmaleimide	NA	NA	NA	H(5) C(5) N O(2)	111.032028	FALSE
+316	DimethylpyrroleAdduct	2,5-dimethypyrrole	NA	NA	NA	H(6) C(6)	78.04695	FALSE
+318	Delta:H(2)C(5)	MDA adduct +62	NA	NA	NA	H(2) C(5)	62.01565	FALSE
+319	Delta:H(2)C(3)O(1)	MDA adduct +54	NA	NA	NA	H(2) C(3) O	54.010565	FALSE
+320	Nethylmaleimide+water	Nethylmaleimidehydrolysis	NA	NA	NA	H(9) C(6) N O(3)	143.058243	FALSE
+323	Xlink:B10621	bis-N-I-sulfonerahodamine	NA	NA	NA	H(30) C(31) N(4) O(6) S I	713.093079	FALSE
+324	DTBP	dimethyl 3,3\'-dithiobispropionimidate	NA	NA	NA	H(5) C(3) N S	87.01427	FALSE
+325	FP-Biotin	10-ethoxyphosphinyl-N-(biotinamidopentyl)decanamide	NA	NA	NA	H(49) C(27) N(4) O(5) P S	572.316129	FALSE
+327	Delta:H(4)C(2)O(-1)S(1)	S-Ethylcystine from Serine	NA	NA	NA	H(4) C(2) O(-1) S	44.008456	FALSE
+329	Methyl:2H(3)13C(1)	monomethylated arginine	NA	NA	NA	H(-1) 2H(3) 13C	18.037835	FALSE
+330	Dimethyl:2H(6)13C(2)	dimethylated arginine	UNIMOD:330	Dimethylation of K 2H(6) 13C(2)	K 2H(6) 13C(2)	H(-2) 2H(6) 13C(2)	36.07567	FALSE
+330	Dimethyl:2H(6)13C(2)	dimethylated arginine	UNIMOD:330	Dimethylation of peptide N-term 2H(6) 13C(2)	peptide N-term 2H(6) 13C(2)	H(-2) 2H(6) 13C(2)	36.07567	FALSE
+332	Thiophos-S-S-biotin	thiophosphate labeled with biotin-HPDP	NA	NA	NA	H(34) C(19) N(4) O(5) P S(3)	525.142894	FALSE
+333	Can-FP-biotin	6-N-biotinylaminohexyl isopropyl phosphate	NA	NA	NA	H(34) C(19) N(3) O(5) P S	447.195679	FALSE
+335	HNE+Delta:H(2)	reduced 4-Hydroxynonenal	NA	NA	NA	H(18) C(9) O(2)	158.13068	FALSE
+337	Methylamine	Michael addition with methylamine	NA	NA	NA	H(3) C N O(-1)	13.031634	FALSE
+340	Bromo	bromination	NA	NA	NA	H(-1) Br	77.910511	FALSE
+342	Amino	Tyrosine oxidation to 2-aminotyrosine	NA	NA	NA	H N	15.010899	FALSE
+343	Argbiotinhydrazide	oxidized Arginine biotinylated with biotin hydrazide	NA	NA	NA	H(13) C(9) N O(2) S	199.066699	FALSE
+344	Arg->GluSA	Arginine oxidation to glutamic semialdehyde	NA	NA	NA	H(-5) C(-1) N(-3) O	-43.053433	FALSE
+345	Trioxidation	cysteine oxidation to cysteic acid	UNIMOD:345	Trioxidation of C	C	O(3)	47.984744	FALSE
+348	His->Asn	histidine oxidation to aspargine	NA	NA	NA	H(-1) C(-2) N(-1) O	-23.015984	FALSE
+349	His->Asp	histidine oxidation to aspartic acid	NA	NA	NA	H(-2) C(-2) N(-2) O(2)	-22.031969	FALSE
+350	Trp->Hydroxykynurenin	tryptophan oxidation to hydroxykynurenin	NA	NA	NA	C(-1) O(2)	19.989829	FALSE
+351	Trp->Kynurenin	tryptophan oxidation to kynurenin	NA	NA	NA	C(-1) O	3.994915	FALSE
+352	Lys->Allysine	Lysine oxidation to aminoadipic semialdehyde	NA	NA	NA	H(-3) N(-1) O	-1.031634	FALSE
+353	Lysbiotinhydrazide	oxidized Lysine biotinylated with biotin hydrazide	NA	NA	NA	H(15) C(10) N(3) O(2) S	241.088497	FALSE
+354	Nitro	Oxidation to nitro	NA	NA	NA	H(-1) N O(2)	44.985078	FALSE
+357	probiotinhydrazide	oxidized proline biotinylated with biotin hydrazide	NA	NA	NA	H(18) C(10) N(4) O(2) S	258.115047	FALSE
+359	Pro->pyro-Glu	proline oxidation to pyroglutamic acid	NA	NA	NA	H(-2) O	13.979265	FALSE
+360	Pro->Pyrrolidinone	Proline oxidation to pyrrolidinone	NA	NA	NA	H(-2) C(-1) O(-1)	-30.010565	FALSE
+361	Thrbiotinhydrazide	oxidized Threonine biotinylated with biotin hydrazide	NA	NA	NA	H(16) C(10) N(4) O S	240.104482	FALSE
+362	Diisopropylphosphate	O-Diisopropylphosphorylation	NA	NA	NA	H(13) C(6) O(3) P	164.060231	FALSE
+363	Isopropylphospho	O-Isopropylphosphorylation	NA	NA	NA	H(7) C(3) O(3) P	122.013281	FALSE
+364	ICPL:13C(6)	Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, heavy form	UNIMOD:364	ICPL6 of peptide N-term	peptide N-term	H(3) 13C(6) N O	111.041593	FALSE
+364	ICPL:13C(6)	Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, heavy form	UNIMOD:364	ICPL6 of K	K	H(3) 13C(6) N O	111.041593	FALSE
+365	ICPL	Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, light form	UNIMOD:365	ICPL0 of peptide N-term	peptide N-term	H(3) C(6) N O	105.021464	FALSE
+365	ICPL	Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, light form	UNIMOD:365	ICPL0 of K	K	H(3) C(6) N O	105.021464	FALSE
+366	Deamidated:18O(1)	Deamidation in presence of O18	UNIMOD:366	Deamidation of N 18O	N 18O	H(-1) N(-1) 18O	2.988261	FALSE
+368	Cys->Dha	Dehydroalanine (from Cysteine)	NA	NA	NA	H(-2) S(-1)	-33.987721	FALSE
+369	Pro->Pyrrolidone	Pyrrolidone from Proline	NA	NA	NA	C(-1) O(-1)	-27.994915	FALSE
+371	HMVK	Michael addition of hydroxymethylvinyl ketone to cysteine	NA	NA	NA	H(6) C(4) O(2)	86.036779	FALSE
+372	Arg->Orn	Ornithine from Arginine	NA	NA	NA	H(-2) C(-1) N(-2)	-42.021798	FALSE
+374	Dehydro	Half of a disulfide bridge	NA	NA	NA	H(-1)	-1.007825	FALSE
+375	Diphthamide	Diphthamide	NA	NA	NA	H(14) C(7) N(2) O	142.110613	FALSE
+376	Hydroxyfarnesyl	hydroxyfarnesyl	NA	NA	NA	H(24) C(15) O	220.182715	FALSE
+377	Diacylglycerol	diacylglycerol	NA	NA	NA	H(68) C(37) O(4)	576.511761	FALSE
+378	Carboxyethyl	carboxyethyl	NA	NA	NA	H(4) C(3) O(2)	72.021129	FALSE
+379	Hypusine	hypusine	NA	NA	NA	H(9) C(4) N O	87.068414	FALSE
+380	Retinylidene	retinal	NA	NA	NA	H(26) C(20)	266.203451	FALSE
+381	Lys->AminoadipicAcid	alpha-amino adipic acid	NA	NA	NA	H(-3) N(-1) O(2)	14.96328	FALSE
+382	Cys->PyruvicAcid	pyruvic acid from N-term cys	NA	NA	NA	H(-3) N(-1) O S(-1)	-33.003705	FALSE
+385	Ammonia-loss	Loss of ammonia	UNIMOD:385	Pyrolidone from carbamidomethylated C	Q	H(-3) N(-1)	-17.026549	FALSE
+387	Phycocyanobilin	phycocyanobilin	NA	NA	NA	H(38) C(33) N(4) O(6)	586.279135	FALSE
+388	Phycoerythrobilin	phycoerythrobilin	NA	NA	NA	H(40) C(33) N(4) O(6)	588.294785	FALSE
+389	Phytochromobilin	phytochromobilin	NA	NA	NA	H(36) C(33) N(4) O(6)	584.263485	FALSE
+390	Heme	heme	NA	NA	NA	H(32) C(34) N(4) O(4) Fe	616.177295	FALSE
+391	Molybdopterin	molybdopterin	NA	NA	NA	H(11) C(10) N(5) O(8) P S(2) Mo	521.884073	FALSE
+392	Quinone	quinone	NA	NA	NA	H(-2) O(2)	29.974179	FALSE
+393	Glucosylgalactosyl	glucosylgalactosyl hydroxylysine	NA	NA	NA	O Hex(2)	340.100562	FALSE
+394	GPIanchor	glycosylphosphatidylinositol	NA	NA	NA	H(6) C(2) N O(3) P	123.00853	FALSE
+395	PhosphoribosyldephosphoCoA	phosphoribosyl dephospho-coenzyme A	NA	NA	NA	H(42) C(26) N(7) O(19) P(3) S	881.146904	FALSE
+396	GlycerylPE	glycerylphosphorylethanolamine	NA	NA	NA	H(12) C(5) N O(5) P	197.04531	FALSE
+397	Triiodothyronine	triiodo	NA	NA	NA	H C(6) O I(3)	469.716159	FALSE
+398	Thyroxine	tetraiodo	NA	NA	NA	C(6) O I(4)	595.612807	FALSE
+400	Tyr->Dha	Dehydroalanine (from Tyrosine)	NA	NA	NA	H(-6) C(-6) O(-1)	-94.041865	FALSE
+401	Didehydro	2-amino-3-oxo-butanoic_acid	UNIMOD:401	Didehydro of T	T	H(-2)	-2.01565	FALSE
+402	Cys->Oxoalanine	oxoalanine	NA	NA	NA	H(-2) O S(-1)	-17.992806	FALSE
+403	Ser->LacticAcid	lactic acid from N-term Ser	NA	NA	NA	H(-1) N(-1)	-15.010899	FALSE
+405	Phosphoadenosine	AMP binding site	NA	NA	NA	H(12) C(10) N(5) O(6) P	329.05252	FALSE
+407	Hydroxycinnamyl	hydroxycinnamyl	NA	NA	NA	H(6) C(9) O(2)	146.036779	FALSE
+408	Glycosyl	glycosyl-L-hydroxyproline	NA	NA	NA	H(-2) C(-1) Hex	148.037173	FALSE
+409	FMNH	flavin mononucleotide	NA	NA	NA	H(19) C(17) N(4) O(9) P	454.088965	FALSE
+410	Archaeol	S-diphytanylglycerol diether	NA	NA	NA	H(86) C(43) O(2)	634.662782	FALSE
+411	Phenylisocyanate	phenyl isocyanate	NA	NA	NA	H(5) C(7) N O	119.037114	FALSE
+412	Phenylisocyanate:2H(5)	d5-phenyl isocyanate	NA	NA	NA	2H(5) C(7) N O	124.068498	FALSE
+413	Phosphoguanosine	phospho-guanosine	NA	NA	NA	H(12) C(10) N(5) O(7) P	345.047435	FALSE
+414	Hydroxymethyl	hydroxymethyl	NA	NA	NA	H(2) C O	30.010565	FALSE
+415	MolybdopterinGD+Delta:S(-1)Se(1)	L-selenocysteinyl molybdenum bis(molybdopterin guanine dinucleotide)	NA	NA	NA	H(47) C(40) N(20) O(26) P(4) S(3) Se Mo	1620.930224	FALSE
+416	Dipyrrolylmethanemethyl	dipyrrolylmethanemethyl	NA	NA	NA	H(22) C(20) N(2) O(8)	418.137616	FALSE
+417	PhosphoUridine	uridine phosphodiester	NA	NA	NA	H(11) C(9) N(2) O(8) P	306.025302	FALSE
+419	Glycerophospho	glycerophospho	NA	NA	NA	H(7) C(3) O(5) P	154.00311	FALSE
+420	Carboxy->Thiocarboxy	thiocarboxylic acid	NA	NA	NA	O(-1) S	15.977156	FALSE
+421	Sulfide	persulfide	NA	NA	NA	S	31.972071	FALSE
+422	PyruvicAcidIminyl	N-pyruvic acid 2-iminyl	NA	NA	NA	H(2) C(3) O(2)	70.005479	FALSE
+423	Delta:Se(1)	selenyl	NA	NA	NA	Se	79.91652	FALSE
+424	MolybdopterinGD	molybdenum bis(molybdopterin guanine dinucleotide)	NA	NA	NA	H(47) C(40) N(20) O(26) P(4) S(4) Mo	1572.985775	FALSE
+425	Dioxidation	dihydroxy	UNIMOD:425	Dioxidation of W	W	O(2)	31.989829	FALSE
+425	Dioxidation	dihydroxy	UNIMOD:425	Dioxidation of M	M	O(2)	31.989829	FALSE
+426	Octanoyl	octanoyl	NA	NA	NA	H(14) C(8) O	126.104465	FALSE
+428	PhosphoHexNAc	N-acetylglucosamine-1-phosphoryl	NA	NA	NA	H O(3) P HexNAc	283.045704	FALSE
+429	PhosphoHex	phosphoglycosyl-D-mannose-1-phosphoryl	NA	NA	NA	H O(3) P Hex	242.019154	FALSE
+431	Palmitoleyl	palmitoleyl	NA	NA	NA	H(28) C(16) O	236.214016	FALSE
+432	Cholesterol	cholesterol ester	NA	NA	NA	H(44) C(27)	368.344302	FALSE
+433	Didehydroretinylidene	3,4-didehydroretinylidene	NA	NA	NA	H(24) C(20)	264.187801	FALSE
+434	CHDH	cis-14-hydroxy-10,13-dioxo-7-heptadecenoic ester	NA	NA	NA	H(26) C(17) O(4)	294.183109	FALSE
+435	Methylpyrroline	4-methyl-delta-1-pyrroline-5-carboxyl	NA	NA	NA	H(7) C(6) N O	109.052764	FALSE
+436	Hydroxyheme	hydroxyheme	NA	NA	NA	H(30) C(34) N(4) O(4) Fe	614.161645	FALSE
+437	MicrocinC7	(3-aminopropyl)(L-aspartyl-1-amino)phosphoryl-5-adenosine	NA	NA	NA	H(19) C(13) N(6) O(6) P	386.110369	FALSE
+438	Cyano	cyano	NA	NA	NA	H(-1) C N	24.995249	FALSE
+439	Diironsubcluster	hydrogenase diiron subcluster	NA	NA	NA	H(-1) C(5) N(2) O(5) S(2) Fe(2)	342.786916	FALSE
+440	Amidino	amidino	NA	NA	NA	H(2) C N(2)	42.021798	FALSE
+442	FMN	O3-(riboflavin phosphoryl)	NA	NA	NA	H(19) C(17) N(4) O(8) P	438.094051	FALSE
+443	FMNC	S-(4a-FMN)	NA	NA	NA	H(21) C(17) N(4) O(9) P	456.104615	FALSE
+444	CuSMo	copper sulfido molybdopterin cytosine dinuncleotide	NA	NA	NA	H(24) C(19) N(8) O(15) P(2) S(3) Cu Mo	922.834855	FALSE
+445	Hydroxytrimethyl	5-hydroxy-N6,N6,N6-trimethyl	NA	NA	NA	H(7) C(3) O	59.04969	FALSE
+447	Deoxy	reduction	NA	NA	NA	O(-1)	-15.994915	FALSE
+448	Microcin	microcin E492 siderophore ester from serine	NA	NA	NA	H(37) C(36) N(3) O(20)	831.197041	FALSE
+449	Decanoyl	lipid	NA	NA	NA	H(18) C(10) O	154.135765	FALSE
+450	Glu	monoglutamyl	NA	NA	NA	H(7) C(5) N O(3)	129.042593	FALSE
+451	GluGlu	diglutamyl	NA	NA	NA	H(14) C(10) N(2) O(6)	258.085186	FALSE
+452	GluGluGlu	triglutamyl	NA	NA	NA	H(21) C(15) N(3) O(9)	387.127779	FALSE
+453	GluGluGluGlu	tetraglutamyl	NA	NA	NA	H(28) C(20) N(4) O(12)	516.170373	FALSE
+454	HexN	Hexosamine	NA	NA	NA	HexN	161.068808	FALSE
+455	Xlink:DMP-s	One end of crosslink attached, one end free	NA	NA	NA	H(14) C(8) N(2) O	154.110613	FALSE
+457	NDA	naphthalene-2,3-dicarboxaldehyde	NA	NA	NA	H(5) C(13) N	175.042199	FALSE
+464	SPITC:13C(6)	4-sulfophenyl isothiocyanate (Heavy C13)	NA	NA	NA	H(5) C 13C(6) N O(3) S(2)	220.991213	FALSE
+472	AEC-MAEC	aminoethylcysteine	NA	NA	NA	H(5) C(2) N O(-1) S	59.019355	FALSE
+476	TMAB	4-trimethyllammoniumbutyryl-	NA	NA	NA	H(14) C(7) N O	128.107539	FALSE
+477	TMAB:2H(9)	d9-4-trimethyllammoniumbutyryl-	NA	NA	NA	H(5) 2H(9) C(7) N O	137.16403	FALSE
+478	FTC	fluorescein-5-thiosemicarbazide	NA	NA	NA	H(15) C(21) N(3) O(5) S	421.073241	FALSE
+481	Label:2H(4)	4,4,5,5-D4 Lysine	UNIMOD:481	Label of K 2H(4)	K 2H(4)	H(-4) 2H(4)	4.025107	FALSE
+481	Label:2H(4)	4,4,5,5-D4 Lysine	UNIMOD:481	Lysine 2H(4)	NA	H(-4) 2H(4)	4.025107	FALSE
+488	DHP	Dehydropyrrolizidine alkaloid (dehydroretronecine) on cysteines	NA	NA	NA	H(8) C(8) N	118.065674	FALSE
+490	Hep	Heptose	NA	NA	NA	Hep	192.063388	FALSE
+493	BADGE	Bisphenol A diglycidyl ether derivative	NA	NA	NA	H(24) C(21) O(4)	340.167459	FALSE
+494	CyDye-Cy3	Cy3 CyDye DIGE Fluor saturation dye	NA	NA	NA	H(44) C(37) N(4) O(6) S	672.298156	FALSE
+495	CyDye-Cy5	Cy5 CyDye DIGE Fluor saturation dye	NA	NA	NA	H(44) C(38) N(4) O(6) S	684.298156	FALSE
+498	BHTOH	Michael addition of t-butyl hydroxylated BHT (BHTOH) to C, H or K	NA	NA	NA	H(22) C(15) O(2)	234.16198	FALSE
+499	IGBP:13C(2)	Heavy IDBEST tag for quantitation	NA	NA	NA	H(13) C(10) 13C(2) N(2) O(2) Br	298.022748	FALSE
+500	Nmethylmaleimide+water	Nmethylmaleimidehydrolysis	NA	NA	NA	H(7) C(5) N O(3)	129.042593	FALSE
+501	PyMIC	3-methyl-2-pyridyl isocyanate	NA	NA	NA	H(6) C(7) N(2) O	134.048013	FALSE
+503	LG-lactam-K	Levuglandinyl - lysine lactam adduct	NA	NA	NA	H(28) C(20) O(4)	332.19876	FALSE
+504	LG-Hlactam-K	Levuglandinyl - lysine hydroxylactam adduct	NA	NA	NA	H(28) C(20) O(5)	348.193674	FALSE
+505	LG-lactam-R	Levuglandinyl - arginine lactam adduct	NA	NA	NA	H(26) C(19) N(-2) O(4)	290.176961	FALSE
+506	LG-Hlactam-R	Levuglandinyl - arginine hydroxylactam adduct	NA	NA	NA	H(26) C(19) N(-2) O(5)	306.171876	FALSE
+510	Dimethyl:2H(4)13C(2)	DiMethyl-C13HD2	NA	NA	NA	2H(4) 13C(2)	34.063117	FALSE
+512	Hex(2)	Lactosylation	NA	NA	NA	Hex(2)	324.105647	FALSE
+513	C8-QAT	[3-(2,5)-Dioxopyrrolidin-1-yloxycarbonyl)-propyl]dimethyloctylammonium	NA	NA	NA	H(29) C(14) N O	227.224915	FALSE
+514	PropylNAGthiazoline	propyl-1,2-dideoxy-2\'-methyl-alpha-D-glucopyranoso-[2,1-d]-Delta2\'-thiazoline	NA	NA	NA	H(14) C(9) N O(4) S	232.064354	FALSE
+515	FNEM	fluorescein-5-maleimide	NA	NA	NA	H(13) C(24) N O(7)	427.069202	FALSE
+518	Diethyl	Diethylation, analogous to Dimethylation	NA	NA	NA	H(8) C(4)	56.0626	FALSE
+519	BisANS	4,4\'-dianilino-1,1\'-binaphthyl-5,5\'-disulfonic acid	NA	NA	NA	H(22) C(32) N(2) O(6) S(2)	594.091928	FALSE
+520	Piperidine	Piperidination	NA	NA	NA	H(8) C(5)	68.0626	FALSE
+522	Maleimide-PEO2-Biotin	Maleimide-PEO2-Biotin	NA	NA	NA	H(35) C(23) N(5) O(7) S	525.225719	FALSE
+523	Sulfo-NHS-LC-LC-Biotin	Sulfo-NHS-LC-LC-Biotin	NA	NA	NA	H(36) C(22) N(4) O(4) S	452.245726	FALSE
+525	CLIP_TRAQ_2	CLIP_TRAQ_2	NA	NA	NA	H(12) C(6) 13C N(2) O	141.098318	FALSE
+526	Dethiomethyl	Prompt loss of side chain from oxidised Met	NA	NA	NA	H(-4) C(-1) S(-1)	-48.003371	FALSE
+528	Methyl+Deamidated	Deamidation followed by a methylation	NA	NA	NA	H C N(-1) O	14.999666	FALSE
+529	Delta:H(5)C(2)	Dimethylation of proline residue	NA	NA	NA	H(5) C(2)	29.039125	FALSE
+530	Cation:K	Replacement of proton by potassium	NA	NA	NA	H(-1) K	37.955882	FALSE
+531	Cation:Cu[I]	Replacement of proton by copper	NA	NA	NA	H(-1) Cu	61.921774	FALSE
+532	iTRAQ4plex114	Accurate mass for 114	NA	NA	NA	H(12) C(5) 13C(2) N(2) 18O	144.105918	FALSE
+533	iTRAQ4plex115	Accurate mass for 115	NA	NA	NA	H(12) C(6) 13C N 15N 18O	144.099599	FALSE
+534	Dibromo	Dibromo	NA	NA	NA	H(-2) Br(2)	155.821022	FALSE
+535	LeuArgGlyGly	Ubiquitination	NA	NA	NA	H(29) C(16) N(7) O(4)	383.228103	FALSE
+536	CLIP_TRAQ_3	CLIP_TRAQ_3	NA	NA	NA	H(20) C(11) 13C N(3) O(4)	271.148736	FALSE
+537	CLIP_TRAQ_4	CLIP_TRAQ_4	NA	NA	NA	H(15) C(9) 13C N(2) O(5)	244.101452	FALSE
+538	15dB-biotin	15-deoxy-delta 12,14-Prostaglandin J2-biotinimide	NA	NA	NA	H(54) C(35) N(4) O(4) S	626.386577	FALSE
+539	PGA1-biotin	Prostaglandin A1-biotinimide	NA	NA	NA	H(60) C(36) N(4) O(5) S	660.428442	FALSE
+540	Ala->Ser	Ala->Ser substitution	NA	NA	NA	O	15.994915	FALSE
+541	Ala->Thr	Ala->Thr substitution	NA	NA	NA	H(2) C O	30.010565	FALSE
+542	Ala->Asp	Ala->Asp substitution	NA	NA	NA	C O(2)	43.989829	FALSE
+543	Ala->Pro	Ala->Pro substitution	NA	NA	NA	H(2) C(2)	26.01565	FALSE
+544	Ala->Gly	Ala->Gly substitution	NA	NA	NA	H(-2) C(-1)	-14.01565	FALSE
+545	Ala->Glu	Ala->Glu substitution	NA	NA	NA	H(2) C(2) O(2)	58.005479	FALSE
+546	Ala->Val	Ala->Val substitution	NA	NA	NA	H(4) C(2)	28.0313	FALSE
+547	Cys->Phe	Cys->Phe substitution	NA	NA	NA	H(4) C(6) S(-1)	44.059229	FALSE
+548	Cys->Ser	Cys->Ser substitution	NA	NA	NA	O S(-1)	-15.977156	FALSE
+549	Cys->Trp	Cys->Trp substitution	NA	NA	NA	H(5) C(8) N S(-1)	83.070128	FALSE
+550	Cys->Tyr	Cys->Tyr substitution	NA	NA	NA	H(4) C(6) O S(-1)	60.054144	FALSE
+551	Cys->Arg	Cys->Arg substitution	NA	NA	NA	H(7) C(3) N(3) S(-1)	53.091927	FALSE
+552	Cys->Gly	Cys->Gly substitution	NA	NA	NA	H(-2) C(-1) S(-1)	-45.987721	FALSE
+553	Asp->Ala	Asp->Ala substitution	NA	NA	NA	C(-1) O(-2)	-43.989829	FALSE
+554	Asp->His	Asp->His substitution	NA	NA	NA	H(2) C(2) N(2) O(-2)	22.031969	FALSE
+555	Asp->Asn	Asp->Asn substitution	NA	NA	NA	H N O(-1)	-0.984016	FALSE
+556	Asp->Gly	Asp->Gly substitution	NA	NA	NA	H(-2) C(-2) O(-2)	-58.005479	FALSE
+557	Asp->Tyr	Asp->Tyr substitution	NA	NA	NA	H(4) C(5) O(-1)	48.036386	FALSE
+558	Asp->Glu	Asp->Glu substitution	NA	NA	NA	H(2) C	14.01565	FALSE
+559	Asp->Val	Asp->Val substitution	NA	NA	NA	H(4) C O(-2)	-15.958529	FALSE
+560	Glu->Ala	Glu->Ala substitution	NA	NA	NA	H(-2) C(-2) O(-2)	-58.005479	FALSE
+561	Glu->Gln	Glu->Gln substitution	NA	NA	NA	H N O(-1)	-0.984016	FALSE
+562	Glu->Asp	Glu->Asp substitution	NA	NA	NA	H(-2) C(-1)	-14.01565	FALSE
+563	Glu->Lys	Glu->Lys substitution	NA	NA	NA	H(5) C N O(-2)	-0.94763	FALSE
+564	Glu->Gly	Glu->Gly substitution	NA	NA	NA	H(-4) C(-3) O(-2)	-72.021129	FALSE
+565	Glu->Val	Glu->Val substitution	NA	NA	NA	H(2) O(-2)	-29.974179	FALSE
+566	Phe->Ser	Phe->Ser substitution	NA	NA	NA	H(-4) C(-6) O	-60.036386	FALSE
+567	Phe->Cys	Phe->Cys substitution	NA	NA	NA	H(-4) C(-6) S	-44.059229	FALSE
+568	Phe->Ile	Phe->Ile or Phe->Leu substitution	NA	NA	NA	H(2) C(-3)	-33.98435	FALSE
+569	Phe->Tyr	Phe->Tyr substitution	NA	NA	NA	O	15.994915	FALSE
+570	Phe->Val	Phe->Val substitution	NA	NA	NA	C(-4)	-48	FALSE
+571	Gly->Ala	Gly->Ala substitution	NA	NA	NA	H(2) C	14.01565	FALSE
+572	Gly->Ser	Gly->Ser substitution	NA	NA	NA	H(2) C O	30.010565	FALSE
+573	Gly->Trp	Gly->Trp substitution	NA	NA	NA	H(7) C(9) N	129.057849	FALSE
+574	Gly->Glu	Gly->Glu substitution	NA	NA	NA	H(4) C(3) O(2)	72.021129	FALSE
+575	Gly->Val	Gly->Val substitution	NA	NA	NA	H(6) C(3)	42.04695	FALSE
+576	Gly->Asp	Gly->Asp substitution	NA	NA	NA	H(2) C(2) O(2)	58.005479	FALSE
+577	Gly->Cys	Gly->Cys substitution	NA	NA	NA	H(2) C S	45.987721	FALSE
+578	Gly->Arg	Gly->Arg substitution	NA	NA	NA	H(9) C(4) N(3)	99.079647	FALSE
+580	His->Pro	His->Pro substitution	NA	NA	NA	C(-1) N(-2)	-40.006148	FALSE
+581	His->Tyr	His->Tyr substitution	NA	NA	NA	H(2) C(3) N(-2) O	26.004417	FALSE
+582	His->Gln	His->Gln substitution	NA	NA	NA	H C(-1) N(-1) O	-9.000334	FALSE
+584	His->Arg	His->Arg substitution	NA	NA	NA	H(5) N	19.042199	FALSE
+585	His->Leu	His->Leu substitution	NA	NA	NA	H(4) N(-2)	-23.974848	FALSE
+588	Ile->Thr	Ile->Thr substitution	NA	NA	NA	H(-4) C(-2) O	-12.036386	FALSE
+589	Ile->Asn	Ile->Asn substitution	NA	NA	NA	H(-5) C(-2) N O	0.958863	FALSE
+590	Ile->Lys	Ile->Lys substitution	NA	NA	NA	H N	15.010899	FALSE
+594	Lys->Thr	Lys->Thr substitution	NA	NA	NA	H(-5) C(-2) N(-1) O	-27.047285	FALSE
+595	Lys->Asn	Lys->Asn substitution	NA	NA	NA	H(-6) C(-2) O	-14.052036	FALSE
+596	Lys->Glu	Lys->Glu substitution	NA	NA	NA	H(-5) C(-1) N(-1) O(2)	0.94763	FALSE
+597	Lys->Gln	Lys->Gln substitution	NA	NA	NA	H(-4) C(-1) O	-0.036386	FALSE
+598	Lys->Met	Lys->Met substitution	NA	NA	NA	H(-3) C(-1) N(-1) S	2.945522	FALSE
+599	Lys->Arg	Lys->Arg substitution	NA	NA	NA	N(2)	28.006148	FALSE
+600	Lys->Ile	Lys->Ile substitution	NA	NA	NA	H(-1) N(-1)	-15.010899	FALSE
+601	Leu->Ser	Leu->Ser substitution	NA	NA	NA	H(-6) C(-3) O	-26.052036	FALSE
+602	Leu->Phe	Leu->Phe substitution	NA	NA	NA	H(-2) C(3)	33.98435	FALSE
+603	Leu->Trp	Leu->Trp substitution	NA	NA	NA	H(-1) C(5) N	72.995249	FALSE
+604	Leu->Pro	Leu->Pro substitution	NA	NA	NA	H(-4) C(-1)	-16.0313	FALSE
+605	Leu->Val	Leu->Val substitution	NA	NA	NA	H(-2) C(-1)	-14.01565	FALSE
+606	Leu->His	Leu->His substitution	NA	NA	NA	H(-4) N(2)	23.974848	FALSE
+607	Leu->Gln	Leu->Gln substitution	NA	NA	NA	H(-3) C(-1) N O	14.974514	FALSE
+608	Leu->Met	Leu->Met substitution	NA	NA	NA	H(-2) C(-1) S	17.956421	FALSE
+609	Leu->Arg	Leu->Arg substitution	NA	NA	NA	H N(3)	43.017047	FALSE
+610	Met->Thr	Met->Thr substitution	NA	NA	NA	H(-2) C(-1) O S(-1)	-29.992806	FALSE
+611	Met->Arg	Met->Arg substitution	NA	NA	NA	H(3) C N(3) S(-1)	25.060626	FALSE
+613	Met->Lys	Met->Lys substitution	NA	NA	NA	H(3) C N S(-1)	-2.945522	FALSE
+614	Met->Leu	Met->Leu substitution	NA	NA	NA	H(2) C S(-1)	-17.956421	FALSE
+615	Met->Val	Met->Val substitution	NA	NA	NA	S(-1)	-31.972071	FALSE
+616	Asn->Ser	Asn->Ser substitution	NA	NA	NA	H(-1) C(-1) N(-1)	-27.010899	FALSE
+617	Asn->Thr	Asn->Thr substitution	NA	NA	NA	H N(-1)	-12.995249	FALSE
+618	Asn->Lys	Asn->Lys substitution	NA	NA	NA	H(6) C(2) O(-1)	14.052036	FALSE
+619	Asn->Tyr	Asn->Tyr substitution	NA	NA	NA	H(3) C(5) N(-1)	49.020401	FALSE
+620	Asn->His	Asn->His substitution	NA	NA	NA	H C(2) N O(-1)	23.015984	FALSE
+621	Asn->Asp	Asn->Asp substitution	NA	NA	NA	H(-1) N(-1) O	0.984016	FALSE
+622	Asn->Ile	Asn->Ile substitution	NA	NA	NA	H(5) C(2) N(-1) O(-1)	-0.958863	FALSE
+623	Pro->Ser	Pro->Ser substitution	NA	NA	NA	H(-2) C(-2) O	-10.020735	FALSE
+624	Pro->Ala	Pro->Ala substitution	NA	NA	NA	H(-2) C(-2)	-26.01565	FALSE
+625	Pro->His	Pro->His substitution	NA	NA	NA	C N(2)	40.006148	FALSE
+626	Pro->Gln	Pro->Gln substitution	NA	NA	NA	H N O	31.005814	FALSE
+627	Pro->Thr	Pro->Thr substitution	NA	NA	NA	C(-1) O	3.994915	FALSE
+628	Pro->Arg	Pro->Arg substitution	NA	NA	NA	H(5) C N(3)	59.048347	FALSE
+629	Pro->Leu	Pro->Leu substitution	NA	NA	NA	H(4) C	16.0313	FALSE
+630	Gln->Pro	Gln->Pro substitution	NA	NA	NA	H(-1) N(-1) O(-1)	-31.005814	FALSE
+631	Gln->Lys	Gln->Lys substitution	NA	NA	NA	H(4) C O(-1)	0.036386	FALSE
+632	Gln->Glu	Gln->Glu substitution	NA	NA	NA	H(-1) N(-1) O	0.984016	FALSE
+633	Gln->His	Gln->His substitution	NA	NA	NA	H(-1) C N O(-1)	9.000334	FALSE
+634	Gln->Arg	Gln->Arg substitution	NA	NA	NA	H(4) C N(2) O(-1)	28.042534	FALSE
+635	Gln->Leu	Gln->Leu substitution	NA	NA	NA	H(3) C N(-1) O(-1)	-14.974514	FALSE
+636	Arg->Ser	Arg->Ser substitution	NA	NA	NA	H(-7) C(-3) N(-3) O	-69.069083	FALSE
+637	Arg->Trp	Arg->Trp substitution	NA	NA	NA	H(-2) C(5) N(-2)	29.978202	FALSE
+638	Arg->Thr	Arg->Thr substitution	NA	NA	NA	H(-5) C(-2) N(-3) O	-55.053433	FALSE
+639	Arg->Pro	Arg->Pro substitution	NA	NA	NA	H(-5) C(-1) N(-3)	-59.048347	FALSE
+640	Arg->Lys	Arg->Lys substitution	NA	NA	NA	N(-2)	-28.006148	FALSE
+641	Arg->His	Arg->His substitution	NA	NA	NA	H(-5) N(-1)	-19.042199	FALSE
+642	Arg->Gln	Arg->Gln substitution	NA	NA	NA	H(-4) C(-1) N(-2) O	-28.042534	FALSE
+643	Arg->Met	Arg->Met substitution	NA	NA	NA	H(-3) C(-1) N(-3) S	-25.060626	FALSE
+644	Arg->Cys	Arg->Cys substitution	NA	NA	NA	H(-7) C(-3) N(-3) S	-53.091927	FALSE
+645	Arg->Ile	Arg->Ile or Arg->Leu substitution	NA	NA	NA	H(-1) N(-3)	-43.017047	FALSE
+646	Arg->Gly	Arg->Gly substitution	NA	NA	NA	H(-9) C(-4) N(-3)	-99.079647	FALSE
+647	Ser->Phe	Ser->Phe substitution	NA	NA	NA	H(4) C(6) O(-1)	60.036386	FALSE
+648	Ser->Ala	Ser->Ala substitution	NA	NA	NA	O(-1)	-15.994915	FALSE
+649	Ser->Trp	Ser->Trp substitution	NA	NA	NA	H(5) C(8) N O(-1)	99.047285	FALSE
+650	Ser->Thr	Ser->Thr substitution	NA	NA	NA	H(2) C	14.01565	FALSE
+651	Ser->Asn	Ser->Asn substitution	NA	NA	NA	H C N	27.010899	FALSE
+652	Ser->Pro	Ser->Pro substitution	NA	NA	NA	H(2) C(2) O(-1)	10.020735	FALSE
+653	Ser->Tyr	Ser->Tyr substitution	NA	NA	NA	H(4) C(6)	76.0313	FALSE
+654	Ser->Cys	Ser->Cys substitution	NA	NA	NA	O(-1) S	15.977156	FALSE
+655	Ser->Arg	Ser->Arg substitution	NA	NA	NA	H(7) C(3) N(3) O(-1)	69.069083	FALSE
+656	Ser->Ile	Ser->Ile or Ser->Leu substitution	NA	NA	NA	H(6) C(3) O(-1)	26.052036	FALSE
+657	Ser->Gly	Ser->Gly substitution	NA	NA	NA	H(-2) C(-1) O(-1)	-30.010565	FALSE
+658	Thr->Ser	Thr->Ser substitution	NA	NA	NA	H(-2) C(-1)	-14.01565	FALSE
+659	Thr->Ala	Thr->Ala substitution	NA	NA	NA	H(-2) C(-1) O(-1)	-30.010565	FALSE
+660	Thr->Asn	Thr->Asn substitution	NA	NA	NA	H(-1) N	12.995249	FALSE
+661	Thr->Lys	Thr->Lys substitution	NA	NA	NA	H(5) C(2) N O(-1)	27.047285	FALSE
+662	Thr->Pro	Thr->Pro substitution	NA	NA	NA	C O(-1)	-3.994915	FALSE
+663	Thr->Met	Thr->Met substitution	NA	NA	NA	H(2) C O(-1) S	29.992806	FALSE
+664	Thr->Ile	Thr->Ile substitution	NA	NA	NA	H(4) C(2) O(-1)	12.036386	FALSE
+665	Thr->Arg	Thr->Arg substitution	NA	NA	NA	H(5) C(2) N(3) O(-1)	55.053433	FALSE
+666	Val->Phe	Val->Phe substitution	NA	NA	NA	C(4)	48	FALSE
+667	Val->Ala	Val->Ala substitution	NA	NA	NA	H(-4) C(-2)	-28.0313	FALSE
+668	Val->Glu	Val->Glu substitution	NA	NA	NA	H(-2) O(2)	29.974179	FALSE
+669	Val->Met	Val->Met substitution	NA	NA	NA	S	31.972071	FALSE
+670	Val->Asp	Val->Asp substitution	NA	NA	NA	H(-4) C(-1) O(2)	15.958529	FALSE
+671	Val->Ile	Val->Ile or Val->Leu substitution	NA	NA	NA	H(2) C	14.01565	FALSE
+672	Val->Gly	Val->Gly substitution	NA	NA	NA	H(-6) C(-3)	-42.04695	FALSE
+673	Trp->Ser	Trp->Ser substitution	NA	NA	NA	H(-5) C(-8) N(-1) O	-99.047285	FALSE
+674	Trp->Cys	Trp->Cys substitution	NA	NA	NA	H(-5) C(-8) N(-1) S	-83.070128	FALSE
+675	Trp->Arg	Trp->Arg substitution	NA	NA	NA	H(2) C(-5) N(2)	-29.978202	FALSE
+676	Trp->Gly	Trp->Gly substitution	NA	NA	NA	H(-7) C(-9) N(-1)	-129.057849	FALSE
+677	Trp->Leu	Trp->Leu substitution	NA	NA	NA	H C(-5) N(-1)	-72.995249	FALSE
+678	Tyr->Phe	Tyr->Phe substitution	NA	NA	NA	O(-1)	-15.994915	FALSE
+679	Tyr->Ser	Tyr->Ser substitution	NA	NA	NA	H(-4) C(-6)	-76.0313	FALSE
+680	Tyr->Asn	Tyr->Asn substitution	NA	NA	NA	H(-3) C(-5) N	-49.020401	FALSE
+681	Tyr->His	Tyr->His substitution	NA	NA	NA	H(-2) C(-3) N(2) O(-1)	-26.004417	FALSE
+682	Tyr->Asp	Tyr->Asp substitution	NA	NA	NA	H(-4) C(-5) O	-48.036386	FALSE
+683	Tyr->Cys	Tyr->Cys substitution	NA	NA	NA	H(-4) C(-6) O(-1) S	-60.054144	FALSE
+684	BDMAPP	Mass Defect Tag on lysine e-amino	NA	NA	NA	H(12) C(11) N O Br	253.010225	FALSE
+685	NA-LNO2	Nitroalkylation by Nitro Linoleic Acid	NA	NA	NA	H(31) C(18) N O(4)	325.225309	FALSE
+686	NA-OA-NO2	Nitroalkylation by Nitro Oleic Acid	NA	NA	NA	H(33) C(18) N O(4)	327.240959	FALSE
+687	ICPL:2H(4)	Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, medium form	UNIMOD:687	ICPL4 of peptide N-term	peptide N-term	H(-1) 2H(4) C(6) N O	109.046571	FALSE
+687	ICPL:2H(4)	Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, medium form	UNIMOD:687	ICPL4 of K	K	H(-1) 2H(4) C(6) N O	109.046571	FALSE
+695	Label:13C(6)15N(1)	13C(6) 15N(1) Silac label	UNIMOD:695	Isoleucine 13C(6) 15N(1)	NA	C(-6) 13C(6) N(-1) 15N	7.017164	FALSE
+695	Label:13C(6)15N(1)	13C(6) 15N(1) Silac label	UNIMOD:695	Leucine 13C(6) 15N(1)	NA	C(-6) 13C(6) N(-1) 15N	7.017164	FALSE
+696	Label:2H(9)13C(6)15N(2)	13C(6) 15N(2) (D)9 SILAC label	NA	NA	NA	H(-9) 2H(9) C(-6) 13C(6) N(-2) 15N(2)	17.07069	FALSE
+697	NIC	Nicotinic Acid	NA	NA	NA	H(3) C(6) N O	105.021464	FALSE
+698	dNIC	deuterated Nicotinic Acid	NA	NA	NA	H 2H(3) C(6) N O	109.048119	FALSE
+720	HNE-Delta:H(2)O	Dehydrated 4-hydroxynonenal	NA	NA	NA	H(14) C(9) O	138.104465	FALSE
+721	4-ONE	4-Oxononenal (ONE)	NA	NA	NA	H(14) C(9) O(2)	154.09938	FALSE
+723	O-Dimethylphosphate	O-Dimethylphosphorylation	NA	NA	NA	H(5) C(2) O(3) P	107.997631	FALSE
+724	O-Methylphosphate	O-Methylphosphorylation	NA	NA	NA	H(3) C O(3) P	93.981981	FALSE
+725	O-Diethylphosphate	O-Diethylphosphorylation	NA	NA	NA	H(9) C(4) O(3) P	136.028931	FALSE
+726	O-Ethylphosphate	O-Ethylphosphorylation	NA	NA	NA	H(5) C(2) O(3) P	107.997631	FALSE
+727	O-pinacolylmethylphosphonate	O-pinacolylmethylphosphonylation	NA	NA	NA	H(15) C(7) O(2) P	162.080967	FALSE
+728	Methylphosphonate	Methylphosphonylation	NA	NA	NA	H(3) C O(2) P	77.987066	FALSE
+729	O-Isopropylmethylphosphonate	O-Isopropylmethylphosphonylation	NA	NA	NA	H(9) C(4) O(2) P	120.034017	FALSE
+730	iTRAQ8plex	Representative mass and accurate mass for 113, 114, 116 & 117	UNIMOD:730	iTRAQ 8-plex of Y	Y	H(24) C(7) 13C(7) N(3) 15N O(3)	304.20536	FALSE
+730	iTRAQ8plex	Representative mass and accurate mass for 113, 114, 116 & 117	UNIMOD:730	iTRAQ 8-plex of peptide N-term	peptide N-term	H(24) C(7) 13C(7) N(3) 15N O(3)	304.20536	FALSE
+730	iTRAQ8plex	Representative mass and accurate mass for 113, 114, 116 & 117	UNIMOD:730	iTRAQ 8-plex of K	K	H(24) C(7) 13C(7) N(3) 15N O(3)	304.20536	FALSE
+731	iTRAQ8plex:13C(6)15N(2)	Accurate mass for 115, 118, 119 & 121	NA	NA	NA	H(24) C(8) 13C(6) N(2) 15N(2) O(3)	304.19904	FALSE
+734	Ethanolamine	Carboxyl modification with ethanolamine	NA	NA	NA	H(5) C(2) N	43.042199	FALSE
+735	DTT_ST	Dithiothreitol (DTT)	NA	NA	NA	H(8) C(4) O S(2)	136.001656	FALSE
+736	DTT_C	Dithiothreitol (DTT) on Cys	NA	NA	NA	H(8) C(4) O(2) S	120.0245	FALSE
+737	TMT6plex	Sixplex Tandem Mass Tag®	UNIMOD:737	TMT 6-plex of K	K	H(20) C(8) 13C(4) N 15N O(2)	229.162932	FALSE
+737	TMT6plex	Sixplex Tandem Mass Tag®	UNIMOD:737	TMT 10-plex of K	K	H(20) C(8) 13C(4) N 15N O(2)	229.162932	FALSE
+737	TMT6plex	Sixplex Tandem Mass Tag®	UNIMOD:737	TMT 10-plex of peptide N-term	peptide N-term	H(20) C(8) 13C(4) N 15N O(2)	229.162932	FALSE
+737	TMT6plex	Sixplex Tandem Mass Tag®	UNIMOD:737	TMT 6-plex of peptide N-term	peptide N-term	H(20) C(8) 13C(4) N 15N O(2)	229.162932	FALSE
+738	TMT2plex	Duplex Tandem Mass Tag®	UNIMOD:738	TMT 2-plex of K	K	H(20) C(11) 13C N(2) O(2)	225.155833	FALSE
+738	TMT2plex	Duplex Tandem Mass Tag®	UNIMOD:738	TMT 2-plex of peptide N-term	peptide N-term	H(20) C(11) 13C N(2) O(2)	225.155833	FALSE
+739	TMT	Native Tandem Mass Tag®	NA	NA	NA	H(20) C(12) N(2) O(2)	224.152478	FALSE
+740	ExacTagThiol	ExacTag Thiol label mass for 2-4-7-10 plex	NA	NA	NA	H(50) C(23) 13C(12) N(8) 15N(6) O(18)	972.365219	FALSE
+741	ExacTagAmine	ExacTag Amine label mass for 2-4-7-10 plex	NA	NA	NA	H(52) C(25) 13C(12) N(8) 15N(6) O(19) S	1046.347854	FALSE
+743	4-ONE+Delta:H(-2)O(-1)	Dehydrated 4-Oxononenal Michael adduct	NA	NA	NA	H(12) C(9) O	136.088815	FALSE
+744	NO_SMX_SEMD	Nitroso Sulfamethoxazole Sulphenamide thiol adduct	NA	NA	NA	H(10) C(10) N(3) O(3) S	252.044287	FALSE
+745	NO_SMX_SMCT	Nitroso Sulfamethoxazole semimercaptal thiol adduct	NA	NA	NA	H(10) C(10) N(3) O(4) S	268.039202	FALSE
+746	NO_SMX_SIMD	Nitroso Sulfamethoxazole Sulfinamide thiol adduct	NA	NA	NA	H(9) C(10) N(3) O(4) S	267.031377	FALSE
+747	Malonyl	Malonylation of C and S residues	NA	NA	NA	H(2) C(3) O(3)	86.000394	FALSE
+748	3sulfo	derivatization by N-term modification using 3-Sulfobenzoic succinimidyl ester	NA	NA	NA	H(4) C(7) O(4) S	183.983029	FALSE
+750	trifluoro	trifluoroleucine replacement of leucine	NA	NA	NA	H(-3) F(3)	53.971735	FALSE
+751	TNBS	tri nitro benzene	NA	NA	NA	H C(6) N(3) O(6)	210.986535	FALSE
+762	IDEnT	Isotope Distribution Encoded Tag	NA	NA	NA	H(7) C(9) N O Cl(2)	214.990469	FALSE
+763	DTT_ST:2H(6)	Isotopically labeled Dithiothreitol (DTT) modification of serines or threonines	NA	NA	NA	H(2) 2H(6) C(4) O S(2)	142.039317	FALSE
+764	DTT_C:2H(6)	Isotopically labeled Dithiothreitol (DTT) modification of cysteines	NA	NA	NA	H(2) 2H(6) C(4) O(2) S	126.062161	FALSE
+765	Met-loss	Removal of initiator methionine from protein N-terminus	NA	NA	NA	H(-9) C(-5) N(-1) O(-1) S(-1)	-131.040485	FALSE
+766	Met-loss+Acetyl	Removal of initiator methionine from protein N-terminus, then acetylation of the new N-terminus	NA	NA	NA	H(-7) C(-3) N(-1) S(-1)	-89.02992	FALSE
+767	Menadione-HQ	Menadione hydroquinone derivative	NA	NA	NA	H(8) C(11) O(2)	172.05243	FALSE
+768	Methyl+Acetyl:2H(3)	Mono-methylated lysine labelled with Acetyl_heavy	NA	NA	NA	H 2H(3) C(3) O	59.045045	FALSE
+771	lapachenole	lapachenole photochemically added to cysteine	NA	NA	NA	H(16) C(16) O(2)	240.11503	FALSE
+772	Label:13C(5)	13C(5) Silac label	UNIMOD:772	Proline 13C(5)	NA	C(-5) 13C(5)	5.016774	FALSE
+773	maleimide	maleimide	NA	NA	NA	H(3) C(4) N O(2)	97.016378	FALSE
+774	Biotin-phenacyl	Alkylation by biotinylated form of phenacyl bromide	NA	NA	NA	H(38) C(29) N(8) O(6) S	626.263502	FALSE
+775	Carboxymethyl:13C(2)	Iodoacetic acid derivative w/ 13C label	NA	NA	NA	H(2) 13C(2) O(2)	60.012189	FALSE
+776	NEM:2H(5)	D5 N-ethylmaleimide on cysteines	NA	NA	NA	H(2) 2H(5) C(6) N O(2)	130.079062	FALSE
+792	AEC-MAEC:2H(4)	deuterium cysteamine modification to S or T	NA	NA	NA	H 2H(4) C(2) N O(-1) S	63.044462	FALSE
+793	Hex1HexNAc1	Hex1HexNAc1	UNIMOD:793	Hex(1)NAc(1) of S	S	Hex HexNAc	365.132196	FALSE
+793	Hex1HexNAc1	Hex1HexNAc1	UNIMOD:793	Hex(1)NAc(1) of T	T	Hex HexNAc	365.132196	FALSE
+799	Label:13C(6)+GlyGly	13C6 labeled ubiquitinylation residue	NA	NA	NA	H(6) C(-2) 13C(6) N(2) O(2)	120.063056	FALSE
+800	PentylamineBiotin	Used for labeling glutamine-donor substrate of transglutaminase	NA	NA	NA	H(25) C(15) N(3) O(2) S	311.166748	FALSE
+801	Pentylamine	Labeling transglutaminase substrate on glutamine side chain	NA	NA	NA	H(11) C(5) N	85.089149	FALSE
+811	Biotin-PEO4-hydrazide	Pierce EZ link biotin hydrazide prod no. 21360	NA	NA	NA	H(37) C(21) N(5) O(6) S	487.246455	FALSE
+821	Cy3b-maleimide	fluorescent dye that labels cysteines	NA	NA	NA	H(38) C(37) N(4) O(7) S	682.24612	FALSE
+822	Gly-loss+Amide	Enzymatic glycine removal leaving an amidated C-terminus	NA	NA	NA	H(-2) C(-2) O(-2)	-58.005479	FALSE
+824	BMOE	Addition of BMOE crosslinker	NA	NA	NA	H(8) C(10) N(2) O(4)	220.048407	FALSE
+825	DFDNB	Addition of DFDNB crosslinker	NA	NA	NA	C(6) N(2) O(4)	163.985807	FALSE
+827	TMPP-Ac	tris(2,4,6-trimethoxyphenyl)phosphonium acetic acid N-hydroxysuccinimide ester derivative	NA	NA	NA	H(33) C(29) O(10) P	572.181134	FALSE
+830	Dihydroxyimidazolidine	Dihydroxy methylglyoxal adduct	NA	NA	NA	H(4) C(3) O(2)	72.021129	FALSE
+834	Label:2H(4)+Acetyl	Acetyl 4,4,5,5-D4 Lysine	NA	NA	NA	H(-2) 2H(4) C(2) O	46.035672	FALSE
+835	Label:13C(6)+Acetyl	Acetyl 13C(6) Silac label	NA	NA	NA	H(2) C(-4) 13C(6) O	48.030694	FALSE
+836	Label:13C(6)15N(2)+Acetyl	Acetyl_13C(6) 15N(2) Silac label	NA	NA	NA	H(2) C(-4) 13C(6) N(-2) 15N(2) O	50.024764	FALSE
+837	Arg->Npo	Arginine replacement by Nitropyrimidyl ornithine	NA	NA	NA	H(-1) C(3) N O(2)	80.985078	FALSE
+846	EQIGG	Sumo mutant Smt3-WT tail following trypsin digestion	NA	NA	NA	H(32) C(20) N(6) O(8)	484.228162	FALSE
+848	Arg2PG	Adduct of phenylglyoxal with Arg	NA	NA	NA	H(10) C(16) O(4)	266.057909	FALSE
+849	cGMP	S-guanylation	NA	NA	NA	H(10) C(10) N(5) O(7) P	343.031785	FALSE
+851	cGMP+RMP-loss	S-guanylation-2	NA	NA	NA	H(4) C(5) N(5) O	150.041585	FALSE
+853	Label:2H(4)+GlyGly	Ubiquitination 2H4 lysine	NA	NA	NA	H(2) 2H(4) C(4) N(2) O(2)	118.068034	FALSE
+859	MG-H1	Methylglyoxal-derived hydroimidazolone	NA	NA	NA	H(2) C(3) O	54.010565	FALSE
+860	G-H1	Glyoxal-derived hydroimiadazolone	NA	NA	NA	C(2) O	39.994915	FALSE
+861	ZGB	NHS ester linked Green Fluorescent Bodipy Dye	NA	NA	NA	H(53) B C(37) N(6) O(6) F(2) S	758.380841	FALSE
+862	Label:13C(1)2H(3)	SILAC	NA	NA	NA	H(-3) 2H(3) C(-1) 13C	4.022185	FALSE
+864	Label:13C(6)15N(2)+GlyGly	13C(6) 15N(2) Lysine glygly	NA	NA	NA	H(6) C(-2) 13C(6) 15N(2) O(2)	122.057126	FALSE
+866	ICPL:13C(6)2H(4)	Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, +10 Da form	UNIMOD:866	ICPL10 of peptide N-term	peptide N-term	H(-1) 2H(4) 13C(6) N O	115.0667	FALSE
+866	ICPL:13C(6)2H(4)	Bruker Daltonics SERVA-ICPL(TM) quantification chemistry, +10 Da form	UNIMOD:866	ICPL10 of K	K	H(-1) 2H(4) 13C(6) N O	115.0667	FALSE
+876	QEQTGG	SUMOylation by SUMO-1	NA	NA	NA	H(36) C(23) N(8) O(11)	600.250354	FALSE
+877	QQQTGG	SUMOylation by SUMO-2/3	NA	NA	NA	H(37) C(23) N(9) O(10)	599.266339	FALSE
+878	Bodipy	Bodipy modifications onto cysteine	NA	NA	NA	H(21) B C(20) N(4) O(3) F(2)	414.167478	FALSE
+884	ChromoBiotin	EZ-Link NHS-Chromogenic Biotin	NA	NA	NA	H(45) C(34) N(7) O(7) S	695.310118	FALSE
+885	Label:13C(1)2H(3)+Oxidation	Oxidised methionine 13C(1)2H(3) SILAC label	NA	NA	NA	H(-3) 2H(3) C(-1) 13C O	20.0171	FALSE
+886	HydroxymethylOP	2-ammonio-6-[4-(hydroxymethyl)-3-oxidopyridinium-1-yl]- hexanoate	NA	NA	NA	H(4) C(6) O(2)	108.021129	FALSE
+887	MDCC	covalent linkage of maleimidyl coumarin probe (Molecular Probes D-10253)	NA	NA	NA	H(21) C(20) N(3) O(5)	383.148121	FALSE
+888	mTRAQ	mTRAQ light	UNIMOD:888	mTRAQ of peptide N-term light	peptide N-term light	H(12) C(7) N(2) O	140.094963	FALSE
+888	mTRAQ	mTRAQ light	UNIMOD:888	mTRAQ of K light	K light	H(12) C(7) N(2) O	140.094963	FALSE
+889	mTRAQ:13C(3)15N(1)	mTRAQ heavy	UNIMOD:889	mTRAQ of peptide N-term 13C(3) 15N	peptide N-term 13C(3) 15N	H(12) C(4) 13C(3) N 15N O	144.102063	FALSE
+889	mTRAQ:13C(3)15N(1)	mTRAQ heavy	UNIMOD:889	mTRAQ of K 13C(3) 15N	K 13C(3) 15N	H(12) C(4) 13C(3) N 15N O	144.102063	FALSE
+890	DyLight-maleimide	Thiol-reactive dye for fluorescence labelling of proteins	NA	NA	NA	H(48) C(39) N(4) O(15) S(4)	940.1999	FALSE
+891	Methyl-PEO12-Maleimide	Methyl-PEO12-Maleimide	NA	NA	NA	H(58) C(32) N(2) O(15)	710.383719	FALSE
+893	CarbamidomethylDTT	Carbamidomethylated DTT modification of cysteine	NA	NA	NA	H(11) C(6) N O(3) S(2)	209.018035	FALSE
+894	CarboxymethylDTT	Carboxymethylated DTT modification of cysteine	NA	NA	NA	H(10) C(6) O(4) S(2)	210.00205	FALSE
+895	Biotin-PEG-PRA	Biotin polyethyleneoxide (n=3) alkyne	NA	NA	NA	H(42) C(26) N(8) O(7)	578.317646	FALSE
+896	Met->Aha	Methionine replacement by azido homoalanine	NA	NA	NA	H(-3) C(-1) N(3) S(-1)	-4.986324	FALSE
+897	Label:15N(4)	SILAC 15N(4)	NA	NA	NA	N(-4) 15N(4)	3.98814	FALSE
+898	pyrophospho	pyrophosphorylation of Ser/Thr	NA	NA	NA	H(2) O(6) P(2)	159.932662	FALSE
+899	Met->Hpg	methionine replacement by homopropargylglycine	NA	NA	NA	H(-2) C S(-1)	-21.987721	FALSE
+901	4AcAllylGal	2,3,4,6-tetra-O-Acetyl-1-allyl-α-D-galactopyranoside modification of cysteine	NA	NA	NA	H(24) C(17) O(9)	372.142033	FALSE
+902	DimethylArsino	Reaction with dimethylarsinous (AsIII) acid	NA	NA	NA	H(5) C(2) As	103.960719	FALSE
+903	Lys->CamCys	Lys->Cys substitution and carbamidomethylation	NA	NA	NA	H(-4) C(-1) O S	31.935685	FALSE
+904	Phe->CamCys	Phe->Cys substitution and carbamidomethylation	NA	NA	NA	H(-1) C(-4) N O S	12.962234	FALSE
+905	Leu->MetOx	Leu->Met substitution and sulfoxidation	NA	NA	NA	H(-2) C(-1) O S	33.951335	FALSE
+906	Lys->MetOx	Lys->Met substitution and sulfoxidation	NA	NA	NA	H(-3) C(-1) N(-1) O S	18.940436	FALSE
+907	Galactosyl	Galactosyl hydroxylysine	NA	NA	NA	O Hex	178.047738	FALSE
+908	SMCC-maleimide	Modified SMCC maleimide with 3-(dimethylamino)-1-propylamine	NA	NA	NA	H(27) C(17) N(3) O(3)	321.205242	FALSE
+910	Bacillosamine	2,4-diacetamido-2,4,6-trideoxyglucopyranose	NA	NA	NA	H(6) C(4) N(2) dHex	228.111007	FALSE
+911	MTSL	Cys modification by (1-oxyl-2,2,5,5-tetramethyl-3-pyrroline-3-methyl)methanesulfonate (MTSL)	NA	NA	NA	H(14) C(9) N O S	184.07961	FALSE
+912	HNE-BAHAH	4-hydroxy-2-nonenal and biotinamidohexanoic acid hydrazide, reduced	NA	NA	NA	H(45) C(25) N(5) O(4) S	511.319226	FALSE
+914	Methylmalonylation	Methylmalonylation on Serine	NA	NA	NA	H(4) C(4) O(3)	100.016044	FALSE
+915	Ethoxyformyl	Ethoxyformylation	NA	NA	NA	H(4) C(3) O(2)	72.021129	FALSE
+923	Label:13C(4)15N(2)+GlyGly	13C(4) 15N(2) Lysine glygly	NA	NA	NA	H(6) 13C(4) 15N(2) O(2)	120.050417	FALSE
+926	ethylamino	ethyl amino	NA	NA	NA	H(5) C(2) N O(-1)	27.047285	FALSE
+928	MercaptoEthanol	2-OH-ethyl thio-Ser	NA	NA	NA	H(4) C(2) S	60.003371	FALSE
+931	EthylAmide	solvolysis of amide group on Asn or Gln by ethanol	NA	NA	NA	H(3) C(2) N(-1) O	29.015316	FALSE
+932	VFQQQTGG	SUMOylation by SUMO-2/3 (formic acid cleavage)	NA	NA	NA	H(55) C(37) N(11) O(12)	845.403166	FALSE
+933	VIEVYQEQTGG	SUMOylation by SUMO-1 (formic acid cleavage)	NA	NA	NA	H(81) C(53) N(13) O(19)	1203.577168	FALSE
+934	GalNAzBiotin	Photocleavable Biotin + GalNAz on O-GlcNAc	NA	NA	NA	H(30) C(19) N(6) O(10)	502.202341	FALSE
+935	Atto495Maleimide	High molecular absorption maleimide label for proteins	NA	NA	NA	H(32) C(27) N(5) O(3)	474.250515	FALSE
+936	Chlorination	Chlorination of tyrosine residues	NA	NA	NA	H(-1) Cl	33.961028	FALSE
+937	dichlorination	Dichlorination of tyrosine residues	NA	NA	NA	H(-2) Cl(2)	67.922055	FALSE
+938	AROD	Cysteine modifier	NA	NA	NA	H(52) C(35) N(10) O(9) S(2)	820.336015	FALSE
+939	Cys->methylaminoAla	carbamidomethylated Cys that undergoes beta-elimination and Michael addition of methylamine	NA	NA	NA	H(3) C N S(-1)	-2.945522	FALSE
+940	Cys->ethylaminoAla	Carbamidomethylated Cys that undergoes beta-elimination and Michael addition of ethylamine	NA	NA	NA	H(5) C(2) N S(-1)	11.070128	FALSE
+941	DNPS	2,4-Dinitrobenzenesulfenyl	NA	NA	NA	H(3) C(6) N(2) O(4) S	198.981352	FALSE
+942	SulfoGMBS	High molecular absorption label for proteins	NA	NA	NA	H(26) C(22) N(4) O(5) S	458.162391	FALSE
+943	DimethylamineGMBS	Modified GMBS X linker for proteins	NA	NA	NA	H(21) C(13) N(3) O(3)	267.158292	FALSE
+944	Label:15N(2)2H(9)	SILAC label	NA	NA	NA	H(-9) 2H(9) N(-2) 15N(2)	11.050561	FALSE
+946	LG-anhydrolactam	Levuglandinyl-lysine anhydrolactam adduct	NA	NA	NA	H(26) C(20) O(3)	314.188195	FALSE
+947	LG-pyrrole	Levuglandinyl-lysine pyrrole adduct	NA	NA	NA	H(28) C(20) O(3)	316.203845	FALSE
+948	LG-anhyropyrrole	Levuglandinyl-lysine anhyropyrrole adduct	NA	NA	NA	H(26) C(20) O(2)	298.19328	FALSE
+949	3-deoxyglucosone	Condensation product of 3-deoxyglucosone	NA	NA	NA	H(8) C(6) O(4)	144.042259	FALSE
+950	Cation:Li	Replacement of proton by lithium	NA	NA	NA	H(-1) Li	6.008178	FALSE
+951	Cation:Ca[II]	Replacement of 2 protons by calcium	NA	NA	NA	H(-2) Ca	37.946941	FALSE
+952	Cation:Fe[II]	Replacement of 2 protons by iron	NA	NA	NA	H(-2) Fe	53.919289	FALSE
+953	Cation:Ni[II]	Replacement of 2 protons by nickel	NA	NA	NA	H(-2) Ni	55.919696	FALSE
+954	Cation:Zn[II]	Replacement of 2 protons by zinc	NA	NA	NA	H(-2) Zn	61.913495	FALSE
+955	Cation:Ag	Replacement of proton by silver	NA	NA	NA	H(-1) Ag	105.897267	FALSE
+956	Cation:Mg[II]	Replacement of 2 protons by magnesium	NA	NA	NA	H(-2) Mg	21.969392	FALSE
+957	2-succinyl	S-(2-succinyl) cysteine	NA	NA	NA	H(4) C(4) O(4)	116.010959	FALSE
+958	Propargylamine	propargylamine	NA	NA	NA	H(3) C(3) N O(-1)	37.031634	FALSE
+959	Phosphopropargyl	phospho-propargylamine	NA	NA	NA	H(4) C(3) N O(2) P	116.997965	FALSE
+960	SUMO2135	SUMOylation by SUMO-1 after tryptic cleavage	NA	NA	NA	H(137) C(90) N(21) O(37) S	2135.920496	FALSE
+961	SUMO3549	SUMOylation by SUMO-2/3 after tryptic cleavage	NA	NA	NA	H(224) C(150) N(38) O(60) S	3549.536568	FALSE
+967	thioacylpropionamide	membrane protein extraction	NA	NA	NA	H(9) C(6) N O(2) S	159.035399	FALSE
+971	maleimide-3-saccharide	maleimide-3-saccharide	NA	NA	NA	H(59) C(37) N(7) O(23)	969.366232	FALSE
+972	maleimide-5-saccharide	maleimide-5-saccharide	NA	NA	NA	H(79) C(49) N(7) O(33)	1293.471879	FALSE
+973	Puromycin	Puromycin	NA	NA	NA	H(27) C(22) N(7) O(4)	453.212452	FALSE
+1291	NA	NA	UNIMOD:1291	Dimethylation of K 2H(6)	K 2H(6)	H(-2) 2H(6) C(2)	34.068961	FALSE
+1291	NA	NA	UNIMOD:1291	Dimethylation of peptide N-term 2H(6)	peptide N-term 2H(6)	H(-2) 2H(6) C(2)	34.068961	FALSE
+1302	NA	NA	UNIMOD:1302	mTRAQ of 13C(6) 15N(2)	13C(6) 15N(2)	H(12) C 13C(6) 15N(2) O	148.109162	FALSE
+1302	NA	NA	UNIMOD:1302	mTRAQ of peptide N-term 13C(6) 15N(2)	peptide N-term 13C(6) 15N(2)	H(12) C 13C(6) 15N(2) O	148.109162	FALSE
+1408	NA	NA	UNIMOD:1408	Hex(5) HexNAc(4) NeuAc(2) Na of N	N	Hex(5) HexNAc(4) NeuAc(2)	2204.772441	FALSE
