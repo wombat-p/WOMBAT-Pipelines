@@ -55,5 +55,5 @@ sdrf_out["fraction"] = sdrf["comment[fraction identifier]"]
 # Add column techrep from the column "comment[technical replicate]"
 sdrf_out["techrep"] = sdrf["comment[technical replicate]"]
 
-sdrf_out.to_csv("exp_design.txt", sep="\t", index=False)
+sdrf_out.to_csv("exp_design.txt", sep="\t", index=False )
     
