@@ -18,6 +18,8 @@ if (workflow.containerEngine == 'singularity'|| workflow.containerEngine == 'app
   path "petide_ions_proline.csv", emit: proline_ions
   path "peptides_proline.csv", emit: proline_peptides
   path "proteins_proline.csv", emit: proline_proteins
+  path "pep_param.yml", emit: pep_param
+  path "prot_param.yml", emit: prot_param
   path "exp_design.txt", emit: exp_design
   
   when:
