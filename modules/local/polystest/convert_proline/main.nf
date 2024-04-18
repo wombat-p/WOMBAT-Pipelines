@@ -1,11 +1,13 @@
 process CONVERT_PROLINE {
 label 'process_low'
 
-conda (params.enable_conda ? "bioconda::polystest-1.3.4" : null)
+conda (params.enable_conda ? "bioconda::polystest-1.5.1" : null)
 if (workflow.containerEngine == 'singularity'|| workflow.containerEngine == 'apptainer') {
-        container "docker://quay.io/biocontainers/polystest:1.5.01--hdfd78af_0"
+//        container "docker://quay.io/biocontainers/polystest:1.5.1--hdfd78af_0"
+        container "docker://veitveit/polystest"
 } else {
-        container "quay.io/biocontainers/polystest:1.5.01--hdfd78af_0"
+//        container "quay.io/biocontainers/polystest:1.5.1--hdfd78af_0"
+        container "veitveit/polystest"
 }
   
   publishDir "${params.outdir}/polystest", mode:'copy'

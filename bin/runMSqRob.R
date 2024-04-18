@@ -1,7 +1,8 @@
-library(MSnbase)
-library(MSqRob)
+library(limma)
+library(QFeatures)
+library(msqrob2)
 
-# reading cmd arguments
+## reading cmd arguments
 args <- commandArgs(trailingOnly = TRUE)
 normalization_method <- strsplit(grep('--normalization', args, value = TRUE), split = '=')[[1]][[2]]
 min_peptides <- strsplit(grep('--min_peptides', args, value = TRUE), split = '=')[[1]][[2]]
@@ -13,25 +14,65 @@ if (any(normalization_method == c("mean","median")))
 if (any(normalization_method == c("quantiles")))
   normalization_method <- "quantiles.robust"
 
-
-options(stringsAsFactors=T)
-peptides <- read2MSnSet("q_input.txt",pattern="Intensity_")
-#head(exprs(peptides))
+## Reading files
+# Experimental design
 exp_annotation <- read.csv("exp_design.txt",sep="\t")
 exp_annotation$raw_file <- tools::file_path_sans_ext(exp_annotation$raw_file)
 exp_annotation$genotype <- make.names(exp_annotation$exp_condition)
-exp_annotation$run <- paste0("Intensity_",exp_annotation$raw_file)
+exp_annotation$run <- paste0("abundance_",exp_annotation$exp_conditions)
 for (c in 1:ncol(exp_annotation)) {
   exp_annotation[,c] <- as.factor(exp_annotation[,c])
 }
-# Create column for replicate number if not existing already
-if (is.null(exp_annotation$biorep)) {
-  exp_annotation$biorep <- 1
-  for (i in unique(exp_annotation$exp_condition)) {
-    ttt <- exp_annotation[exp_annotation$exp_condition == i, "biorep"]
-    exp_annotation[exp_annotation$exp_condition == i, "biorep"] <- 1:length(ttt)
-  }
-}
+
+# Peptides
+peptidesFile <- "stand_pep_quant.csv"
+
+ecols <- grep(
+  "^abundance_",
+  names(read.delim(peptidesFile))
+)
+
+peptides <- readQFeatures(
+  table = peptidesFile,
+  fnames = "modified_peptide",
+  ecol = ecols,
+  name = "peptideRaw", sep=",")
+
+colData(peptides)$genotype[exp_annotation$run] <- exp_annotation$exp_condition
+colData(peptides)$genotype <- as.factor(colData(peptides)$genotype)
+
+peptides <- logTransform(peptides, base = 2, i = "peptideRaw", name = "peptideLog")
+
+# Proteins
+proteinsFile <- "stand_prot_quant.csv"
+
+ecols <- grep(
+  "^abundance_",
+  names(read.delim(proteinsFile))
+)
+
+proteins <- readQFeatures(
+  table = proteinsFile,
+  fnames = "protein_group",
+  ecol = ecols,
+  name = "proteinRaw", sep=",")
+
+colData(proteins)$genotype[exp_annotation$run] <- exp_annotation$exp_condition
+colData(proteins)$genotype <- as.factor(colData(proteins)$genotype)
+
+## Normalization
+# TODO exp and log for sum only
+peptides <- normalize(peptides,
+                i = "peptideLog",
+                name = "peptideNorm",
+                method = normalization_method)
+proteins <- normalize(proteins,
+                i = "proteinRaw",
+                name = "proteinNorm",
+                method = normalization_method)
+
+# TODO: filter proteins for min_peptides
+...
 
 
 ## Running MSqRob

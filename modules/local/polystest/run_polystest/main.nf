@@ -1,11 +1,12 @@
 process POLYSTEST {
   label 'process_high'
-
-  conda (params.enable_conda ? "bioconda::polystest-1.3.4" : null)
+  // TODO: REVERT TO OFFICIAL PACKAGE
+  conda (params.enable_conda ? "bioconda::polystest-1.5.2" : null)
   if (workflow.containerEngine == 'singularity'|| workflow.containerEngine == 'apptainer') {
         container "docker://quay.io/biocontainers/polystest:1.5.01--hdfd78af_0"
   } else {
-        container "quay.io/biocontainers/polystest:1.5.01--hdfd78af_0"
+// TODO        container "quay.io/biocontainers/polystest:1.5.01--hdfd78af_0"
+        container "veitveit/polystest"
   }
   
   publishDir "${params.outdir}/polystest", mode:'copy'

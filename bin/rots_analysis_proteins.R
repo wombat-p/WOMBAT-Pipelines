@@ -1,4 +1,3 @@
-
 ### installation of R packages if necessary
 
 # if (!require("BiocManager", quietly = TRUE))
@@ -26,6 +25,8 @@ D <- D[rowSums(is.na(D[, ab_cols])) < sum(ab_cols),]
 
 protein_name <- D$protein_group
 intensities <- D[, ab_cols]
+
+# TODO Read comparisons from exp_design file
 
 ### extract group information
 group <- limma::strsplit2(colnames(intensities), "_")[,2]
