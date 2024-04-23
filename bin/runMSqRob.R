@@ -25,54 +25,78 @@ for (c in 1:ncol(exp_annotation)) {
 }
 
 # Peptides
-peptidesFile <- "stand_pep_quant.csv"
+peptidesTable <- read.csv("stand_pep_quant.csv")
 
 ecols <- grep(
   "^abundance_",
-  names(read.delim(peptidesFile))
+  names(peptidesTable)
 )
 
 peptides <- readQFeatures(
-  table = peptidesFile,
+  table = peptidesTable,
   fnames = "modified_peptide",
   ecol = ecols,
   name = "peptideRaw", sep=",")
 
 colData(peptides)$genotype[exp_annotation$run] <- exp_annotation$exp_condition
 colData(peptides)$genotype <- as.factor(colData(peptides)$genotype)
-
+peptides <- zeroIsNA(peptides, "peptideRaw")
 peptides <- logTransform(peptides, base = 2, i = "peptideRaw", name = "peptideLog")
 
 # Proteins
-proteinsFile <- "stand_prot_quant.csv"
+proteinTable <- read.csv("stand_prot_quant.csv")
 
 ecols <- grep(
   "^abundance_",
-  names(read.delim(proteinsFile))
+  names(proteinTable)
+)
+rcols <- grep(
+  "^number_of_peptides_",
+  names(proteinTable)
 )
 
 proteins <- readQFeatures(
-  table = proteinsFile,
+  table = proteinTable,
   fnames = "protein_group",
   ecol = ecols,
   name = "proteinRaw", sep=",")
 
 colData(proteins)$genotype[exp_annotation$run] <- exp_annotation$exp_condition
 colData(proteins)$genotype <- as.factor(colData(proteins)$genotype)
+# Add the columns for the number of peptides to the protein data
+rowData(proteins)$number_of_peptides <- proteinTable[,rcols]
+
 
 ## Normalization
-# TODO exp and log for sum only
+# take exp and log for sum only
+if (normalization_method == "sum") {
+  ttt <- assays(peptides)$peptideRaw
+  ttt <- 2^ttt
+  assays(peptides)$peptideRaw <- ttt
+  assays(peptides)$peptideRaw <- 2^(assays(peptides)$peptideRaw)
+  assays(proteins)$proteinRaw <- 2^(assays(proteins)$proteinRaw)
+}
 peptides <- normalize(peptides,
-                i = "peptideLog",
-                name = "peptideNorm",
-                method = normalization_method)
+                      i = "peptideRaw",
+                      name = "peptideNorm",
+                      method = normalization_method)
 proteins <- normalize(proteins,
-                i = "proteinRaw",
-                name = "proteinNorm",
-                method = normalization_method)
+                      i = "proteinRaw",
+                      name = "proteinNorm",
+                      method = normalization_method)
+if (normalization_method == "sum") {
+  assay(peptides)$peptideNorm <- log2(assay(peptides)$peptideNorm)
+  assay(proteins)$proteinNorm <- log2(assay(proteins)$proteinNorm)
+}
 
-# TODO: filter proteins for min_peptides
-...
+
+# filter proteins for min_peptides
+prots <- assays(proteins, "proteinNorm")
+nums <- rowData(proteins)[["proteinRaw"]]
+prots[nums < min_peptides,] <- NA
+assays(proteins)$proteinNorm <- prots
+
+keep_prots <- sapply(, function(x) length(unique(x$protein_group))) >= min_peptides
 
 
 ## Running MSqRob
@@ -81,10 +105,10 @@ proteins <- normalize(proteins,
 # we stick here with sum, center.mean, center.median and quantiles
 peptides <- preprocess_MSnSet(peptides,accession="Protein.Groups",split=",", useful_properties="Sequence", exp_annotation=exp_annotation, normalisation=normalization_method)
 
-# necessary due to change to R 4.x    
+# necessary due to change to R 4.x
 fData(peptides)[,"Protein.Groups"] <- as.factor(fData(peptides)[,"Protein.Groups"])
 # Set data.frame for experimental design with columns run genotype biorep
-proteins <- MSnSet2protdata(peptides, accession="Protein.Groups")  
+proteins <- MSnSet2protdata(peptides, accession="Protein.Groups")
 
 # filter for proteins with more than min_peptides peptides
 keep_prots <- sapply(proteins@data, function(x) length(unique(x$Sequence))) >= min_peptides
@@ -98,7 +122,7 @@ levels <- as.factor(paste0("genotype",make.names(unique(exp_annotation$genotype)
 # levels <- unique(exp_annotation$genotype)
 if (length(levels) > 1) {
   for (i in levels[-1]) {
-    contrasts <- append(contrasts, paste(i, levels[1], sep="-"))  
+    contrasts <- append(contrasts, paste(i, levels[1], sep="-"))
   }
 } else {
   contrasts <- levels
@@ -127,10 +151,10 @@ rownames(all_pep) <- all_pep[,1]
 # merging with quant data
 stand_pep_quant <- cbind(all_pep[fData(peptides)$Sequence,], protein_group=protnames[fData(peptides)$Sequence, 2], 2^exprs(peptides))
 for (r in 1:nrow(exp_annotation)) {
-  colnames(stand_pep_quant) <- sub(paste0("^Intensity_", exp_annotation$raw_file[r], "$"), 
+  colnames(stand_pep_quant) <- sub(paste0("^Intensity_", exp_annotation$raw_file[r], "$"),
                                    paste0("abundance_", exp_annotation$exp_condition[r], "_",
                                           exp_annotation$biorep[r]), colnames(stand_pep_quant))
-  colnames(stand_pep_quant) <- sub(paste0("^number_of_psms_", exp_annotation$raw_file[r], "$"), 
+  colnames(stand_pep_quant) <- sub(paste0("^number_of_psms_", exp_annotation$raw_file[r], "$"),
                                    paste0("number_of_psms_", exp_annotation$exp_condition[r], "_",
                                           exp_annotation$biorep[r]), colnames(stand_pep_quant))
 }
@@ -159,26 +183,26 @@ rownames(all_prot) <- all_prot[,1]
 stand_prot_quant <- cbind(all_prot[rownames(result),], log2(quant_prots[rownames(result), ]), result[,grep("estimate$|qval$|pval$", colnames(result))])
 # Exchanging file name based columns names to the ones defined in the experimental design
 for (r in 1:nrow(exp_annotation)) {
-  colnames(stand_prot_quant) <- sub(paste0("^Intensity_", exp_annotation$raw_file[r], "$"), 
+  colnames(stand_prot_quant) <- sub(paste0("^Intensity_", exp_annotation$raw_file[r], "$"),
                                     paste0("abundance_", exp_annotation$exp_condition[r], "_",
                                            exp_annotation$biorep[r]), colnames(stand_prot_quant))
-  colnames(stand_prot_quant) <- sub(paste0("^number_of_peptides_", exp_annotation$raw_file[r], "$"), 
+  colnames(stand_prot_quant) <- sub(paste0("^number_of_peptides_", exp_annotation$raw_file[r], "$"),
                                     paste0("number_of_peptides_", exp_annotation$exp_condition[r], "_",
                                            exp_annotation$biorep[r]), colnames(stand_prot_quant))
 }
 
 # Change column names for statistics
-ttt <- colnames(stand_prot_quant)[grep("estimate$", colnames(stand_prot_quant))] 
+ttt <- colnames(stand_prot_quant)[grep("estimate$", colnames(stand_prot_quant))]
 ttt <- sub("estimate$", "", ttt)
 if (ttt == "")
   ttt <- paste(rev(unique(exp_annotation$exp_condition)), collapse = "_vs_")
 colnames(stand_prot_quant)[grep("estimate$", colnames(stand_prot_quant))] <- paste0("log_fold_change_", ttt)
-ttt <- colnames(stand_prot_quant)[grep("qval$", colnames(stand_prot_quant))] 
+ttt <- colnames(stand_prot_quant)[grep("qval$", colnames(stand_prot_quant))]
 ttt <- sub("qval$", "", ttt)
 if (ttt == "")
   ttt <- paste(rev(unique(exp_annotation$exp_condition)), collapse = "_vs_")
 colnames(stand_prot_quant)[grep("qval$", colnames(stand_prot_quant))] <- paste0("differential_abundance_qvalue_", ttt)
-ttt <- colnames(stand_prot_quant)[grep("pval$", colnames(stand_prot_quant))] 
+ttt <- colnames(stand_prot_quant)[grep("pval$", colnames(stand_prot_quant))]
 ttt <- sub("pval$", "", ttt)
 if (ttt == "")
   ttt <- paste(rev(unique(exp_annotation$exp_condition)), collapse = "_vs_")
