@@ -4,25 +4,39 @@ library(msqrob2)
 
 ## reading cmd arguments
 args <- commandArgs(trailingOnly = TRUE)
-normalization_method <- strsplit(grep('--normalization', args, value = TRUE), split = '=')[[1]][[2]]
-min_peptides <- strsplit(grep('--min_peptides', args, value = TRUE), split = '=')[[1]][[2]]
-if (!any(normalization_method == c("sum", "median", "mean", "quantiles","none"))) {
+normalization_method <- strsplit(grep("--normalization", args, value = TRUE), split = "=")[[1]][[2]]
+min_peptides <- strsplit(grep("--min_peptides", args, value = TRUE), split = "=")[[1]][[2]]
+if (!any(normalization_method == c("sum", "median", "mean", "quantiles", "none"))) {
   stop("Invalid normalization method, should be one of: sum, median, mean, quantiles, none")
 }
-if (any(normalization_method == c("mean","median")))
+if (any(normalization_method == c("mean", "median"))) {
   normalization_method <- paste0("center.", normalization_method)
-if (any(normalization_method == c("quantiles")))
+}
+if (any(normalization_method == c("quantiles"))) {
   normalization_method <- "quantiles.robust"
+}
+if (min_peptides < 1) {
+  stop("Minimum number of peptides should be at least 1")
+}
 
 ## Reading files
 # Experimental design
-exp_annotation <- read.csv("exp_design.txt",sep="\t")
-exp_annotation$raw_file <- tools::file_path_sans_ext(exp_annotation$raw_file)
-exp_annotation$genotype <- make.names(exp_annotation$exp_condition)
-exp_annotation$run <- paste0("abundance_",exp_annotation$exp_conditions)
-for (c in 1:ncol(exp_annotation)) {
-  exp_annotation[,c] <- as.factor(exp_annotation[,c])
+exp_annotation <- read.csv("exp_design.txt", sep = "\t")
+# Check for existing column names
+for (col in c("raw_file", "exp_condition", "biorep", "techrep", "fraction")) {
+  if (!any(col %in% colnames(exp_annotation))) {
+    stop(paste("Missing column in experimental design file:", col))
+  }
 }
+
+# Remove all fractions larger than one as they have been summed into one sample
+exp_annotation <- exp_annotation[exp_annotation$fraction == 1, ]
+exp_annotation$raw_file <- tools::file_path_sans_ext(exp_annotation$raw_file)
+exp_annotation$exp_condition <- make.names(exp_annotation$exp_condition)
+# needed to ensure factors
+exp_annotation$biorep <- as.character(exp_annotation$biorep)
+exp_annotation$run <- paste0("abundance_", exp_annotation$exp_condition, "_", exp_annotation$biorep)
+
 
 # Peptides
 peptidesTable <- read.csv("stand_pep_quant.csv")
@@ -36,10 +50,13 @@ peptides <- readQFeatures(
   table = peptidesTable,
   fnames = "modified_peptide",
   ecol = ecols,
-  name = "peptideRaw", sep=",")
+  name = "peptideRaw", sep = ","
+)
 
-colData(peptides)$genotype[exp_annotation$run] <- exp_annotation$exp_condition
-colData(peptides)$genotype <- as.factor(colData(peptides)$genotype)
+colData(peptides)$exp_condition[exp_annotation$run] <- exp_annotation$exp_condition
+colData(peptides)$biorep[exp_annotation$run] <- exp_annotation$biorep
+colData(peptides)$exp_condition <- factor(colData(peptides)$exp_condition)
+colData(peptides)$biorep <- factor(colData(peptides)$biorep
 peptides <- zeroIsNA(peptides, "peptideRaw")
 peptides <- logTransform(peptides, base = 2, i = "peptideRaw", name = "peptideLog")
 
@@ -50,164 +67,128 @@ ecols <- grep(
   "^abundance_",
   names(proteinTable)
 )
-rcols <- grep(
-  "^number_of_peptides_",
-  names(proteinTable)
-)
-
 proteins <- readQFeatures(
   table = proteinTable,
   fnames = "protein_group",
   ecol = ecols,
-  name = "proteinRaw", sep=",")
+  name = "proteinRaw", sep = ","
+)
 
-colData(proteins)$genotype[exp_annotation$run] <- exp_annotation$exp_condition
-colData(proteins)$genotype <- as.factor(colData(proteins)$genotype)
-# Add the columns for the number of peptides to the protein data
-rowData(proteins)$number_of_peptides <- proteinTable[,rcols]
-
+colData(proteins)$exp_condition[exp_annotation$run] <- exp_annotation$exp_condition
+colData(proteins)$biorep[exp_annotation$run] <- exp_annotation$biorep
+colData(proteins)$exp_condition <- factor(colData(proteins)$exp_condition)
+colData(proteins)$biorep <- factor(colData(proteins)$biorep)
 
 ## Normalization
 # take exp and log for sum only
-if (normalization_method == "sum") {
-  ttt <- assays(peptides)$peptideRaw
-  ttt <- 2^ttt
-  assays(peptides)$peptideRaw <- ttt
-  assays(peptides)$peptideRaw <- 2^(assays(peptides)$peptideRaw)
-  assays(proteins)$proteinRaw <- 2^(assays(proteins)$proteinRaw)
-}
-peptides <- normalize(peptides,
-                      i = "peptideRaw",
-                      name = "peptideNorm",
-                      method = normalization_method)
-proteins <- normalize(proteins,
-                      i = "proteinRaw",
-                      name = "proteinNorm",
-                      method = normalization_method)
-if (normalization_method == "sum") {
-  assay(peptides)$peptideNorm <- log2(assay(peptides)$peptideNorm)
-  assay(proteins)$proteinNorm <- log2(assay(proteins)$proteinNorm)
+if (normalization_method == "none") {
+  peptides <- addAssay(peptides, peptides[["peptideLog"]],
+    name = "peptideNorm"
+  )
+  addAssayLinkOneToOne(peptides, "peptideLog", "peptideNorm")
+  proteins <- addAssay(proteins, proteins[["proteinRaw"]],
+    name = "proteinNorm"
+  )
+  addAssayLinkOneToOne(proteins, "proteinRaw", "proteinNorm")
+} else {
+  if (normalization_method == "sum") {
+    ttt <- peptides[["peptideLog"]]
+    assay(ttt) <- 2^assay(ttt)
+    peptides[["peptideLog"]] <- ttt
+    ttt <- proteins[["proteinRaw"]]
+    assay(ttt) <- 2^assay(ttt)
+    proteins[["proteinRaw"]] <- ttt
+  }
+  peptides <- normalize(peptides,
+    i = "peptideLog",
+    name = "peptideNorm",
+    method = normalization_method
+  )
+  proteins <- normalize(proteins,
+    i = "proteinRaw",
+    name = "proteinNorm",
+    method = normalization_method
+  )
+  if (normalization_method == "sum") {
+    ttt <- peptides[["peptideNorm"]]
+    assay(ttt) <- log2(assay(ttt))
+    peptides[["peptideNorm"]] <- ttt
+    ttt <- proteins[["proteinNorm"]]
+    assay(ttt) <- log2(assay(ttt))
+    proteins[["proteinNorm"]] <- ttt
+  }
 }
 
 
 # filter proteins for min_peptides
-prots <- assays(proteins, "proteinNorm")
+prots <- proteins[["proteinNorm"]]
 nums <- rowData(proteins)[["proteinRaw"]]
-prots[nums < min_peptides,] <- NA
-assays(proteins)$proteinNorm <- prots
+nums <- as.matrix(nums[,grep("^number_of_peptides_", names(nums))])
+assay(prots)[nums < min_peptides ] <- NA
 
-keep_prots <- sapply(, function(x) length(unique(x$protein_group))) >= min_peptides
+# Filter peptides for proteins to have at least as many non-NA values as experimental conditions
+rowData(peptides)$peptideNorm$numvalues <- rowSums(!is.na(assay(peptides, "peptideNorm")))
+rowData(proteins)$proteinNorm$numvalues <- rowSums(!is.na(assay(proteins, "proteinNorm")))
+proteins <- filterFeatures(proteins, i="proteinNorm", ~ numvalues >= length(unique(exp_annotation[,"exp_condition"])))
+peptides <- filterFeatures(peptides, i="peptideNorm", ~ numvalues >= length(unique(exp_annotation[,"exp_condition"])))
 
+# Running MSqRob with error handling
+run_msqrob <- function(object, i, formula) {
+  tryCatch({
+    msqrob(object = object, i = i, formula = formula)
+  }, error = function(e) {
+    stop("Failed to run msqrob on", i, "with error:", e$message, "\n")
+  })
+}
 
-## Running MSqRob
-# Had to change normalization due to error in preprocesscore
-# normalization methods: should be one of “sum”, “max”, “center.mean”, “center.median”, “div.mean”, “div.median”, “diff.median”, “quantiles”, “quantiles.robust”, “vsn”
-# we stick here with sum, center.mean, center.median and quantiles
-peptides <- preprocess_MSnSet(peptides,accession="Protein.Groups",split=",", useful_properties="Sequence", exp_annotation=exp_annotation, normalisation=normalization_method)
-
-# necessary due to change to R 4.x
-fData(peptides)[,"Protein.Groups"] <- as.factor(fData(peptides)[,"Protein.Groups"])
-# Set data.frame for experimental design with columns run genotype biorep
-proteins <- MSnSet2protdata(peptides, accession="Protein.Groups")
-
-# filter for proteins with more than min_peptides peptides
-keep_prots <- sapply(proteins@data, function(x) length(unique(x$Sequence))) >= min_peptides
-# needed to fix problem when accession numbers are actual numbers
-proteins[as.character(proteins@accession[which(keep_prots)])]
-#proteins <- proteins[which(keep_prots)]
-system.time(protLM <- fit.model(proteins, response="quant_value", fixed=c("genotype"),  random=c("run","Sequence"), add.intercept=TRUE))
-#create comparisons vs first
-contrasts <- NULL
-levels <- as.factor(paste0("genotype",make.names(unique(exp_annotation$genotype))))
-# levels <- unique(exp_annotation$genotype)
-if (length(levels) > 1) {
-  for (i in levels[-1]) {
-    contrasts <- append(contrasts, paste(i, levels[1], sep="-"))
-  }
+if (max(exp_annotation$techrep) == 2) {
+   proteins <- run_msqrob(object = proteins, i = "proteinNorm", formula = ~ (1|exp_condition) + (1|biorep))
+   peptides <- run_msqrob(object = peptides, i = "peptideNorm", formula = ~ (1|exp_condition) + (1|biorep))
+} else if (max(exp_annotation$techrep) > 2) {
+   proteins <- run_msqrob(object = proteins, i = "proteinNorm", formula = ~ exp_condition + (1|biorep), ridge=T)
+   peptides <- run_msqrob(object = peptides, i = "peptideNorm", formula = ~ exp_condition + (1|biorep), ridge=T)
 } else {
-  contrasts <- levels
-}
-L <- makeContrast(contrasts=contrasts,levels=as.character(levels))
-result <- test.protLMcontrast(protLM, L)
-result <- prot.p.adjust(result, method="fdr")
-write.csv(result, "MSqRobOut.csv")
-result <- as.data.frame(result)
-
-## Merging more data from peptide and protein level
-all_peptides <- list()
-protnames <- NULL
-for (type in exp_annotation$raw_file) {
-  tin <- read.csv(paste0(type,"_peptides.txt"), sep="\t")
-  protnames <- tin[, c("Modified.Sequence","Protein.s.")]
-  tin <- tin[,c( "Modified.Sequence","X.Validated.PSMs")]
-  colnames(tin) <- paste0(c("modified_peptide", "number_of_psms"), "_", type)
-  all_peptides[[type]] <- tin
-}
-protnames <- unique(protnames)
-rownames(protnames) <- protnames[,1]
-all_pep <- Reduce(function(x, y) merge(x, y, by=1, all=TRUE), all_peptides)
-
-rownames(all_pep) <- all_pep[,1]
-# merging with quant data
-stand_pep_quant <- cbind(all_pep[fData(peptides)$Sequence,], protein_group=protnames[fData(peptides)$Sequence, 2], 2^exprs(peptides))
-for (r in 1:nrow(exp_annotation)) {
-  colnames(stand_pep_quant) <- sub(paste0("^Intensity_", exp_annotation$raw_file[r], "$"),
-                                   paste0("abundance_", exp_annotation$exp_condition[r], "_",
-                                          exp_annotation$biorep[r]), colnames(stand_pep_quant))
-  colnames(stand_pep_quant) <- sub(paste0("^number_of_psms_", exp_annotation$raw_file[r], "$"),
-                                   paste0("number_of_psms_", exp_annotation$exp_condition[r], "_",
-                                          exp_annotation$biorep[r]), colnames(stand_pep_quant))
-}
-# standardizing colnames
-colnames(stand_pep_quant)[1] <- "modified_peptide"
-
-write.csv(stand_pep_quant, "stand_pep_quant_merged.csv", row.names=F)
-
-
-# Merging data from peptideshaker, flashlfq and msqrob
-quant_prots <- read.csv("q_prot.txt", sep="\t")
-rownames(quant_prots) <- quant_prots[, "Protein.Groups"]
-quant_prots <- quant_prots[, grep("^Intensity",colnames(quant_prots)), drop=FALSE]
-# making zeroes to NA
-quant_prots[quant_prots == 0] <- NA
-all_proteins <- list()
-for (type in exp_annotation$raw_file) {
-  tin <- read.csv(paste0(type,"_proteins.txt"), sep="\t")
-  tin <- tin[,c("Protein.Group", "X.Unique.Peptides")]
-  colnames(tin) <- c("protein_group", paste0("number_of_peptides_", type))
-  all_proteins[[type]] <- tin
-}
-all_prot <- Reduce(function(x, y) merge(x, y, by=1, all=TRUE), all_proteins)
-# merging with quant data
-rownames(all_prot) <- all_prot[,1]
-stand_prot_quant <- cbind(all_prot[rownames(result),], log2(quant_prots[rownames(result), ]), result[,grep("estimate$|qval$|pval$", colnames(result))])
-# Exchanging file name based columns names to the ones defined in the experimental design
-for (r in 1:nrow(exp_annotation)) {
-  colnames(stand_prot_quant) <- sub(paste0("^Intensity_", exp_annotation$raw_file[r], "$"),
-                                    paste0("abundance_", exp_annotation$exp_condition[r], "_",
-                                           exp_annotation$biorep[r]), colnames(stand_prot_quant))
-  colnames(stand_prot_quant) <- sub(paste0("^number_of_peptides_", exp_annotation$raw_file[r], "$"),
-                                    paste0("number_of_peptides_", exp_annotation$exp_condition[r], "_",
-                                           exp_annotation$biorep[r]), colnames(stand_prot_quant))
+   proteins <- run_msqrob(object = proteins, i = "proteinNorm", formula = ~ exp_condition)
+   peptides <- run_msqrob(object = peptides, i = "peptideNorm", formula = ~ exp_condition)
 }
 
-# Change column names for statistics
-ttt <- colnames(stand_prot_quant)[grep("estimate$", colnames(stand_prot_quant))]
-ttt <- sub("estimate$", "", ttt)
-if (ttt == "")
-  ttt <- paste(rev(unique(exp_annotation$exp_condition)), collapse = "_vs_")
-colnames(stand_prot_quant)[grep("estimate$", colnames(stand_prot_quant))] <- paste0("log_fold_change_", ttt)
-ttt <- colnames(stand_prot_quant)[grep("qval$", colnames(stand_prot_quant))]
-ttt <- sub("qval$", "", ttt)
-if (ttt == "")
-  ttt <- paste(rev(unique(exp_annotation$exp_condition)), collapse = "_vs_")
-colnames(stand_prot_quant)[grep("qval$", colnames(stand_prot_quant))] <- paste0("differential_abundance_qvalue_", ttt)
-ttt <- colnames(stand_prot_quant)[grep("pval$", colnames(stand_prot_quant))]
-ttt <- sub("pval$", "", ttt)
-if (ttt == "")
-  ttt <- paste(rev(unique(exp_annotation$exp_condition)), collapse = "_vs_")
-colnames(stand_prot_quant)[grep("pval$", colnames(stand_prot_quant))] <- paste0("differential_abundance_pvalue_", ttt)
-write.csv(stand_prot_quant, "stand_prot_quant_merged.csv", row.names=F)
 
+# Now make the contrast matrix
+conditions <- levels(colData(proteins)$exp_condition)
 
+# Create a design matrix
+design <- model.matrix(~ 0 + colData(proteins)$exp_condition)
+colnames(design) <- conditions
 
+# Choose the type of contrast: all-vs-all (TODO, use optional parameter for all-vs-first)
+   contrast_formulas <- combn(conditions, 2, FUN = function(x) paste(x[1], "-", x[2]), simplify = FALSE)
+    contrast_names <- combn(conditions, 2, FUN = function(x) paste(x[1], "vs", x[2], sep="_"), simplify = FALSE)
+    contrasts <- setNames(contrast_formulas, contrast_names)
+    contrast_matrix <- makeContrasts(levels = design, contrasts = contrasts)
+    rownames(contrast_matrix) <- paste0("(Intercept)exp_condition", rownames(contrast_matrix))
+
+# Test the hypotheses
+proteins <- hypothesisTest(object=proteins, i="proteinNorm", contrast=contrast_matrix)
+peptides <- hypothesisTest(object=peptides, i="peptideNorm", contrast=contrast_matrix)
+
+## adding the new columns to the data frame
+stand_prot_out <- assay(proteins[["proteinNorm"]])
+add_cols <- rowData(proteins[["proteinNorm"]])
+stand_prot_out <- cbind(add_cols[, grep("^protein_group", colnames(add_cols))], stand_prot_out, add_cols[, grep("^number_of_peptides_", colnames(add_cols))])
+for (i in unlist(contrasts)) {
+    ttt <- add_cols[, i]
+    colnames(ttt) <- paste0(c("log_ratios_", "standard_error_", "degrees_freedom_",
+                              "t_", "differential_abundance_pvalue_", "differential_abundance_qvalue_"), names(i))
+    stand_prot_out <- cbind(stand_prot_out, ttt[,c(1,5,6)])
+}
+stand_pep_out <- assay(peptides[["peptideNorm"]])
+add_cols <- rowData(peptides[["peptideNorm"]])
+stand_pep_out <- cbind(add_cols[, grep("^modified_peptide", colnames(add_cols))], stand_pep_out, add_cols[, grep("^number_of_psms_", colnames(add_cols))])
+for (i in unlist(contrasts)) {
+    ttt <- add_cols[, i]
+    colnames(ttt) <- paste0(c("log_ratios_", "standard_error_", "degrees_freedom_",
+                              "t_", "differential_abundance_pvalue_", "differential_abundance_qvalue_"), names(i))
+    stand_pep_out <- cbind(stand_pep_out, ttt[,c(1,5,6)])
+}
+write.csv(stand_prot_out, "stand_prot_quant_merged.csv", row.names = F)
+write.csv(stand_pep_out, "stand_pep_quant_merged.csv", row.names = F)
