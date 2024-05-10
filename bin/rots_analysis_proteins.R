@@ -1,3 +1,20 @@
+## Script to run statistical testing with ROTS on peptide and protein data from WOMBAT-P
+
+library(limma)
+library(ROTS)
+
+read_expdesign <- function(file) {
+  exp_design <- read.csv(file, header = TRUE, sep = "\t", stringsAsFactors = FALSE)
+  if (length(unique(exp_design$biorep)) == 1) {
+    exp_design$replicates <- exp_design$techrep
+  } else {
+    exp_design$replicates <- exp_design$biorep
+  }
+  return(exp_design)
+}
+
+
+
 ### installation of R packages if necessary
 
 # if (!require("BiocManager", quietly = TRUE))
