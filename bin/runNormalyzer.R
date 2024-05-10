@@ -19,10 +19,10 @@ compfile <- strsplit(grep("--comp_file", args, value = TRUE), split = "=")[[1]][
 exp_design <- read_expdesign(exp_file)
 
 # Read proteins
-proteins <- read_proteins("/data/tmp/stand_prot_quant.csv")
+proteins <- read_proteins("stand_prot_quant.csv")
 
 # Read peptides
-peptides <- read_peptides("/data/tmp/stand_pep_quant.csv")
+peptides <- read_peptides("stand_pep_quant.csv")
 
 # Check if all names are present
 all_names <- check_names(exp_design, proteins)
