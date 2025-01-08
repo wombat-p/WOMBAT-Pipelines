@@ -1,3 +1,4 @@
+#!/usr/bin/env Rscript
 
 ### installation of R packages if necessary
 

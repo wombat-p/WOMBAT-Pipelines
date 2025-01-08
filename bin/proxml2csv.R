@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 ######################################################################
 # AUTH  Jeff Jones, extended by Veit Schwaemmle
 # DATE  2022.07.23
