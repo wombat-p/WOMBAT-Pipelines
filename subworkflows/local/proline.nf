@@ -40,7 +40,7 @@ workflow PROLINE {
     RUN_PROLINE ( CONFIG_PROLINE.out.xml_search_files, RAW2MZDB.out.mzdbs.collect(), CONFIG_PROLINE.out.lfq_param_file,  
                   CONFIG_PROLINE.out.import_files, EXP_DESIGN_PROLINE.out.exp_design  )
     POLYSTEST ( EXP_DESIGN_PROLINE.out.exp_design, RUN_PROLINE.out, parameters )
-    CONVERT_POLYSTEST ( EXP_DESIGN_PROLINE.out.exp_design, POLYSTEST.out.ionsquant, POLYSTEST.out.polystest_pep,  POLYSTEST.out.polystest_prot )
+    CONVERT_POLYSTEST ( EXP_DESIGN_PROLINE.out.exp_design, POLYSTEST.out.ions_quant, POLYSTEST.out.polystest_pep,  POLYSTEST.out.polystest_prot )
 
     emit:
     CONVERT_POLYSTEST.out.exp_design
