@@ -32,6 +32,12 @@ for (i in 1:nrow(exp_design)) {
     paste("number_of_psms", exp_design$exp_condition[i], exp_design$biorep[i], sep = "_"),
     colnames(peptides)
   )
+for (i in 1:nrow(exp_design)) {
+  colnames(ions) <- sub(
+    paste0("^psm_count_", exp_design$sample_name[i], "$"),
+    paste("number_of_psms", exp_design$exp_condition[i], exp_design$biorep[i], sep = "_"),
+    colnames(ions)
+  )
   colnames(proteins) <- sub(
     paste0("^peptides_count_", exp_design$sample_name[i], "$"),
     paste("number_of_peptides", exp_design$exp_condition[i], exp_design$biorep[i], sep = "_"),
@@ -43,7 +49,9 @@ for (s in unique(exp_design$exp_condition)) colnames(peptides) <- sub(paste0("^"
 colnames(peptides) <- sub("^FDR\\.PolySTest\\.", "differential_abundance_qvalue_", colnames(peptides))
 
 # Creating modified sequences
-modified_peptides <- strsplit(as.character(peptides$modifications), "; ")
+modify_sequence <- function(modifications, sequence) {
+
+modified_peptides <- strsplit(as.character(modifications), "; ")
 modified_peptides <- lapply(modified_peptides, function(x) {
   if (any(!is.na(x))) {
     tt <- matrix(unlist(strsplit(x, " \\(")), nrow = 2)
@@ -58,17 +66,22 @@ modified_peptides <- lapply(modified_peptides, function(x) {
   }
 })
 
-modified_sequence <- peptides$sequence
-for (i in 1:nrow(peptides)) {
-  if (!is.na(modified_peptides[[i]][1])) {
+  modified_sequence <- sequence
+  for (i in 1:length(modifications)) {
+    if (!is.na(modifications[i])) {
     modified_sequence[i] <- stri_sub_replace_all(modified_sequence[i],
       replacement = paste0("[", modified_peptides[[i]][1, ], "]"),
       from = as.numeric(modified_peptides[[i]][3, ]) + 1,
       to = as.numeric(modified_peptides[[i]][3, ])
     )
+    }
   }
+  return(modified_sequence)
 }
-peptides$modified_sequence <- modified_sequence
+
+peptides$modified_sequence <- modify_sequence(peptides$modifications)
+ions$modified_sequence <- modify_sequence(ions$modifications)
+
 
 stand_peps <- data.frame(
   "modified_peptide" = peptides$modified_sequence, protein_group = peptides$samesets_accessions,
@@ -83,6 +96,11 @@ stand_peps <- stand_peps[order(rowMeans(peptides[, grep("^abundance", colnames(p
 stand_peps <- stand_peps[!duplicated(stand_peps$modified_peptide), ]
 stand_peps <- stand_peps[order(stand_peps$protein_group), ]
 write.csv(stand_peps, "stand_pep_quant_merged.csv", row.names = F)
+
+# Still needs more adjustments of colnames, ...
+write.csv(ion, "stand_ions_quant_merged.csv", row.names = F)
+
+
 
 # Converting column names
 colnames(proteins) <- sub("^log\\.ratios\\.", "log_ratios_", colnames(proteins))
