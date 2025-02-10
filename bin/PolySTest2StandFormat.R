@@ -94,7 +94,7 @@ reduce_prot_accs <- function(accessions) {
         return(NA)
       }
       print(x)
-      if (stri_count_fixed(x, fixed = "\\|") != 2) {
+      if (stri_count_fixed(x, "\\|") != 2) {
         return(x)
       }
       return(unlist(strsplit(x, "\\|"))[2])
