@@ -21,7 +21,7 @@ process POLYSTEST {
   output:
   path "polystest_prot_res.csv", emit: polystest_prot
   path "polystest_pep_res.csv", emit: polystest_pep
-  path "polystest_ions_res.csv" emit: ions_quant
+  path "polystest_ions_res.csv", emit: ions_quant
   
   script:
   """
