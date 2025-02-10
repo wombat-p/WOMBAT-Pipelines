@@ -49,6 +49,7 @@ for (i in 1:nrow(exp_design)) {
 }
 colnames(peptides) <- sub("^log\\.ratios\\.", "log_fold_change_", colnames(peptides))
 for (s in unique(exp_design$exp_condition)) colnames(peptides) <- sub(paste0("^", s, "\\."), paste0("abundance_", s, "_"), colnames(peptides))
+for (s in unique(exp_design$exp_condition)) colnames(ions) <- sub(paste0("^", s, "\\."), paste0("abundance_", s, "_"), colnames(ions))
 colnames(peptides) <- sub("^FDR\\.PolySTest\\.", "differential_abundance_qvalue_", colnames(peptides))
 
 # Creating modified sequences
@@ -84,6 +85,28 @@ modify_sequence <- function(modifications, sequence) {
 peptides$modified_sequence <- modify_sequence(peptides$modifications, peptides$sequence)
 ions$modified_sequence <- modify_sequence(ions$modifications, ions$sequence)
 
+# Reduce protein accessions from long format (e.g. "sp|P12345|A1BG_HUMAN;sp|P12346|A1BG_HUMAN") to a string of only the accession numbers
+reduce_prot_accs <- function(accessions) {
+  tout <- sapply(accessions, function(y) {
+    tgroup <- strsplit(y, "; ")
+    tgroup <- lapply(tgroup, function(x) {
+      if (is.na(x)) {
+        return(NA)
+      }
+      if (sum(grepl("\\|", x)) != 2) {
+        return(x)
+      }
+      return(unlist(strsplit(x, "\\|")[2])
+    })
+    return(paste(tgroup, collapse = ","))
+  })
+
+  return(tout)
+}
+
+proteins$samesets_accessions <- reduce_prot_accs(proteins$samesets_accessions)
+peptides$samesets_accessions <- reduce_prot_accs(peptides$samesets_accessions)
+ions$samesets_accessions <- reduce_prot_accs(ions$samesets_accessions)
 
 stand_peps <- data.frame(
   "modified_peptide" = peptides$modified_sequence, protein_group = peptides$samesets_accessions,
@@ -91,6 +114,14 @@ stand_peps <- data.frame(
   2^peptides[, grep("^abundance", colnames(peptides)), drop = F],
   peptides[, grep("^log_ratios", colnames(peptides)), drop = F],
   peptides[, grep("^differential_abundance_qvalue", colnames(peptides)), drop = F]
+)
+
+stand_ions <- data.frame(
+  modified_peptide = ions$modified_sequence,
+  ions[, grep("^number_of_psms", colnames(ions)), drop = F], 
+  ions[, grep("^abundance", colnames(ions)), drop = F],
+  protein_group = ions$samesets_accessions,
+  charge = ions$master_quant_peptide_ion_charge
 )
 
 # deleting charge states with lower intensities to maintain max. 1 (modified) peptide sequence
