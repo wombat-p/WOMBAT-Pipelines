@@ -14,6 +14,7 @@ publishDir "${params.outdir}/msqrob", mode:'copy'
   input:
   path exp_design
   path rawfiles
+  path quant_ion_tab
   path quant_tab
   path quant_prot_tab
   path pep_file

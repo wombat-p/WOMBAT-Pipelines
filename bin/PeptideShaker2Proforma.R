@@ -2,55 +2,7 @@ library(matrixStats)
 library(stringi)
 
 # Reading files
-peptides <- read.csv("polystest_pep_res.csv")
-proteins <- read.csv("polystest_prot_res.csv")
-ions <- read.csv("polystest_ions_res.csv")
-exp_design <- read.csv("exp_design.txt", sep = "\t")
-exp_design[, 2] <- make.names(exp_design[, 2])
-
-if (is.null(exp_design$raw_file)) {
-  exp_design$raw_file <- exp_design$mzdb_file
-}
-
-exp_design$sample_name <- sub("\\.mzDB", "", sub("\\.\\/", "", exp_design$raw_file))
-colnames(exp_design)[1:2] <- c("raw_file", "exp_condition")
-# Create column for (biological) replicate number if not existing already
-if (is.null(exp_design$biorep)) {
-  exp_design$biorep <- 1
-  for (i in unique(exp_design$exp_condition)) {
-    ttt <- exp_design[exp_design$exp_condition == i, "biorep"]
-    exp_design[exp_design$exp_condition == i, "biorep"] <- 1:length(ttt)
-  }
-}
-
-write.table(exp_design, "exp_design.txt", sep = "\t", row.names = F)
-
-# Converting column names
-for (i in 1:nrow(exp_design)) {
-  colnames(peptides) <- sub(
-    paste0("^psm_count_", exp_design$sample_name[i], "$"),
-    paste("number_of_psms", exp_design$exp_condition[i], exp_design$biorep[i], sep = "_"),
-    colnames(peptides)
-  )
-}
-for (i in 1:nrow(exp_design)) {
-  colnames(ions) <- sub(
-    paste0("^psm_count_", exp_design$sample_name[i], "$"),
-    paste("number_of_psms", exp_design$exp_condition[i], exp_design$biorep[i], sep = "_"),
-    colnames(ions)
-  )
-}
-for (i in 1:nrow(exp_design)) {
-  colnames(proteins) <- sub(
-    paste0("^peptides_count_", exp_design$sample_name[i], "$"),
-    paste("number_of_peptides", exp_design$exp_condition[i], exp_design$biorep[i], sep = "_"),
-    colnames(proteins)
-  )
-}
-colnames(peptides) <- sub("^log\\.ratios\\.", "log_fold_change_", colnames(peptides))
-for (s in unique(exp_design$exp_condition)) colnames(peptides) <- sub(paste0("^", s, "\\."), paste0("abundance_", s, "_"), colnames(peptides))
-for (s in unique(exp_design$exp_condition)) colnames(ions) <- sub(paste0("^", s, "\\."), paste0("abundance_", s, "_"), colnames(ions))
-colnames(peptides) <- sub("^FDR\\.PolySTest\\.", "differential_abundance_qvalue_", colnames(peptides))
+ions <- read.csv("peptideshaker_out". sep="\t")
 
 # Creating modified sequences
 modify_sequence <- function(modifications, sequence) {

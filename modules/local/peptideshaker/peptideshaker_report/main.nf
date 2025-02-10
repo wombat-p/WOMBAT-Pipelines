@@ -28,6 +28,7 @@ publishDir "${params.outdir}/peptideshaker", mode:'copy'
         mv "wombat_Default_Peptide_Report.txt" "${pepshaker.baseName}_peptides.txt"
         mv "wombat_Default_Protein_Report.txt" "${pepshaker.baseName}_proteins.txt"
 
+
   """    
 
 }    
