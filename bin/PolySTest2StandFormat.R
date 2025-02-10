@@ -98,7 +98,7 @@ stand_peps <- stand_peps[order(stand_peps$protein_group), ]
 write.csv(stand_peps, "stand_pep_quant_merged.csv", row.names = F)
 
 # Still needs more adjustments of colnames, ...
-write.csv(ion, "stand_ions_quant_merged.csv", row.names = F)
+write.csv(ions, "stand_ions_quant_merged.csv", row.names = F)
 
 
 
