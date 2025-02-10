@@ -93,7 +93,8 @@ reduce_prot_accs <- function(accessions) {
       if (is.na(x)) {
         return(NA)
       }
-      if (sum(grepl("\\|", x)) != 2) {
+      print(x)
+      if (stri_count_fixed(x, fixed = "\\|") != 2) {
         return(x)
       }
       return(unlist(strsplit(x, "\\|"))[2])
