@@ -96,7 +96,7 @@ reduce_prot_accs <- function(accessions) {
       if (sum(grepl("\\|", x)) != 2) {
         return(x)
       }
-      return(unlist(strsplit(x, "\\|")[2])
+      return(unlist(strsplit(x, "\\|"))[2])
     })
     return(paste(tgroup, collapse = ","))
   })
@@ -118,7 +118,7 @@ stand_peps <- data.frame(
 
 stand_ions <- data.frame(
   modified_peptide = ions$modified_sequence,
-  ions[, grep("^number_of_psms", colnames(ions)), drop = F], 
+  ions[, grep("^number_of_psms", colnames(ions)), drop = F],
   ions[, grep("^abundance", colnames(ions)), drop = F],
   protein_group = ions$samesets_accessions,
   charge = ions$master_quant_peptide_ion_charge
