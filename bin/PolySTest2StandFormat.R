@@ -32,12 +32,15 @@ for (i in 1:nrow(exp_design)) {
     paste("number_of_psms", exp_design$exp_condition[i], exp_design$biorep[i], sep = "_"),
     colnames(peptides)
   )
+}
 for (i in 1:nrow(exp_design)) {
   colnames(ions) <- sub(
     paste0("^psm_count_", exp_design$sample_name[i], "$"),
     paste("number_of_psms", exp_design$exp_condition[i], exp_design$biorep[i], sep = "_"),
     colnames(ions)
   )
+}
+for (i in 1:nrow(exp_design)) {
   colnames(proteins) <- sub(
     paste0("^peptides_count_", exp_design$sample_name[i], "$"),
     paste("number_of_peptides", exp_design$exp_condition[i], exp_design$biorep[i], sep = "_"),
@@ -50,37 +53,36 @@ colnames(peptides) <- sub("^FDR\\.PolySTest\\.", "differential_abundance_qvalue_
 
 # Creating modified sequences
 modify_sequence <- function(modifications, sequence) {
-
-modified_peptides <- strsplit(as.character(modifications), "; ")
-modified_peptides <- lapply(modified_peptides, function(x) {
-  if (any(!is.na(x))) {
-    tt <- matrix(unlist(strsplit(x, " \\(")), nrow = 2)
-    tt[2, ] <- sub("\\)", "", tt[2, ])
-    modpos <- NULL
-    for (i in 1:ncol(tt)) {
-      modpos <- append(modpos, ifelse(grepl("N-term|C-term", tt[2, i]), 0, sub("[A-Z]", "", tt[2, i])))
+  modified_peptides <- strsplit(as.character(modifications), "; ")
+  modified_peptides <- lapply(modified_peptides, function(x) {
+    if (any(!is.na(x))) {
+      tt <- matrix(unlist(strsplit(x, " \\(")), nrow = 2)
+      tt[2, ] <- sub("\\)", "", tt[2, ])
+      modpos <- NULL
+      for (i in 1:ncol(tt)) {
+        modpos <- append(modpos, ifelse(grepl("N-term|C-term", tt[2, i]), 0, sub("[A-Z]", "", tt[2, i])))
+      }
+      tt <- rbind(tt, modpos)
+    } else {
+      NA
     }
-    tt <- rbind(tt, modpos)
-  } else {
-    NA
-  }
-})
+  })
 
   modified_sequence <- sequence
   for (i in 1:length(modifications)) {
     if (!is.na(modifications[i])) {
-    modified_sequence[i] <- stri_sub_replace_all(modified_sequence[i],
-      replacement = paste0("[", modified_peptides[[i]][1, ], "]"),
-      from = as.numeric(modified_peptides[[i]][3, ]) + 1,
-      to = as.numeric(modified_peptides[[i]][3, ])
-    )
+      modified_sequence[i] <- stri_sub_replace_all(modified_sequence[i],
+        replacement = paste0("[", modified_peptides[[i]][1, ], "]"),
+        from = as.numeric(modified_peptides[[i]][3, ]) + 1,
+        to = as.numeric(modified_peptides[[i]][3, ])
+      )
     }
   }
   return(modified_sequence)
 }
 
-peptides$modified_sequence <- modify_sequence(peptides$modifications)
-ions$modified_sequence <- modify_sequence(ions$modifications)
+peptides$modified_sequence <- modify_sequence(peptides$modifications, peptides$sequence)
+ions$modified_sequence <- modify_sequence(ions$modifications, ions$sequence)
 
 
 stand_peps <- data.frame(
@@ -99,7 +101,6 @@ write.csv(stand_peps, "stand_pep_quant_merged.csv", row.names = F)
 
 # Still needs more adjustments of colnames, ...
 write.csv(ions, "stand_ions_quant_merged.csv", row.names = F)
-
 
 
 # Converting column names
