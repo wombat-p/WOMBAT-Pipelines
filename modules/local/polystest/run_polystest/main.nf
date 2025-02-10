@@ -33,7 +33,7 @@ process POLYSTEST {
   
   #echo \$convertProline
   #Rscript \${convertProline}/convertFromProline.R ${exp_design} ${proline_res}
-  Rscript bin/convertFromProline.R ${exp_design} ${proline_res}
+  Rscript $baseDir/bin/convertFromProline.R ${exp_design} ${proline_res}
   
   sed -i "s/threads: 2/threads: ${task.cpus}/g" pep_param.yml
   sed -i "s/threads: 2/threads: ${task.cpus}/g" prot_param.yml
