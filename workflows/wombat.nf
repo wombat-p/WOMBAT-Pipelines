@@ -132,7 +132,7 @@ workflow WOMBAT {
     //
     // MODULE: calculate benchmarks
     //
-    CALCBENCHMARKS_PROLINE ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), PROLINE.out[0], PROLINE.out[1], PROLINE.out[2], ch_fasta, Channel.value("proline") )
+    CALCBENCHMARKS_PROLINE ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), PROLINE.out[0], PROLINE.out[2], PROLINE.out[3], ch_fasta, Channel.value("proline") )
 
     }
 
@@ -146,7 +146,7 @@ workflow WOMBAT {
     //
     // MODULE: calculate benchmarks
     //
-    CALCBENCHMARKS_COMPOMICS ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), COMPOMICS.out[0], COMPOMICS.out[2], COMPOMICS.out[3], ch_fasta, Channel.value("compomics") )
+    CALCBENCHMARKS_COMPOMICS ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), COMPOMICS.out[0], COMPOMICS.out[1], COMPOMICS.out[2], ch_fasta, Channel.value("compomics") )
 
     }
 
