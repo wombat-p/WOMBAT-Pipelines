@@ -90,6 +90,7 @@ reduce_prot_accs <- function(accessions) {
   tout <- sapply(accessions, function(y) {
     tgroup <- strsplit(y, "; ")
     tgroup <- lapply(tgroup, function(x) {
+      print(x)
       if (is.na(x)) {
         return(NA)
       }
