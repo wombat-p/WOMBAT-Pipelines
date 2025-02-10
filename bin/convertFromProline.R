@@ -111,7 +111,7 @@ for (rep in 1:NumReps) {
     colnames(proteins)[ncol(proteins)] <- paste(cond, rep)
   }
 }
-write.csv(proteins, "proteins.csv", row.names = FALSE)
+write.csv(proteins, "proteins_proline.csv", row.names = FALSE)
 
 ## Write parameter values for PolySTest, assuming unpaired design
 params <- paste0(
