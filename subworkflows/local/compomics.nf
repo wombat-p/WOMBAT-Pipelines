@@ -33,10 +33,10 @@ workflow COMPOMICS {
     RUN_SEARCHGUI ( RAW2MZML.out, PREPARE_SEARCHGUI.out,  CREATE_DECOY_DATABASE.out.ifEmpty(fasta) )
     RUN_PEPTIDESHAKER ( RUN_SEARCHGUI.out,  CREATE_DECOY_DATABASE.out.ifEmpty(fasta) )
     PEPTIDESHAKER_REPORT ( RUN_PEPTIDESHAKER.out )
-    CONVERT_PROFORMA ( PEPTIDESHAKER_REPORT.out.peptideshaker_tsv_file_filtered )
-    FLASHLFQ ( CONVERT_PROFORMA.out.peptideshaker_proforma_file_filtered.collect(), RAW2MZML.out.collect(), parameters, exp_design )
+    CONVERT_PROFORMA ( PEPTIDESHAKER_REPORT.out.peptideshaker_peptide_file, PEPTIDESHAKER_REPORT.out.peptideshaker_protein_file, PEPTIDESHAKER_REPORT.out.peptideshaker_tsv_file_filtered )
+    FLASHLFQ ( CONVERT_PROFORMA.out.peptideshaker_proforma_filtered.collect(), RAW2MZML.out.collect(), parameters, exp_design )
     MSQROB ( exp_design, raws.collect(), FLASHLFQ.out.flashlfq_peptides, FLASHLFQ.out.flashlfq_proteins, 
-             PEPTIDESHAKER_REPORT.out.peptideshaker_peptide_file.collect(), PEPTIDESHAKER_REPORT.out.peptideshaker_protein_file.collect() , parameters)
+             CONVERT_PROFORMA.out.peptideshaker_proforma_peptides.collect(), CONVERT_PROFORMA.out.peptideshaker_proforma_proteins.collect() , parameters)
 
     emit:
     MSQROB.out.exp_design_final
