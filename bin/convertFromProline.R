@@ -88,7 +88,7 @@ write.csv(peptides, "peptides_proline.csv", row.names = F)
 ## Write parameter values for PolySTest, assuming unpaired design
 params <- paste0(
   "numreps: ", NumReps, "\nnumcond: ", NumCond, "\npaired: false\nrefcond: 0\nfirstquantcol: ", ColQuant,
-  "\nrep_grouped: true\ncsvfile: peptides.csv\ndelim: ','\ndecimal: '.'\nheader: true\noutfile: 'polystest_pep_res.csv'\nthreads: 2\n"
+  "\nrep_grouped: true\ncsvfile: peptides_proline.csv\ndelim: ','\ndecimal: '.'\nheader: true\noutfile: 'polystest_pep_res.csv'\nthreads: 2\n"
 )
 writeLines(params, "pep_param.yml")
 cat(paste0("Files pep_param.yml , peptide_ions_proline.csv and peptides_proline.txt written\n"))
@@ -116,7 +116,7 @@ write.csv(proteins, "proteins.csv", row.names = FALSE)
 ## Write parameter values for PolySTest, assuming unpaired design
 params <- paste0(
   "numreps: ", NumReps, "\nnumcond: ", NumCond, "\npaired: false\nrefcond: 0\nfirstquantcol: ", ColQuant,
-  "\nrep_grouped: true\ncsvfile: proteins.csv\ndelim: ','\ndecimal: '.'\nheader: true\noutfile: 'polystest_prot_res.csv'\nthreads: 2\n"
+  "\nrep_grouped: true\ncsvfile: proteins_proline.csv\ndelim: ','\ndecimal: '.'\nheader: true\noutfile: 'polystest_prot_res.csv'\nthreads: 2\n"
 )
 writeLines(params, "prot_param.yml")
 cat(paste0("Files prot_param.yml and proteins_proline.txt written\n"))
