@@ -11,13 +11,15 @@ if (workflow.containerEngine == 'singularity'|| workflow.containerEngine == 'app
   publishDir "${params.outdir}/polystest", mode:'copy'
   
   input:
-  path exp_design 
+  path exp_design
+  path ions_quant
   path pep_quant 
   path prot_quant
   
   output:
   path "stand_prot_quant_merged.csv", emit: stdprotquant
   path "stand_pep_quant_merged.csv", emit: stdpepquant
+  path "stand_ions_quant_merged.csv", emit: stdionsquant
   path "exp_design.txt", emit: exp_design
   
   when:
@@ -26,7 +28,7 @@ if (workflow.containerEngine == 'singularity'|| workflow.containerEngine == 'app
   script:
  """
   cp "${exp_design}" exp_design.txt
-  Rscript $baseDir/bin/Convert2StandFormat.R
+  Rscript $baseDir/bin/PolySTest2StandFormat.R
   """
 
 
