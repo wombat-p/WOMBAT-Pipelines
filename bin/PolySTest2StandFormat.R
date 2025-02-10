@@ -88,9 +88,8 @@ ions$modified_sequence <- modify_sequence(ions$modifications, ions$sequence)
 # Reduce protein accessions from long format (e.g. "sp|P12345|A1BG_HUMAN;sp|P12346|A1BG_HUMAN") to a string of only the accession numbers
 reduce_prot_accs <- function(accessions) {
   tout <- sapply(accessions, function(y) {
-    tgroup <- strsplit(y, "; ")
+    tgroup <- unlist(strsplit(y, "; "))
     tgroup <- lapply(tgroup, function(x) {
-      print(x)
       if (is.na(x)) {
         return(NA)
       }
