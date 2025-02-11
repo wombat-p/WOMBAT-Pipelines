@@ -32,6 +32,7 @@ modify_sequence <- function(fmods, vmods, sequence) {
         # Remove from x
         x <- gsub("\\(.*?\\)", "", x)
         # Split by " of "
+        print(x)
         x <- ptmmapping[x]
         # print(x)o
         c(x, modpos)
