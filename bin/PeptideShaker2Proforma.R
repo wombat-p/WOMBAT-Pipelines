@@ -12,8 +12,7 @@ ptmmapping <- ptmmapping[, c("unimod_title", "searchgui_name")]
 ptmmapping <- ptmmapping[!duplicated(ptmmapping$searchgui_name), ]
 ptmmapping <- ptmmapping[!is.na(ptmmapping$searchgui_name), ]
 rownames(ptmmapping) <- ptmmapping$searchgui_name
-ptmmapping <- ptmmapping$unimod_title
-print(head(ptmmapping))
+ptmmapping <- ptmmapping[, "unimod_title"]
 
 
 # Creating modified sequences
