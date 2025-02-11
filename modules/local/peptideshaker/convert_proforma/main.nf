@@ -16,7 +16,6 @@ import groovy.json.JsonOutput
    path peptideshaker_peptides_out
    path peptideshaker_proteins_out
    path peptideshaker_filtered_out
-   path ptm_mapping
    
   output:
    path "psm_proforma.txt"    , emit: peptideshaker_proforma_filtered
@@ -25,6 +24,7 @@ import groovy.json.JsonOutput
   
   script:
   """
+  cp $baseDir/assets/unimod2searchgui_mapping.tsv" ptm_mapping.txt
   cp "${peptideshaker_filtered_out}" peptideshaker_filtered_out.txt
   cp "${peptideshaker_peptides_out}" peptideshaker_peptides_out.txt
   cp "${peptideshaker_proteins_out}" peptideshaker_proteins_out.txt

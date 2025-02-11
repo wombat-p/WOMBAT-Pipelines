@@ -5,6 +5,7 @@ library(stringi)
 ions <- read.delim("peptideshaker_filtered_out.txt", sep = "\t", check.names = F)
 peptides <- read.delim("peptideshaker_peptides_out.txt", sep = "\t", check.names = F)
 proteins <- read.delim("peptideshaker_proteins_out.txt", sep = "\t", check.names = F)
+ptmmapping <- read.delim("ptm_mapping.txt", sep = "\t", check.names = F)
 
 
 # Creating modified sequences
