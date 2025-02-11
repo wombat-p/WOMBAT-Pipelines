@@ -76,5 +76,5 @@ reduce_prot_accs <- function(accessions) {
   return(tout)
 }
 
-write.csv(peptides, "peptides_proforma.txt", row.names = F, sep = "\t")
-write.csv(ions, "psms_proforma.txt", row.names = F, sep = "\t")
+write.table(peptides, "peptides_proforma.txt", row.names = F, sep = "\t")
+write.table(ions, "psms_proforma.txt", row.names = F, sep = "\t")
