@@ -2,9 +2,9 @@ library(matrixStats)
 library(stringi)
 
 # Reading files
-ions <- read.csv("peptideshaker_filtered_out.txt", sep = "\t")
-peptides <- read.csv("peptideshaker_peptides_out.txt", sep = "\t")
-proteins <- read.csv("peptideshaker_proteins_out.txt", sep = "\t")
+ions <- read.delim("peptideshaker_filtered_out.txt", sep = "\t", check.names = F)
+peptides <- read.delim("peptideshaker_peptides_out.txt", sep = "\t", check.names = F)
+proteins <- read.delim("peptideshaker_proteins_out.txt", sep = "\t", check.names = F)
 
 print(names(peptides))
 
