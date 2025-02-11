@@ -11,9 +11,18 @@ print(names(proteins))
 
 # Creating modified sequences
 modify_sequence <- function(modifications, sequence) {
-  modified_peptides <- strsplit(as.character(modifications), "; ")
+  modified_peptides <- strsplit(as.character(modifications), ";")
   modified_peptides <- lapply(modified_peptides, function(x) {
     if (any(!is.na(x))) {
+      # Extract string in parentheses
+      modpos <- gregexpr("\\((.*?)\\)", x)
+      print(modpos)
+      # Remove from x
+      x <- gsub("\\(.*?\\)", "", x)
+      # Split by " of "
+      x <- strsplit(x, " of ")[1]
+      print(x)
+
       tt <- matrix(unlist(strsplit(x, " \\(")), nrow = 2)
       tt[2, ] <- sub("\\)", "", tt[2, ])
       modpos <- NULL
@@ -39,8 +48,8 @@ modify_sequence <- function(modifications, sequence) {
   return(modified_sequence)
 }
 
-peptides$modified_sequence <- modify_sequence(peptides$modifications, peptides$sequence)
-ions$modified_sequence <- modify_sequence(ions$modifications, ions$sequence)
+peptides$modified_sequence <- modify_sequence(peptides$Variable.Modifications, peptides$Fixed.Modifications, peptides$Sequence)
+ions$modified_sequence <- modify_sequence(ions$modifications, ions$Sequence)
 
 # Reduce protein accessions from long format (e.g. "sp|P12345|A1BG_HUMAN;sp|P12346|A1BG_HUMAN") to a string of only the accession numbers
 reduce_prot_accs <- function(accessions) {
