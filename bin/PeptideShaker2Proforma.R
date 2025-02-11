@@ -7,7 +7,9 @@ peptides <- read.delim("peptideshaker_peptides_out.txt", sep = "\t", check.names
 proteins <- read.delim("peptideshaker_proteins_out.txt", sep = "\t", check.names = F)
 ptmmapping <- read.delim("ptm_mapping.txt", sep = "\t", check.names = F)
 
-ptmmapping <- unique(ptmmapping[, c("unimod_title", "searchgui_name")])
+ptmmapping <- ptmmapping[, c("unimod_title", "searchgui_name")]
+# Take only the first entry for each searchgui_name
+ptmmapping <- ptmmapping[!duplicated(ptmmapping$searchgui_name), ]
 rownames(ptmmapping) <- ptmmapping$searchgui_name
 ptmmapping <- ptmmapping$unimod_title
 
