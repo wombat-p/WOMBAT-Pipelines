@@ -6,7 +6,6 @@ ions <- read.delim("peptideshaker_filtered_out.txt", sep = "\t", check.names = F
 peptides <- read.delim("peptideshaker_peptides_out.txt", sep = "\t", check.names = F)
 proteins <- read.delim("peptideshaker_proteins_out.txt", sep = "\t", check.names = F)
 
-print(names(peptides))
 
 # Creating modified sequences
 modify_sequence <- function(fmods, vmods, sequence) {
@@ -76,5 +75,6 @@ reduce_prot_accs <- function(accessions) {
   return(tout)
 }
 
-write.table(peptides, "peptides_proforma.txt", row.names = F, sep = "\t")
-write.table(ions, "psms_proforma.txt", row.names = F, sep = "\t")
+write.table(peptides, "peptides_proforma.txt", row.names = F, sep = "\t", quote = "")
+write.table(ions, "psms_proforma.txt", row.names = F, sep = "\t", quote = "")
+write.table(proteins, "proteins_proforma.txt", row.names = F, sep = "\t", quote = "")
