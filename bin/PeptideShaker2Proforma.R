@@ -15,6 +15,8 @@ modify_sequence <- function(fmods, vmods, sequence) {
     if (any(!is.na(x))) {
       # Extract string in parentheses
       modpos <- gregexpr("\\((.*?)\\)", x)
+      regmatches(x, modpos)
+      print(modpos)
       modspos <- unlist(strsplit(modpos, ","))
       print(modpos)
       # Remove from x
