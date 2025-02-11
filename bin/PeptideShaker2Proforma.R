@@ -9,8 +9,8 @@ proteins <- read.csv("peptideshaker_proteins_out.txt", sep = "\t")
 print(names(peptides))
 
 # Creating modified sequences
-modify_sequence <- function(modifications, sequence) {
-  modified_peptides <- strsplit(as.character(modifications), ";")
+modify_sequence <- function(fmods, vmods, sequence) {
+  modified_peptides <- c(strsplit(as.character(fmods), ";"), strsplit(as.character(vmods), ";"))
   modified_peptides <- lapply(modified_peptides, function(x) {
     if (any(!is.na(x))) {
       # Extract string in parentheses
