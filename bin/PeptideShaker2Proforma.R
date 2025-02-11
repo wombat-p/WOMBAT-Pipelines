@@ -10,27 +10,28 @@ print(names(peptides))
 
 # Creating modified sequences
 modify_sequence <- function(fmods, vmods, sequence) {
-  modified_peptides <- c(strsplit(as.character(fmods), ";"), strsplit(as.character(vmods), ";"))
-  modified_peptides <- lapply(modified_peptides, function(x) {
-    if (any(!is.na(x))) {
-      print(x)
-      # Extract string in parentheses
-      modpos <- gregexpr("\\((.*?)\\)", x)
-      modpos <- regmatches(x, modpos)
-      modpos <- gsub("[()]", "", modpos) # Remove parentheses
+  modified_peptides <- lapply(paste0(fmods, ";", vmods), strsplit, ";")
+  modified_peptides <- lapply(modified_peptides, function(y) {
+    mm <- lapply(y, function(x) {
+      if (any(!is.na(x))) {
+        # Extract string in parentheses
+        modpos <- gregexpr("\\((.*?)\\)", x)
+        modpos <- regmatches(x, modpos)
+        modpos <- gsub("[()]", "", modpos) # Remove parentheses
 
-      modpos <- unlist(strsplit(modpos, ","))[[1]]
-      # Remove from x
-      x <- gsub("\\(.*?\\)", "", x)
-      # Split by " of "
-      x <- strsplit(x, " of ")[[1]][1]
-      print(c(x, modpos))
-      c(x, modpos)
-    } else {
-      NA
-    }
+        modpos <- unlist(strsplit(modpos, ","))[[1]]
+        # Remove from x
+        x <- gsub("\\(.*?\\)", "", x)
+        # Split by " of "
+        x <- strsplit(x, " of ")[[1]][1]
+        print(c(x, modpos))
+        c(x, modpos)
+      } else {
+        NA
+      }
+    })
+    return(mm)
   })
-  print(head(modified_peptides))
 
   modified_sequence <- sequence
   for (i in 1:length(modifications)) {
