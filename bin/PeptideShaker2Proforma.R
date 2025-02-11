@@ -10,6 +10,7 @@ print(names(peptides))
 
 # Creating modified sequences
 modify_sequence <- function(fmods, vmods, sequence) {
+  print(paste0(fmods, ";", vmods))
   modified_peptides <- lapply(paste0(fmods, ";", vmods), strsplit, ";")
   modified_peptides <- lapply(modified_peptides, function(y) {
     mm <- lapply(y, function(x) {
