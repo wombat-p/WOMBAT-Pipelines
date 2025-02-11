@@ -3,8 +3,8 @@ library(stringi)
 
 # Reading files
 ions <- read.csv("peptideshaker_filtered_out", sep = "\t")
-peptides <- read.csv("peptideshaker_peptides_filtered_out", sep = "\t")
-proteins <- read.csv("peptideshaker_proteins_filtered_out", sep = "\t")
+peptides <- read.csv("peptideshaker_peptides_out", sep = "\t")
+proteins <- read.csv("peptideshaker_proteins_out", sep = "\t")
 
 print(names(ions))
 print(names(proteins))
