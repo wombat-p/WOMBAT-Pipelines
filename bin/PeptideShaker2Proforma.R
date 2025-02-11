@@ -54,8 +54,8 @@ modify_sequence <- function(fmods, vmods, sequence) {
   return(modified_sequence)
 }
 
-peptides$Modified.Sequence <- modify_sequence(peptides$Variable.Modifications, peptides$Fixed.Modifications, peptides$Sequence)
-ions$Modified.Sequence <- modify_sequence(ions$Variable.Modifications, ions$Fixed.Modifications, ions$Sequence)
+peptides$"Modified Sequence" <- modify_sequence(peptides$"Variable Modifications", peptides$"Fixed Modifications", peptides$Sequence)
+ions$"Modified Sequence" <- modify_sequence(ions$"Variable Modifications", ions$"Fixed Modifications", ions$Sequence)
 
 # Not needed: Reduce protein accessions from long format (e.g. "sp|P12345|A1BG_HUMAN;sp|P12346|A1BG_HUMAN") to a string of only the accession numbers
 reduce_prot_accs <- function(accessions) {
