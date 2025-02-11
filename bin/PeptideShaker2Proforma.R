@@ -5,14 +5,14 @@ library(stringi)
 ions <- read.delim("peptideshaker_filtered_out.txt", sep = "\t", check.names = F)
 peptides <- read.delim("peptideshaker_peptides_out.txt", sep = "\t", check.names = F)
 proteins <- read.delim("peptideshaker_proteins_out.txt", sep = "\t", check.names = F)
-ptmmapping <- read.delim("ptm_mapping.txt", sep = "\t", check.names = F)
+ptmmaptable <- read.delim("ptm_mapping.txt", sep = "\t", check.names = F)
 
-ptmmapping <- ptmmapping[, c("unimod_title", "searchgui_name")]
+ptmmaptable <- ptmmaptable[, c("unimod_title", "searchgui_name")]
 # Take only the first entry for each searchgui_name
-ptmmapping <- ptmmapping[!duplicated(ptmmapping$searchgui_name), ]
-ptmmapping <- ptmmapping[!is.na(ptmmapping$searchgui_name), ]
-rownames(ptmmapping) <- ptmmapping$searchgui_name
-ptmmapping <- ptmmapping[, "unimod_title"]
+ptmmaptable <- ptmmaptable[!duplicated(ptmmaptable$searchgui_name), ]
+ptmmaptable <- ptmmaptable[!is.na(ptmmaptable$searchgui_name), ]
+ptmmapping <- ptmmaptable[, "unimod_title"]
+names(ptmmapping) <- ptmmaptable$searchgui_name
 
 
 # Creating modified sequences
