@@ -18,8 +18,8 @@ import groovy.json.JsonOutput
    path peptideshaker_filtered_out
    
   output:
-   path "psm_proforma.txt"    , emit: peptideshaker_proforma_filtered
-   path "pep_proforma.txt"    , emit: peptideshaker_proforma_peptides
+   path "psms_proforma.txt"    , emit: peptideshaker_proforma_filtered
+   path "peptides_proforma.txt"    , emit: peptideshaker_proforma_peptides
    path "proteins_proforma.txt"    , emit: peptideshaker_proforma_proteins
   
   script:
