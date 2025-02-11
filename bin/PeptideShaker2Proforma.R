@@ -13,6 +13,7 @@ modify_sequence <- function(fmods, vmods, sequence) {
   modified_peptides <- c(strsplit(as.character(fmods), ";"), strsplit(as.character(vmods), ";"))
   modified_peptides <- lapply(modified_peptides, function(x) {
     if (any(!is.na(x))) {
+      print(x)
       # Extract string in parentheses
       modpos <- gregexpr("\\((.*?)\\)", x)
       modpos <- regmatches(x, modpos)
