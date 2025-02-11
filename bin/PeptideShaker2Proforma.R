@@ -7,7 +7,9 @@ peptides <- read.delim("peptideshaker_peptides_out.txt", sep = "\t", check.names
 proteins <- read.delim("peptideshaker_proteins_out.txt", sep = "\t", check.names = F)
 ptmmapping <- read.delim("ptm_mapping.txt", sep = "\t", check.names = F)
 
-print(head(ptmmaspping))
+ptmmapping <- unique(ptmmapping[, c("unimod_title", "searchgui_name")])
+rownames(ptmmapping) <- ptmmapping$searchgui_name
+ptmmapping <- ptmmapping$unimod_title
 
 
 # Creating modified sequences
@@ -25,7 +27,8 @@ modify_sequence <- function(fmods, vmods, sequence) {
         # Remove from x
         x <- gsub("\\(.*?\\)", "", x)
         # Split by " of "
-        x <- strsplit(x, " of ")[[1]][1]
+        x <- ptmmapping[x]
+        print(x)
         c(x, modpos)
       } else {
         NA
