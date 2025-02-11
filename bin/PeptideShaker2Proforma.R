@@ -16,6 +16,8 @@ modify_sequence <- function(fmods, vmods, sequence) {
       # Extract string in parentheses
       modpos <- gregexpr("\\((.*?)\\)", x)
       modpos <- regmatches(x, modpos)
+      modpos <- gsub("[()]", "", modpos) # Remove parentheses
+
       print(modpos)
       modspos <- unlist(strsplit(modpos, ","))
       print(modpos)
