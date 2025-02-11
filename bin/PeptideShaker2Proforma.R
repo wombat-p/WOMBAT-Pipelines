@@ -29,21 +29,28 @@ modify_sequence <- function(fmods, vmods, sequence) {
         NA
       }
     })
+    mods <- NULL
+    for (i in 1:length(mm)) {
+      if (!is.na(mm[[i]][1])) {
+        mods <- rbind(mods, mm[[i]])
+      }
+    }
     return(mm)
   })
 
-  print(modified_peptides)
 
   modified_sequence <- sequence
-  for (i in 1:length(modifications)) {
-    if (!is.na(modifications[i])) {
-      modified_sequence[i] <- stri_sub_replace_all(modified_sequence[i],
-        replacement = paste0("[", modified_peptides[[i]][1, ], "]"),
-        from = as.numeric(modified_peptides[[i]][3, ]) + 1,
-        to = as.numeric(modified_peptides[[i]][3, ])
+  for (i in 1:length(modified_peptides)) {
+    x <- modified_peptides[[i]]
+    if (!is.null(x)) {
+      modified_sequence <- stri_sub_replace_all(modified_sequence,
+        replacement = paste0("[", x[1], "]"),
+        from = as.numeric(x[2]) + 1,
+        to = as.numeric(x[2])
       )
     }
   }
+
   return(modified_sequence)
 }
 
