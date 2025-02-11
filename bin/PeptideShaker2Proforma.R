@@ -2,7 +2,12 @@ library(matrixStats)
 library(stringi)
 
 # Reading files
-ions <- read.csv("peptideshaker_out". sep="\t")
+ions <- read.csv("peptideshaker_filtered_out". sep="\t")
+peptides <- read.csv("peptideshaker_peptides_filtered_out". sep="\t")
+proteins <- read.csv("peptideshaker_proteins_filtered_out". sep="\t")
+
+print(names(ions))
+print(names(proteins))
 
 # Creating modified sequences
 modify_sequence <- function(modifications, sequence) {
