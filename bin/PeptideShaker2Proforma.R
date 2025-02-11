@@ -18,16 +18,12 @@ modify_sequence <- function(fmods, vmods, sequence) {
       modpos <- regmatches(x, modpos)
       modpos <- gsub("[()]", "", modpos) # Remove parentheses
 
-      print(modpos)
-      modspos <- unlist(strsplit(modpos, ","))
-      print(modpos)
+      modpos <- unlist(strsplit(modpos, ","))[[1]]
       # Remove from x
       x <- gsub("\\(.*?\\)", "", x)
       # Split by " of "
-      print(x)
       x <- strsplit(x, " of ")[[1]][1]
-      print(x)
-
+      print(c, modpos)
       c(x, modpos)
     } else {
       NA
