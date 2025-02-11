@@ -23,7 +23,7 @@ modify_sequence <- function(fmods, vmods, sequence) {
       x <- gsub("\\(.*?\\)", "", x)
       # Split by " of "
       x <- strsplit(x, " of ")[[1]][1]
-      print(c, modpos)
+      print(c(x, modpos))
       c(x, modpos)
     } else {
       NA
