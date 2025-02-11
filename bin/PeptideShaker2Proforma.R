@@ -35,14 +35,13 @@ modify_sequence <- function(fmods, vmods, sequence) {
         mods <- rbind(mods, mm[[i]])
       }
     }
-    return(mm)
+    return(mods)
   })
 
 
   modified_sequence <- sequence
   for (i in 1:length(modified_peptides)) {
     x <- unlist(modified_peptides[[i]])
-    print(x)
     if (!is.null(x)) {
       modified_sequence[i] <- stri_sub_replace_all(modified_sequence[i],
         replacement = paste0("[", x[1], "]"),
@@ -50,13 +49,13 @@ modify_sequence <- function(fmods, vmods, sequence) {
         to = as.numeric(x[2])
       )
     }
-    print(modified_sequence[i])
   }
 
   return(modified_sequence)
 }
 
 peptides$modified_sequence <- modify_sequence(peptides$Variable.Modifications, peptides$Fixed.Modifications, peptides$Sequence)
+print(cbind(peptides$modified_sequence, peptides$Variable.Modifications, peptides$Fixed.Modifications, peptides$Sequence))
 exit()
 ions$modified_sequence <- modify_sequence(ions$Variable.Modifications, ions$Fixed.Modifications, ions$Sequence)
 
