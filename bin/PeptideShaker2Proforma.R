@@ -8,11 +8,13 @@ proteins <- read.delim("peptideshaker_proteins_out.txt", sep = "\t", check.names
 ptmmaptable <- read.delim("ptm_mapping.txt", sep = "\t", check.names = F)
 
 ptmmaptable <- ptmmaptable[, c("unimod_title", "searchgui_name")]
+print(head(ptmmaptable))
 # Take only the first entry for each searchgui_name
 ptmmaptable <- ptmmaptable[!duplicated(ptmmaptable$searchgui_name), ]
 ptmmaptable <- ptmmaptable[!is.na(ptmmaptable$searchgui_name), ]
 ptmmapping <- ptmmaptable[, "unimod_title"]
 names(ptmmapping) <- ptmmaptable$searchgui_name
+print(head(ptmmapping))
 
 
 # Creating modified sequences
@@ -31,7 +33,7 @@ modify_sequence <- function(fmods, vmods, sequence) {
         x <- gsub("\\(.*?\\)", "", x)
         # Split by " of "
         x <- ptmmapping[x]
-        print(x)
+        # print(x)o
         c(x, modpos)
       } else {
         NA
