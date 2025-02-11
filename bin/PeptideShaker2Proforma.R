@@ -42,7 +42,7 @@ modify_sequence <- function(fmods, vmods, sequence) {
   modified_sequence <- sequence
   for (i in 1:length(modified_peptides)) {
     x <- modified_peptides[[i]]
-    print(x)
+    print(as.numeric(x[2]))
     if (!is.null(x)) {
       modified_sequence[i] <- stri_sub_replace_all(modified_sequence[i],
         replacement = paste0("[", x[1], "]"),
