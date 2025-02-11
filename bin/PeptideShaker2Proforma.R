@@ -6,8 +6,7 @@ ions <- read.csv("peptideshaker_filtered_out.txt", sep = "\t")
 peptides <- read.csv("peptideshaker_peptides_out.txt", sep = "\t")
 proteins <- read.csv("peptideshaker_proteins_out.txt", sep = "\t")
 
-print(names(ions))
-print(names(proteins))
+print(names(peptides))
 
 # Creating modified sequences
 modify_sequence <- function(modifications, sequence) {
