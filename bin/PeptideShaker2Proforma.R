@@ -10,8 +10,7 @@ print(names(peptides))
 
 # Creating modified sequences
 modify_sequence <- function(fmods, vmods, sequence) {
-  print(lapply(paste0(fmods, ";", vmods), strsplit, ";"))
-  modified_peptides <- lapply(paste0(fmods, ";", vmods), strsplit, ";")
+  modified_peptides <- lapply(paste0(fmods, ";", vmods), function(x) strsplit(x, ";")[[1]])
   modified_peptides <- lapply(modified_peptides, function(y) {
     mm <- lapply(y, function(x) {
       if (any(!is.na(x))) {
