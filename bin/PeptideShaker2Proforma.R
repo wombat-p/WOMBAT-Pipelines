@@ -12,7 +12,6 @@ print(names(peptides))
 modify_sequence <- function(fmods, vmods, sequence) {
   modified_peptides <- lapply(paste0(fmods, ";", vmods), function(x) strsplit(x, ";")[[1]])
   modified_peptides <- lapply(modified_peptides, function(y) {
-    print(y)
     mm <- lapply(y, function(x) {
       if (any(!is.na(x))) {
         # Extract string in parentheses
@@ -25,7 +24,6 @@ modify_sequence <- function(fmods, vmods, sequence) {
         x <- gsub("\\(.*?\\)", "", x)
         # Split by " of "
         x <- strsplit(x, " of ")[[1]][1]
-        print(c(x, modpos))
         c(x, modpos)
       } else {
         NA
@@ -33,6 +31,8 @@ modify_sequence <- function(fmods, vmods, sequence) {
     })
     return(mm)
   })
+
+  print(modified_peptides)
 
   modified_sequence <- sequence
   for (i in 1:length(modifications)) {
