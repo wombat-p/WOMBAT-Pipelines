@@ -10,6 +10,7 @@ ptmmapping <- read.delim("ptm_mapping.txt", sep = "\t", check.names = F)
 ptmmapping <- ptmmapping[, c("unimod_title", "searchgui_name")]
 # Take only the first entry for each searchgui_name
 ptmmapping <- ptmmapping[!duplicated(ptmmapping$searchgui_name), ]
+ptmmapping <- ptmmapping[!is.na(ptmmapping$searchgui_name), ]
 rownames(ptmmapping) <- ptmmapping$searchgui_name
 ptmmapping <- ptmmapping$unimod_title
 
