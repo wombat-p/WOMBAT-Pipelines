@@ -15,24 +15,20 @@ modify_sequence <- function(fmods, vmods, sequence) {
     if (any(!is.na(x))) {
       # Extract string in parentheses
       modpos <- gregexpr("\\((.*?)\\)", x)
+      modspos <- unlist(strsplit(modpos, ","))
       print(modpos)
       # Remove from x
       x <- gsub("\\(.*?\\)", "", x)
       # Split by " of "
-      x <- strsplit(x, " of ")[1]
+      x <- strsplit(x, " of ")[[1]][1]
       print(x)
 
-      tt <- matrix(unlist(strsplit(x, " \\(")), nrow = 2)
-      tt[2, ] <- sub("\\)", "", tt[2, ])
-      modpos <- NULL
-      for (i in 1:ncol(tt)) {
-        modpos <- append(modpos, ifelse(grepl("N-term|C-term", tt[2, i]), 0, sub("[A-Z]", "", tt[2, i])))
-      }
-      tt <- rbind(tt, modpos)
+      c(x, modpos)
     } else {
       NA
     }
   })
+  print(head(modified_peptides))
 
   modified_sequence <- sequence
   for (i in 1:length(modifications)) {
