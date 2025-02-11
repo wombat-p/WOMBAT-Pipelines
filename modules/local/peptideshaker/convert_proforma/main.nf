@@ -18,9 +18,9 @@ import groovy.json.JsonOutput
    path peptideshaker_filtered_out
    
   output:
-   path "psms_proforma.txt"    , emit: peptideshaker_proforma_filtered
-   path "peptides_proforma.txt"    , emit: peptideshaker_proforma_peptides
-   path "proteins_proforma.txt"    , emit: peptideshaker_proforma_proteins
+   path "${peptideshaker_filtered_out.baseName}_proforma.txt" , emit: peptideshaker_proforma_filtered
+   path "${peptideshaker_peptides_out.baseName}_proforma.txt"    , emit: peptideshaker_proforma_peptides
+   path "${peptideshaker_proteins_out.baseName}_proforma.txt"    , emit: peptideshaker_proforma_proteins
   
   script:
   """
@@ -29,6 +29,9 @@ import groovy.json.JsonOutput
   cp "${peptideshaker_peptides_out}" peptideshaker_peptides_out.txt
   cp "${peptideshaker_proteins_out}" peptideshaker_proteins_out.txt
   Rscript $baseDir/bin/PeptideShaker2Proforma.R
+  cp psms_proforma.txt ${peptideshaker_filtered_out.baseName}_proforma.txt
+  cp peptides_proforma.txt ${peptideshaker_peptides_out.baseName}_proforma.txt
+  cp proteins_proforma.txt ${peptideshaker_proteins_out.baseName}_proforma.txt
   """
 }
 
