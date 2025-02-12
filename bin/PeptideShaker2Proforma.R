@@ -59,6 +59,7 @@ modify_sequence <- function(fmods, vmods, sequence) {
       )
     }
   }
+  print(modified_sequence)
 
   return(modified_sequence)
 }
