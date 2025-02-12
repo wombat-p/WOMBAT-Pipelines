@@ -59,6 +59,7 @@ modify_sequence <- function(fmods, vmods, sequence) {
         to = as.numeric(x[2])
       )
     }
+    print(modified_sequence[i])
   }
 
   return(modified_sequence)
