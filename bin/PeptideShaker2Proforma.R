@@ -32,7 +32,7 @@ modify_sequence <- function(fmods, vmods, sequence) {
         x <- gsub(" $", "", x)
         # Split by " of "
         x <- ptmmapping[x]
-        # print(x)o
+        print(cbind(x, modpos))
         cbind(x, modpos)
       } else {
         NA
@@ -51,7 +51,7 @@ modify_sequence <- function(fmods, vmods, sequence) {
   modified_sequence <- sequence
   for (i in 1:length(modified_peptides)) {
     x <- unlist(modified_peptides[[i]])
-    print(x)
+    # print(x)
     if (length(x) > 2) {
       x <- x[order(as.numeric(x[, 2])), ]
     }
@@ -62,7 +62,7 @@ modify_sequence <- function(fmods, vmods, sequence) {
         to = as.numeric(x[, 2])
       )
     }
-    print(modified_sequence[i])
+    # print(modified_sequence[i])
   }
 
   return(modified_sequence)
