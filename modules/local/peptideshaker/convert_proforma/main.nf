@@ -25,6 +25,7 @@ import groovy.json.JsonOutput
   script:
   """
   cp "$baseDir/assets/unimod2searchgui_mapping.tsv" ptm_mapping.txt
+  
   cp "${peptideshaker_filtered_out}" peptideshaker_filtered_out.txt
   cp "${peptideshaker_peptides_out}" peptideshaker_peptides_out.txt
   cp "${peptideshaker_proteins_out}" peptideshaker_proteins_out.txt
