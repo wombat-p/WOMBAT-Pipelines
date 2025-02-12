@@ -33,7 +33,7 @@ modify_sequence <- function(fmods, vmods, sequence) {
         # Split by " of "
         x <- ptmmapping[x]
         # print(x)o
-        c(x, modpos)
+        cbind(x, modpos)
       } else {
         NA
       }
