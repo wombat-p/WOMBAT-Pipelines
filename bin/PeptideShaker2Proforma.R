@@ -26,13 +26,12 @@ modify_sequence <- function(fmods, vmods, sequence) {
         modpos <- regmatches(x, modpos)
         modpos <- gsub("[()]", "", modpos) # Remove parentheses
 
-        modpos <- unlist(strsplit(modpos, ","))[[1]]
+        modpos <- unlist(strsplit(modpos, ","))
         # Remove from x
         x <- gsub("\\(.*?\\)", "", x)
         x <- gsub(" $", "", x)
         # Split by " of "
         x <- ptmmapping[x]
-        print(cbind(x, modpos))
         cbind(x, modpos)
       } else {
         NA
