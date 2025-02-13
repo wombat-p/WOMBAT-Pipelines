@@ -147,6 +147,28 @@ all_pep_quant <- all_pep_quant[
   , c(keep_pep_columns_once, ind_cols[order(ind_cols)])
 ]
 
+# Reduce protein accessions from long format (e.g. "sp|P12345|A1BG_HUMAN;sp|P12346|A1BG_HUMAN") to a string of only the accession numbers
+reduce_prot_accs <- function(accessions) {
+  tout <- sapply(accessions, function(y) {
+    tgroup <- unlist(strsplit(y, "; "))
+    tgroup <- lapply(tgroup, function(x) {
+      if (is.na(x)) {
+        return(NA)
+      }
+      if (stri_count_fixed(x, "|") != 2) {
+        return(x)
+      }
+      return(unlist(strsplit(x, "\\|"))[2])
+    })
+    return(paste(tgroup, collapse = ","))
+  })
+
+  return(tout)
+}
+
+all_quant$protein_group <- reduce_prot_accs(all_quant$protein_group)
+all_pep_quant$protein_group <- reduce_prot_accs(all_pep_quant$protein_group)
+
 write.csv(all_quant, "all_prot_quant_merged.csv", row.names = FALSE)
 write.csv(all_pep_quant, "all_pep_quant_merged.csv", row.names = FALSE)
 
