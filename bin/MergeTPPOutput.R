@@ -168,7 +168,7 @@ reduce_prot_accs <- function(accessions) {
   return(tout)
 }
 
-all_quant$protein_namne <- reduce_prot_accs(all_quant$protein_name)
+all_quant$protein_name <- reduce_prot_accs(all_quant$protein_name)
 all_pep_quant$protein_name <- reduce_prot_accs(all_pep_quant$protein_name)
 rownames(all_quant) <- reduce_prot_accs(rownames(all_quant))
 
