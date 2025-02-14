@@ -96,7 +96,6 @@ for (file in exp_design[, 1]) {
   )
 
   rownames(t_pep_quant) <- t_pep_rownames
-  t_quant[, "protein_name"] <- reduce_prot_accs(t_quant[, "protein_name"])
   rownames(t_quant) <- t_quant[, "protein_name"]
   t_prot_info <- t_quant[, keep_columns_once, drop = F]
   t_pep_info <- t_pep_quant[, keep_pep_columns_once]
@@ -171,6 +170,7 @@ reduce_prot_accs <- function(accessions) {
 
 all_quant$protein_namne <- reduce_prot_accs(all_quant$protein_name)
 all_pep_quant$protein_name <- reduce_prot_accs(all_pep_quant$protein_name)
+rownames(all_quant) <- reduce_prot_accs(rownames(all_quant))
 
 write.csv(all_quant, "all_prot_quant_merged.csv", row.names = FALSE)
 write.csv(all_pep_quant, "all_pep_quant_merged.csv", row.names = FALSE)
