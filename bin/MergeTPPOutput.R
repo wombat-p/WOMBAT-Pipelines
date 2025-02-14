@@ -1,5 +1,7 @@
 #!/usr/bin/env Rscript
 
+library(stringi)
+
 # read in the experimental design file
 xp_design <- read.csv("exp_design.txt", sep = "\t")
 # sort the experimental design file by the first column
