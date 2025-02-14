@@ -167,6 +167,7 @@ reduce_prot_accs <- function(accessions) {
 }
 
 all_quant$protein_group <- reduce_prot_accs(all_quant$protein_group)
+print(all_quant$protein_group)
 all_pep_quant$protein_group <- reduce_prot_accs(all_pep_quant$protein_group)
 
 write.csv(all_quant, "all_prot_quant_merged.csv", row.names = FALSE)
