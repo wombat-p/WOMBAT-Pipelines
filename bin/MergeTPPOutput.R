@@ -111,11 +111,11 @@ for (file in exp_design[, 1]) {
   prot_info <- rbind(prot_info, t_prot_info)
   pep_info <- rbind(pep_info, t_pep_info)
   colnames(quant_out[[file]]) <- paste(colnames(quant_out[[file]]),
-    exp_design[file, 2], exp_design[file, 3],
+    exp_design[file, 2], exp_design$replicates, # exp_design[file, 3],
     sep = "_"
   )
   colnames(quant_pep_out[[file]]) <- paste(colnames(quant_pep_out[[file]]),
-    exp_design[file, 2], exp_design[file, 3],
+    exp_design[file, 2], exp_design$replicates, # exp_design[file, 3],
     sep = "_"
   )
 }
