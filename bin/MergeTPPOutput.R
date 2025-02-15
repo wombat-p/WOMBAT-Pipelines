@@ -103,7 +103,6 @@ for (file in exp_design[, 1]) {
     t_quant[, keep_columns_all],
     stringsAsFactors = FALSE
   )
-  print(colnames(t_pep_quant))
   quant_pep_out[[file]] <- cbind(rownames(t_pep_quant),
     t_pep_quant[, keep_pep_columns_all],
     stringsAsFactors = FALSE
