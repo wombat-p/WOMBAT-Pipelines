@@ -97,17 +97,21 @@ reduce_prot_accs <- function(accessions) {
       if (is.na(x)) {
         return(NA)
       }
-      if (stri_count_fixed(x, "|") != 2) {
+      parts <- strsplit(x, "\\|")[[1]]
+
+      # If it has exactly 3 parts, the second is the accession
+      if (length(parts) == 3) {
+        return(parts[2])
+      } else {
+        # Otherwise, return the original entry
         return(x)
       }
-      return(unlist(strsplit(x, "\\|"))[2])
     })
     return(paste(tgroup, collapse = ","))
   })
 
   return(tout)
 }
-
 
 # changing column names
 peptides$missed_cleavages <- peptides$Missed.cleavages
