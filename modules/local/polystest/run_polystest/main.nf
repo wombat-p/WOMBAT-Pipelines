@@ -21,16 +21,19 @@ process POLYSTEST {
   output:
   path "polystest_prot_res.csv", emit: polystest_prot
   path "polystest_pep_res.csv", emit: polystest_pep
+  path "polystest_ions_res.csv", emit: ions_quant
   
   script:
   """
-  convertProline=\$(which runPolySTestCLI.R)
+  # Run local script to avoid relaunching new PolySTest versions
+  #convertProline=\$(which runPolySTestCLI.R)
   
-  echo \$convertProline
-  convertProline=\$(dirname \$convertProline)
+  #echo \$convertProline
+  #convertProline=\$(dirname \$convertProline)
   
-  echo \$convertProline
-  Rscript \${convertProline}/convertFromProline.R ${exp_design} ${proline_res}
+  #echo \$convertProline
+  #Rscript \${convertProline}/convertFromProline.R ${exp_design} ${proline_res}
+  Rscript $baseDir/bin/convertFromProline.R ${exp_design} ${proline_res}
   
   sed -i "s/threads: 2/threads: ${task.cpus}/g" pep_param.yml
   sed -i "s/threads: 2/threads: ${task.cpus}/g" prot_param.yml

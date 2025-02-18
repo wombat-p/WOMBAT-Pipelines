@@ -40,8 +40,7 @@ process MERGEOUTPUT {
         if [[ "${exp_design_file}" != "exp_design.txt" ]] 
         then
             cp "${exp_design_file}" exp_design.txt
-        fi
-        
+        fi        
         MergeTPPOutput.R
         """
     }

@@ -1,5 +1,7 @@
 #!/usr/bin/env Rscript
 
+library(stringi)
+
 # read in the experimental design file
 xp_design <- read.csv("exp_design.txt", sep = "\t")
 # sort the experimental design file by the first column
@@ -101,7 +103,6 @@ for (file in exp_design[, 1]) {
     t_quant[, keep_columns_all],
     stringsAsFactors = FALSE
   )
-  print(colnames(t_pep_quant))
   quant_pep_out[[file]] <- cbind(rownames(t_pep_quant),
     t_pep_quant[, keep_pep_columns_all],
     stringsAsFactors = FALSE
@@ -109,11 +110,11 @@ for (file in exp_design[, 1]) {
   prot_info <- rbind(prot_info, t_prot_info)
   pep_info <- rbind(pep_info, t_pep_info)
   colnames(quant_out[[file]]) <- paste(colnames(quant_out[[file]]),
-    exp_design[file, 2], exp_design[file, 3],
+    exp_design[file, 2], exp_design[file, "replicates"], # exp_design[file, 3],
     sep = "_"
   )
   colnames(quant_pep_out[[file]]) <- paste(colnames(quant_pep_out[[file]]),
-    exp_design[file, 2], exp_design[file, 3],
+    exp_design[file, 2], exp_design[file, "replicates"], # exp_design[file, 3],
     sep = "_"
   )
 }
@@ -146,6 +147,34 @@ ind_cols <- colnames(all_pep_quant)[
 all_pep_quant <- all_pep_quant[
   , c(keep_pep_columns_once, ind_cols[order(ind_cols)])
 ]
+
+# Reduce protein accessions from long format (e.g. "sp|P12345|A1BG_HUMAN;sp|P12346|A1BG_HUMAN") to a string of only the accession numbers
+reduce_prot_accs <- function(accessions) {
+  tout <- sapply(accessions, function(y) {
+    tgroup <- unlist(strsplit(y, "; "))
+    tgroup <- lapply(tgroup, function(x) {
+      if (is.na(x)) {
+        return(NA)
+      }
+      parts <- strsplit(x, "\\|")[[1]]
+
+      # If it has exactly 3 parts, the second is the accession
+      if (length(parts) == 3) {
+        return(parts[2])
+      } else {
+        # Otherwise, return the original entry
+        return(x)
+      }
+    })
+    return(paste(tgroup, collapse = ","))
+  })
+
+  return(tout)
+}
+
+all_quant$protein_name <- reduce_prot_accs(all_quant$protein_name)
+all_pep_quant$protein_name <- reduce_prot_accs(all_pep_quant$protein_name)
+rownames(all_quant) <- reduce_prot_accs(rownames(all_quant))
 
 write.csv(all_quant, "all_prot_quant_merged.csv", row.names = FALSE)
 write.csv(all_pep_quant, "all_pep_quant_merged.csv", row.names = FALSE)
