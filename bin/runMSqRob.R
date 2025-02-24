@@ -101,14 +101,14 @@ for (r in 1:nrow(exp_annotation)) {
     paste0("^Intensity_", exp_annotation$raw_file[r], "$"),
     paste0(
       "abundance_", exp_annotation$exp_condition[r], "_",
-      exp_annotation$biorep[r]
+      exp_annotation$appendix[r]
     ), colnames(stand_pep_quant)
   )
   colnames(stand_pep_quant) <- sub(
     paste0("^number_of_psms_", exp_annotation$raw_file[r], "$"),
     paste0(
       "number_of_psms_", exp_annotation$exp_condition[r], "_",
-      exp_annotation$biorep[r]
+      exp_annotation$appendix[r]
     ), colnames(stand_pep_quant)
   )
 }
@@ -141,14 +141,14 @@ for (r in 1:nrow(exp_annotation)) {
     paste0("^Intensity_", exp_annotation$raw_file[r], "$"),
     paste0(
       "abundance_", exp_annotation$exp_condition[r], "_",
-      exp_annotation$biorep[r]
+      exp_annotation$appendix[r]
     ), colnames(stand_prot_quant)
   )
   colnames(stand_prot_quant) <- sub(
     paste0("^number_of_peptides_", exp_annotation$raw_file[r], "$"),
     paste0(
       "number_of_peptides_", exp_annotation$exp_condition[r], "_",
-      exp_annotation$biorep[r]
+      exp_annotation$appendix[r]
     ), colnames(stand_prot_quant)
   )
 }
