@@ -35,6 +35,13 @@ if (is.null(exp_annotation$biorep)) {
   }
 }
 
+# Adding appendix for file names
+if (length(unique(exp_annotation$techrep)) > 1) {
+  exp_annotation$appendix <- paste0(exp_annotation$run, "_", exp_annotation$biorep "_", exp_annotation$techrep)
+}
+if (length(unique(exp_annotation$biorep)) == 1) & length(unique(exp_annotation$techrep)) > 1) {
+  exp_annotation$appendix <- paste0(exp_annotation$run, "_", exp_annotation$techrep)
+}
 
 ## Running MSqRob
 # Had to change normalization due to error in preprocesscore
@@ -83,6 +90,7 @@ for (type in exp_annotation$raw_file) {
 protnames <- unique(protnames)
 rownames(protnames) <- protnames[, 1]
 all_pep <- Reduce(function(x, y) merge(x, y, by = 1, all = TRUE), all_peptides)
+
 
 rownames(all_pep) <- all_pep[, 1]
 # merging with quant data

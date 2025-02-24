@@ -11,6 +11,8 @@ import groovy.json.JsonOutput
         container "wombatp/maxquant-pipeline:v0.2"
     }
 
+  publishDir "${params.outdir}/peptideshaker", mode:'copy'
+
 
   input:
    path peptideshaker_peptides_out
