@@ -37,12 +37,13 @@ if (is.null(exp_annotation$biorep)) {
 
 # Adding appendix for file names
 if (length(unique(exp_annotation$techrep)) > 1) {
+  if (length(unique(exp_annotation$biorep)) == 1) {
+    exp_annotation$appendix <- paste0(exp_annotation$run, "_", exp_annotation$techrep)
+  } else {
   exp_annotation$appendix <- paste0(exp_annotation$run, "_", exp_annotation$biorep "_", exp_annotation$techrep)
+  }
 }
-if (length(unique(exp_annotation$biorep)) == 1) & length(unique(exp_annotation$techrep)) > 1) {
-  exp_annotation$appendix <- paste0(exp_annotation$run, "_", exp_annotation$techrep)
-}
-
+  
 ## Running MSqRob
 # Had to change normalization due to error in preprocesscore
 # normalization methods: should be one of “sum”, “max”, “center.mean”, “center.median”, “div.mean”, “div.median”, “diff.median”, “quantiles”, “quantiles.robust”, “vsn”
