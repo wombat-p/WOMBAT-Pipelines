@@ -73,7 +73,7 @@ modify_sequence <- function(modifications, sequence) {
   for (i in 1:length(modifications)) {
     if (!is.na(modifications[i])) {
       modified_sequence[i] <- stri_sub_replace_all(modified_sequence[i],
-        replacement = ifelse(x[, 2] == 0, paste0("[", x[, 1], "]-"), paste0("[", x[, 1], "]")),
+        replacement = ifelse(as.numeric(modified_peptides[[i]][3, ]) == 0, paste0("[", modified_peptides[[i]][1, ], "]-"), paste0("[", modified_peptides[[i]][1, ], "]")),
         from = as.numeric(modified_peptides[[i]][3, ]) + 1,
         to = as.numeric(modified_peptides[[i]][3, ])
       )
