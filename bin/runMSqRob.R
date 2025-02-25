@@ -46,7 +46,7 @@ if (length(unique(exp_annotation$techrep)) > 1) {
   if (length(unique(exp_annotation$techrep)) > 1) {
     exp_annotation$appendix <- paste0(exp_annotation$appendix, "_", exp_annotation$techrep)
   }
-  if (length(unique(exp_annotation$run)) == 1 & Length(unique(exp_annotation$techrep)) == 1) {
+  if (length(unique(exp_annotation$run)) == 1 & length(unique(exp_annotation$techrep)) == 1) {
     exp_annotation$appendix <- paste0(exp_annotation$appendix, "_", 1)
   }
 }
