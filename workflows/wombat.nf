@@ -87,10 +87,13 @@ workflow WOMBAT {
 
     ch_versions = Channel.empty()
 
+
+    wombat_version = "dev"
+
     //
     // MODULE: Prepare input files
     //
-    PREPARE_FILES (ch_sdrf, ch_params, ch_exp_design, ch_raws.collect(), ch_mzmls.collect(), ch_sdrfmapping)    
+    PREPARE_FILES (ch_sdrf, ch_params, ch_exp_design, ch_raws.collect(), ch_mzmls.collect(), ch_sdrfmapping, ch_fasta, wombat_version)    
 
 
     //

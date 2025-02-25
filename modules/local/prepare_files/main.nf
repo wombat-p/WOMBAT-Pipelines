@@ -16,6 +16,8 @@ process PREPARE_FILES {
       path raws
       path mzmls
       path map
+      path fasta
+      val version
      
 
     output:
@@ -75,12 +77,21 @@ process PREPARE_FILES {
 
     if [[ "$parameters" == "no_params" ]]
     then
-	printf "params:\n  None:  \nrawfiles: None\nfastafile: None" >  params.yml
+	printf "params:\n  None:  \nrawfiles: See exp_design.txt\nfastafile: ${fasta}\nversion: ${version}" >  params.yml
     elif [[ "$parameters" != "params.yml" ]] 
     then
         cp "${parameters}" params.yml
+        # Put fasta file into parameters file
+        sed -i '/^fastafile:/s/fasta.*/fastafile: ${fasta}/' params.yml
+        # check if version is already in the file
+        if grep -q "^version:" params.yml
+        then
+            sed -i '/^version:/s/version.*/version: ${version}/' params.yml
+        else
+            echo 'version: $version' >> params.yml
+        fi
     fi
-    echo "See workflow version" > prepare_files.version.txt
+    echo "${version}" > prepare_files.version.txt
     cp sdrf_local.tsv sdrf_temp.tsv
     """
 }

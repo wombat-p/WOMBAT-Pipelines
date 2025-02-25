@@ -32,3 +32,4 @@ params:
 rawfiles: None
 
 fastafile: None
+version: dev
