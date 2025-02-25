@@ -35,6 +35,21 @@ if (is.null(exp_annotation$biorep)) {
   }
 }
 
+# Adding appendix for file names
+exp_annotation$appendix <- exp_annotation$exp_condition
+if (length(unique(exp_annotation$techrep)) > 1) {
+  exp_annotation$biorep <- as.numeric(exp_annotation$biorep)
+  exp_annotation$techrep <- as.numeric(exp_annotation$techrep)
+  if (length(unique(exp_annotation$biorep)) > 1) {
+    exp_annotation$appendix <- paste0(exp_annotation$appendix, "_", exp_annotation$biorep)
+  }
+  if (length(unique(exp_annotation$techrep)) > 1) {
+    exp_annotation$appendix <- paste0(exp_annotation$appendix, "_", exp_annotation$techrep)
+  }
+  if (length(unique(exp_annotation$run)) == 1 & length(unique(exp_annotation$techrep)) == 1) {
+    exp_annotation$appendix <- paste0(exp_annotation$appendix, "_", 1)
+  }
+}
 
 ## Running MSqRob
 # Had to change normalization due to error in preprocesscore
@@ -84,6 +99,7 @@ protnames <- unique(protnames)
 rownames(protnames) <- protnames[, 1]
 all_pep <- Reduce(function(x, y) merge(x, y, by = 1, all = TRUE), all_peptides)
 
+
 rownames(all_pep) <- all_pep[, 1]
 # merging with quant data
 stand_pep_quant <- cbind(all_pep[fData(peptides)$Sequence, ], protein_group = protnames[fData(peptides)$Sequence, 2], 2^exprs(peptides))
@@ -91,15 +107,13 @@ for (r in 1:nrow(exp_annotation)) {
   colnames(stand_pep_quant) <- sub(
     paste0("^Intensity_", exp_annotation$raw_file[r], "$"),
     paste0(
-      "abundance_", exp_annotation$exp_condition[r], "_",
-      exp_annotation$biorep[r]
+      "abundance_", exp_annotation$appendix[r]
     ), colnames(stand_pep_quant)
   )
   colnames(stand_pep_quant) <- sub(
     paste0("^number_of_psms_", exp_annotation$raw_file[r], "$"),
     paste0(
-      "number_of_psms_", exp_annotation$exp_condition[r], "_",
-      exp_annotation$biorep[r]
+      "number_of_psms_", exp_annotation$appendix[r]
     ), colnames(stand_pep_quant)
   )
 }
@@ -131,15 +145,13 @@ for (r in 1:nrow(exp_annotation)) {
   colnames(stand_prot_quant) <- sub(
     paste0("^Intensity_", exp_annotation$raw_file[r], "$"),
     paste0(
-      "abundance_", exp_annotation$exp_condition[r], "_",
-      exp_annotation$biorep[r]
+      "abundance_", exp_annotation$appendix[r]
     ), colnames(stand_prot_quant)
   )
   colnames(stand_prot_quant) <- sub(
     paste0("^number_of_peptides_", exp_annotation$raw_file[r], "$"),
     paste0(
-      "number_of_peptides_", exp_annotation$exp_condition[r], "_",
-      exp_annotation$biorep[r]
+      "number_of_peptides_", exp_annotation$appendix[r]
     ), colnames(stand_prot_quant)
   )
 }
