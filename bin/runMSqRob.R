@@ -38,6 +38,8 @@ if (is.null(exp_annotation$biorep)) {
 # Adding appendix for file names
 if (length(unique(exp_annotation$techrep)) > 1) {
   exp_annotation$appendix <- exp_annotation$exp_condition
+  exp_annotation$biorep <- as.numeric(exp_annotation$biorep)
+  exp_annotation$techrep <- as.numeric(exp_annotation$techrep)
   if (length(unique(exp_annotation$biorep)) > 1) {
     exp_annotation$appendix <- paste0(exp_annotation$appendix, "_", exp_annotation$biorep)
   }
