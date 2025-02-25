@@ -56,7 +56,7 @@ modify_sequence <- function(fmods, vmods, sequence) {
     }
     if (!is.null(x)) {
       modified_sequence[i] <- stri_sub_replace_all(modified_sequence[i],
-        replacement = ifelse(x[, 2] == 0, paste0("[", x[, 1], "]-"), paste0("[", x[, 1], "]")),
+        replacement = ifelse(as.numeric(x[, 2]) == 0, paste0("[", x[, 1], "]-"), paste0("[", x[, 1], "]")),
         from = as.numeric(x[, 2]) + 1,
         to = as.numeric(x[, 2])
       )

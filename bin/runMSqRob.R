@@ -38,9 +38,9 @@ if (is.null(exp_annotation$biorep)) {
 # Adding appendix for file names
 if (length(unique(exp_annotation$techrep)) > 1) {
   if (length(unique(exp_annotation$biorep)) == 1) {
-    exp_annotation$appendix <- paste0(exp_annotation$genotype, "_", exp_annotation$techrep)
+    exp_annotation$appendix <- paste0(exp_annotation$exp_condition, "_", exp_annotation$techrep)
   } else {
-    exp_annotation$appendix <- paste0(exp_annotation$genotyp, "_", exp_annotation$biorep, "_", exp_annotation$techrep)
+    exp_annotation$appendix <- paste0(exp_annotation$exp_condition, "_", exp_annotation$biorep, "_", exp_annotation$techrep)
   }
 }
 
@@ -100,15 +100,13 @@ for (r in 1:nrow(exp_annotation)) {
   colnames(stand_pep_quant) <- sub(
     paste0("^Intensity_", exp_annotation$raw_file[r], "$"),
     paste0(
-      "abundance_", exp_annotation$exp_condition[r], "_",
-      exp_annotation$appendix[r]
+      "abundance_", exp_annotation$appendix[r]
     ), colnames(stand_pep_quant)
   )
   colnames(stand_pep_quant) <- sub(
     paste0("^number_of_psms_", exp_annotation$raw_file[r], "$"),
     paste0(
-      "number_of_psms_", exp_annotation$exp_condition[r], "_",
-      exp_annotation$appendix[r]
+      "number_of_psms_", exp_annotation$appendix[r]
     ), colnames(stand_pep_quant)
   )
 }
@@ -140,15 +138,13 @@ for (r in 1:nrow(exp_annotation)) {
   colnames(stand_prot_quant) <- sub(
     paste0("^Intensity_", exp_annotation$raw_file[r], "$"),
     paste0(
-      "abundance_", exp_annotation$exp_condition[r], "_",
-      exp_annotation$appendix[r]
+      "abundance_", exp_annotation$appendix[r]
     ), colnames(stand_prot_quant)
   )
   colnames(stand_prot_quant) <- sub(
     paste0("^number_of_peptides_", exp_annotation$raw_file[r], "$"),
     paste0(
-      "number_of_peptides_", exp_annotation$exp_condition[r], "_",
-      exp_annotation$appendix[r]
+      "number_of_peptides_", exp_annotation$appendix[r]
     ), colnames(stand_prot_quant)
   )
 }
