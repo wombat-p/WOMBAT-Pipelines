@@ -1,3 +1,6 @@
+library(tidyr)
+library(dplyr)
+
 # reading cmd arguments
 args <- commandArgs(trailingOnly = TRUE)
 normalyzerMethod <- strsplit(grep("--method", args, value = TRUE), split = "=")[[1]][[2]]
@@ -45,18 +48,87 @@ if (comps == "") {
   comps <- unlist(strsplit(comps, ","))
 }
 
-## changing peptides to modification string of "sequence_[ptm]_mod.id in peptide input for Normalyzer
-# Create some modification string
-peps <- read.csv("peptide_file.txt", sep = "\t")
-cmods <- grep("site\\.IDs$", colnames(peps), value = T)
-mods <- unlist(sub("\\.site\\.IDs", "", cmods))
-mods <- unlist(gsub("\\.", "", mods))
-names(mods) <- cmods
-for (c in cmods) {
-  peps[, c] <- sapply(peps[, c], function(x) ifelse(is.na(x) | x == "", "", paste0("_[", mods[c], "]_", unlist(strsplit(as.character(x), ";")), collapse = "")))
+# Reduce protein accessions from long format (e.g. "sp|P12345|A1BG_HUMAN;sp|P12346|A1BG_HUMAN") to a string of only the accession numbers
+reduce_prot_accs <- function(accessions) {
+  tout <- sapply(accessions, function(y) {
+    tgroup <- unlist(strsplit(y, ";"))
+    tgroup <- lapply(tgroup, function(x) {
+      if (is.na(x)) {
+        return(NA)
+      }
+      parts <- strsplit(x, "\\|")[[1]]
+
+      # If it has exactly 3 parts, the second is the accession
+      if (length(parts) == 3) {
+        return(parts[2])
+      } else {
+        # Otherwise, return the original entry
+        return(x)
+      }
+    })
+    return(paste(tgroup, collapse = ","))
+  })
+
+  return(tout)
 }
-peps$Sequence <- paste0(peps$Sequence, peps[, cmods])
-write.table(peps, "peptide_file.txt", row.names = F, sep = "\t", quote = F)
+
+
+## Read evidence file to create ion standard file and make proforma files
+evidence_data <- read.delim("evidence.txt", stringsAsFactors = FALSE)
+# change "Modified sequence" to proforma format
+# for that remove the "site" starts with a space and ends with a bracket
+evidence_data$Modified.sequence <- gsub("\\s\\([^()]*\\)", "", evidence_data$Modified.sequence)
+# Remove underscores
+evidence_data$Modified.sequence <- gsub("_", "", evidence_data$Modified.sequence)
+# change parenthesis to brackets
+evidence_data$Modified.sequence <- gsub("\\(", "[", evidence_data$Modified.sequence)
+evidence_data$Modified.sequence <- gsub("\\)", "]", evidence_data$Modified.sequence)
+# When the first character is a bracket, add a "-" after the first "]"
+evidence_data$Modified.sequence <- sapply(evidence_data$Modified.sequence, function(x) {
+  if (grepl("^\\[", x)) {
+    x <- sub("\\]", "]-", x)
+  }
+  return(x)
+})
+evidence_data$Proteins <- reduce_prot_accs(evidence_data$Proteins)
+
+
+# Create ion standard file
+std_ion_output <- evidence_data[, c("Modified.sequence", "Proteins", "Experiment", "Charge", "Intensity")]
+colnames(std_ion_output) <- c("modified_peptide", "protein_group", "exp_conditions", "charge", "abundance")
+# Change to wide format
+std_ion_wide <- as.data.frame(pivot_wider(
+  std_ion_output,
+  names_from = exp_conditions,
+  values_from = abundance,
+  names_prefix = "abundance_",
+  values_fn = ~ sum(.x, na.rm = TRUE)
+))
+# Filter out the rows with all abundance values being NA or zero
+std_ion_wide <- std_ion_wide[rowSums(std_ion_wide[, grep("^abundance_", colnames(std_ion_wide))], na.rm = T) > 0, ]
+
+
+write.csv(std_ion_wide, "std_ion_output.csv", row.names = F)
+
+# Create peptidoform level file from std_ion_output
+pep <- as.data.frame(std_ion_wide %>%
+  group_by(modified_peptide, protein_group) %>%
+  summarise(
+    across(
+      starts_with("abundance_"),
+      ~ sum(.x, na.rm = TRUE)
+    ),
+    .groups = "drop"
+  ))
+pep_vals <- pep[, grep("^abundance_", colnames(pep))]
+pep_vals[pep_vals == 0] <- NA
+pep[, grep("^abundance_", colnames(pep))] <- pep_vals
+
+pep_mq <- pep
+colnames(pep_mq)[1:2] <- c("Sequence", "Proteins")
+colnames(pep_mq)[2:ncol(pep_mq)] <- sub("^abundance_", "Intensity ", colnames(pep_mq)[2:ncol(pep_mq)])
+pep_mq$Mass <- pep_mq$Leading.razor.protein <- pep_mq$Charges <- pep_mq$PEP <- NA
+write.table(pep_mq, "peptide_file.txt", row.names = F, sep = "\t", quote = F)
 
 ## run Normalyzer
 if (min(table(final_exp[, "group"])) > 1 & length(unique(final_exp[, "group"])) > 1) {
@@ -89,29 +161,6 @@ if (file.exists("NormalyzerPeptides/NormalyzerPeptides_stats.tsv")) {
   stats_proteins <- read.csv(paste0("NormalyzerProteins/", normalyzerMethod, "-normalized.txt"), sep = "\t", row.names = 1)
 }
 
-# Reduce protein accessions from long format (e.g. "sp|P12345|A1BG_HUMAN;sp|P12346|A1BG_HUMAN") to a string of only the accession numbers
-reduce_prot_accs <- function(accessions) {
-  tout <- sapply(accessions, function(y) {
-    tgroup <- unlist(strsplit(y, "; "))
-    tgroup <- lapply(tgroup, function(x) {
-      if (is.na(x)) {
-        return(NA)
-      }
-      parts <- strsplit(x, "\\|")[[1]]
-
-      # If it has exactly 3 parts, the second is the accession
-      if (length(parts) == 3) {
-        return(parts[2])
-      } else {
-        # Otherwise, return the original entry
-        return(x)
-      }
-    })
-    return(paste(tgroup, collapse = ","))
-  })
-
-  return(tout)
-}
 
 # changing column names
 peptides$missed_cleavages <- peptides$Missed.cleavages
@@ -169,31 +218,44 @@ colnames(norm_peptides) <- make.unique(colnames(norm_peptides))
 norm_peptides[, grep("^abundance_", colnames(norm_peptides), value = T)] <- 2^(norm_peptides[, grep("^abundance_", colnames(norm_peptides), value = T)])
 if (!any(grepl("^differential_abundance", colnames(stats_peptides)))) {
   proteins <- cbind(
-    proteins[rownames(norm_proteins), c("protein_group", grep("^number_of_peptides_", colnames(proteins), value = T))],
+    proteins[rownames(norm_proteins), c(
+      "protein_group",
+      grep("^number_of_peptides_", colnames(proteins), value = T)
+    )],
     norm_proteins[, grep("^abundance_", colnames(norm_proteins), value = T)]
   )
   peptides <- cbind(
     modified_peptide = rownames(norm_peptides),
-    peptides[rownames(norm_peptides), c("protein_group", grep("^number_of_psms_", colnames(peptides), value = T))],
+    peptides[rownames(norm_peptides), c(
+      "protein_group",
+      grep("^number_of_psms_", colnames(peptides), value = T)
+    ), drop = F],
     norm_peptides[, grep("^abundance_", colnames(norm_peptides), value = T)]
   )
 } else {
   proteins <- cbind(
-    proteins[rownames(norm_proteins), c("protein_group", grep("^number_of_peptides_", colnames(proteins), value = T))],
+    proteins[rownames(norm_proteins), c(
+      "protein_group",
+      grep("^number_of_peptides_", colnames(proteins), value = T)
+    )],
     stats_proteins[rownames(norm_proteins), grep("^differential_abundance", colnames(stats_proteins), value = T)],
     norm_proteins[, grep("^abundance_", colnames(norm_proteins), value = T)]
   )
   peptides <- cbind(
     modified_peptide = rownames(norm_peptides),
-    peptides[rownames(norm_peptides), c("protein_group", grep("^number_of_psms_", colnames(peptides), value = T))],
+    peptides[rownames(norm_peptides), c(
+      "protein_group",
+      grep("^number_of_psms_", colnames(peptides), value = T)
+    ), drop = F],
     norm_peptides[, grep("^abundance_", colnames(norm_peptides), value = T)],
-    stats_peptides[rownames(norm_peptides), grep("^differential_abundance", colnames(stats_peptides), value = T)]
+    stats_peptides[
+      rownames(norm_peptides),
+      grep("^differential_abundance", colnames(stats_peptides), value = T)
+    ]
   )
 }
 
-peptides$protein_group <- reduce_prot_accs(peptides$protein_group)
-
-
+proteins$protein_group <- reduce_prot_accs(proteins$protein_group)
 
 write.csv(proteins, "stand_prot_quant_merged.csv", row.names = F)
 write.csv(peptides, "stand_pep_quant_merged.csv", row.names = F)
