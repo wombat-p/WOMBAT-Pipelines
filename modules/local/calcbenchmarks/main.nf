@@ -17,6 +17,7 @@ import groovy.json.JsonOutput
         path exp_design_file
         path std_prot_file
         path std_pep_file
+        path std_ion_file
         path fasta_file
         val workflow
  
@@ -25,6 +26,7 @@ import groovy.json.JsonOutput
    path "benchmarks*.json",  emit:  benchmarks
    path "stand_pep_quant_merged${workflow}.csv"    , emit: std_peps
    path "stand_prot_quant_merged${workflow}.csv"    , emit: std_prots
+    path "stand_ion_quant_merged${workflow}.csv"    , emit: std_ions
   
   script:
   """
@@ -36,6 +38,7 @@ import groovy.json.JsonOutput
   fi
   Rscript $baseDir/bin/CalcBenchmarks.R
   mv benchmarks.json benchmarks_${workflow}.json
+  cp stand_ion_quant_merged.csv stand_ion_quant_merged${workflow}.csv
   cp stand_pep_quant_merged.csv stand_pep_quant_merged${workflow}.csv
   cp stand_prot_quant_merged.csv stand_prot_quant_merged${workflow}.csv
   """

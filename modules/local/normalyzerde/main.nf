@@ -24,6 +24,7 @@ process NORMALYZERDE {
 	path "NormalyzerPeptides/*"   , emit:  normalyzer_peptides
         path "stand_prot_quant_merged.csv"    , emit: std_prots
         path "stand_pep_quant_merged.csv"    , emit: std_peps
+        path "stand_ion_quant_merged.csv"    , emit: std_ions
         path "exp_design_calcb.tsv"    , emit: std_exp_design
 
 

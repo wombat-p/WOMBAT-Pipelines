@@ -16,6 +16,7 @@ publishDir "${params.outdir}/msqrob", mode:'copy'
   path rawfiles
   path quant_tab
   path quant_prot_tab
+  path quant_ion_tab
   path pep_file
   path prot_file
   val parameters
@@ -24,6 +25,7 @@ publishDir "${params.outdir}/msqrob", mode:'copy'
   path "MSqRobOut.csv", emit: msqrob_prot_out
   path "stand_prot_quant_merged.csv", emit: stdprotquant
   path "stand_pep_quant_merged.csv", emit: stdpepquant
+  path "stand_ion_quant_merged.csv", emit: stdionquant
   path "exp_design.txt", emit: exp_design_final
   
   
@@ -46,6 +48,7 @@ publishDir "${params.outdir}/msqrob", mode:'copy'
   cp "${exp_design}" exp_design.txt
   mv "${quant_tab}" q_input.txt
   mv "${quant_prot_tab}" q_prot.txt
+  mv "${quant_ion_tab}" q_ion.txt
   Rscript $baseDir/bin/runMSqRob.R --normalization="${parameters.normalization_method}" --min_peptides="${parameters.min_num_peptides}"
   """
 }    

@@ -1,5 +1,6 @@
 library(MSnbase)
 library(MSqRob)
+library(reshape2)
 
 # reading cmd arguments
 args <- commandArgs(trailingOnly = TRUE)
@@ -122,6 +123,24 @@ colnames(stand_pep_quant)[1] <- "modified_peptide"
 
 write.csv(stand_pep_quant, "stand_pep_quant_merged.csv", row.names = F)
 
+## Read peaks file and convert to wide format
+peaks <- read.csv("q_ion.txt", sep = "\t")
+print(names(peaks))
+peaks <- peaks[, c("File.Name", "Full.Sequence", "Protein.Group", "Precursor.Charge", "Peak.intensity")]
+
+# to wide format for each file using reshape2
+peaks_wide <- dcast(peaks, Full.Sequence + Protein.Group + Precursor.Charge ~ File.Name, value.var = "Peak.intensity")
+# Substitute Intensity column names with the ones defined in the experimental design
+for (r in 1:nrow(exp_annotation)) {
+  colnames(peaks_wide) <- sub(
+    paste0("^", exp_annotation$raw_file[r], "$"),
+    paste0(
+      "abundance_", exp_annotation$appendix[r]
+    ), colnames(peaks_wide)
+  )
+}
+colnames(peaks_wide)[1:3] <- c("modified_peptide", "protein_group", "precursor_charge")
+write.csv(peaks_wide, "stand_ion_quant_merged.csv", row.names = F)
 
 # Merging data from peptideshaker, flashlfq and msqrob
 quant_prots <- read.csv("q_prot.txt", sep = "\t")

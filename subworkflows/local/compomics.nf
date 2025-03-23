@@ -37,11 +37,13 @@ workflow COMPOMICS {
                        PEPTIDESHAKER_REPORT.out.peptideshaker_tsv_file_filtered )
     FLASHLFQ ( CONVERT_PROFORMA.out.peptideshaker_proforma_filtered.collect(), RAW2MZML.out.collect(), parameters, exp_design )
     MSQROB ( exp_design, raws.collect(), FLASHLFQ.out.flashlfq_peptides, FLASHLFQ.out.flashlfq_proteins, 
-             CONVERT_PROFORMA.out.peptideshaker_proforma_peptides.collect(), CONVERT_PROFORMA.out.peptideshaker_proforma_proteins.collect() , parameters)
+             FLASHLFQ.out.flashlfq_ions, CONVERT_PROFORMA.out.peptideshaker_proforma_peptides.collect(), 
+             CONVERT_PROFORMA.out.peptideshaker_proforma_proteins.collect() , parameters)
 
     emit:
     MSQROB.out.exp_design_final
-    MSQROB.out.stdpepquant
     MSQROB.out.stdprotquant
+    MSQROB.out.stdpepquant
+    MSQROB.out.stdionquant
     MSQROB.out.msqrob_prot_out
 }

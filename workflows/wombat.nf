@@ -122,7 +122,7 @@ workflow WOMBAT {
     //
     // MODULE: calculate benchmarks
     //
-    CALCBENCHMARKS_MQ ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), MAXQUANT.out[0], MAXQUANT.out[1], MAXQUANT.out[2], ch_fasta, channel.value("maxquant") )
+    CALCBENCHMARKS_MQ ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), MAXQUANT.out[0], MAXQUANT.out[1], MAXQUANT.out[2], MAXQUANT.out[3], ch_fasta, channel.value("maxquant") )
     }
 
     //
@@ -135,7 +135,7 @@ workflow WOMBAT {
     //
     // MODULE: calculate benchmarks
     //
-    CALCBENCHMARKS_PROLINE ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), PROLINE.out[0], PROLINE.out[2], PROLINE.out[3], ch_fasta, Channel.value("proline") )
+    CALCBENCHMARKS_PROLINE ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), PROLINE.out[0], PROLINE.out[3], PROLINE.out[2], PROLINE.out[1], ch_fasta, Channel.value("proline") )
 
     }
 
@@ -149,7 +149,7 @@ workflow WOMBAT {
     //
     // MODULE: calculate benchmarks
     //
-    CALCBENCHMARKS_COMPOMICS ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), COMPOMICS.out[0], COMPOMICS.out[1], COMPOMICS.out[2], ch_fasta, Channel.value("compomics") )
+    CALCBENCHMARKS_COMPOMICS ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), COMPOMICS.out[0], COMPOMICS.out[1], COMPOMICS.out[2], COMPOMICS.out[3], ch_fasta, Channel.value("compomics") )
 
     }
 
@@ -163,7 +163,7 @@ workflow WOMBAT {
     //
     // MODULE: calculate benchmarks
     //
-    CALCBENCHMARKS_TPP ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), TPP.out[0], TPP.out[1], TPP.out[2], ch_fasta, Channel.value("tpp") )
+    CALCBENCHMARKS_TPP ( JsonOutput.prettyPrint(JsonOutput.toJson(params)), TPP.out[0], TPP.out[1], TPP.out[2], TPP.out[3], ch_fasta, Channel.value("tpp") )
 
     }
 

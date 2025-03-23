@@ -46,4 +46,5 @@ workflow TPP {
     expdesign = merged_quants.expdesign
     rots_results_protein
     rots_results_peptide
+    merged_quants.stdionquant
 }

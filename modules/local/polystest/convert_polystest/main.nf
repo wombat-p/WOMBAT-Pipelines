@@ -19,7 +19,7 @@ if (workflow.containerEngine == 'singularity'|| workflow.containerEngine == 'app
   output:
   path "stand_prot_quant_merged.csv", emit: stdprotquant
   path "stand_pep_quant_merged.csv", emit: stdpepquant
-  path "stand_ions_quant_merged.csv", emit: stdionsquant
+  path "stand_ion_quant_merged.csv", emit: stdionsquant
   path "exp_design.txt", emit: exp_design
   
   when:
