@@ -18,7 +18,7 @@ process FLASHLFQ {
   path exp_design
   
   output:
-  path "QuantifiedPeaks.tsv", emit: flashlfq_peaks
+  path "QuantifiedPeaks.tsv", emit: flashlfq_ions
   path "QuantifiedPeptides.tsv", emit: flashlfq_peptides
   path "QuantifiedProteins.tsv", emit: flashlfq_proteins
   

@@ -108,7 +108,7 @@ std_ion_wide <- as.data.frame(pivot_wider(
 std_ion_wide <- std_ion_wide[rowSums(std_ion_wide[, grep("^abundance_", colnames(std_ion_wide))], na.rm = T) > 0, ]
 
 
-write.csv(std_ion_wide, "std_ion_output.csv", row.names = F)
+write.csv(std_ion_wide, "stand_ion_quant_merged.csv", row.names = F)
 
 # Create peptidoform level file from std_ion_output
 pep <- as.data.frame(std_ion_wide %>%

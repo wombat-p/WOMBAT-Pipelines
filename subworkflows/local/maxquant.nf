@@ -23,5 +23,6 @@ workflow MAXQUANT {
     NORMALYZERDE.out.std_exp_design
     NORMALYZERDE.out.std_prots
     NORMALYZERDE.out.std_peps
+    NORMALYZERDE.out.std_ions
  
 }

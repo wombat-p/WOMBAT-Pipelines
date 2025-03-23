@@ -191,25 +191,25 @@ for (i in 1:length(prot_convert_names)) {
 }
 colnames(stand_prot_quant) <- cnames
 
-stand_pep_quant <- all_pep_quant[, grep(
+stand_ion_quant <- all_pep_quant[, grep(
   paste("^", pep_convert_names, collapse = "|", sep = ""),
   colnames(all_pep_quant)
 )]
-cnames <- colnames(stand_pep_quant)
+cnames <- colnames(stand_ion_quant)
 for (i in 1:length(pep_convert_names)) {
   cnames <- gsub(pep_convert_names[i], names(pep_convert_names)[i], cnames)
 }
-colnames(stand_pep_quant) <- cnames
+colnames(stand_ion_quant) <- cnames
 
 # merging charge states
 library(dplyr)
 stand_pep_quant <- merge(
-  stand_pep_quant %>%
+  stand_ion_quant %>%
     group_by(modified_peptide) %>%
     summarize_at(c("protein_group", "charge"), paste, collapse = ";"),
-  stand_pep_quant %>%
+  stand_ion_quant %>%
     group_by(modified_peptide) %>%
-    summarize_at(grep("^abundance", colnames(stand_pep_quant), value = TRUE),
+    summarize_at(grep("^abundance", colnames(stand_ion_quant), value = TRUE),
       sum,
       na.rm = TRUE
     ),
@@ -223,6 +223,10 @@ for (c in grep("^abundance", colnames(stand_pep_quant))) {
 write.csv(stand_prot_quant, "stand_prot_quant_merged_pre.csv",
   row.names = FALSE
 )
+write.csv(stand_ion_quant, "stand_ion_quant_merged.csv",
+  row.names = FALSE
+)
+
 write.csv(stand_pep_quant, "stand_pep_quant_merged_pre.csv",
   row.names = FALSE
 )

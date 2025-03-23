@@ -49,7 +49,7 @@ for (i in 1:nrow(exp_design)) {
 }
 colnames(peptides) <- sub("^log\\.ratios\\.", "log_fold_change_", colnames(peptides))
 for (s in unique(exp_design$exp_condition)) colnames(peptides) <- sub(paste0("^", s, "\\."), paste0("abundance_", s, "_"), colnames(peptides))
-for (s in unique(exp_design$exp_condition)) colnames(ions) <- sub(paste0("^", s, "\\."), paste0("abundance_", s, "_"), colnames(ions))
+for (s in unique(exp_design$exp_condition)) colnames(ions) <- sub(paste0("^abundance_", s, "\\."), paste0("abundance_", s, "_"), colnames(ions))
 colnames(peptides) <- sub("^FDR\\.PolySTest\\.", "differential_abundance_qvalue_", colnames(peptides))
 
 # Creating modified sequences
@@ -131,7 +131,7 @@ stand_peps <- stand_peps[order(stand_peps$protein_group), ]
 write.csv(stand_peps, "stand_pep_quant_merged.csv", row.names = F)
 
 # Still needs more adjustments of colnames, ...
-write.csv(stand_ions, "stand_ions_quant_merged.csv", row.names = F)
+write.csv(stand_ions, "stand_ion_quant_merged.csv", row.names = F)
 
 
 # Converting column names

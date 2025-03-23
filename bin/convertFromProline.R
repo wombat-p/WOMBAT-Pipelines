@@ -56,7 +56,16 @@ for (cond in unique(expDesign[, 2])) {
   tmpDesign <- rbind(tmpDesign, cbind(allreps, replicate = 1:nrow(allreps)))
   if (NumReps > nrow(allreps)) {
     numcols <- NumReps - nrow(allreps)
-    tmpDesign <- rbind(tmpDesign, cbind(sample = paste0("NA column ", (NA_cols + 1):(NA_cols + numcols)), condition = cond, replicate = (nrow(allreps) + 1):NumReps))
+    tmpDesign <- rbind(
+      tmpDesign,
+      cbind(
+        sample = paste0(
+          "NA column ",
+          (NA_cols + 1):(NA_cols + numcols)
+        ),
+        condition = cond, replicate = (nrow(allreps) + 1):NumReps
+      )
+    )
     NA_cols <- NA_cols + numcols
   }
 }
@@ -66,8 +75,6 @@ rownames(expDesign) <- paste(expDesign$condition, expDesign$replicate)
 ### On peptide level
 # set number of columns before input
 ColQuant <- min(which(colnames(peptide_ions) %in% expDesign$sample))
-print(expDesign)
-print(colnames(peptide_ions))
 peptides <- peptide_ions[, 1:(ColQuant - 1)]
 for (rep in 1:NumReps) {
   for (cond in unique(expDesign$condition)) {
@@ -79,6 +86,17 @@ for (rep in 1:NumReps) {
       peptides <- cbind(peptides, NA)
     }
     colnames(peptides)[ncol(peptides)] <- paste("abundance", cond, rep, sep = "_")
+  }
+}
+# Change columns names
+print(colnames(peptide_ions))
+for (rep in 1:NumReps) {
+  for (cond in unique(expDesign$condition)) {
+    sample <- expDesign[paste(cond, rep), 1]
+    print(sample)
+    if (any(sample == colnames(peptide_ions))) {
+      colnames(peptide_ions)[colnames(peptide_ions) == sample] <- paste("abundance", cond, rep, sep = "_")
+    }
   }
 }
 write.csv(peptide_ions, "polystest_ions_res.csv", row.names = F)
