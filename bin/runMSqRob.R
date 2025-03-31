@@ -142,7 +142,7 @@ for (r in 1:nrow(exp_annotation)) {
     ), colnames(peaks_wide)
   )
 }
-colnames(peaks_wide)[1:3] <- c("modified_peptide", "protein_group", "precursor_charge")
+colnames(peaks_wide)[1:3] <- c("modified_peptide", "protein_group", "charge")
 write.csv(peaks_wide, "stand_ion_quant_merged.csv", row.names = F)
 
 # Merging data from peptideshaker, flashlfq and msqrob
