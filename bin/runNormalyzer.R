@@ -75,6 +75,8 @@ reduce_prot_accs <- function(accessions) {
 
 ## Read evidence file to create ion standard file and make proforma files
 evidence_data <- read.delim("evidence.txt", stringsAsFactors = FALSE)
+# Remove reverse hits
+evidence_data <- evidence_data[evidence_data$Reverse != "+", ]
 # change "Modified sequence" to proforma format
 # for that remove the "site" starts with a space and ends with a bracket
 evidence_data$Modified.sequence <- gsub("\\s\\([^()]*\\)", "", evidence_data$Modified.sequence)
