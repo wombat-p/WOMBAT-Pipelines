@@ -110,8 +110,6 @@ std_ion_wide <- as.data.frame(pivot_wider(
 std_ion_wide <- std_ion_wide[rowSums(std_ion_wide[, grep("^abundance_", colnames(std_ion_wide))], na.rm = T) > 0, ]
 
 
-write.csv(std_ion_wide, "stand_ion_quant_merged.csv", row.names = F)
-
 # Create peptidoform level file from std_ion_output
 pep <- as.data.frame(std_ion_wide %>%
   group_by(modified_peptide, protein_group) %>%
@@ -207,13 +205,17 @@ for (s in 1:nrow(final_exp)) {
   if (grepl("^X", substitute_with)) substitute_with <- sub("^X", "", substitute_with)
   colnames(proteins) <- sub(substitute_from, substitute_with, colnames(proteins))
   colnames(peptides) <- sub(substitute_from, substitute_with, colnames(peptides))
+  colnames(std_ion_output) <- sub(substitute_from, substitute_with, colnames(std_ion_output))
   colnames(norm_proteins) <- sub(paste0("^", substitute_from), paste0("abundance_", substitute_with), colnames(norm_proteins))
   colnames(norm_peptides) <- sub(paste0("^", substitute_from), paste0("abundance_", substitute_with), colnames(norm_peptides))
+  colnames(std_ion_wide) <- sub(paste0("^", substitute_from), paste0("abundance_", substitute_with), colnames(std_ion_wide))
 }
 colnames(proteins) <- make.unique(colnames(proteins))
 colnames(peptides) <- make.unique(colnames(peptides))
+colnames(std_ion_output) <- make.unique(colnames(std_ion_output))
 colnames(norm_proteins) <- make.unique(colnames(norm_proteins))
 colnames(norm_peptides) <- make.unique(colnames(norm_peptides))
+colnames(std_ion_wide) <- make.unique(colnames(std_ion_wide))
 
 
 # getting relevant columns
@@ -259,6 +261,7 @@ if (!any(grepl("^differential_abundance", colnames(stats_peptides)))) {
 
 proteins$protein_group <- reduce_prot_accs(proteins$protein_group)
 
+write.csv(std_ion_wide, "stand_ion_quant_merged.csv", row.names = F)
 write.csv(proteins, "stand_prot_quant_merged.csv", row.names = F)
 write.csv(peptides, "stand_pep_quant_merged.csv", row.names = F)
 exp_design_out <- final_exp[, c("Run", "group")]
