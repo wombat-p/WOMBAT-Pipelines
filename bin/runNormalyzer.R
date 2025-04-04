@@ -205,7 +205,7 @@ for (s in 1:nrow(final_exp)) {
   if (grepl("^X", substitute_with)) substitute_with <- sub("^X", "", substitute_with)
   colnames(proteins) <- sub(substitute_from, substitute_with, colnames(proteins))
   colnames(peptides) <- sub(substitute_from, substitute_with, colnames(peptides))
-  colnames(std_ion_output) <- sub(substitute_from, substitute_with, colnames(std_ion_output))
+  colnames(std_ion_wide) <- sub(substitute_from, substitute_with, colnames(std_ion_wide))
   colnames(norm_proteins) <- sub(paste0("^", substitute_from), paste0("abundance_", substitute_with), colnames(norm_proteins))
   colnames(norm_peptides) <- sub(paste0("^", substitute_from), paste0("abundance_", substitute_with), colnames(norm_peptides))
   colnames(std_ion_wide) <- sub(paste0("^", substitute_from), paste0("abundance_", substitute_with), colnames(std_ion_wide))
