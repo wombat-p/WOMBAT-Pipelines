@@ -74,9 +74,13 @@ reduce_prot_accs <- function(accessions) {
 
 
 ## Read evidence file to create ion standard file and make proforma files
+
 evidence_data <- read.delim("evidence.txt", stringsAsFactors = FALSE)
 # Remove reverse hits
+evidence_data$Reverse[is.na(evidence_data$Reverse)] <- ""
 evidence_data <- evidence_data[evidence_data$Reverse != "+", ]
+print(head(evidence_data))
+
 # change "Modified sequence" to proforma format
 # for that remove the "site" starts with a space and ends with a bracket
 evidence_data$Modified.sequence <- gsub("\\s\\([^()]*\\)", "", evidence_data$Modified.sequence)
@@ -94,9 +98,9 @@ evidence_data$Modified.sequence <- sapply(evidence_data$Modified.sequence, funct
 })
 evidence_data$Proteins <- reduce_prot_accs(evidence_data$Proteins)
 
-
 # Create ion standard file
 std_ion_output <- evidence_data[, c("Modified.sequence", "Proteins", "Experiment", "Charge", "Intensity")]
+
 colnames(std_ion_output) <- c("modified_peptide", "protein_group", "exp_conditions", "charge", "abundance")
 # Change to wide format
 std_ion_wide <- as.data.frame(pivot_wider(
