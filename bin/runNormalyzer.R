@@ -74,7 +74,13 @@ reduce_prot_accs <- function(accessions) {
 
 
 ## Read evidence file to create ion standard file and make proforma files
+
 evidence_data <- read.delim("evidence.txt", stringsAsFactors = FALSE)
+# Remove reverse hits
+evidence_data$Reverse[is.na(evidence_data$Reverse)] <- ""
+evidence_data <- evidence_data[evidence_data$Reverse != "+", ]
+print(head(evidence_data))
+
 # change "Modified sequence" to proforma format
 # for that remove the "site" starts with a space and ends with a bracket
 evidence_data$Modified.sequence <- gsub("\\s\\([^()]*\\)", "", evidence_data$Modified.sequence)
@@ -92,9 +98,9 @@ evidence_data$Modified.sequence <- sapply(evidence_data$Modified.sequence, funct
 })
 evidence_data$Proteins <- reduce_prot_accs(evidence_data$Proteins)
 
-
 # Create ion standard file
 std_ion_output <- evidence_data[, c("Modified.sequence", "Proteins", "Experiment", "Charge", "Intensity")]
+
 colnames(std_ion_output) <- c("modified_peptide", "protein_group", "exp_conditions", "charge", "abundance")
 # Change to wide format
 std_ion_wide <- as.data.frame(pivot_wider(
@@ -107,8 +113,6 @@ std_ion_wide <- as.data.frame(pivot_wider(
 # Filter out the rows with all abundance values being NA or zero
 std_ion_wide <- std_ion_wide[rowSums(std_ion_wide[, grep("^abundance_", colnames(std_ion_wide))], na.rm = T) > 0, ]
 
-
-write.csv(std_ion_wide, "stand_ion_quant_merged.csv", row.names = F)
 
 # Create peptidoform level file from std_ion_output
 pep <- as.data.frame(std_ion_wide %>%
@@ -205,13 +209,17 @@ for (s in 1:nrow(final_exp)) {
   if (grepl("^X", substitute_with)) substitute_with <- sub("^X", "", substitute_with)
   colnames(proteins) <- sub(substitute_from, substitute_with, colnames(proteins))
   colnames(peptides) <- sub(substitute_from, substitute_with, colnames(peptides))
+  colnames(std_ion_wide) <- sub(substitute_from, substitute_with, colnames(std_ion_wide))
   colnames(norm_proteins) <- sub(paste0("^", substitute_from), paste0("abundance_", substitute_with), colnames(norm_proteins))
   colnames(norm_peptides) <- sub(paste0("^", substitute_from), paste0("abundance_", substitute_with), colnames(norm_peptides))
+  colnames(std_ion_wide) <- sub(paste0("^", substitute_from), paste0("abundance_", substitute_with), colnames(std_ion_wide))
 }
 colnames(proteins) <- make.unique(colnames(proteins))
 colnames(peptides) <- make.unique(colnames(peptides))
+colnames(std_ion_output) <- make.unique(colnames(std_ion_output))
 colnames(norm_proteins) <- make.unique(colnames(norm_proteins))
 colnames(norm_peptides) <- make.unique(colnames(norm_peptides))
+colnames(std_ion_wide) <- make.unique(colnames(std_ion_wide))
 
 
 # getting relevant columns
@@ -257,6 +265,7 @@ if (!any(grepl("^differential_abundance", colnames(stats_peptides)))) {
 
 proteins$protein_group <- reduce_prot_accs(proteins$protein_group)
 
+write.csv(std_ion_wide, "stand_ion_quant_merged.csv", row.names = F)
 write.csv(proteins, "stand_prot_quant_merged.csv", row.names = F)
 write.csv(peptides, "stand_pep_quant_merged.csv", row.names = F)
 exp_design_out <- final_exp[, c("Run", "group")]

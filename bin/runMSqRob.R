@@ -129,7 +129,10 @@ print(names(peaks))
 peaks <- peaks[, c("File.Name", "Full.Sequence", "Protein.Group", "Precursor.Charge", "Peak.intensity")]
 
 # to wide format for each file using reshape2
-peaks_wide <- dcast(peaks, Full.Sequence + Protein.Group + Precursor.Charge ~ File.Name, value.var = "Peak.intensity")
+peaks_wide <- dcast(peaks, Full.Sequence + Protein.Group + Precursor.Charge ~ File.Name,
+  value.var = "Peak.intensity", fun.aggregate = sum
+)
+peaks_wide[peaks_wide == 0] <- NA
 # Substitute Intensity column names with the ones defined in the experimental design
 for (r in 1:nrow(exp_annotation)) {
   colnames(peaks_wide) <- sub(
@@ -139,7 +142,7 @@ for (r in 1:nrow(exp_annotation)) {
     ), colnames(peaks_wide)
   )
 }
-colnames(peaks_wide)[1:3] <- c("modified_peptide", "protein_group", "precursor_charge")
+colnames(peaks_wide)[1:3] <- c("modified_peptide", "protein_group", "charge")
 write.csv(peaks_wide, "stand_ion_quant_merged.csv", row.names = F)
 
 # Merging data from peptideshaker, flashlfq and msqrob
