@@ -88,7 +88,7 @@ workflow WOMBAT {
     ch_versions = Channel.empty()
 
 
-    wombat_version = "0.9.6"
+    wombat_version = "0.9.11"
 
     //
     // MODULE: Prepare input files
