@@ -80,7 +80,7 @@ evidence_data <- read.delim("evidence.txt", stringsAsFactors = FALSE)
 evidence_data$Reverse[is.na(evidence_data$Reverse)] <- ""
 evidence_data <- evidence_data[evidence_data$Reverse != "+", ]
 # To be sure, also remove REV__ hits
-evidence_data <- evidence_data[!grepl("^REV__", evidence_data$Proteins), ]
+evidence_data <- evidence_data[!grepl("^REV__", evidence_data$Leading.proteins), ]
 
 # change "Modified sequence" to proforma format
 # for that remove the "site" starts with a space and ends with a bracket
