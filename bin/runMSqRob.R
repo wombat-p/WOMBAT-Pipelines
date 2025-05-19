@@ -103,7 +103,11 @@ all_pep <- Reduce(function(x, y) merge(x, y, by = 1, all = TRUE), all_peptides)
 
 rownames(all_pep) <- all_pep[, 1]
 # merging with quant data
-stand_pep_quant <- cbind(all_pep[fData(peptides)$Sequence, ], protein_group = protnames[fData(peptides)$Sequence, 2], 2^exprs(peptides))
+stand_pep_quant <- cbind(fData(peptides)$Sequence,
+  protein_group = fData(peptides)$Protein.Groups,
+  all_pep[fData(peptides)$Sequence, grep("^number_of_psms_", colnames(all_pep))],
+  2^exprs(peptides)
+)
 for (r in 1:nrow(exp_annotation)) {
   colnames(stand_pep_quant) <- sub(
     paste0("^Intensity_", exp_annotation$raw_file[r], "$"),
