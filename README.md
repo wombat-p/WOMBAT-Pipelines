@@ -187,16 +187,8 @@ Contributions to change and modify the workflows are most welcome. For this, ple
 
 ## Credits
 
-nf-core/wombat was originally written by the members of the ELIXIR Implementation study [Comparison, benchmarking and dissemination of proteomics data analysis pipelines](https://elixir-europe.org/internal-projects/commissioned-services/proteomics-pipelines) under the lead of Veit Schwämmle and major participation of David Bouyssié and Fredrik Levander.
+wombat-p was originally written by the members of the ELIXIR Implementation study [Comparison, benchmarking and dissemination of proteomics data analysis pipelines](https://elixir-europe.org/internal-projects/commissioned-services/proteomics-pipelines) under the lead of Veit Schwämmle and major participation of David Bouyssié and Fredrik Levander.
 
 ## Citations
 
-Preprint available: https://www.biorxiv.org/content/10.1101/2023.10.02.560412v1
-
-As the workflows are using an nf-core template, we refer to the publication:
-
-> **The nf-core framework for community-curated bioinformatics pipelines.**
->
-> Philip Ewels, Alexander Peltzer, Sven Fillinger, Harshil Patel, Johannes Alneberg, Andreas Wilm, Maxime Ulysse Garcia, Paolo Di Tommaso & Sven Nahnsen.
->
-> _Nat Biotechnol._ 2020 Feb 13. doi: [10.1038/s41587-020-0439-x](https://dx.doi.org/10.1038/s41587-020-0439-x).
+[Bouyssié D, Altıner P, Capella-Gutierrez S, et al. WOMBAT-P: Benchmarking Label-Free Proteomics Data Analysis Workflows. Journal of Proteome Research. 2024 Jan;23(1):418-429. DOI: 10.1021/acs.jproteome.3c00636. PMID: 38038272.](https://europepmc.org/article/MED/38038272)
